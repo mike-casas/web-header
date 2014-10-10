@@ -3,10 +3,13 @@
  */
 
 var fs = require('fs');
+var path = require('path');
 var read = fs.readFileSync;
+var resolve = path.resolve;
 var jade = require('jade');
 
-var header = jade.compile(read('./template.jade', { encode: 'utf8'}));
+var headerPath = resolve(__dirname, './template.jade');
+var header = jade.compile(read(headerPath, { encode: 'utf8'}));
 
 module.exports = render;
 
