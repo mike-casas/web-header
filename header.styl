@@ -1,0 +1,67 @@
+// Auth0 style guide
+
+// Colors
+
+color_blue_light = #44c7f4;
+
+
+.site-header.navbar-fixed-top, .site-header.navbar-fixed-bottom
+  background: #fff;
+  position:fixed !important;
+  right:0;
+  left:0;
+  z-index:1030;
+  transform:translate3d(0,0,0);
+  -webkit-transform:translate3d(0,0,0);
+.navbar-header
+  position: relative;
+
+a.hiring
+  background: color_blue_light;
+  text-transform: uppercase;
+  position: absolute;
+  top: 16px;
+  left: -104px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: white !important;
+  display: inline-block
+  font-size: 11px;
+
+  &::after
+    position: absolute;
+    content: "";
+    right: -4px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid color_blue_light;
+
+@media screen and (max-width: 767px)
+  header.site-header .navbar-default .navbar-nav .open .dropdown-menu>li>a
+    color: #777 !important;
+
+  header.site-header .navbar-default .dropdown-menu ::after
+    display: none;
+
+  header.site-header .navbar-default .signin-button
+    margin-bottom: 5px
+
+
+
+@media screen and (min-width: 992px)
+
+  .site-header.navbar-fixed-top,
+  .site-header.navbar-fixed-bottom
+    background:rgba(255,255,255,0.9);
+
+
+  // .navbar-nav .open .dropdown-menu
+
+  //   & ::after
+  //     border-color: transparent;
+  //   a
+  //     color: #777 !important;

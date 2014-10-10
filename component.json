@@ -1,0 +1,26 @@
+{
+  "name": "web-header",
+  "repo": "auth0/web-header",
+  "description": "Auth0's website and landings header",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/domify": "*",
+    "visionmedia/debug": "*",
+    "cristiandouce/query": "*"
+    },
+  "development": {
+    "auth0/styleguide": "*"
+  },
+  "templates": [
+    "template.jade"
+  ],
+  "styles": [
+    "header.styl"
+  ],
+  "license": "MIT",
+  "main": "header.js",
+  "scripts": [
+    "header.js"
+  ]
+}
