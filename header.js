@@ -17,13 +17,17 @@ module.exports = HeaderView;
  * Create a `HeaderView` view instance
  */
 
-function HeaderView() {
+function HeaderView(options) {
   if (!(this instanceof HeaderView)) {
-    return new HeaderView();
+    return new HeaderView(options);
   };
 
+  options = options || {};
+
+  if (!options.base_url) options.base_url = '';
+
   log('initialize');
-  this.el = domify(splash());
+  this.el = domify(splash(options));
 }
 
 /**
