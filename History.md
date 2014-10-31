@@ -1,4 +1,10 @@
 
+0.2.0 / 2014-10-31
+==================
+
+  * Rename standalone name for the web header
+  * Add grunt-cli as devDependency
+
 0.1.0 / 2014-10-31
 ==================
 

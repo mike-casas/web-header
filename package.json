@@ -2,7 +2,7 @@
   "name": "web-header",
   "private": true,
   "description": "Auth0's website and landings header",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "cdn": "grunt cdn"
   },
