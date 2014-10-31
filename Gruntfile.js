@@ -63,8 +63,8 @@ module.exports = function (grunt) {
         command: [
           './node_modules/.bin/component-build --use component-stylus,component-jade --out release',
           './node_modules/.bin/component-build --use component-stylus,component-jade,component-minify --out release --name build.min',
-          './node_modules/.bin/component-build --use component-stylus,component-jade --out release --standalone TutorialNavigator --name standalone',
-          './node_modules/.bin/component-build --use component-stylus,component-jade,component-minify --out release --standalone TutorialNavigator --name standalone.min'
+          './node_modules/.bin/component-build --use component-stylus,component-jade --out release --standalone WebHeader --name standalone',
+          './node_modules/.bin/component-build --use component-stylus,component-jade,component-minify --out release --standalone WebHeader --name standalone.min'
         ].join(' && ')
       }
     },
