@@ -6,11 +6,19 @@
   <script type="text/javascript" src="/build/build.js"></script>
 </head>
 <body>
-  <div id="top"></div>
+  <header id="header" class="site-header"></header>
   <script type="text/javascript">
+    // Auth0's web-header initialization and render!
     var Header = require('web-header');
     var header = new Header();
-    header.render('#top');
+    header.render('#header');
+
+    // Developemnt only elements, to show dropdown working
+    // since at the moment it's an external feature not
+    // compeiling to the header html stuff...
+    // XXX: WE SHOULD!
+    window.jQuery = window.$ = require('components-jquery');
+    require('codemix-bootstrap-dropdown');
   </script>
 </body>
 </html>

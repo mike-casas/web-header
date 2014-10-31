@@ -11,7 +11,9 @@
     "cristiandouce/query": "*"
     },
   "development": {
-    "auth0/styleguide": "*"
+    "auth0/styleguide": "*",
+    "components/jquery": "*",
+    "codemix/bootstrap-dropdown": "*"
   },
   "templates": [
     "template.jade"

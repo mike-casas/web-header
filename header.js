@@ -3,7 +3,7 @@
  */
 
 var log = require('debug')('header:view');
-var splash = require('./template.jade');
+var splash = require('./template');
 var domify = require('domify');
 var query = require('query');
 
