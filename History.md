@@ -1,4 +1,10 @@
 
+0.2.6 / 2014-11-19
+==================
+
+  * Merge branch 'master' of github.com:auth0/web-header
+  * Update release process
+
 0.2.5 / 2014-11-19
 ==================
 
