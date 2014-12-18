@@ -31,7 +31,7 @@ module.exports = function (grunt) {
               function basic(req, res, next) {
                 res.end(read(join(__dirname, 'example/index.html')));
               }
-            ]
+            ];
           }
         }
       },
@@ -65,6 +65,12 @@ module.exports = function (grunt) {
           './node_modules/.bin/component-build --use component-stylus,component-jade,component-minify --out release --name build.min',
           './node_modules/.bin/component-build --use component-stylus,component-jade --out release --standalone WebHeader --name standalone',
           './node_modules/.bin/component-build --use component-stylus,component-jade,component-minify --out release --standalone WebHeader --name standalone.min'
+        ].join(' && ')
+      },
+      purge_cdn: {
+        command: [
+          'curl -X DELETE https://cdn.auth0.com/web-header/latest',
+          'curl -X DELETE https://cdn.auth0.com/web-header/' + pkg.version
         ].join(' && ')
       }
     },
@@ -107,45 +113,16 @@ module.exports = function (grunt) {
           options: { gzip: false }
         }, {
           rel:    'release',
-          src:    'release/*',
+          src:    'release/**/*',
           dest:   'web-header/latest/',
           options: { gzip: false }
         }]
       }
-    },
-    maxcdn: {
-      purgeCache: {
-        options: {
-          companyAlias:   process.env.MAXCDN_COMPANY_ALIAS,
-          consumerKey:    process.env.MAXCDN_CONSUMER_KEY,
-          consumerSecret: process.env.MAXCDN_CONSUMER_SECRET,
-          zone_id:        process.env.MAXCDN_ZONE_ID,
-          method:         'delete'
-        },
-        files: [
-          { dest:     'web-header/' + pkg.version + '/build.css', },
-          { dest:     'web-header/' + pkg.version + '/build.js', },
-          { dest:     'web-header/' + pkg.version + '/build.min.css', },
-          { dest:     'web-header/' + pkg.version + '/build.min.js', },
-          { dest:     'web-header/' + pkg.version + '/standalone.css', },
-          { dest:     'web-header/' + pkg.version + '/standalone.js', },
-          { dest:     'web-header/' + pkg.version + '/standalone.min.css', },
-          { dest:     'web-header/' + pkg.version + '/standalone.min.js', },
-          { dest:     'web-header/latest/build.css', },
-          { dest:     'web-header/latest/build.js', },
-          { dest:     'web-header/latest/build.min.css', },
-          { dest:     'web-header/latest/build.min.js', },
-          { dest:     'web-header/latest/standalone.css', },
-          { dest:     'web-header/latest/standalone.js', },
-          { dest:     'web-header/latest/standalone.min.css', },
-          { dest:     'web-header/latest/standalone.min.js', },
-        ],
-      },
     }
   });
 
-  grunt.registerTask('dev', ['shell:component_install_dev', 'shell:component_build_dev', 'connect', 'watch'])
+  grunt.registerTask('dev', ['shell:component_install_dev', 'shell:component_build_dev', 'connect', 'watch']);
   grunt.registerTask('build', ['clean', 'shell:component_install', 'shell:component_build_release']);
-  grunt.registerTask('cdn', ['build', 's3', 'maxcdn']);
+  grunt.registerTask('cdn', ['build', 's3', 'shell:purge_cdn']);
   grunt.registerTask('default', ['build']);
-}
+};
