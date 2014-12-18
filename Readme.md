@@ -5,9 +5,11 @@
 
 ## Installation
 
-  Install with [component(1)](http://component.io):
-
-    $ component install {repo}
+~~~html
+<link href="https://cdn.auth0.com/styleguide/latest/index.css" rel="stylesheet" />
+<link href="https://cdn.auth0.com/web-header/latest/standalone.css" rel="stylesheet"/>
+<script type="text/javascript" src="//cdn.auth0.com/web-header/latest/standalone.min.js"></script>
+~~~
 
 ## API
 
