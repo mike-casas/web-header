@@ -1,4 +1,9 @@
 
+0.4.6 / 2015-01-02
+==================
+
+  * Remove breaking data target in FF34, causing bootstrap to attempt target un unexisting id
+
 0.4.5 / 2014-12-18
 ==================
 
