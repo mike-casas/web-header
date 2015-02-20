@@ -1,4 +1,9 @@
 
+0.4.8 / 2015-02-20
+==================
+
+  * Update navbar-brand anchor background from cdn
+
 0.4.7 / 2015-01-08
 ==================
 
