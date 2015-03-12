@@ -1,4 +1,9 @@
 
+0.4.9 / 2015-03-12
+==================
+
+  * Fix dependency manifest visionmedia/jade -> jadejs/jade
+
 0.4.8 / 2015-02-20
 ==================
 
