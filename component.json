@@ -2,7 +2,7 @@
   "name": "web-header",
   "repo": "auth0/web-header",
   "description": "Auth0's website and landings header",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "keywords": [],
   "dependencies": {
     "component/domify": "*",
