@@ -1,4 +1,10 @@
 
+0.4.10 / 2015-04-01
+===================
+
+  * Update styleguide to use 1.0.0 instead of latest
+  * Update template.jade
+
 0.4.9 / 2015-03-12
 ==================
 
