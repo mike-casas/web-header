@@ -80,6 +80,7 @@ module.exports = function (grunt) {
         key:    process.env.S3_KEY,
         secret: process.env.S3_SECRET,
         bucket: process.env.S3_BUCKET,
+        region: process.env.S3_REGION,
         access: 'public-read',
         headers: {
           'Cache-Control':  'public, max-age=300'
