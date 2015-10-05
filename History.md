@@ -1,4 +1,12 @@
 
+0.5.0 / 2015-10-05
+==================
+
+  * Merge pull request #3 from auth0/features/hide-navs-no-navs-mode
+  * Hide jumper when basic-navs-mode is set
+  * Add basic navs mode
+  * Update Gruntfile.js
+
 
 0.4.12 / 2015-05-21
 ===================
