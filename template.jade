@@ -1,6 +1,5 @@
 nav.navbar.navbar-default(role='navigation')
   .container
-
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
         span.sr-only Toggle navigation
@@ -8,17 +7,13 @@ nav.navbar.navbar-default(role='navigation')
         span.icon-bar
         span.icon-bar
 
-
-
       h1.navbar-brand
         a(href="/")
           span Auth0
 
       a(href="#{base_url}/jobs").no-basic.hiring.animated.bounce.hidden-sm.hidden-xs.hidden-md We're hiring!
 
-
     #navbar-collapse.collapse.navbar-collapse
-
 
       ul.nav.navbar-nav.navbar-left.no-basic
         li.li-why
@@ -36,25 +31,26 @@ nav.navbar.navbar-default(role='navigation')
 
             li
               a(href="#{base_url}/lock") Lock
+              
+            li
+              a(href="#{base_url}/lock") Passwordless
 
             li
-              a(href="#{base_url}/wordpress") Wordpress
-
-
+              a(href="#{base_url}/wordpress") WordPress
 
             li.divider
 
             li
-
               a(href="#{base_url}/about") About
 
             li
               a(href="#{base_url}/blog") Blog
 
-
             li
               a(href="#{base_url}/customers") Customers
-
+              
+            li
+              a(href="#{base_url}/partners") Partners
 
             li
               a(href="#{base_url}/opensource") Open Source
@@ -62,22 +58,13 @@ nav.navbar.navbar-default(role='navigation')
             li
               a(href="#{base_url}/jobs") Jobs
 
-
-
       ul.nav.navbar-nav.navbar-right
 
         li.li-docs.no-basic
           a(href="#{base_url}/support") Help & Support
 
-
         li.li-docs.no-basic
           a(href="#{base_url}/docs") Documentation
 
-
-
-
-
         li
           a.signin-button(href="javascript:login()").login Login
-
-
