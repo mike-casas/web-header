@@ -1,4 +1,10 @@
 
+0.5.5 / 2016-01-21
+==================
+
+  * Merge pull request #5 from ramasilveyra/add-press-link
+  * Add link to the Press page
+
 0.5.4 / 2015-11-30
 ==================
 
