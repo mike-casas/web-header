@@ -1,4 +1,10 @@
 
+0.5.6 / 2016-02-01
+==================
+
+  * Merge pull request #6 from ramasilveyra/fix-jade-repo
+  * Jade change repository
+
 0.5.5 / 2016-01-21
 ==================
 
