@@ -7,7 +7,7 @@
   "dependencies": {
     "component/domify": "*",
     "visionmedia/debug": "*",
-    "jadejs/jade": "1.11.0",
+    "pugjs/jade": "1.11.0",
     "cristiandouce/query": "*"
   },
   "development": {
