@@ -75,7 +75,7 @@ module.exports = function (grunt) {
       }
     },
 
-    s3: {
+    aws_s3: {
       options: {
         key:    process.env.S3_KEY,
         secret: process.env.S3_SECRET,
@@ -87,36 +87,36 @@ module.exports = function (grunt) {
         }
       },
       clean: {
-        del: [
-          { src:     'web-header/' + pkg.version + '/build.css', },
-          { src:     'web-header/' + pkg.version + '/build.js', },
-          { src:     'web-header/' + pkg.version + '/build.min.css', },
-          { src:     'web-header/' + pkg.version + '/build.min.js', },
-          { src:     'web-header/' + pkg.version + '/standalone.css', },
-          { src:     'web-header/' + pkg.version + '/standalone.js', },
-          { src:     'web-header/' + pkg.version + '/standalone.min.css', },
-          { src:     'web-header/' + pkg.version + '/standalone.min.js', },
-          { src:     'web-header/latest/build.css', },
-          { src:     'web-header/latest/build.js', },
-          { src:     'web-header/latest/build.min.css', },
-          { src:     'web-header/latest/build.min.js', },
-          { src:     'web-header/latest/standalone.css', },
-          { src:     'web-header/latest/standalone.js', },
-          { src:     'web-header/latest/standalone.min.css', },
-          { src:     'web-header/latest/standalone.min.js', },
+        files: [
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/build.css', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/build.js', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/build.min.css', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/build.min.js', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/standalone.css', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/standalone.js', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/standalone.min.css', },
+          { action: 'delete', dest: 'web-header/' + pkg.version + '/standalone.min.js', },
+          { action: 'delete', dest: 'web-header/latest/build.css', },
+          { action: 'delete', dest: 'web-header/latest/build.js', },
+          { action: 'delete', dest: 'web-header/latest/build.min.css', },
+          { action: 'delete', dest: 'web-header/latest/build.min.js', },
+          { action: 'delete', dest: 'web-header/latest/standalone.css', },
+          { action: 'delete', dest: 'web-header/latest/standalone.js', },
+          { action: 'delete', dest: 'web-header/latest/standalone.min.css', },
+          { action: 'delete', dest: 'web-header/latest/standalone.min.js', },
         ]
       },
       publish: {
-        upload: [{
-          rel:    'release',
-          src:    'release/**/*',
-          dest:   'web-header/' + pkg.version + '/',
-          options: { gzip: false }
+        files: [{
+          expand: true,
+          cwd:    'release/',
+          src:    ['**'],
+          dest:   'web-header/' + pkg.version + '/'
         }, {
-          rel:    'release',
-          src:    'release/**/*',
-          dest:   'web-header/latest/',
-          options: { gzip: false }
+          expand: true,
+          cwd:    'release/',
+          src:    ['**'],
+          dest:   'web-header/latest/'
         }]
       }
     }
