@@ -1,4 +1,13 @@
 
+0.5.7 / 2016-05-12
+==================
+
+  * Merge pull request #9 from ramasilveyra/use-latest-logo
+  * Use latest version of full logo
+  * Merge pull request #8 from ramasilveyra/remove-video-tutorials
+  * Remove Video Tutorials link
+  * Fix s3 publish
+
 0.5.6 / 2016-02-01
 ==================
 
