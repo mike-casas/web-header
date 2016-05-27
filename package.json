@@ -1,30 +1,52 @@
 {
-  "name": "web-header",
-  "private": true,
-  "description": "Auth0's website and landings header",
+  "name": "auth0-web-header",
   "version": "0.5.7",
+  "description": "Auth0's website and landings header",
+  "main": "dist/auth0-web-header.js",
   "scripts": {
-    "cdn": "grunt cdn"
+    "build": "webpack -p",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:js",
+    "test": "mocha \"src/**/*.spec.js\" --require test/setup.js --compilers js:babel-register && npm run lint",
+    "dev": "webpack-dev-server --config webpack.playground.config.js --hot --inline --port 3000"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "bump": "ianstormtaylor/bump",
-    "component": "^0.19.9",
-    "component-jade": "^0.5.0",
-    "component-minify": "^1.2.0",
-    "component-stylus": "^1.1.3",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-maxcdn": "https://github.com/siacomuzzi/grunt-maxcdn/tarball/0.0.1",
-    "grunt-aws-s3": "~0.9.3",
-    "grunt-shell": "^0.7.0",
-    "jade": "^1.7.0",
-    "matchdep": "^0.3.0",
-    "serve": "*"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0/web-header.git"
   },
+  "author": "Auth0 Inc. <support@auth0.com> (https://auth0.com)",
   "license": "MIT",
-  "main": "index.js"
+  "bugs": {
+    "url": "https://github.com/auth0/web-header/issues"
+  },
+  "homepage": "https://github.com/auth0/web-header#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "component-playground": "^1.2.1",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.10.2",
+    "eslint-config-auth0": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0",
+    "html-webpack-plugin": "^2.17.0",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.1.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "private": true
 }
