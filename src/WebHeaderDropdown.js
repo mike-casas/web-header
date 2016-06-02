@@ -24,7 +24,7 @@ class WebHeaderDropdown extends Component {
           'with-highlight': this.props.hasHighlight
         })}>
         <WebHeaderDropdownList data={this.props.data} handleHover={this.props.handleDropdownItemHover} />
-        <WebHeaderDropdownHighlight />
+        { this.props.hasHighlight ? <WebHeaderDropdownHighlight /> : null }
       </div>
     );
   }

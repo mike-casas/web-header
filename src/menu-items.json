@@ -2,20 +2,16 @@
   {
     "name": "Products",
     "id": "products",
-    "position": "left",
-    "hasHighlight": true,
     "childrens": [
+      {
+        "name": "Platform",
+        "id": "platform",
+        "href": "https://auth0.com/platform"
+      },
       {
         "name": "Enterprise",
         "id": "enterprise",
-        "href": "https://auth0.com/enterprise",
-        "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/",
-          "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
-          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
-          "userName": "Marco Gomes",
-          "date": "February 08, 2016"
-        }
+        "href": "https://auth0.com/enterprise"
       },
       {
         "name": "Lock",
@@ -31,29 +27,23 @@
         "name": "Wordpress",
         "id": "wordpress",
         "href": "https://auth0.com/wordpress"
+      },
+      {
+        "name": "Webtask",
+        "id": "webtask",
+        "href": "https://webtask.io/"
       }
     ]
   },
   {
-    "name": "Solutions",
-    "id": "solutions",
-    "href": "https://auth0.com/solutions"
-  },
-  {
-    "name": "Pricing",
-    "id": "pricing",
-    "href": "https://auth0.com/pricing"
-  },
-  {
-    "name": "Customers",
-    "id": "customers",
-    "position": "right",
+    "name": "Why Auth0",
+    "id": "why-auth0",
     "hasHighlight": true,
     "childrens": [
       {
-        "name": "Enterprise",
-        "id": "enterprise",
-        "url": "https://auth0.com/enterprise",
+        "name": "Overview",
+        "id": "overview",
+        "href": "https://auth0.com/why-auth0",
         "highlight": {
           "imageUrl": "http://lorempixel.com/400/400/",
           "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
@@ -61,6 +51,112 @@
           "userName": "Marco Gomes",
           "date": "February 08, 2016"
         }
+      },
+      {
+        "name": "Customers",
+        "id": "customers",
+        "href": "https://auth0.com/customers"
+      },
+      {
+        "name": "Case Studies",
+        "id": "case-studies",
+        "href": "https://auth0.com/resources#case-studies"
+      },
+      {
+        "name": "Concepts",
+        "id": "concepts",
+        "href": "https://auth0.com/docs/applications"
+      },
+      {
+        "name": "Use Cases",
+        "id": "use-cases",
+        "href": "https://auth0.com/resources#use-cases"
+      },
+      {
+        "name": "Industries",
+        "id": "industries",
+        "href": "https://auth0.com/industries"
+      },
+      {
+        "name": "Others",
+        "id": "others",
+        "href": "https://auth0.com/learn/#growth"
+      }
+    ]
+  },
+  {
+    "name": "How it works",
+    "id": "how-it-works",
+    "href": "https://auth0.com/pricing",
+    "hasHighlight": true,
+    "childrens": [
+      {
+        "name": "Overview",
+        "id": "overview",
+        "href": "https://auth0.com/how-it-works",
+        "highlight": {
+          "imageUrl": "http://lorempixel.com/400/400/",
+          "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
+          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
+          "userName": "Marco Gomes",
+          "date": "February 08, 2016"
+        }
+      },
+      {
+        "name": "Security",
+        "id": "security",
+        "href": "https://auth0.com/security"
+      },
+      {
+        "name": "Availability & Trust",
+        "id": "availability-trust",
+        "href": "https://auth0.com/availability-trust"
+      },
+      {
+        "name": "Blog",
+        "id": "blog",
+        "href": "https://auth0.com/blog"
+      }
+    ]
+  },
+  {
+    "name": "Pricing",
+    "id": "pricing",
+    "href": "https://auth0.com/pricing"
+  },
+  {
+    "name": "Documentation",
+    "id": "documentation",
+    "href": "https://auth0.com/docs"
+  },
+  {
+    "name": "More",
+    "id": "more",
+    "childrens": [
+      {
+        "name": "About",
+        "id": "about",
+        "href": "https://auth0.com/about"
+      },
+      {
+        "name": "Support",
+        "id": "support",
+        "href": "https://auth0.com/support"
+      },
+      {
+        "name": "Partners",
+        "id": "partners",
+        "href": "https://auth0.com/partners"
+      },
+      {
+        "name": "Press",
+        "id": "press",
+        "href": "https://auth0.com/press"
+      },
+      {
+        "name": "Jobs",
+        "id": "jobs",
+        "href": "https://auth0.com/jobs"
       }
     ]
   }
