@@ -45,7 +45,7 @@
         "id": "overview",
         "href": "https://auth0.com/why-auth0",
         "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/",
+          "imageUrl": "http://lorempixel.com/400/400/cats/1/",
           "title": "Highlight 1",
           "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
           "description": "Highligh 1 description Lorem ipsum dolor sit amet.",
@@ -58,7 +58,7 @@
         "id": "customers",
         "href": "https://auth0.com/customers",
         "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/2",
+          "imageUrl": "http://lorempixel.com/400/400/cats/2/",
           "title": "Highlight 2.",
           "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
           "description": "Highligh 2 description Lorem ipsum dolor sit amet.",
@@ -105,7 +105,8 @@
         "href": "https://auth0.com/how-it-works",
         "highlight": {
           "imageUrl": "http://lorempixel.com/400/400/",
-          "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
+          "title": "Highlight 3",
+          "description": "Description for item 3",
           "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
           "userName": "Marco Gomes",
           "date": "February 08, 2016"
@@ -124,7 +125,15 @@
       {
         "name": "Blog",
         "id": "blog",
-        "href": "https://auth0.com/blog"
+        "href": "https://auth0.com/blog",
+        "highlight": {
+          "imageUrl": "http://lorempixel.com/400/400/",
+          "title": "Highlight 4",
+          "description": "Description for item 3",
+          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
+          "userName": "Marco Gomes",
+          "date": "February 08, 2016"
+        }
       }
     ]
   },

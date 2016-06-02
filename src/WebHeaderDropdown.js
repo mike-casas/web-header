@@ -21,15 +21,21 @@ class WebHeaderDropdown extends Component {
   };
 
   state = {
-    highlight: {} // Should be the first element highlight or general highlight
+    // Return first highlight of list of items
+    highlight: ( () => {
+      for (var i = 0; i < this.props.data.length; i++) {
+        console.log(this.props.data[i].name);
+        if(this.props.data[i].highlight){
+          return this.props.data[i].highlight;
+        }
+      }
+    })()
   };
 
   itemHoverHandler(highlight){
     if(!highlight) return;
 
-    this.setState({
-      highlight: highlight
-    });
+    this.setState({ highlight });
   };
 
   render(){
