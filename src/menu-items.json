@@ -55,7 +55,14 @@
       {
         "name": "Customers",
         "id": "customers",
-        "href": "https://auth0.com/customers"
+        "href": "https://auth0.com/customers",
+        "highlight": {
+          "imageUrl": "http://lorempixel.com/400/400/2",
+          "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
+          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
+          "userName": "Harry Roberts",
+          "date": "February 08, 2016"
+        }
       },
       {
         "name": "Case Studies",

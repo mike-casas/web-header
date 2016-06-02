@@ -10,21 +10,37 @@ class WebHeaderDropdown extends Component {
     data: PropTypes.array
   };
 
+  static defaultProps = {
+    hasHighlight: false,
+    data: []
+  };
+
   constructor(props){
     super(props);
-  }
 
-  handleDropdownItemHover(data){
-    console.log(data);
-  }
+  };
+
+  state = {
+    highlight: {} // Should be the first element highlight or general highlight
+  };
+
+  itemHoverHandler(highlight){
+    if(!highlight) return;
+
+    console.log(highlight);
+    // Want to update the state adding the highlighted item
+    // this.setState({
+    //   highlight: "test"
+    // });
+  };
 
   render(){
     return (
       <div className={cx('navbar-dropdown', {
           'with-highlight': this.props.hasHighlight
         })}>
-        <WebHeaderDropdownList data={this.props.data} handleHover={this.props.handleDropdownItemHover} />
-        { this.props.hasHighlight ? <WebHeaderDropdownHighlight /> : null }
+        <WebHeaderDropdownList data={this.props.data} itemHoverHandler={this.itemHoverHandler}/>
+        { this.props.hasHighlight ? <WebHeaderDropdownHighlight data={this.state.highlight}/> : null }
       </div>
     );
   }
