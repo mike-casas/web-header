@@ -1,114 +1,67 @@
 [
   {
-    "name": "Why Auth0",
-    "id": "why-auth0",
-    "url": "https://auth0.com/why-auth0",
-    "position": "navbar-left",
-    "active": true
+    "name": "Products",
+    "id": "products",
+    "position": "left",
+    "hasHighlight": true,
+    "childrens": [
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "href": "https://auth0.com/enterprise",
+        "highlight": {
+          "imageUrl": "http://lorempixel.com/400/400/",
+          "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
+          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
+          "userName": "Marco Gomes",
+          "date": "February 08, 2016"
+        }
+      },
+      {
+        "name": "Lock",
+        "id": "lock",
+        "href": "https://auth0.com/lock"
+      },
+      {
+        "name": "Passwordless",
+        "id": "passwordless",
+        "href": "https://auth0.com/passwordless"
+      },
+      {
+        "name": "Wordpress",
+        "id": "wordpress",
+        "href": "https://auth0.com/wordpress"
+      }
+    ]
   },
   {
-    "name": "How It Works",
-    "id": "how-it-works",
-    "url": "https://auth0.com/how-it-works",
-    "position": "navbar-left",
-    "active": true
+    "name": "Solutions",
+    "id": "solutions",
+    "href": "https://auth0.com/solutions"
   },
   {
     "name": "Pricing",
     "id": "pricing",
-    "url": "https://auth0.com/pricing",
-    "position": "navbar-left",
-    "active": true
-  },
-  {
-    "name": "Lock",
-    "id": "lock",
-    "url": "https://auth0.com/lock",
-    "position": "navbar-left-dropdown-top",
-    "active": true
-  },
-  {
-    "name": "Passwordless",
-    "id": "passwordless",
-    "url": "https://auth0.com/passwordless",
-    "position": "navbar-left-dropdown-top",
-    "active": true
-  },
-  {
-    "name": "WordPress",
-    "id": "wordpress",
-    "url": "https://auth0.com/wordpress",
-    "position": "navbar-left-dropdown-top",
-    "active": true
-  },
-  {
-    "name": "About",
-    "id": "about",
-    "url": "https://auth0.com/about",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Blog",
-    "id": "blog",
-    "url": "https://auth0.com/blog",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
+    "href": "https://auth0.com/pricing"
   },
   {
     "name": "Customers",
     "id": "customers",
-    "url": "https://auth0.com/customers",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Resources",
-    "id": "resources",
-    "url": "https://auth0.com/resources",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Partners",
-    "id": "partners",
-    "url": "https://auth0.com/partners",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Open Source",
-    "id": "opensource",
-    "url": "https://auth0.com/opensource",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Jobs",
-    "id": "jobs",
-    "url": "https://auth0.com/jobs",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Press",
-    "id": "press",
-    "url": "https://auth0.com/press",
-    "position": "navbar-left-dropdown-bottom",
-    "active": true
-  },
-  {
-    "name": "Help & Support",
-    "id": "support",
-    "url": "https://auth0.com/support",
-    "position": "navbar-right",
-    "active": true
-  },
-  {
-    "name": "Documentation",
-    "id": "docs",
-    "url": "https://auth0.com/docs",
-    "position": "navbar-right",
-    "active": true
+    "position": "right",
+    "hasHighlight": true,
+    "childrens": [
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "url": "https://auth0.com/enterprise",
+        "highlight": {
+          "imageUrl": "http://lorempixel.com/400/400/",
+          "title": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data.",
+          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
+          "userName": "Marco Gomes",
+          "date": "February 08, 2016"
+        }
+      }
+    ]
   }
 ]

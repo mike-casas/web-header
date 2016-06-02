@@ -5,12 +5,9 @@ import WebHeaderItem from './WebHeaderItem';
 import menuItems from './menu-items.json';
 
 // Lists of links by their position on the header
-const itemsLeft = menuItems.filter(item => item.position === 'navbar-left' && item.active);
-const itemsRight = menuItems.filter(item => item.position === 'navbar-right' && item.active);
-const itemsLeftDropdownTop = menuItems
-.filter(item => item.position === 'navbar-left-dropdown-top' && item.active);
-const itemsLeftDropdownBottom = menuItems
-  .filter(item => item.position === 'navbar-left-dropdown-bottom' && item.active);
+const itemsLeft = menuItems.filter(item => (item.position === undefined || item.position === 'left') && (item.active === undefined || item.active === true));
+const itemsRight = menuItems.filter(item => item.position === 'right' && (item.active === undefined || item.active === true));
+
 
 class WebHeader extends Component {
   static propTypes = {
@@ -90,84 +87,43 @@ class WebHeader extends Component {
                 <span className="icon-bar" />
               </button>
               <h1 className="navbar-brand">
-                <a href="/" rel="home">
+                <a href="/" rel="home" className="logo">
                   <span>Auth0</span>
                 </a>
-              </h1>
-              {
-                this.props.promoteLink
+                {
+                  this.props.promoteLink
                   ?
-                    <a
-                      href={this.props.promoteLinkURL}
-                      className="no-basic hiring animated bounce hidden-sm hidden-xs hidden-md"
+                  <a
+                    href={this.props.promoteLinkURL}
+                    className="hiring animated bounce"
                     >{this.props.promoteLinkText}</a>
                   : null
-              }
+                }
+              </h1>
             </div>
             <div
               className={cx('navbar-collapse', {
-                collapse: !this.state.navbarDropdownIsOpen,
+                // collapse: !this.state.navbarDropdownIsOpen,
                 in: this.state.navbarDropdownIsOpen
               })}
             >
               <ul className="no-basic nav navbar-nav navbar-left">
                 {itemsLeft.map(item =>
                   <WebHeaderItem
-                    className={`li-${item.id}`}
+                    className={`li-${item.id} navbar-item`}
                     key={item.position + item.id}
-                    href={item.url}
-                    text={item.name}
+                    item={item}
                   />
                 )}
-                <li
-                  className={cx('dropdown', { open: this.state.moreDropdownIsOpen })}
-                  ref="menuItemsDropdown"
-                >
-                  <button
-                    className="btn-dro"
-                    onClick={this.moreDropdownHandler}
-                  >
-                    More<i className="icon-budicon-460" />
-                  </button>
-                  <ul className="dropdown-menu">
-                    {itemsLeftDropdownTop.map(item =>
-                      <WebHeaderItem
-                        className={`li-${item.id}`}
-                        key={item.position + item.id}
-                        href={item.url}
-                        text={item.name}
-                      />
-                    )}
-                    <li role="separator" className="divider" />
-                    {itemsLeftDropdownBottom.map(item =>
-                      <WebHeaderItem
-                        className={`li-${item.id}`}
-                        key={item.position + item.id}
-                        href={item.url}
-                        text={item.name}
-                      />
-                    )}
-                  </ul>
-                </li>
               </ul>
               <ul className="nav navbar-nav navbar-right">
                 {itemsRight.map(item =>
                   <WebHeaderItem
-                    className={`li-${item.id} no-basic`}
+                    className={`li-${item.id} navbar-item`}
                     key={item.position + item.id}
-                    href={item.url}
-                    text={item.name}
+                    item={item}
                   />
                 )}
-                <li>
-                  <a
-                    className="signin-button login"
-                    href={this.isDefaultLoginText() ? '#' : 'https://manage.auth0.com'}
-                    onClick={this.props.loginButtonOnClick}
-                  >
-                    {this.props.loginButtonText}
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
