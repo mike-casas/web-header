@@ -27,11 +27,9 @@ class WebHeaderDropdown extends Component {
   itemHoverHandler(highlight){
     if(!highlight) return;
 
-    console.log(highlight);
-    // Want to update the state adding the highlighted item
-    // this.setState({
-    //   highlight: "test"
-    // });
+    this.setState({
+      highlight: highlight
+    });
   };
 
   render(){
@@ -39,7 +37,7 @@ class WebHeaderDropdown extends Component {
       <div className={cx('navbar-dropdown', {
           'with-highlight': this.props.hasHighlight
         })}>
-        <WebHeaderDropdownList data={this.props.data} itemHoverHandler={this.itemHoverHandler}/>
+        <WebHeaderDropdownList data={this.props.data} parentReference={this} itemHoverHandler={this.itemHoverHandler}/>
         { this.props.hasHighlight ? <WebHeaderDropdownHighlight data={this.state.highlight}/> : null }
       </div>
     );
