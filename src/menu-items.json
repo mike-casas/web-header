@@ -45,12 +45,12 @@
         "id": "overview",
         "href": "https://auth0.com/why-auth0",
         "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/cats/1/",
-          "title": "Highlight 1",
-          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
-          "description": "Highligh 1 description Lorem ipsum dolor sit amet.",
-          "userName": "Marco Gomes",
-          "date": "February 08, 2016"
+          "imageUrl": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
+          "title": "Ruby Authentication: Secure Your Rack Application",
+          "description": "JSON Web Tokens (JWT) provide an easy way to add authentication to Ruby apps.",
+          "userAvatar": "https://s.gravatar.com/avatar/6c0654e56c8c73ffee8f76fe03d18ccf?s=80",
+          "userName": "Alex Sears",
+          "date": "Today"
         }
       },
       {
@@ -58,12 +58,12 @@
         "id": "customers",
         "href": "https://auth0.com/customers",
         "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/cats/2/",
-          "title": "Highlight 2.",
-          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
-          "description": "Highligh 2 description Lorem ipsum dolor sit amet.",
-          "userName": "Harry Roberts",
-          "date": "February 08, 2016"
+          "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
+          "title": "Cookies vs Tokens: The Definitive Guide",
+          "userAvatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
+          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
+          "userName": "Ado Kukic",
+          "date": "3 days ago"
         }
       },
       {
@@ -84,7 +84,15 @@
       {
         "name": "Industries",
         "id": "industries",
-        "href": "https://auth0.com/industries"
+        "href": "https://auth0.com/industries",
+        "highlight": {
+          "imageUrl": "https://cdn.auth0.com/blog/analytics-matter/logo.png",
+          "title": "Insight and Execution: Why Analytics Matter",
+          "description": "3 ways you can use Analytics to build your product.",
+          "userAvatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
+          "userName": "Diego Poza",
+          "date": "7 days ago"
+        }
       },
       {
         "name": "Others",
