@@ -3,6 +3,7 @@ import commonConfig from './webpack.common.config.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import path from 'path';
+import CarteBlanche from 'carte-blanche';
 
 const DEBUG = process.env.NODE_ENV !== 'production';
 
@@ -35,6 +36,13 @@ config.plugins.push(
     title: 'Auth0 Web Header Component',
     template: './tools/playground-template.ejs',
     inject: 'body'
+  })
+);
+
+config.plugins.push(
+  new CarteBlanche({
+    componentRoot: './src',
+    dest: 'variations'
   })
 );
 
