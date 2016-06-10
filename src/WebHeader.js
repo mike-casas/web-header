@@ -1,8 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
-import cx from 'classnames';
 import WebHeaderItem from './WebHeaderItem';
 import menuItems from './menu-items.json';
+import styles from './WebHeader.styl';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 // Lists of links by their position on the header
 const itemsLeft = menuItems.filter(item => (item.position === undefined || item.position === 'left') && (item.active === undefined || item.active === true));
@@ -72,7 +75,7 @@ class WebHeader extends Component {
 
   render() {
     return (
-      <header className="site-header">
+      <header className={cx('header')}>
         <nav className="navbar navbar-default">
           <div className="container">
             <div className="navbar-header" ref="menuDropdown">
