@@ -24,8 +24,11 @@ const config = {
       loader: 'json-loader'
     }, {
       test: /\.styl$/,
-      loader: `css-loader?${JSON.stringify({ sourceMap: DEBUG, minimize: !DEBUG })}` +
-        '!stylus-loader'
+      loader: `css-loader?${JSON.stringify({
+        sourceMap: DEBUG,
+        minimize: !DEBUG,
+        modules: true
+      })}!stylus-loader`
     }]
   },
 
