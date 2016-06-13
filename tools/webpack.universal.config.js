@@ -12,8 +12,7 @@ const config = merge({}, commonConfig, {
 });
 
 config.module.loaders
-  .filter(x => x.loader === `css-loader?${JSON.stringify({ sourceMap: DEBUG, minimize: !DEBUG })}` +
-    '!stylus-loader')
+  .filter(x => x.loader === config.stylLoader)
   .forEach(x => (x.loader = `isomorphic-style-loader!${x.loader}`));
 
 export default config;

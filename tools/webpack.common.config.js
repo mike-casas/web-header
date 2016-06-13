@@ -4,6 +4,13 @@ import poststylus from 'poststylus';
 
 const DEBUG = process.env.NODE_ENV !== 'production';
 
+const stylLoader = `css-loader?${JSON.stringify({
+  sourceMap: DEBUG,
+  minimize: !DEBUG,
+  modules: true,
+  localIdentName: DEBUG ? '[path][name]--[local]--[hash:base64:5]' : '[hash:base64:4]'
+})}!stylus-loader`;
+
 const config = {
   entry: [
     './src'
@@ -24,11 +31,7 @@ const config = {
       loader: 'json-loader'
     }, {
       test: /\.styl$/,
-      loader: `css-loader?${JSON.stringify({
-        sourceMap: DEBUG,
-        minimize: !DEBUG,
-        modules: true
-      })}!stylus-loader`
+      loader: stylLoader
     }]
   },
 
@@ -71,7 +74,9 @@ const config = {
     colors: true,
     reasons: DEBUG,
     timings: true
-  }
+  },
+
+  stylLoader
 };
 
 module.exports = config;

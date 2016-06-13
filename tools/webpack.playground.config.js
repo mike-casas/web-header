@@ -27,11 +27,7 @@ config.module.loaders
   .forEach(x => (x.include.push(path.join(__dirname))));
 
 config.module.loaders
-  .filter(x => x.loader === `css-loader?${JSON.stringify({
-    sourceMap: DEBUG,
-    minimize: !DEBUG,
-    modules: true
-  })}!stylus-loader`)
+  .filter(x => x.loader === config.stylLoader)
   .forEach(x => (x.loader = `style-loader!${x.loader}`));
 
 config.plugins.push(
