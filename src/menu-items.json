@@ -53,7 +53,7 @@
     "dropdownClass": "highlightDropdown",
     "childrens": [
       {
-        "componentType" : "list",
+        "componentType": "list",
         "key": "why-auth0-list",
         "hasArrows": true,
         "items": [
@@ -62,12 +62,12 @@
             "id": "overview",
             "href": "https://auth0.com/why-auth0",
             "highlight": {
-              "imageUrl": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
+              "thumbnail": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
               "title": "Ruby Authentication: Secure Your Rack Application",
               "description": "JSON Web Tokens (JWT) provide an easy way to add authentication to Ruby apps.",
               "time": "2 days ago",
               "linkText": "See more",
-              "linkUrl": "www.auth0.com"
+              "link": "www.auth0.com"
             }
           },
           {
@@ -75,12 +75,12 @@
             "id": "customers",
             "href": "https://auth0.com/customers",
             "highlight": {
-              "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
+              "thumbnail": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
               "title": "Cookies vs Tokens: The Definitive Guide",
               "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
               "time": "3 days ago",
               "linkText": "See more",
-              "linkUrl": "www.auth0.com"
+              "link": "www.auth0.com"
             }
           },
           {
@@ -103,12 +103,12 @@
             "id": "industries",
             "href": "https://auth0.com/industries",
             "highlight": {
-              "imageUrl": "https://cdn.auth0.com/blog/analytics-matter/logo.png",
+              "thumbnail": "https://cdn.auth0.com/blog/analytics-matter/logo.png",
               "title": "Insight and Execution: Why Analytics Matter",
               "description": "3 ways you can use Analytics to build your product.",
               "time": "27/10",
               "linkText": "See more",
-              "linkUrl": "www.auth0.com"
+              "link": "www.auth0.com"
             }
           }
         ]
@@ -117,11 +117,11 @@
         "componentType": "highlight",
         "title": "Featured in Case Studies",
         "default": {
-          "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
+          "thumbnail": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
           "title": "Cookies vs Tokens: The Definitive Guide",
           "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
           "linkText": "See more",
-          "linkUrl": "www.auth0.com"
+          "link": "www.auth0.com"
         }
       }
     ]
@@ -180,12 +180,16 @@
       {
         "componentType": "highlight",
         "title": "Latest from Auth0 blog",
+        "id": "last-blog",
         "default": {
-          "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
-          "title": "Cookies vs Tokens: The Definitive Guide",
-          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
-          "linkText": "See more",
-          "linkUrl": "www.auth0.com"
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Creating your first Laravel app and adding authentication",
+          "excerpt": "TL;DR: Laravel is a great PHP framework. Currently, it is the most starred PHP project on Github and a lot of companies and people a...",
+          "link": "https://auth0.com/blog/2016/06/23/creating-your-first-laravel-app-and-adding-authentication/",
+          "date": "June 23",
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/laravel-auth/logo.png",
+          "linkText": "See more"
         }
       }
     ]

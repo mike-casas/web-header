@@ -11,7 +11,7 @@ const DropdownHighlight = ({ data, parentClass }) =>
   >
     { data.componentTitle ? <h4 className={cx('section-title')}>{data.componentTitle}</h4> : null }
     <div className={cx('content')}>
-      <img src={data.imageUrl} alt="" />
+      <img src={data.thumbnail} alt="" />
       <h5 className={cx('title')}>{data.title}</h5>
       {data.description ?
         <p className={cx('text')}>{data.description}</p>
@@ -19,8 +19,8 @@ const DropdownHighlight = ({ data, parentClass }) =>
       {data.time ?
         <span className={cx('time')}>{data.time}</span>
         : null }
-      { (data.linkText && data.linkUrl) ?
-        <a href={data.linkUrl} className={cx('link')}>{data.linkText}</a>
+      { (data.linkText && data.link) ?
+        <a href={data.link} className={cx('link')}>{data.linkText}</a>
         : null }
     </div>
   </div>
