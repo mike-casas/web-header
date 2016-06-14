@@ -1,2 +1,267 @@
-.header
-  background: blue
+@import 'base';
+
+// .site-header.open
+//   +breakpoint("desktop", "max")
+//     position fixed
+//     top 0
+//     right 0
+//     bottom 0
+//     left 0
+//     height 100%
+//     width 100%
+//     overflow-y scroll
+//
+//     .navbar-left
+//       padding-bottom 85px
+//
+//     .navbar-right
+//       position fixed
+//       bottom 0
+//       right 0
+//       left 0
+//       padding 40px 0 15px
+//       background-color white
+//       background linear-gradient(to bottom, transparent 0%, rgba(white,0.95) 50%)
+
+.site-header
+  border-bottom 1px solid rgba(black, 0.1)
+
+.collapse
+  composes clearfix
+  display block
+
+.navigation
+  composes clearfix
+  position relative
+  color $navbar-default-link-color
+  list-style-type none
+  margin 0
+
+  +breakpoint("desktop")
+    navbar-vertical-align(18px, $navbar-desktop-height)
+
+.navigation-left
+  composes navigation
+  float left
+  padding-left 30px
+
+.navigation-right
+  composes navigation
+  float right
+
+// .collapse
+//   display block
+
+    // Dark version styles only apply for desktop view
+    // &.dark-version
+    //   border-bottom 1px solid rgba(white, 0.15)
+    //   color $navbar-dark-link-color
+
+  // Reset container width at mobile view
+  // .container
+  //   +breakpoint("desktop", "max")
+  //     width 100%
+  //     max-width 100%
+
+
+  // .navbar-collapse
+  //   background-color rgba(white, 0.95)
+
+
+  // Both navbar header and collapse
+  //
+  // When a container is present, change the behavior of the header and collapse.
+
+  // .container,
+  // .container-fluid
+  //   > .navbar-header,
+  //   > .navbar-collapse
+  //     margin-right (-($navbar-padding-horizontal))
+  //     margin-left (-($navbar-padding-horizontal))
+  //
+  //     +breakpoint("desktop")
+  //       margin-right 0
+  //       margin-left 0
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+
+// .navbar-nav
+//
+//   // Set main navbar padding in desktop view
+//   &.navbar-left
+//     +breakpoint("desktop")
+//       navbar-vertical-align(58px, $navbar-desktop-height)
+//       padding-left 30px
+//       float left
+//       position relative
+//
+//   &.navbar-right
+//     .btn
+//       padding 8px 16px
+//
+//     .navbar-item + .navbar-item
+//       margin-left 15px
+//
+//     +breakpoint("desktop", "max")
+//       text-align center
+//
+//       li
+//         display inline-block
+//
+//     +breakpoint("desktop")
+//       navbar-vertical-align(34px, $navbar-desktop-height)
+//
+//
+//   .navbar-dropdown
+//     z-index 1000
+//
+//     +breakpoint("desktop")
+//       color $color-text
+//       position absolute
+//       background-color white
+//       width 182px
+//       border-radius 3px
+//       top 45px
+//       left 45px
+//       border 1px solid $bg-color-gray
+//       box-shadow 0 2px 7px rgba(black, 0.05)
+//       transition visibility 0s 0.2s, opacity 0.2s, margin-top 0.2s
+//       opacity 0
+//       visibility hidden
+//       margin-top 0
+//
+//     &.with-highlight
+//       +breakpoint("desktop")
+//         height 280px
+//         width 602px
+//
+//     &.more-dropdown
+//
+//         .highlight-content
+//           margin 20px 15px 0
+//           width calc(100% - 30px)
+//           padding-left 84px
+//
+//           img
+//             width 64px
+//             height 64px
+//
+//           .highlight-title
+//             font-size 14px
+//
+//           .highlight-date
+//             font-size 12px
+//
+//         +breakpoint("desktop")
+//
+//           .navbar-dropdown-list
+//             width 170px
+//
+//             & + .navbar-dropdown-list
+//               margin-left -20px
+//
+//           .section-title
+//             margin-top 15px
+//
+//           .navbar-dropdown-highlight
+//             width 295px
+//             margin-left -15px
+//             border 0
+//             padding-top 5px
+//
+//   .section-title
+//     padding-bottom 10px
+//     margin 20px 10px 10px
+//     font-size 11px
+//     text-transform uppercase
+//     letter-spacing 1px
+//     color $color-text-black
+//     border-bottom 1px solid $bg-color-gray
+//
+//   // Highlight section
+//
+//   .navbar-dropdown-highlight
+//     position relative
+//     padding 0 5px
+//
+//     +breakpoint("desktop", "max")
+//       padding-left 10px
+//       padding-right 10px
+//
+//     +breakpoint("desktop")
+//       height 100%
+//       border-left 1px solid $bg-color-gray
+//       width 418px
+//       float left
+//
+//     .highlight-content
+//       position relative
+//       width calc(100% - 40px)
+//       margin 0 20px
+//       padding-left 110px
+//       margin-top 20px
+//
+//       > img
+//         position absolute
+//         top 0px
+//         left 0px
+//         width 90px
+//         height 90px
+//         background-color $bg-color-gray
+//         border-radius 50%
+//
+//     .highlight-title
+//       font-size 18px
+//       line-height 1.5em
+//       margin-top 0
+//       margin-bottom 5px
+//
+//     .highlight-text
+//       margin-bottom 0
+//       color $color-text
+//
+//     .highlight-link
+//       display block
+//       margin-top 10px
+//       line-height 2
+//       color $link-color
+//
+//       &:hover
+//         color $link-hover-color
+//
+//         &:after
+//           transform translateX(3px)
+//
+//       &:after
+//         content ''
+//         display inline-block
+//         width 0
+//         height 0
+//         margin-left 10px
+//         border-top 4px solid transparent
+//         border-right 4px solid transparent
+//         border-bottom 4px solid transparent
+//         border-left 4px solid currentColor
+//         transition transform 0.2s
+//
+// // Component alignment
+// //
+// // Repurpose the pull utilities as their own navbar utilities to avoid specificity
+// // issues with parents and chaining. Only do this when the navbar is uncollapsed
+// // though so that navbar contents properly stack and align in mobile.
+// //
+// // Declared after the navbar components to ensure more specificity on the margins.
+//
+// +breakpoint("desktop")
+//   .navbar-left
+//     float left !important
+//
+//   .navbar-right
+//     float right !important
+//     margin-right -($navbar-padding-horizontal)
+//
+//     ~ .navbar-right
+//       margin-right 0

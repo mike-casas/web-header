@@ -106,6 +106,7 @@
     "id": "how-it-works",
     "href": "https://auth0.com/pricing",
     "hasHighlight": true,
+    "position": "right",
     "childrens": [
       {
         "name": "Overview",
@@ -153,7 +154,8 @@
   {
     "name": "Documentation",
     "id": "documentation",
-    "href": "https://auth0.com/docs"
+    "href": "https://auth0.com/docs",
+    "position": "right"
   },
   {
     "name": "More",

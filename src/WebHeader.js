@@ -1,32 +1,30 @@
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
-import WebHeaderItem from './WebHeaderItem';
+import Head from './Head';
+import Item from './Item';
 import menuItems from './menu-items.json';
 import styles from './WebHeader.styl';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
-
-// Lists of links by their position on the header
-const itemsLeft = menuItems.filter(item => (item.position === undefined || item.position === 'left') && (item.active === undefined || item.active === true));
-const itemsRight = menuItems.filter(item => item.position === 'right' && (item.active === undefined || item.active === true));
+const items = menuItems.filter(item => item.active === undefined || item.active === true);
 
 
 class WebHeader extends Component {
   static propTypes = {
     loginButtonText: PropTypes.string,
     loginButtonOnClick: PropTypes.func,
-    promoteLink: PropTypes.bool,
-    promoteLinkURL: PropTypes.string,
-    promoteLinkText: PropTypes.string
+    promoteLink: PropTypes.object
   };
 
   static defaultProps = {
     loginButtonText: 'Login',
     loginButtonOnClick: () => {},
-    promoteLink: true,
-    promoteLinkURL: 'https://auth0.com/jobs',
-    promoteLinkText: 'We\'re hiring!'
+    promoteLink: {
+      active: true,
+      url: 'https://auth0.com/jobs',
+      text: 'We\'re hiring!'
+    }
   };
 
   constructor(props) {
@@ -75,58 +73,30 @@ class WebHeader extends Component {
 
   render() {
     return (
-      <header className={cx('header')}>
-        <nav className="navbar navbar-default">
-          <div className="container">
-            <div className="navbar-header" ref="menuDropdown">
-              <button
-                type="button"
-                className="navbar-toggle collapsed"
-                onClick={this.navbarDropdownHandler}
-              >
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
-              <h1 className="navbar-brand">
-                <a href="/" rel="home" className="logo">
-                  <span>Auth0</span>
-                </a>
-                {
-                  this.props.promoteLink
-                  ?
-                  <a
-                    href={this.props.promoteLinkURL}
-                    className="hiring animated bounce"
-                    >{this.props.promoteLinkText}</a>
-                  : null
-                }
-              </h1>
-            </div>
+      <header className={cx('site-header')}>
+        <nav className={cx('navbar')}>
+          <div className={cx('container')}>
+            <Head
+              toggleDropdownHandler = {this.navbarDropdownHandler}
+              promoteLink = {this.props.promoteLink}
+            />
             <div
-              className={cx('navbar-collapse', {
+              className={cx('collapse', {
                 // collapse: !this.state.navbarDropdownIsOpen,
                 in: this.state.navbarDropdownIsOpen
               })}
             >
-              <ul className="no-basic nav navbar-nav navbar-left">
-                {itemsLeft.map(item =>
-                  <WebHeaderItem
-                    className={`li-${item.id} navbar-item`}
+              <ul className={cx('navigation-left')}>
+                {items.map(item =>
+                  <Item
                     key={item.position + item.id}
                     item={item}
                   />
                 )}
               </ul>
-              <ul className="nav navbar-nav navbar-right">
-                {itemsRight.map(item =>
-                  <WebHeaderItem
-                    className={`li-${item.id} navbar-item`}
-                    key={item.position + item.id}
-                    item={item}
-                  />
-                )}
+              <ul className={cx('navigation-right')}>
+                <a href="#" className="btn" >Talk to sales</a>
+                <button>Log in</button>
               </ul>
             </div>
           </div>

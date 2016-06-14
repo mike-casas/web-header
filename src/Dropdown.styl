@@ -1,0 +1,63 @@
+@import 'base'
+
+.dropdown
+  z-index 1000
+
+  +breakpoint("desktop")
+    color $color-text
+    position absolute
+    background-color white
+    width 182px
+    border-radius 3px
+    top 30px
+    left 20px
+    border 1px solid $bg-color-gray
+    box-shadow 0 2px 7px rgba(black, 0.05)
+    transition visibility 0s 0.2s, opacity 0.2s, margin-top 0.2s
+    opacity 0
+    visibility hidden
+    margin-top 0
+
+
+.highlightDropdown
+  composes dropdown
+
+  +breakpoint("desktop")
+    height 280px
+    width 602px
+
+
+.moreDropdown
+  composes dropdown
+
+  .highlight-content
+    margin 20px 15px 0
+    width calc(100% - 30px)
+    padding-left 84px
+
+    img
+      width 64px
+      height 64px
+
+    .highlight-title
+      font-size 14px
+
+    .highlight-date
+      font-size 12px
+
+  +breakpoint("desktop")
+
+    .navbar-dropdown-list
+      width 170px
+
+      & + .navbar-dropdown-list
+        margin-left -20px
+
+    .section-title
+      margin-top 15px
+
+    .navbar-dropdown-highlight
+      width 295px
+      margin-left -15px
+      border 0
+      padding-top 5px

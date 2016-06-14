@@ -1,0 +1,112 @@
+.clearfix:after
+  visibility hidden
+  display block
+  font-size 0
+  content ""
+  clear both
+  height 0
+
+navbar-vertical-align($element-height, $container-height)
+  margin-top (($container-height - $element-height) / 2)
+  margin-bottom (($container-height - $element-height) / 2)
+
+:global
+  body
+    font-family 'Arial', sans-serif
+
+  // Screen readers style
+  .sr-only
+    position absolute
+    width 1px
+    height 1px
+    padding 0
+    margin -1px
+    overflow hidden
+    clip rect(0,0,0,0)
+    border 0
+
+//
+// Responsive
+//
+breakpoint-mobile = 320px
+breakpoint-mobile-landscape = 568px
+breakpoint-tablet = 768px
+breakpoint-desktop = 992px
+breakpoint-desktop-hd = 1200px
+
+breakpoint(point, orientation = "min")
+  if point == "mobile"
+    if orientation == "max"
+      @media ({orientation}-width: (breakpoint-mobile - 1) )
+        {block}
+    else
+      @media ({orientation}-width: breakpoint-mobile)
+        {block}
+
+  else if point == "mobile-landscape"
+    if orientation == "max"
+      @media ({orientation}-width: (breakpoint-mobile-landscape - 1) )
+        {block}
+    else
+      @media ({orientation}-width: breakpoint-mobile-landscape)
+        {block}
+
+
+  else if point == "tablet"
+    if orientation == "max"
+      @media ({orientation}-width: (breakpoint-tablet - 1) )
+        {block}
+    else
+      @media ({orientation}-width: breakpoint-tablet)
+        {block}
+
+  else if point == "desktop"
+    if orientation == "max"
+      @media ({orientation}-width: (breakpoint-desktop - 1) )
+        {block}
+    else
+      @media ({orientation}-width: breakpoint-desktop)
+        {block}
+
+  else if point == "desktop-hd"
+    if orientation == "max"
+      @media ({orientation}-width: (breakpoint-desktop-hd - 1) )
+        {block}
+    else
+      @media ({orientation}-width: breakpoint-desktop-hd)
+        {block}
+
+  else if point == "retina-only"
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      {block}
+
+
+$grid-gutter-width ?= 15px //test
+$color-blue-light ?= #44c7f4
+
+$navbar-padding-horizontal ?=              floor($grid-gutter-width / 2)
+
+// Basics of a navbar
+$navbar-mobile-height ?=                   75px
+$navbar-desktop-height ?=                  100px
+
+// Navbar links
+$navbar-default-link-color ?=              black //$color-text-black
+$navbar-default-link-hover-color ?=        black
+$navbar-dark-link-color ?=                 white //$color-text-contrast-light
+$navbar-dark-link-hover-color ?=           white
+
+// Navbar toggle
+$navbar-toggle-background-color ?=         gray //$color-gray
+$navbar-toggle-background-hover-color ?=   black
+$color-text ?= black
+$bg-color-gray ?= gray
+
+.container
+  margin 0 auto
+  @media (min-width: 768px)
+    width: 735px
+  @media (min-width: 992px)
+    width: 955px
+  @media (min-width: 1200px)
+    width: 1155px
