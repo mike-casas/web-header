@@ -7,7 +7,10 @@ const cx = classNames.bind(styles);
 
 const Item = ({ item }) =>
   <li className={cx('item')}>
-    <a href={item.href} className={cx('dropdownLink')}>
+    <a href={item.href} className={cx({
+      link: !item.childrens,
+      dropdownLink: item.childrens })}
+    >
       {item.name}
       {item.childrens ?
         <svg

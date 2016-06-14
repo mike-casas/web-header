@@ -1,0 +1,52 @@
+@import 'base'
+
+.item
+  position relative
+
+  > a
+    display block
+    padding 0 10px
+    height 44px
+    line-height 44px
+    text-decoration none
+    white-space nowrap
+    color rgba(black, 0.64)
+
+    > svg,
+    > span
+      vertical-align middle
+
+    > svg
+      display inline-block
+      max-width 20px
+      max-height 20px
+      margin-right 12px
+      filter grayscale(100%)
+      opacity .5
+      transition filter 0.1s, opacity 0.1s
+
+  &:hover > img
+    opacity 1
+    filter none
+
+.arrowItem
+  composes item
+
+  +breakpoint("desktop")
+    &:after
+      content ''
+      display inline-block
+      position absolute
+      right 15px
+      top 50%
+      transform translateY(-50%)
+      width 0
+      height 0
+      border-top 4px solid transparent
+      border-right 4px solid transparent
+      border-bottom 4px solid transparent
+      border-left 4px solid rgba(black, 0.2)
+      transition border 0.1s
+
+    &:hover:after
+      border-left-color black

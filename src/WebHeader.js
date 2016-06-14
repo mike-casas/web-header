@@ -18,7 +18,7 @@ class WebHeader extends Component {
   };
 
   static defaultProps = {
-    loginButtonText: 'Login',
+    loginButtonText: 'Log in',
     loginButtonOnClick: () => {},
     promoteLink: {
       active: true,
@@ -31,13 +31,11 @@ class WebHeader extends Component {
     super(props);
 
     this.navbarDropdownHandler = ::this.navbarDropdownHandler;
-    this.moreDropdownHandler = ::this.moreDropdownHandler;
     this.handleDocumentClick = ::this.handleDocumentClick;
   }
 
   state = {
-    navbarDropdownIsOpen: false,
-    moreDropdownIsOpen: false
+    navbarDropdownIsOpen: false
   };
 
   componentDidMount() {
@@ -54,17 +52,10 @@ class WebHeader extends Component {
     if (!findDOMNode(this.refs.menuDropdown).contains(event.target)) {
       this.setState({ navbarDropdownIsOpen: false });
     }
-    if (!findDOMNode(this.refs.menuItemsDropdown).contains(event.target)) {
-      this.setState({ moreDropdownIsOpen: false });
-    }
   }
 
   navbarDropdownHandler() {
     this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen });
-  }
-
-  moreDropdownHandler() {
-    this.setState({ moreDropdownIsOpen: !this.state.moreDropdownIsOpen });
   }
 
   isDefaultLoginText() {

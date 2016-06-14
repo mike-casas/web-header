@@ -28,17 +28,17 @@ class Dropdown extends Component {
     })()
   };
 
-  itemHoverHandler(highlight) {
-    // if (!highlight) return;
-    //
-    // this.setState({ highlight });
-    console.log("test");
-  }
+  // itemHoverHandler(highlight) {
+  //   if (!highlight) return;
+  //
+  //   this.setState({ highlight });
+  // }
 
   render() {
     return (
-      <div className={cx('dropdown', 'headerItemDropdown', {
-        withHighlight: this.props.hasHighlight
+      <div className={cx('headerItemDropdown', {
+        dropdown: !this.props.hasHighlight,
+        highlightDropdown: this.props.hasHighlight
       })}
       >
         <DropdownList
