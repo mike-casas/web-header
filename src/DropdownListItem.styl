@@ -6,17 +6,16 @@
   > a
     display block
     padding 0 10px
+    padding-right 30px
+    font-size 14px
     height 44px
     line-height 44px
     text-decoration none
     white-space nowrap
     color rgba(black, 0.64)
+    vertical-align middle
 
-    > svg,
-    > span
-      vertical-align middle
-
-    > svg
+    .icon
       display inline-block
       max-width 20px
       max-height 20px
@@ -24,8 +23,9 @@
       filter grayscale(100%)
       opacity .5
       transition filter 0.1s, opacity 0.1s
+      vertical-align middle
 
-  &:hover > img
+  &:hover .icon
     opacity 1
     filter none
 
@@ -37,7 +37,7 @@
       content ''
       display inline-block
       position absolute
-      right 15px
+      right 10px
       top 50%
       transform translateY(-50%)
       width 0

@@ -4,186 +4,162 @@
     "id": "products",
     "childrens": [
       {
-        "name": "Platform",
-        "id": "platform",
-        "href": "https://auth0.com/platform"
-      },
-      {
-        "name": "Enterprise",
-        "id": "enterprise",
-        "href": "https://auth0.com/enterprise"
-      },
-      {
-        "name": "Lock",
-        "id": "lock",
-        "href": "https://auth0.com/lock"
-      },
-      {
-        "name": "Passwordless",
-        "id": "passwordless",
-        "href": "https://auth0.com/passwordless"
-      },
-      {
-        "name": "Wordpress",
-        "id": "wordpress",
-        "href": "https://auth0.com/wordpress"
-      },
-      {
-        "name": "Webtask",
-        "id": "webtask",
-        "href": "https://webtask.io/"
+        "componentType": "list",
+        "items": [
+          {
+            "name": "Platform",
+            "id": "platform",
+            "href": "https://auth0.com/platform",
+            "icon": "auth0"
+          },
+          {
+            "name": "Enterprise",
+            "id": "enterprise",
+            "href": "https://auth0.com/enterprise",
+            "icon": "auth0"
+          },
+          {
+            "name": "Lock",
+            "id": "lock",
+            "href": "https://auth0.com/lock",
+            "icon": "auth0"
+          },
+          {
+            "name": "Passwordless",
+            "id": "passwordless",
+            "href": "https://auth0.com/passwordless",
+            "icon": "webtask"
+          },
+          {
+            "name": "Wordpress",
+            "id": "wordpress",
+            "href": "https://auth0.com/wordpress",
+            "icon": "webtask"
+          },
+          {
+            "name": "Webtask",
+            "id": "webtask",
+            "href": "https://webtask.io/",
+            "icon": "auth0"
+          }
+        ]
       }
     ]
   },
   {
     "name": "Why Auth0",
     "id": "why-auth0",
-    "hasHighlight": true,
     "childrens": [
       {
-        "name": "Overview",
-        "id": "overview",
-        "href": "https://auth0.com/why-auth0",
-        "highlight": {
-          "imageUrl": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
-          "title": "Ruby Authentication: Secure Your Rack Application",
-          "description": "JSON Web Tokens (JWT) provide an easy way to add authentication to Ruby apps.",
-          "userAvatar": "https://s.gravatar.com/avatar/6c0654e56c8c73ffee8f76fe03d18ccf?s=80",
-          "userName": "Alex Sears",
-          "date": "Today"
-        }
+        "componentType" : "list",
+        "hasArrows": true,
+        "items": [
+          {
+            "name": "Overview",
+            "id": "overview",
+            "href": "https://auth0.com/why-auth0",
+            "highlight": {
+              "imageUrl": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
+              "title": "Ruby Authentication: Secure Your Rack Application",
+              "description": "JSON Web Tokens (JWT) provide an easy way to add authentication to Ruby apps."
+            }
+          },
+          {
+            "name": "Customers",
+            "id": "customers",
+            "href": "https://auth0.com/customers",
+            "highlight": {
+              "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
+              "title": "Cookies vs Tokens: The Definitive Guide",
+              "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers."
+            }
+          },
+          {
+            "name": "Case Studies",
+            "id": "case-studies",
+            "href": "https://auth0.com/resources#case-studies"
+          },
+          {
+            "name": "Concepts",
+            "id": "concepts",
+            "href": "https://auth0.com/docs/applications"
+          },
+          {
+            "name": "Use Cases",
+            "id": "use-cases",
+            "href": "https://auth0.com/resources#use-cases"
+          },
+          {
+            "name": "Industries",
+            "id": "industries",
+            "href": "https://auth0.com/industries",
+            "highlight": {
+              "imageUrl": "https://cdn.auth0.com/blog/analytics-matter/logo.png",
+              "title": "Insight and Execution: Why Analytics Matter",
+              "description": "3 ways you can use Analytics to build your product."
+            }
+          }
+        ]
       },
       {
-        "name": "Customers",
-        "id": "customers",
-        "href": "https://auth0.com/customers",
-        "highlight": {
+        "componentType": "highlight",
+        "title": "Featured in Case Studies",
+        "default": {
           "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
           "title": "Cookies vs Tokens: The Definitive Guide",
-          "userAvatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
-          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
-          "userName": "Ado Kukic",
-          "date": "3 days ago"
-        }
-      },
-      {
-        "name": "Case Studies",
-        "id": "case-studies",
-        "href": "https://auth0.com/resources#case-studies"
-      },
-      {
-        "name": "Concepts",
-        "id": "concepts",
-        "href": "https://auth0.com/docs/applications"
-      },
-      {
-        "name": "Use Cases",
-        "id": "use-cases",
-        "href": "https://auth0.com/resources#use-cases"
-      },
-      {
-        "name": "Industries",
-        "id": "industries",
-        "href": "https://auth0.com/industries",
-        "highlight": {
-          "imageUrl": "https://cdn.auth0.com/blog/analytics-matter/logo.png",
-          "title": "Insight and Execution: Why Analytics Matter",
-          "description": "3 ways you can use Analytics to build your product.",
-          "userAvatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
-          "userName": "Diego Poza",
-          "date": "7 days ago"
-        }
-      },
-      {
-        "name": "Others",
-        "id": "others",
-        "href": "https://auth0.com/learn/#growth"
-      }
-    ]
-  },
-  {
-    "name": "How it works",
-    "id": "how-it-works",
-    "href": "https://auth0.com/pricing",
-    "position": "right",
-    "childrens": [
-      {
-        "name": "Overview",
-        "id": "overview",
-        "href": "https://auth0.com/how-it-works",
-        "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/",
-          "title": "Highlight 3",
-          "description": "Description for item 3",
-          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
-          "userName": "Marco Gomes",
-          "date": "February 08, 2016"
-        }
-      },
-      {
-        "name": "Security",
-        "id": "security",
-        "href": "https://auth0.com/security"
-      },
-      {
-        "name": "Availability & Trust",
-        "id": "availability-trust",
-        "href": "https://auth0.com/availability-trust"
-      },
-      {
-        "name": "Blog",
-        "id": "blog",
-        "href": "https://auth0.com/blog",
-        "highlight": {
-          "imageUrl": "http://lorempixel.com/400/400/",
-          "title": "Highlight 4",
-          "description": "Description for item 3",
-          "userAvatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcogomes/128.jpg",
-          "userName": "Marco Gomes",
-          "date": "February 08, 2016"
+          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers."
         }
       }
     ]
-  },
-  {
-    "name": "Pricing",
-    "id": "pricing",
-    "href": "https://auth0.com/pricing"
-  },
-  {
-    "name": "Documentation",
-    "id": "documentation",
-    "href": "https://auth0.com/docs",
-    "position": "right"
   },
   {
     "name": "More",
     "id": "more",
     "childrens": [
       {
-        "name": "About",
-        "id": "about",
-        "href": "https://auth0.com/about"
+        "componentType": "list",
+        "title": "Tech resources",
+        "items": [
+          {
+            "name": "Security",
+            "id": "security"
+          },
+          {
+            "name": "Availability",
+            "id": "availability"
+          },
+          {
+            "name": "Opensource",
+            "id": "opensource"
+          }
+        ]
       },
       {
-        "name": "Support",
-        "id": "support",
-        "href": "https://auth0.com/support"
+        "componentType": "list",
+        "title": "Additional info",
+        "items": [
+          {
+            "name": "About",
+            "id": "about"
+          },
+          {
+            "name": "Support",
+            "id": "support"
+          },
+          {
+            "name": "Partners",
+            "id": "partners"
+          }
+        ]
       },
       {
-        "name": "Partners",
-        "id": "partners",
-        "href": "https://auth0.com/partners"
-      },
-      {
-        "name": "Press",
-        "id": "press",
-        "href": "https://auth0.com/press"
-      },
-      {
-        "name": "Jobs",
-        "id": "jobs",
-        "href": "https://auth0.com/jobs"
+        "componentType": "highlight",
+        "title": "Latest from Auth0 blog",
+        "default": {
+          "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
+          "title": "Default vs Tokens: The Definitive Guide",
+          "description": "Default cookie vs token debate favors token-based authentication. Learn the advantages and get answers."
+        }
       }
     ]
   }

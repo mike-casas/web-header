@@ -5,18 +5,12 @@ const cx = classNames.bind(styles);
 
 const DropdownHighlight = ({ data }) =>
   <div className={cx('highlight')}>
-    <h4 className="highlight-section-title">Latest on blog</h4>
-    <div className="highlight-content">
+    <h4 className="section-title">Latest on blog</h4>
+    <div className={cx('content')}>
       <img src={data.imageUrl} alt="" />
-      <h5 className="highlight-title">{data.title}</h5>
-      <p className="highlight-text">{data.description}</p>
-      <div className="highlight-footer">
-        <div className="highlight-avatar">
-          <img src={data.userAvatar} alt={data.userName} />
-          <span>{data.userName}</span>
-        </div>
-        <div className="highlight-date">{data.date}</div>
-      </div>
+      <h5 className={cx('title')}>{data.title}</h5>
+      <p className={cx('text')}>{data.description}</p>
+      <a href="#" className={cx('link')}>See more case studies</a>
     </div>
   </div>
   ;

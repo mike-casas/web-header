@@ -35,7 +35,11 @@ const Item = ({ item }) =>
         : null}
     </a>
     { item.childrens ?
-      <Dropdown hasHighlight={item.hasHighlight} data={item.childrens} />
+      <Dropdown
+        data={item.childrens}
+        hasHighlight={item.hasHighlight}
+        hasArrows={item.hasArrows}
+      />
       : null }
   </li>;
 

@@ -10,11 +10,11 @@
 
   +breakpoint("desktop")
     height 100%
-    border-left 1px solid $bg-color-gray
+    border-left 1px solid rgba(black, 0.1)//$bg-color-gray
     width 418px
     float left
 
-  .highlight-content
+  .content
     position relative
     width calc(100% - 40px)
     margin 0 20px
@@ -30,21 +30,25 @@
       background-color $bg-color-gray
       border-radius 50%
 
-  .highlight-title
+  .title
     font-size 18px
+    font-weight 500
     line-height 1.5em
     margin-top 0
     margin-bottom 5px
 
-  .highlight-text
+  .text
     margin-bottom 0
     color $color-text
+    font-size 14px
+    line-height 1.75
 
-  .highlight-link
+  .link
     display block
     margin-top 10px
     line-height 2
     color $link-color
+    text-decoration none
 
     &:hover
       color $link-hover-color

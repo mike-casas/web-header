@@ -9,6 +9,7 @@ class Dropdown extends Component {
 
   static propTypes = {
     hasHighlight: PropTypes.bool,
+    hasArrows: PropTypes.bool,
     data: PropTypes.array
   };
 
@@ -45,6 +46,7 @@ class Dropdown extends Component {
           data={this.props.data}
           dropdownReference={this}
           itemHoverHandler={this.itemHoverHandler}
+          hasArrows={this.props.hasArrows}
         />
         { this.props.hasHighlight ?
           <DropdownHighlight data={this.state.highlight} />

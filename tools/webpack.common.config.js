@@ -32,6 +32,13 @@ const config = {
     }, {
       test: /\.styl$/,
       loader: stylLoader
+    }, {
+      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+      loader: 'url-loader',
+      query: {
+        name: DEBUG ? '[path][name].[ext]?[hash]' : '[hash].[ext]',
+        limit: 10000
+      }
     }]
   },
 
