@@ -5,6 +5,7 @@
     "childrens": [
       {
         "componentType": "list",
+        "key": "product-list",
         "items": [
           {
             "name": "Platform",
@@ -49,9 +50,11 @@
   {
     "name": "Why Auth0",
     "id": "why-auth0",
+    "dropdownClass": "highlightDropdown",
     "childrens": [
       {
         "componentType" : "list",
+        "key": "why-auth0-list",
         "hasArrows": true,
         "items": [
           {
@@ -115,10 +118,12 @@
   {
     "name": "More",
     "id": "more",
+    "dropdownClass": "moreDropdown",
     "childrens": [
       {
         "componentType": "list",
         "title": "Tech resources",
+        "key": "resources-list",
         "items": [
           {
             "name": "Security",
@@ -137,6 +142,7 @@
       {
         "componentType": "list",
         "title": "Additional info",
+        "key": "adittional-list",
         "items": [
           {
             "name": "About",

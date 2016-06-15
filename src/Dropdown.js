@@ -8,26 +8,23 @@ const cx = classNames.bind(styles);
 class Dropdown extends Component {
 
   static propTypes = {
-    hasHighlight: PropTypes.bool,
-    hasArrows: PropTypes.bool,
-    data: PropTypes.array
+    data: PropTypes.object
   };
 
   static defaultProps = {
-    hasHighlight: false,
-    data: []
+    data: {}
   };
 
-  state = {
+  // state = {
     // Return first highlight of list of items
-    highlight: (() => {
-      for (let i = 0; i < this.props.data.length; i++) {
-        if (this.props.data[i].highlight) {
-          return this.props.data[i].highlight;
-        }
-      }
-    })()
-  };
+    // highlight: (() => {
+    //   for (let i = 0; i < this.props.data.childrens.length; i++) {
+    //     if (this.props.data.childrens[i].highlight) {
+    //       return this.props.data.childrens[i].highlight;
+    //     }
+    //   }
+    // })()
+  // };
 
   // itemHoverHandler(highlight) {
   //   if (!highlight) return;
@@ -37,21 +34,19 @@ class Dropdown extends Component {
 
   render() {
     return (
-      <div className={cx('headerItemDropdown', {
-        dropdown: !this.props.hasHighlight,
-        highlightDropdown: this.props.hasHighlight
-      })}
-      >
-        <DropdownList
-          data={this.props.data}
-          dropdownReference={this}
-          itemHoverHandler={this.itemHoverHandler}
-          hasArrows={this.props.hasArrows}
-        />
-        { this.props.hasHighlight ?
-          <DropdownHighlight data={this.state.highlight} />
-          :
-          null }
+      <div className={cx('dropdown', 'headerItemDropdown', this.props.data.dropdownClass)}>
+        {
+          this.props.data.childrens.map((component) => {
+            switch (component.componentType) {
+              case 'list':
+                return <DropdownList key={component.key} data={component} />;
+              case 'highlight':
+                return <DropdownHighlight key={component.key} data={component} />;
+              default:
+                return null;
+            }
+          })
+        }
       </div>
     );
   }

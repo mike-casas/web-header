@@ -34,13 +34,7 @@ const Item = ({ item }) =>
         </svg>
         : null}
     </a>
-    { item.childrens ?
-      <Dropdown
-        data={item.childrens}
-        hasHighlight={item.hasHighlight}
-        hasArrows={item.hasArrows}
-      />
-      : null }
+    { item.childrens ? <Dropdown data={item} /> : null }
   </li>;
 
 Item.propTypes = {
