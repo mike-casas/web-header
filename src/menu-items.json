@@ -29,19 +29,19 @@
             "name": "Passwordless",
             "id": "passwordless",
             "href": "https://auth0.com/passwordless",
-            "icon": "webtask"
+            "icon": "auth0"
           },
           {
             "name": "Wordpress",
             "id": "wordpress",
             "href": "https://auth0.com/wordpress",
-            "icon": "webtask"
+            "icon": "auth0"
           },
           {
             "name": "Webtask",
             "id": "webtask",
             "href": "https://webtask.io/",
-            "icon": "auth0"
+            "icon": "webtask"
           }
         ]
       }
@@ -64,7 +64,10 @@
             "highlight": {
               "imageUrl": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
               "title": "Ruby Authentication: Secure Your Rack Application",
-              "description": "JSON Web Tokens (JWT) provide an easy way to add authentication to Ruby apps."
+              "description": "JSON Web Tokens (JWT) provide an easy way to add authentication to Ruby apps.",
+              "time": "2 days ago",
+              "linkText": "See more",
+              "linkUrl": "www.auth0.com"
             }
           },
           {
@@ -74,7 +77,10 @@
             "highlight": {
               "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
               "title": "Cookies vs Tokens: The Definitive Guide",
-              "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers."
+              "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
+              "time": "3 days ago",
+              "linkText": "See more",
+              "linkUrl": "www.auth0.com"
             }
           },
           {
@@ -99,7 +105,10 @@
             "highlight": {
               "imageUrl": "https://cdn.auth0.com/blog/analytics-matter/logo.png",
               "title": "Insight and Execution: Why Analytics Matter",
-              "description": "3 ways you can use Analytics to build your product."
+              "description": "3 ways you can use Analytics to build your product.",
+              "time": "27/10",
+              "linkText": "See more",
+              "linkUrl": "www.auth0.com"
             }
           }
         ]
@@ -110,7 +119,9 @@
         "default": {
           "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
           "title": "Cookies vs Tokens: The Definitive Guide",
-          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers."
+          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
+          "linkText": "See more",
+          "linkUrl": "www.auth0.com"
         }
       }
     ]
@@ -136,6 +147,10 @@
           {
             "name": "Opensource",
             "id": "opensource"
+          },
+          {
+            "name": "Jobs",
+            "id": "jobs"
           }
         ]
       },
@@ -155,6 +170,10 @@
           {
             "name": "Partners",
             "id": "partners"
+          },
+          {
+            "name": "Jobs",
+            "id": "jobs"
           }
         ]
       },
@@ -164,7 +183,7 @@
         "default": {
           "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
           "title": "Default vs Tokens: The Definitive Guide",
-          "description": "Default cookie vs token debate favors token-based authentication. Learn the advantages and get answers."
+          "time": "10 days ago"
         }
       }
     ]

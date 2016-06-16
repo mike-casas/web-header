@@ -15,6 +15,12 @@ class Dropdown extends Component {
     data: {}
   };
 
+  constructor(props) {
+    super(props);
+
+    this.itemHoverHandler = this.itemHoverHandler.bind(this);
+  }
+
   // state = {
     // Return first highlight of list of items
     // highlight: (() => {
@@ -26,11 +32,12 @@ class Dropdown extends Component {
     // })()
   // };
 
-  // itemHoverHandler(highlight) {
-  //   if (!highlight) return;
-  //
-  //   this.setState({ highlight });
-  // }
+  itemHoverHandler() {
+    console.log(this);
+    // if (!highlight) return;
+    //
+    // this.setState({ highlight });
+  }
 
   render() {
     return (
@@ -39,9 +46,22 @@ class Dropdown extends Component {
           this.props.data.childrens.map((component) => {
             switch (component.componentType) {
               case 'list':
-                return <DropdownList key={component.key} data={component} />;
+                return (
+                  <DropdownList
+                    key={component.key}
+                    data={component}
+                    parentClass={this.props.data.dropdownClass}
+                    itemHoverHandler={this.itemHoverHandler.bind(this)}
+                  />
+                );
               case 'highlight':
-                return <DropdownHighlight key={component.key} data={component} />;
+                return (
+                  <DropdownHighlight
+                    key={component.key}
+                    data={component}
+                    parentClass={this.props.data.dropdownClass}
+                  />
+                );
               default:
                 return null;
             }

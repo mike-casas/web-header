@@ -11,6 +11,8 @@ navbar-vertical-align($element-height, $container-height)
   margin-bottom (($container-height - $element-height) / 2)
 
 :global
+
+  // DEV
   body
     font-family "Avenir Next","avenir-next-web","Helvetica Neue",Hevetica,sans-serif;
 
@@ -18,11 +20,10 @@ navbar-vertical-align($element-height, $container-height)
     box-sizing border-box
 
   .section-title
-    padding-bottom 10px
-    margin 20px 10px 10px
+    padding-bottom 5px
+    margin 12px 0 10px 0
     font-size 13px
-    font-weight 500
-    letter-spacing 1px
+    font-weight 400
     color $color-text-black
     border-bottom 1px solid rgba(black, 0.1)//$bg-color-gray
 
@@ -36,15 +37,6 @@ navbar-vertical-align($element-height, $container-height)
     overflow hidden
     clip rect(0,0,0,0)
     border 0
-
-//
-// Responsive
-//
-breakpoint-mobile = 320px
-breakpoint-mobile-landscape = 568px
-breakpoint-tablet = 768px
-breakpoint-desktop = 992px
-breakpoint-desktop-hd = 1200px
 
 breakpoint(point, orientation = "min")
   if point == "mobile"
@@ -91,28 +83,6 @@ breakpoint(point, orientation = "min")
   else if point == "retina-only"
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
       {block}
-
-
-$grid-gutter-width ?= 15px //test
-$color-blue-light ?= #44c7f4
-
-$navbar-padding-horizontal ?=              floor($grid-gutter-width / 2)
-
-// Basics of a navbar
-$navbar-mobile-height ?=                   75px
-$navbar-desktop-height ?=                  100px
-
-// Navbar links
-$navbar-default-link-color ?=              black //$color-text-black
-$navbar-default-link-hover-color ?=        black
-$navbar-dark-link-color ?=                 white //$color-text-contrast-light
-$navbar-dark-link-hover-color ?=           white
-
-// Navbar toggle
-$navbar-toggle-background-color ?=         gray //$color-gray
-$navbar-toggle-background-hover-color ?=   black
-$color-text ?= black
-$bg-color-gray ?= gray
 
 .container
   margin 0 auto

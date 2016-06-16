@@ -1,13 +1,15 @@
 @import 'base'
+@import 'variables'
 
 .dropdownList
   float left
   height 100%
+  padding 5px 20px
+  width 180px
 
   ul
     list-style-type none
-    padding 5px 10px
-
+    padding 0
 
   +breakpoint("desktop", "max")
     float none
@@ -19,3 +21,11 @@
 
       .navbar-dropdown-item:hover:after
         border-left 4px solid black
+
+.moreDropdownList
+  padding-left 12px
+  padding-right 12px
+  width 150px
+
+  &:first-child
+    padding-left 20px

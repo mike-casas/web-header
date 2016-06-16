@@ -1,4 +1,5 @@
 @import 'base'
+@import 'variables'
 
 .dropdown
   z-index 1000
@@ -22,41 +23,13 @@
   composes dropdown
 
   +breakpoint("desktop")
-    height 280px
-    width 602px
+    height 276px
+    width 592px
 
 
 .moreDropdown
   composes dropdown
 
-  .highlight-content
-    margin 20px 15px 0
-    width calc(100% - 30px)
-    padding-left 84px
-
-    img
-      width 64px
-      height 64px
-
-    .highlight-title
-      font-size 14px
-
-    .highlight-date
-      font-size 12px
-
   +breakpoint("desktop")
-
-    .navbar-dropdown-list
-      width 170px
-
-      & + .navbar-dropdown-list
-        margin-left -20px
-
-    .section-title
-      margin-top 15px
-
-    .navbar-dropdown-highlight
-      width 295px
-      margin-left -15px
-      border 0
-      padding-top 5px
+    width 582px
+    height 276px

@@ -64,7 +64,7 @@ class WebHeader extends Component {
 
   render() {
     return (
-      <header className={cx('site-header')}>
+      <header className={cx('siteHeader')}>
         <nav className={cx('navbar')}>
           <div className={cx('container')}>
             <Head
@@ -77,7 +77,7 @@ class WebHeader extends Component {
                 in: this.state.navbarDropdownIsOpen
               })}
             >
-              <ul className={cx('navigation-left')}>
+              <ul className={cx('navigationLeft')}>
                 {items.map(item =>
                   <Item
                     key={item.position + item.id}
@@ -85,9 +85,9 @@ class WebHeader extends Component {
                   />
                 )}
               </ul>
-              <ul className={cx('navigation-right')}>
-                <a href="#" className="btn" >Talk to sales</a>
-                <button>Log in</button>
+              <ul className={cx('navigationRight')}>
+                <a href="#" className={cx('btnTransparent')}>Talk to sales</a>
+                <button className={cx('btnSuccess')}>Log in</button>
               </ul>
             </div>
           </div>

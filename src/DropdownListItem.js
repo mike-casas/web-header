@@ -8,28 +8,30 @@ class DropdownListItem extends React.Component {
     item: PropTypes.object,
     itemHoverHandler: PropTypes.func,
     dropdownReference: PropTypes.object,
-    hasArrows: PropTypes.bool
+    hasArrow: PropTypes.bool,
+    parentClass: PropTypes.string
   };
 
   render() {
     const logos = {
-      auth0: 'https://cdn.auth0.com/styleguide/latest/lib/circle-logo/img/ruby.svg',
-      webtask: 'https://cdn.auth0.com/styleguide/latest/lib/circle-logo/img/angular.svg'
+      auth0: 'http://styleguide.auth0.com/lib/logos/img/badge.png',
+      webtask: 'https://webtask.io/images/symbol.svg'
     };
 
     return (
       <li
         className={cx({
-          item: !this.props.hasArrows,
-          arrowItem: this.props.hasArrows
+          item: !this.props.hasArrow,
+          arrowItem: this.props.hasArrow,
+          moreItem: this.props.parentClass === 'moreDropdown'
         })}
-        onMouseEnter={this.itemHoverHandler}
+        onMouseEnter={this.props.itemHoverHandler}
       >
       <a href={this.props.item.href}>
         {this.props.item.icon ?
           <img src={logos[this.props.item.icon]} className={cx('icon')} role="presentation" />
           : null }
-        {this.props.item.name}
+          <span className={cx('text')}>{this.props.item.name}</span>
       </a>
       </li>
     );

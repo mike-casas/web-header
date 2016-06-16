@@ -1,8 +1,11 @@
 @import 'base'
+@import 'variables'
 
-.highlight
+// Common styles for all variations
+.baseHighlight
   position relative
-  padding 0 5px
+  padding-top 5px
+  padding-bottom 5px
 
   +breakpoint("desktop", "max")
     padding-left 10px
@@ -10,25 +13,11 @@
 
   +breakpoint("desktop")
     height 100%
-    border-left 1px solid rgba(black, 0.1)//$bg-color-gray
-    width 418px
     float left
 
   .content
-    position relative
-    width calc(100% - 40px)
-    margin 0 20px
-    padding-left 110px
+    width 100%
     margin-top 20px
-
-    > img
-      position absolute
-      top 0px
-      left 0px
-      width 90px
-      height 90px
-      background-color $bg-color-gray
-      border-radius 50%
 
   .title
     font-size 18px
@@ -49,6 +38,7 @@
     line-height 2
     color $link-color
     text-decoration none
+    font-size 13px
 
     &:hover
       color $link-hover-color
@@ -67,3 +57,50 @@
       border-bottom 4px solid transparent
       border-left 4px solid currentColor
       transition transform 0.2s
+
+.highlight
+  composes baseHighlight
+
+  padding-left 20px
+  padding-right 20px
+
+  +breakpoint("desktop")
+    width 410px
+    border-left 1px solid rgba(black, 0.1)//$bg-color-gray
+
+  .content
+    position relative
+    padding-left 110px
+
+    > img
+      position absolute
+      top 0px
+      left 0px
+      width 90px
+      height 90px
+      background-color $bg-color-gray
+      border-radius 50%
+
+.moreHighlight
+  composes baseHighlight
+
+  width 280px
+  padding-left 12px
+  padding-right 20px
+  border-left 0
+
+  .content
+    width 100
+    text-align center
+
+    > img
+      width 64px
+      height 64px
+      border-radius 50%
+
+  .title
+    font-size 14px
+    margin-top 10px
+
+  .time
+    font-size 12px
