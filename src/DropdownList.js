@@ -4,7 +4,7 @@ import styles from './DropdownList.styl';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-const DropdownList = ({ data, itemHoverHandler, dropdownReference, parentClass }) =>
+const DropdownList = ({ data, itemHoverHandler, parentClass }) =>
   <div className={cx('dropdownList', { moreDropdownList: parentClass === 'moreDropdown' })} >
     <ul>
       { data.title ? <h4 className={cx('section-title')}>{data.title}</h4> : null }
@@ -12,7 +12,6 @@ const DropdownList = ({ data, itemHoverHandler, dropdownReference, parentClass }
         <DropdownListItem
           key={item.id}
           item={item}
-          dropdownReference={dropdownReference}
           itemHoverHandler={itemHoverHandler}
           hasArrow={data.hasArrows}
           parentClass={parentClass}

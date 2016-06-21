@@ -25,7 +25,7 @@ class DropdownListItem extends React.Component {
           arrowItem: this.props.hasArrow,
           moreItem: this.props.parentClass === 'moreDropdown'
         })}
-        onMouseEnter={this.props.itemHoverHandler}
+        onMouseEnter={ () => {this.props.itemHoverHandler(this.props.item.highlight);} }
       >
       <a href={this.props.item.href}>
         {this.props.item.icon ?

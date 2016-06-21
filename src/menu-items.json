@@ -182,8 +182,10 @@
         "title": "Latest from Auth0 blog",
         "default": {
           "imageUrl": "https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png",
-          "title": "Default vs Tokens: The Definitive Guide",
-          "time": "10 days ago"
+          "title": "Cookies vs Tokens: The Definitive Guide",
+          "description": "The cookie vs token debate favors token-based authentication. Learn the advantages and get answers.",
+          "linkText": "See more",
+          "linkUrl": "www.auth0.com"
         }
       }
     ]

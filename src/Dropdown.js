@@ -17,26 +17,20 @@ class Dropdown extends Component {
 
   constructor(props) {
     super(props);
-
     this.itemHoverHandler = this.itemHoverHandler.bind(this);
+
+    // Set highlight object to default highlight of the dropdown
+    const highlightComponent = this.props.data.childrens.find((component) => {
+      if (component.default) return true;
+      return false;
+    });
+    if (!highlightComponent) return;
+    this.state = { highlight: highlightComponent.default };
   }
 
-  // state = {
-    // Return first highlight of list of items
-    // highlight: (() => {
-    //   for (let i = 0; i < this.props.data.childrens.length; i++) {
-    //     if (this.props.data.childrens[i].highlight) {
-    //       return this.props.data.childrens[i].highlight;
-    //     }
-    //   }
-    // })()
-  // };
-
-  itemHoverHandler() {
-    console.log(this);
-    // if (!highlight) return;
-    //
-    // this.setState({ highlight });
+  itemHoverHandler(highlight) {
+    if (!highlight) return;
+    this.setState({ highlight });
   }
 
   render() {
@@ -51,14 +45,14 @@ class Dropdown extends Component {
                     key={component.key}
                     data={component}
                     parentClass={this.props.data.dropdownClass}
-                    itemHoverHandler={this.itemHoverHandler.bind(this)}
+                    itemHoverHandler={this.itemHoverHandler}
                   />
                 );
               case 'highlight':
                 return (
                   <DropdownHighlight
                     key={component.key}
-                    data={component}
+                    data={this.state.highlight}
                     parentClass={this.props.data.dropdownClass}
                   />
                 );

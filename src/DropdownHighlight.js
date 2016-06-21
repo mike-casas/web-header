@@ -9,18 +9,18 @@ const DropdownHighlight = ({ data, parentClass }) =>
     moreHighlight: parentClass === 'moreDropdown'
   })}
   >
-    { data.title ? <h4 className={cx('section-title')}>{data.title}</h4> : null }
+    { data.componentTitle ? <h4 className={cx('section-title')}>{data.componentTitle}</h4> : null }
     <div className={cx('content')}>
-      <img src={data.default.imageUrl} alt="" />
-      <h5 className={cx('title')}>{data.default.title}</h5>
-      {data.default.description ?
-        <p className={cx('text')}>{data.default.description}</p>
+      <img src={data.imageUrl} alt="" />
+      <h5 className={cx('title')}>{data.title}</h5>
+      {data.description ?
+        <p className={cx('text')}>{data.description}</p>
         : null }
-      {data.default.time ?
-        <span className={cx('time')}>{data.default.time}</span>
+      {data.time ?
+        <span className={cx('time')}>{data.time}</span>
         : null }
-      { (data.default.linkText && data.default.linkUrl) ?
-        <a href={data.default.linkUrl} className={cx('link')}>{data.default.linkText}</a>
+      { (data.linkText && data.linkUrl) ?
+        <a href={data.linkUrl} className={cx('link')}>{data.linkText}</a>
         : null }
     </div>
   </div>
