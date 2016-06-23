@@ -87,13 +87,16 @@
   composes baseHighlight
   border-left 0
 
+  +breakpoint("desktop", "max")
+    padding 0
+
   +breakpoint("desktop")
     width 280px
     padding-left 12px
     padding-right 20px
 
   .content
-    width 100
+    width 100%
     text-align center
 
     > img
