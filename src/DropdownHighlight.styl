@@ -87,22 +87,27 @@
   composes baseHighlight
   border-left 0
 
+  .content > img
+    width 64px
+    height 64px
+    border-radius 50%
+    background-color $bg-color-gray
+
   +breakpoint("desktop", "max")
+    text-align center
     padding 0
+
+    :global(.section-title)
+      text-align left
 
   +breakpoint("desktop")
     width 280px
     padding-left 12px
     padding-right 20px
 
-  .content
-    width 100%
-    text-align center
-
-    > img
-      width 64px
-      height 64px
-      border-radius 50%
+    .content
+      width 100%
+      text-align center
 
   .title
     font-size 14px

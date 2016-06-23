@@ -2,9 +2,24 @@
 
 .head
   clearfix()
+  position relative
 
   +breakpoint("desktop", "max")
     background-color white
+
+    &.dropdownOpen
+      background-color white
+
+      &:before
+        content ''
+        display block
+        position absolute
+        z-index 1
+        width calc(100% + 30px)
+        left -15px
+        height 15px
+        top 100%
+        background linear-gradient(to bottom, white 0%, transparent 100%)
 
   +breakpoint("desktop")
     float left
@@ -51,7 +66,7 @@
     left: calc(-100% - 10px);
 
   // Caret
-  &::after
+  &:after
     position: absolute;
     content: "";
     top: 6px;
@@ -75,27 +90,59 @@
   float right
   margin-right ($navbar-padding-horizontal - 10px)
   padding 10px
+  width 26px
   background-color transparent
   border 0
-  vertical-center-elem(38px, $navbar-mobile-height)
+  vertical-center-elem(20px, $navbar-mobile-height)
+
+  &.closeButton .iconBar
+    &:nth-of-type(2)
+      top 10px
+      width 0%
+      left 50%
+      opacity 0
+
+    &:nth-of-type(3)
+      transform rotate(45deg)
+
+    &:nth-of-type(4)
+      transform rotate(-45deg)
+
+    &:nth-of-type(5)
+      top 10px
+      width 0%
+      left 50%
+      opacity 0
 
   &:hover,
   &:focus
     outline 0
 
-    .iconBar
-      background-color $navbar-toggle-background-hover-color
-
   // Bars
   .iconBar
     display block
-    width 22px
+    position absolute
+    width 100%
     height 2px
-    border-radius 1px
+    left 0
+    right 0
     background-color $navbar-toggle-background-color
+    transition .25s ease-in-out
 
-  .iconBar + .iconBar
-    margin-top 6px
+    &:nth-of-type(2)
+      top 0
+
+    &:nth-of-type(3)
+      top 50%
+      transform translateY(-50%)
+
+    &:nth-of-type(4)
+      top 50%
+      transform translateY(-50%)
+
+    &:nth-of-type(5)
+      top calc(100% - 2px)
+
 
   // Hide at desktop view
   +breakpoint("desktop")

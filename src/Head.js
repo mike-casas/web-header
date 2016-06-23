@@ -3,14 +3,15 @@ import styles from './Head.styl';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-const Head = ({ toggleDropdownHandler, promoteLink }) =>
-  <div className={cx('head')}>
+const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen }) =>
+  <div className={cx('head', { dropdownOpen })}>
     <button
       type="button"
-      className={cx('toggleButton', 'collapsed')}
+      className={cx('toggleButton', 'collapsed', { closeButton: dropdownOpen })}
       onClick={toggleDropdownHandler}
     >
       <span className="sr-only">Toggle navigation</span>
+      <span className={cx('iconBar')} />
       <span className={cx('iconBar')} />
       <span className={cx('iconBar')} />
       <span className={cx('iconBar')} />
@@ -35,7 +36,8 @@ const Head = ({ toggleDropdownHandler, promoteLink }) =>
 
 Head.propTypes = {
   toggleDropdownHandler: PropTypes.func,
-  promoteLink: PropTypes.object
+  promoteLink: PropTypes.object,
+  dropdownOpen: PropTypes.bool
 };
 
 export default Head;

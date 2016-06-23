@@ -65,16 +65,17 @@ class WebHeader extends Component {
   render() {
     return (
       <div>
-        <header className={cx('siteHeader')}>
+        <header className={cx('siteHeader', { dropdownOpen: this.state.navbarDropdownIsOpen })}>
           <nav>
             <div className="container">
               <Head
                 toggleDropdownHandler = {this.navbarDropdownHandler}
                 promoteLink = {this.props.promoteLink}
+                dropdownOpen = {this.state.navbarDropdownIsOpen}
               />
               <div
                 className={cx('collapse', {
-                  // collapse: !this.state.navbarDropdownIsOpen,
+                  dropdownOpen: this.state.navbarDropdownIsOpen,
                   in: this.state.navbarDropdownIsOpen
                 })}
               >
@@ -98,9 +99,11 @@ class WebHeader extends Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-6">
+              <img src="http://lorempixel.com/400/400/sports/" alt="" />
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora sint quod eum labore dolorem rem nam ducimus officiis, quia?</p>
             </div>
             <div className="col-xs-6">
+              <img src="http://lorempixel.com/400/600/cats/" alt="" />
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque similique, laboriosam corporis nobis vero aperiam officia voluptates, corrupti nam reprehenderit accusantium cum? Laudantium sit, nesciunt iusto sed! Dolorem eius eligendi dolorum saepe quasi nisi earum, vitae reiciendis fuga fugit! Quas eos placeat nam aspernatur doloremque eaque dolorem, consequatur officia.</p>
             </div>
           </div>
