@@ -1,9 +1,11 @@
 @import 'base'
-@import 'variables'
 
 .item
   cursor pointer
   position relative
+
+  +breakpoint("desktop", "max")
+    margin-bottom 25px
 
   +breakpoint("desktop")
     float left
@@ -35,11 +37,11 @@
   cursor pointer
   padding 15px
 
-
   +breakpoint("desktop", "max")
     font-size 20px
     padding-top 15px
     padding-bottom 15px
+    padding-left 0
     line-height 1.5
 
   +breakpoint("desktop")
@@ -55,7 +57,7 @@
     width 0
     height 0
     position absolute
-    top 45px
+    top 43px
     left 50%
     z-index 1100
     border-top 6px solid transparent

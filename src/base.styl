@@ -1,94 +1,28 @@
-.clearfix:after
-  visibility hidden
-  display block
-  font-size 0
-  content ""
-  clear both
-  height 0
+@import '../node_modules/auth0-styleguide/lib/vars/index'
+@import '../node_modules/auth0-styleguide/lib/mixins/index.styl'
 
-navbar-vertical-align($element-height, $container-height)
+// Variables
+
+$grid-gutter-width ?= 30px
+$navbar-padding-horizontal ?=              floor($grid-gutter-width / 2)
+
+// Basics of a navbar
+$navbar-mobile-height ?=                   75px
+$navbar-desktop-height ?=                  110px
+
+// Navbar links
+$navbar-default-link-color ?=              $color-text-black
+$navbar-default-link-hover-color ?=        black
+$navbar-dark-link-color ?=                 $color-text-contrast-light
+$navbar-dark-link-hover-color ?=           white
+
+// Navbar toggle
+$navbar-toggle-background-color ?=         $color-gray
+$navbar-toggle-background-hover-color ?=   black
+
+
+// Mixins
+
+vertical-center-elem($element-height, $container-height)
   margin-top (($container-height - $element-height) / 2)
   margin-bottom (($container-height - $element-height) / 2)
-
-:global
-
-  // DEV
-  body
-    font-family "Avenir Next","avenir-next-web","Helvetica Neue",Hevetica,sans-serif;
-
-  *
-    box-sizing border-box
-
-  .section-title
-    padding-bottom 5px
-    margin 12px 0 10px 0
-    font-size 13px
-    font-weight 400
-    color $color-text-black
-    border-bottom 1px solid rgba(black, 0.1)//$bg-color-gray
-
-  // Screen readers style
-  .sr-only
-    position absolute
-    width 1px
-    height 1px
-    padding 0
-    margin -1px
-    overflow hidden
-    clip rect(0,0,0,0)
-    border 0
-
-breakpoint(point, orientation = "min")
-  if point == "mobile"
-    if orientation == "max"
-      @media ({orientation}-width: (breakpoint-mobile - 1) )
-        {block}
-    else
-      @media ({orientation}-width: breakpoint-mobile)
-        {block}
-
-  else if point == "mobile-landscape"
-    if orientation == "max"
-      @media ({orientation}-width: (breakpoint-mobile-landscape - 1) )
-        {block}
-    else
-      @media ({orientation}-width: breakpoint-mobile-landscape)
-        {block}
-
-
-  else if point == "tablet"
-    if orientation == "max"
-      @media ({orientation}-width: (breakpoint-tablet - 1) )
-        {block}
-    else
-      @media ({orientation}-width: breakpoint-tablet)
-        {block}
-
-  else if point == "desktop"
-    if orientation == "max"
-      @media ({orientation}-width: (breakpoint-desktop - 1) )
-        {block}
-    else
-      @media ({orientation}-width: breakpoint-desktop)
-        {block}
-
-  else if point == "desktop-hd"
-    if orientation == "max"
-      @media ({orientation}-width: (breakpoint-desktop-hd - 1) )
-        {block}
-    else
-      @media ({orientation}-width: breakpoint-desktop-hd)
-        {block}
-
-  else if point == "retina-only"
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-      {block}
-
-.container
-  margin 0 auto
-  @media (min-width: 768px)
-    width: 735px
-  @media (min-width: 992px)
-    width: 955px
-  @media (min-width: 1200px)
-    width: 1155px

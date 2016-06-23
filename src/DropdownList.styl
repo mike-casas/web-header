@@ -1,5 +1,4 @@
 @import 'base'
-@import 'variables'
 
 .dropdownList
   float left
@@ -16,16 +15,17 @@
     width 100%
     margin 0
     height auto
-    padding-top 0
+    padding 0
     padding-bottom 15px
 
       .navbar-dropdown-item:hover:after
         border-left 4px solid black
 
 .moreDropdownList
-  padding-left 12px
-  padding-right 12px
-  width 150px
+  +breakpoint("desktop")
+    padding-left 12px
+    padding-right 12px
+    width 150px
 
-  &:first-child
-    padding-left 20px
+    &:first-child
+      padding-left 20px

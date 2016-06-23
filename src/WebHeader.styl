@@ -1,15 +1,27 @@
-@import 'base';
-@import 'variables'
+@import 'base'
+
+// Global styles
+
+:global
+  .section-title
+    padding-bottom 10px
+    margin 12px 0 10px 0
+    font-size 13px
+    font-weight 500
+    color black
+    border-bottom 1px solid $bg-color-gray
+
+// end global styles
 
 .siteHeader
   border-bottom 1px solid rgba(black, 0.1)
 
 .collapse
-  composes clearfix
+  clearfix()
   display block
 
 .navigation
-  composes clearfix
+  clearfix()
   position relative
   color $navbar-default-link-color
   list-style-type none
@@ -17,40 +29,26 @@
   padding 0
 
   +breakpoint("desktop")
-    navbar-vertical-align(18px, $navbar-desktop-height)
+    vertical-center-elem(28px, $navbar-desktop-height)
 
 .navigationLeft
   composes navigation
-  float left
-  padding-left 30px
+
+  +breakpoint("desktop")
+    float left
+    padding-left 30px
 
 .navigationRight
   composes navigation
-  float right
 
-.btn
-  font-size 11px
-  text-transform uppercase
-  text-decoration none
-  line-height 30px
-  color black
-  padding 0 18px
-  display inline-block
-  border-radius 3px
-  cursor pointer
+  +breakpoint("desktop")
+    float right
 
-  & + .btn
-    margin-left 18px
+  :global
 
+    .btn
+      font-size 11px
+      padding 8px 18px
 
-.btnTransparent
-  composes btn
-
-  border 1px solid black
-
-.btnSuccess
-  composes btn
-
-  background-color #EB5424
-  border 1px solid #EB5424
-  color white
+      + .btn
+        margin-left 18px

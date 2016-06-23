@@ -1,5 +1,4 @@
 @import 'base'
-@import 'variables'
 
 .head
   clearfix()
@@ -15,14 +14,12 @@
   position relative
   margin-left $navbar-padding-horizontal
   margin 0
-  navbar-vertical-align(36px, $navbar-mobile-height)
-
-  // Set logo size
   width 100px
   height 36px
+  vertical-center-elem(36px, $navbar-mobile-height)
 
   +breakpoint("desktop")
-    navbar-vertical-align(36px, $navbar-desktop-height)
+    vertical-center-elem(36px, $navbar-desktop-height)
 
 .logo
   display block
@@ -80,7 +77,7 @@
   padding 10px
   background-color transparent
   border 0
-  navbar-vertical-align(38px, $navbar-mobile-height)
+  vertical-center-elem(38px, $navbar-mobile-height)
 
   &:hover,
   &:focus

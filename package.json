@@ -27,6 +27,7 @@
     "react-dom": "^15.1.0"
   },
   "devDependencies": {
+    "auth0-styleguide": "auth0/styleguide",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",
