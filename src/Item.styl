@@ -7,6 +7,7 @@
   +breakpoint("desktop", "max")
     margin-bottom 25px
 
+
   +breakpoint("desktop")
     float left
 
@@ -28,6 +29,10 @@
         visibility visible
         margin-top 5px
         transition-delay 0s
+
+  &.item-more > a
+    +breakpoint("desktop", "max")
+      display none
 
 
 .link

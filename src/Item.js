@@ -6,7 +6,7 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 const Item = ({ item }) =>
-  <li className={cx('item')}>
+  <li className={cx('item', { [`item-${item.id}`]: true })}>
     <a href={item.href} className={cx({
       link: !item.childrens,
       dropdownLink: item.childrens })}
