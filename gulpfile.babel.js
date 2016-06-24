@@ -56,31 +56,31 @@ function generateNewMenuItemsJson([content, blog, learn]) {
   const replacements = [{
     id: 'last-blog',
     key: 'default',
-    value: setValue(blog, { linkText: 'See more' })
+    value: setValue(blog)
   }, {
     id: 'learn-case-studies',
     key: 'highlight',
-    value: setValue(learn['case-studies'], { linkText: 'See more' })
+    value: setValue(learn['case-studies'])
   }, {
     id: 'learn-use-cases',
     key: 'highlight',
-    value: setValue(learn['use-cases'], { linkText: 'See more' })
+    value: setValue(learn['use-cases'])
   }, {
     id: 'learn-industries',
     key: 'highlight',
-    value: setValue(learn.industries, { linkText: 'See more' })
+    value: setValue(learn.industries)
   }, {
     id: 'learn-concepts',
     key: 'highlight',
-    value: setValue(learn.concepts, { linkText: 'See more' })
+    value: setValue(learn.concepts)
   }, {
     id: 'learn-frameworks',
     key: 'highlight',
-    value: setValue(learn.frameworks, { linkText: 'See more' })
+    value: setValue(learn.frameworks)
   }, {
     id: 'learn-growth',
     key: 'highlight',
-    value: setValue(learn.growth, { linkText: 'See more' })
+    value: setValue(learn.growth)
   }];
   // Array of replacements IDs
   const replacementsIDs = replacements.map(item => item.id);
@@ -94,10 +94,10 @@ function generateNewMenuItemsJson([content, blog, learn]) {
   return JSON.stringify(content, null, 2);
 }
 
-function setValue(object, defaults) {
+function setValue(object) {
   if (!object && !isObject(object)) return null;
 
-  return Object.assign(object, defaults);
+  return object;
 }
 
 function getItem(id, from) {
@@ -129,7 +129,7 @@ function makeItemsReplacements(items, replacements) {
     if (!item) return;
     if (replaceSource.value === null) return delete item[replaceSource.key];
 
-    item[replaceSource.key] = replaceSource.value;
+    item[replaceSource.key] = Object.assign({}, item[replaceSource.key], replaceSource.value);
   });
 }
 
