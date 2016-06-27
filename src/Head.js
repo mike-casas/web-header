@@ -3,8 +3,12 @@ import styles from './Head.styl';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen }) =>
-  <div className={cx('head', { dropdownOpen })}>
+const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen, theme }) =>
+  <div className={cx('head', {
+    dropdownOpen,
+    [`theme-${theme}`]: true
+  })}
+  >
     <button
       type="button"
       className={cx('toggleButton', 'collapsed', { closeButton: dropdownOpen })}
@@ -37,7 +41,8 @@ const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen }) =>
 Head.propTypes = {
   toggleDropdownHandler: PropTypes.func,
   promoteLink: PropTypes.object,
-  dropdownOpen: PropTypes.bool
+  dropdownOpen: PropTypes.bool,
+  theme: PropTypes.string
 };
 
 export default Head;

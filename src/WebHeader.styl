@@ -16,6 +16,10 @@
 .siteHeader
   border-bottom 1px solid rgba(black, 0.1)
 
+  &.theme-dark
+    +breakpoint("desktop")
+      border-bottom 1px solid rgba(white, 0.1)
+
   :global(.container)
     width auto
 
@@ -48,7 +52,6 @@
 .navigation
   clearfix()
   position relative
-  color $navbar-default-link-color
   list-style-type none
   margin 0
   padding 0
@@ -91,7 +94,6 @@
     float right
 
   :global
-
     .btn
       font-size 11px
       padding 8px 18px

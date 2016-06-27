@@ -9,7 +9,13 @@ const DropdownHighlight = ({ data, parentClass }) =>
     moreHighlight: parentClass === 'moreDropdown'
   })}
   >
-    { data.componentTitle ? <h4 className={cx('section-title')}>{data.componentTitle}</h4> : null }
+    { data.componentTitle ?
+      <h4
+        className={cx('section-title')}
+        dangerouslySetInnerHTML={{ __html: data.componentTitle }}
+      >
+      </h4>
+      : null }
     <div className={cx('content')}>
       <img src={data.thumbnail} alt="" />
       <h5 className={cx('title')}>{data.title}</h5>

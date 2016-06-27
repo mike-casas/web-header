@@ -14,7 +14,8 @@ class WebHeader extends Component {
   static propTypes = {
     loginButtonText: PropTypes.string,
     loginButtonOnClick: PropTypes.func,
-    promoteLink: PropTypes.object
+    promoteLink: PropTypes.object,
+    theme: PropTypes.string
   };
 
   static defaultProps = {
@@ -24,7 +25,8 @@ class WebHeader extends Component {
       active: true,
       url: 'https://auth0.com/jobs',
       text: 'We\'re hiring!'
-    }
+    },
+    theme: 'dark'
   };
 
   constructor(props) {
@@ -65,13 +67,18 @@ class WebHeader extends Component {
   render() {
     return (
       <div>
-        <header className={cx('siteHeader', { dropdownOpen: this.state.navbarDropdownIsOpen })}>
+        <header className={cx('siteHeader', {
+          dropdownOpen: this.state.navbarDropdownIsOpen,
+          [`theme-${this.props.theme}`]: true
+        })}
+        >
           <nav>
             <div className="container">
               <Head
                 toggleDropdownHandler = {this.navbarDropdownHandler}
                 promoteLink = {this.props.promoteLink}
                 dropdownOpen = {this.state.navbarDropdownIsOpen}
+                theme = {this.props.theme}
               />
               <div
                 className={cx('collapse', {
@@ -84,6 +91,7 @@ class WebHeader extends Component {
                     <Item
                       key={item.position + item.id}
                       item={item}
+                      theme={this.props.theme}
                     />
                   )}
                 </ul>

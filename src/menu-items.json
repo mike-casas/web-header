@@ -182,7 +182,7 @@
         "title": "Latest from Auth0 blog",
         "id": "last-blog",
         "default": {
-          "componentTitle": "Latest from Auth0 Blog",
+          "componentTitle": "Latest from <a href=\"https://auth0.com/blog\">Auth0 blog</a>",
           "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
           "title": "Creating your first Laravel app and adding authentication",
           "excerpt": "TL;DR: Laravel is a great PHP framework. Currently, it is the most starred PHP project on Github and a lot of companies and people a...",
