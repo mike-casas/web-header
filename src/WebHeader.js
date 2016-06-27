@@ -95,7 +95,7 @@ class WebHeader extends Component {
                     />
                   )}
                 </ul>
-                <ul className={cx('navigationRight')}>
+                <ul className={`${cx('navigationRight')} theme-${this.props.theme}`}>
                   <a href="#" className="btn btn-transparent btn-sm"> Talk to sales </a>
                   <button className="btn btn-success btn-sm">Log in</button>
                 </ul>
