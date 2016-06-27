@@ -2,7 +2,7 @@
 
 .item
   cursor pointer
-  position relative
+  // position relative   test
 
   +breakpoint("desktop", "max")
     margin-bottom 25px
@@ -17,11 +17,13 @@
         color $navbar-default-link-hover-color
 
       // Show dropdown caret
-      .dropdownLink:after
-        opacity 1
-        visibility visible
+      .dropdownLink .dropdownCaret
         margin-top 5px
-        transition-delay 0s
+
+        &:after
+          opacity 1
+          visibility visible
+          transition-delay 0s
 
       :global .headerItemDropdown
         opacity 1
@@ -29,14 +31,13 @@
         margin-top 5px
         transition-delay 0s
 
-    &.theme-dark
-      .link span
-        color white
-        opacity 0.7
+    &.theme-dark .text
+      color white
+      opacity 0.7
 
       &:hover,
       &:focus
-        .link span
+        .text
           opacity 1
 
   &.item-more > a
@@ -65,23 +66,31 @@
 .dropdownLink
   composes link
 
-  &:after
-    content ''
+  .dropdownCaret
     display inline-block
-    width 0
-    height 0
     position absolute
-    top 33px
-    left 50%
     z-index 1100
-    border-top 8px solid transparent
-    border-left 8px solid transparent
-    border-right 8px solid transparent
-    border-bottom 8px solid white
-    transition visibility 0s 0.2s, opacity 0.2s, margin-top 0.2s
-    opacity 0
-    visibility hidden
+    overflow hidden
+    text-align center
+    width 20px
+    height 12px
+    top 37px
+    left 50%
+    transform translateX(-50%)
     margin-top 0
+    transition margin-top 0.2s
+
+    &:after
+      content ''
+      display inline-block
+      width 12px
+      height 12px
+      background-color white
+      border 1px solid rgba(black, 0.1)
+      transform rotate(45deg)
+      transition visibility 0s 0.2s, opacity 0.2s
+      opacity 0
+      visibility hidden
 
 .caret
   display none

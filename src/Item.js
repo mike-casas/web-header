@@ -15,7 +15,8 @@ const Item = ({ item, theme }) =>
       link: !item.childrens,
       dropdownLink: item.childrens })}
     >
-      <span>{item.name}</span>
+      <span className={cx('text')}>{item.name}</span>
+      <span className={cx('dropdownCaret')}></span>
       {item.childrens ?
         <svg
           width="10px"
