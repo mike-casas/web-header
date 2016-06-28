@@ -78,62 +78,47 @@ class WebHeader extends Component {
 
   render() {
     return (
-      <div>
-        <header className={cx('siteHeader', {
-          dropdownOpen: this.state.navbarDropdownIsOpen,
-          [`theme-${this.props.theme}`]: true
-        })}
-        >
-          <nav>
-            <div className="container">
-              <Head
-                toggleDropdownHandler = {this.navbarDropdownHandler}
-                promoteLink = {this.props.promoteLink}
-                dropdownOpen = {this.state.navbarDropdownIsOpen}
-                theme = {this.props.theme}
-              />
-              <div
-                className={cx('collapse', {
-                  dropdownOpen: this.state.navbarDropdownIsOpen,
-                  in: this.state.navbarDropdownIsOpen
-                })}
+      <header className={cx('siteHeader', {
+        dropdownOpen: this.state.navbarDropdownIsOpen,
+        [`theme-${this.props.theme}`]: true
+      })}
+      >
+        <nav>
+          <div className="container">
+            <Head
+              toggleDropdownHandler = {this.navbarDropdownHandler}
+              promoteLink = {this.props.promoteLink}
+              dropdownOpen = {this.state.navbarDropdownIsOpen}
+              theme = {this.props.theme}
+            />
+            <div
+              className={cx('collapse', {
+                dropdownOpen: this.state.navbarDropdownIsOpen,
+                in: this.state.navbarDropdownIsOpen
+              })}
+            >
+              <ul className={cx('navigationLeft')}>
+                {items.map(item =>
+                  <Item
+                    key={item.position + item.id}
+                    item={item}
+                    theme={this.props.theme}
+                    simpleList={item.simpleList}
+                  />
+                )}
+              </ul>
+              <ul className={ `
+                  ${cx('navigationRight')}
+                  ${this.props.theme === 'dark' && !this.state.mobileState ? 'theme-dark' : ''}
+                `}
               >
-                <ul className={cx('navigationLeft')}>
-                  {items.map(item =>
-                    <Item
-                      key={item.position + item.id}
-                      item={item}
-                      theme={this.props.theme}
-                      simpleList={item.simpleList}
-                    />
-                  )}
-                </ul>
-                <ul className={ `
-                    ${cx('navigationRight')}
-                    ${this.props.theme === 'dark' && !this.state.mobileState ? 'theme-dark' : ''}
-                  `}
-                >
-                  <a href="#" className="btn btn-transparent btn-sm"> Talk to sales </a>
-                  <button className="btn btn-success btn-sm">Log in</button>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-6">
-              <img src="http://lorempixel.com/400/400/sports/" alt="" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora sint quod eum labore dolorem rem nam ducimus officiis, quia?</p>
-            </div>
-            <div className="col-xs-6">
-              <img src="http://lorempixel.com/400/600/cats/" alt="" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque similique, laboriosam corporis nobis vero aperiam officia voluptates, corrupti nam reprehenderit accusantium cum? Laudantium sit, nesciunt iusto sed! Dolorem eius eligendi dolorum saepe quasi nisi earum, vitae reiciendis fuga fugit! Quas eos placeat nam aspernatur doloremque eaque dolorem, consequatur officia.</p>
+                <a href="#" className="btn btn-transparent btn-sm"> Talk to sales </a>
+                <button className="btn btn-success btn-sm">Log in</button>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </nav>
+      </header>
     );
   }
 }
