@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { findDOMNode } from 'react-dom';
 import Head from './Head';
 import Item from './Item';
 import menuItems from './menu-items.json';
@@ -7,8 +6,6 @@ import styles from './WebHeader.styl';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
-const items = menuItems.filter(item => item.active === undefined || item.active === true);
-
 
 class WebHeader extends Component {
   static propTypes = {
@@ -35,7 +32,6 @@ class WebHeader extends Component {
     super(props);
 
     this.navbarDropdownHandler = ::this.navbarDropdownHandler;
-    this.handleDocumentClick = ::this.handleDocumentClick;
     this.handleResize = ::this.handleResize;
   }
 
@@ -46,21 +42,11 @@ class WebHeader extends Component {
 
   componentDidMount() {
     this.handleResize();
-    document.addEventListener('click', this.handleDocumentClick);
-    document.addEventListener('touchend', this.handleDocumentClick);
     window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleDocumentClick);
-    document.removeEventListener('touchend', this.handleDocumentClick);
     window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleDocumentClick(event) {
-    if (!findDOMNode(this.refs.menuDropdown).contains(event.target)) {
-      this.setState({ navbarDropdownIsOpen: false });
-    }
   }
 
   handleResize() {
@@ -98,7 +84,7 @@ class WebHeader extends Component {
               })}
             >
               <ul className={cx('navigationLeft')}>
-                {items.map(item =>
+                {menuItems.map(item =>
                   <Item
                     key={item.position + item.id}
                     item={item}
