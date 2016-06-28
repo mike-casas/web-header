@@ -1,5 +1,12 @@
 @import 'base'
 
+// test
+:global
+  .playgroundCode
+    display none
+  .playgroundPreview
+    padding 0
+
 .head
   clearfix()
   position relative
@@ -11,8 +18,6 @@
 
 
   +breakpoint("desktop", "max")
-    background-color white
-
     &.dropdownOpen
       background-color white
 
@@ -72,6 +77,10 @@
 
   +breakpoint("desktop")
     left: calc(-100% - 10px);
+
+  +breakpoint("desktop")
+    +breakpoint("desktop-hd", "max")
+      display none
 
   // Caret
   &:after

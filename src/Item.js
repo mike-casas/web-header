@@ -5,10 +5,11 @@ import classNames from 'classnames/bind';
 // import arrowIcon from './img/arrow-down.svg';
 const cx = classNames.bind(styles);
 
-const Item = ({ item, theme }) =>
+const Item = ({ item, theme, simpleList }) =>
   <li className={cx('item', {
     [`item-${item.id}`]: true,
-    [`theme-${theme}`]: true
+    [`theme-${theme}`]: true,
+    positionRelative: simpleList
   })}
   >
     <a href={item.href} className={cx({

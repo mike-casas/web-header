@@ -15,7 +15,8 @@ class WebHeader extends Component {
     loginButtonText: PropTypes.string,
     loginButtonOnClick: PropTypes.func,
     promoteLink: PropTypes.object,
-    theme: PropTypes.string
+    theme: PropTypes.string,
+    breakpoint: PropTypes.number
   };
 
   static defaultProps = {
@@ -26,7 +27,8 @@ class WebHeader extends Component {
       url: 'https://auth0.com/jobs',
       text: 'We\'re hiring!'
     },
-    theme: 'dark'
+    theme: 'light',
+    breakpoint: 992
   };
 
   constructor(props) {
@@ -34,26 +36,36 @@ class WebHeader extends Component {
 
     this.navbarDropdownHandler = ::this.navbarDropdownHandler;
     this.handleDocumentClick = ::this.handleDocumentClick;
+    this.handleResize = ::this.handleResize;
   }
 
   state = {
-    navbarDropdownIsOpen: false
+    navbarDropdownIsOpen: false,
+    mobileState: true
   };
 
   componentDidMount() {
+    this.handleResize();
     document.addEventListener('click', this.handleDocumentClick);
     document.addEventListener('touchend', this.handleDocumentClick);
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.handleDocumentClick);
     document.removeEventListener('touchend', this.handleDocumentClick);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleDocumentClick(event) {
     if (!findDOMNode(this.refs.menuDropdown).contains(event.target)) {
       this.setState({ navbarDropdownIsOpen: false });
     }
+  }
+
+  handleResize() {
+    if (window.innerWidth < this.props.breakpoint) return this.setState({ mobileState: true });
+    return this.setState({ mobileState: false });
   }
 
   navbarDropdownHandler() {
@@ -92,10 +104,15 @@ class WebHeader extends Component {
                       key={item.position + item.id}
                       item={item}
                       theme={this.props.theme}
+                      simpleList={item.simpleList}
                     />
                   )}
                 </ul>
-                <ul className={`${cx('navigationRight')} theme-${this.props.theme}`}>
+                <ul className={ `
+                    ${cx('navigationRight')}
+                    ${this.props.theme === 'dark' && !this.state.mobileState ? 'theme-dark' : ''}
+                  `}
+                >
                   <a href="#" className="btn btn-transparent btn-sm"> Talk to sales </a>
                   <button className="btn btn-success btn-sm">Log in</button>
                 </ul>

@@ -2,6 +2,7 @@
   {
     "name": "Products",
     "id": "products",
+    "simpleList": true,
     "childrens": [
       {
         "componentType": "list",

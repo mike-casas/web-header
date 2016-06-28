@@ -2,7 +2,6 @@
 
 .item
   cursor pointer
-  // position relative   test
 
   +breakpoint("desktop", "max")
     margin-bottom 25px
@@ -31,13 +30,16 @@
         margin-top 5px
         transition-delay 0s
 
-    &.theme-dark .text
-      color white
-      opacity 0.7
+    &.theme-dark
+      .text,
+      .caret
+        color white
+        opacity 0.7
 
       &:hover,
       &:focus
-        .text
+        .text,
+        .caret
           opacity 1
 
   &.item-more > a
@@ -99,3 +101,6 @@
     display inline-block
     font-size 10px
     margin-left 5px
+
+.positionRelative
+  position relative
