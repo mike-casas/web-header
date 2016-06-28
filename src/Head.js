@@ -1,13 +1,14 @@
 import React, { PropTypes } from 'react';
 import styles from './Head.styl';
 import classNames from 'classnames/bind';
+
 const cx = classNames.bind(styles);
 
 const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen, theme }) =>
-  <div className={cx('head', {
-    dropdownOpen,
-    [`theme-${theme}`]: true
-  })}
+  <div
+    className={cx('head', [`theme-${theme}`], {
+      dropdownOpen
+    })}
   >
     <button
       type="button"
@@ -24,12 +25,9 @@ const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen, theme }) =>
       <a href="/" rel="home" className={cx('logo')}>
         <span>Auth0</span>
       </a>
-      {
-        promoteLink.active
-        ?
+      {promoteLink.active ?
         <a
-          href={promoteLink.url}
-          className={cx('hiring', 'animated', 'bounce')}
+          href={promoteLink.url} className={cx('hiring', 'animated', 'bounce')}
         >
         {promoteLink.text}
         </a>

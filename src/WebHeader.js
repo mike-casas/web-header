@@ -64,18 +64,18 @@ class WebHeader extends Component {
 
   render() {
     return (
-      <header className={cx('siteHeader', {
-        dropdownOpen: this.state.navbarDropdownIsOpen,
-        [`theme-${this.props.theme}`]: true
-      })}
+      <header
+        className={cx('siteHeader', [`theme-${this.props.theme}`], {
+          dropdownOpen: this.state.navbarDropdownIsOpen
+        })}
       >
         <nav>
           <div className="container">
             <Head
-              toggleDropdownHandler = {this.navbarDropdownHandler}
-              promoteLink = {this.props.promoteLink}
-              dropdownOpen = {this.state.navbarDropdownIsOpen}
-              theme = {this.props.theme}
+              toggleDropdownHandler={this.navbarDropdownHandler}
+              promoteLink={this.props.promoteLink}
+              dropdownOpen={this.state.navbarDropdownIsOpen}
+              theme={this.props.theme}
             />
             <div
               className={cx('collapse', {
@@ -93,10 +93,10 @@ class WebHeader extends Component {
                   />
                 )}
               </ul>
-              <ul className={ `
-                  ${cx('navigationRight')}
-                  ${this.props.theme === 'dark' && !this.state.mobileState ? 'theme-dark' : ''}
-                `}
+              <ul
+                className={cx('navigationRight', {
+                  'theme-dark': this.props.theme === 'dark' && !this.state.mobileState
+                })}
               >
                 <a href="#" className="btn btn-transparent btn-sm"> Talk to sales </a>
                 <button className="btn btn-success btn-sm">Log in</button>
