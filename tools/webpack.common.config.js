@@ -1,15 +1,9 @@
 import path from 'path';
 import webpack from 'webpack';
 import poststylus from 'poststylus';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const DEBUG = process.env.NODE_ENV !== 'production';
-
-const stylLoader = `css-loader?${JSON.stringify({
-  sourceMap: DEBUG,
-  minimize: !DEBUG,
-  modules: true,
-  localIdentName: DEBUG ? '[path][name]--[local]--[hash:base64:5]' : '[hash:base64:4]'
-})}!stylus-loader`;
 
 const config = {
   entry: [
@@ -31,7 +25,13 @@ const config = {
       loader: 'json-loader'
     }, {
       test: /\.styl$/,
-      loader: stylLoader
+      loader: ExtractTextPlugin.extract('style-loader',
+        `css-loader?${JSON.stringify({
+          sourceMap: DEBUG,
+          minimize: !DEBUG,
+          modules: true,
+          localIdentName: DEBUG ? '[path][name]--[local]--[hash:base64:5]' : '[hash:base64:4]'
+        })}!stylus-loader`)
     }, {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
       loader: 'url-loader',
@@ -43,6 +43,7 @@ const config = {
   },
 
   plugins: [
+    new ExtractTextPlugin('index.css'),
     // Assign the module and chunk ids by occurrence count
     // Consistent ordering of modules required if using any hashing ([hash] or [chunkhash])
     // https://webpack.github.io/docs/list-of-plugins.html#occurrenceorderplugin
@@ -83,7 +84,7 @@ const config = {
     timings: true
   },
 
-  stylLoader
+  devtool: DEBUG ? 'inline-source-map' : null
 };
 
 module.exports = config;

@@ -4,8 +4,7 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import commonConfig from './tools/webpack.common.config';
-import browserConfig from './tools/webpack.browser.config';
-import universalConfig from './tools/webpack.universal.config';
+import moduleConfig from './tools/webpack.module.config';
 import playgroundConfig from './tools/webpack.playground.config';
 import fs from 'fs';
 import path from 'path';
@@ -178,8 +177,7 @@ gulp.task('dev', () => {
  */
 gulp.task('build', () =>
   Promise.all([
-    bundle(universalConfig),
-    bundle(browserConfig)
+    bundle(moduleConfig)
   ])
     .then(stats => {
       stats.forEach(stat => {
