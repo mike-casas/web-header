@@ -4,7 +4,14 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen, theme }) =>
+const Head = ({
+  toggleDropdownHandler,
+  featured,
+  featuredLink,
+  featuredText,
+  dropdownOpen,
+  theme
+}) =>
   <div
     className={cx('head', [`theme-${theme}`], {
       dropdownOpen
@@ -25,12 +32,8 @@ const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen, theme }) =>
       <a href="/" rel="home" className={cx('logo')}>
         <span>Auth0</span>
       </a>
-      {promoteLink.active ?
-        <a
-          href={promoteLink.url} className={cx('hiring', 'animated', 'bounce')}
-        >
-        {promoteLink.text}
-        </a>
+      {featured
+        ? <a href={featuredLink} className={cx('hiring', 'animated', 'bounce')}>{featuredText}</a>
         : null
       }
     </h1>
@@ -38,7 +41,9 @@ const Head = ({ toggleDropdownHandler, promoteLink, dropdownOpen, theme }) =>
 
 Head.propTypes = {
   toggleDropdownHandler: PropTypes.func,
-  promoteLink: PropTypes.object,
+  featured: PropTypes.bool,
+  featuredLink: PropTypes.string,
+  featuredText: PropTypes.string,
   dropdownOpen: PropTypes.bool,
   theme: PropTypes.string
 };

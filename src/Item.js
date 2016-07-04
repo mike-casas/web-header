@@ -25,7 +25,6 @@ const Item = ({ item, theme, simpleList }) =>
           width="10"
           height="6"
           viewBox="62 7 10 6"
-          xmlns="http://www.w3.org/2000/svg"
           className={cx('caret')}
         >
           <path

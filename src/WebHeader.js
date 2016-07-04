@@ -1,30 +1,49 @@
 import React, { Component, PropTypes } from 'react';
 import Head from './Head';
 import Item from './Item';
-import menuItems from './menu-items.json';
+import defaultMenuItems from './menu-items.json';
 import styles from './WebHeader.styl';
 import classNames from 'classnames/bind';
+import cxN from 'classnames';
 
 const cx = classNames.bind(styles);
 
 class WebHeader extends Component {
   static propTypes = {
-    loginButtonText: PropTypes.string,
-    loginButtonOnClick: PropTypes.func,
-    promoteLink: PropTypes.object,
-    theme: PropTypes.string,
+    className: PropTypes.string,
+    children: PropTypes.node,
+    menuItems: PropTypes.array,
+    theme: PropTypes.oneOf(['light', 'dark']),
+    featuredEnable: PropTypes.bool,
+    featuredLink: PropTypes.string,
+    featuredText: PropTypes.string,
+    primaryButtonEnable: PropTypes.bool,
+    primaryButtonLink: PropTypes.string,
+    primaryButtonOnClick: PropTypes.func,
+    primaryButtonText: PropTypes.string,
+    secondaryButtonEnable: PropTypes.bool,
+    secondaryButtonLink: PropTypes.string,
+    secondaryButtonOnClick: PropTypes.func,
+    secondaryButtonText: PropTypes.string,
     breakpoint: PropTypes.number
   };
 
   static defaultProps = {
-    loginButtonText: 'Log in',
-    loginButtonOnClick: () => {},
-    promoteLink: {
-      active: true,
-      url: 'https://auth0.com/jobs',
-      text: 'We\'re hiring!'
-    },
+    className: '',
+    children: null,
+    menuItems: defaultMenuItems,
     theme: 'light',
+    featuredEnable: true,
+    featuredLink: 'https://auth0.com/jobs',
+    featuredText: 'We\'re hiring!',
+    primaryButtonEnable: true,
+    primaryButtonLink: '',
+    primaryButtonOnClick: () => {},
+    primaryButtonText: 'Log in',
+    secondaryButtonEnable: true,
+    secondaryButtonLink: '?contact=true',
+    secondaryButtonOnClick: () => {},
+    secondaryButtonText: 'Talk to sales',
     breakpoint: 992
   };
 
@@ -58,48 +77,83 @@ class WebHeader extends Component {
     this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen });
   }
 
-  isDefaultLoginText() {
-    return this.props.loginButtonText === WebHeader.defaultProps.loginButtonText;
+  renderButton(link, onClick, text, className) {
+    return !!link
+      ? <a href={link} className={className}>{text}</a>
+      : <button className={className} onClick={onClick}>{text}</button>;
   }
 
   render() {
+    const {
+      className,
+      children,
+      menuItems,
+      theme,
+      featuredEnable,
+      featuredLink,
+      featuredText,
+      primaryButtonEnable,
+      primaryButtonLink,
+      primaryButtonOnClick,
+      primaryButtonText,
+      secondaryButtonEnable,
+      secondaryButtonLink,
+      secondaryButtonOnClick,
+      secondaryButtonText
+    } = this.props;
+    const { navbarDropdownIsOpen, mobileState } = this.state;
+
+    const primaryButton = this.renderButton(
+      primaryButtonLink,
+      primaryButtonOnClick,
+      primaryButtonText,
+      'btn btn-success btn-sm'
+    );
+    const secondaryButton = this.renderButton(
+      secondaryButtonLink,
+      secondaryButtonOnClick,
+      secondaryButtonText,
+      'btn btn-transparent btn-sm'
+    );
+    const renderedMenuItems = menuItems.map(item =>
+      <Item
+        key={item.position + item.id}
+        item={item}
+        theme={theme}
+        simpleList={item.simpleList}
+      />
+    );
+
     return (
       <header
-        className={cx('siteHeader', [`theme-${this.props.theme}`], {
-          dropdownOpen: this.state.navbarDropdownIsOpen
-        })}
+        className={cx('siteHeader', [`theme-${theme}`], {
+          dropdownOpen: navbarDropdownIsOpen
+        }, className)}
       >
         <nav>
           <div className="container">
             <Head
               toggleDropdownHandler={this.navbarDropdownHandler}
-              promoteLink={this.props.promoteLink}
-              dropdownOpen={this.state.navbarDropdownIsOpen}
-              theme={this.props.theme}
+              featured={featuredEnable}
+              featuredLink={featuredLink}
+              featuredText={featuredText}
+              dropdownOpen={navbarDropdownIsOpen}
+              theme={theme}
             />
             <div
               className={cx('collapse', {
-                dropdownOpen: this.state.navbarDropdownIsOpen,
-                in: this.state.navbarDropdownIsOpen
+                dropdownOpen: navbarDropdownIsOpen,
+                in: navbarDropdownIsOpen
               })}
             >
-              <ul className={cx('navigationLeft')}>
-                {menuItems.map(item =>
-                  <Item
-                    key={item.position + item.id}
-                    item={item}
-                    theme={this.props.theme}
-                    simpleList={item.simpleList}
-                  />
-                )}
-              </ul>
+              <ul className={cx('navigationLeft')}>{!!children ? children : renderedMenuItems}</ul>
               <ul
-                className={cx('navigationRight', {
-                  'theme-dark': this.props.theme === 'dark' && !this.state.mobileState
+                className={cxN(cx('navigationRight'), {
+                  'theme-dark': theme === 'dark' && !mobileState
                 })}
               >
-                <a href="#" className="btn btn-transparent btn-sm"> Talk to sales </a>
-                <button className="btn btn-success btn-sm">Log in</button>
+                {secondaryButtonEnable ? secondaryButton : null}
+                {primaryButtonEnable ? primaryButton : null}
               </ul>
             </div>
           </div>

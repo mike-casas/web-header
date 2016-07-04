@@ -19,11 +19,17 @@
 .siteHeader
   border-bottom 1px solid rgba(black, 0.1)
   background-color white
+  text-align left
 
   &.theme-dark
     +breakpoint("desktop")
       border-bottom 1px solid rgba(white, 0.1)
       background-color transparent
+      position absolute
+      width 100%
+      left 0
+      top 0
+      z-index 999
 
   :global(.container)
     width auto
