@@ -1,4 +1,54 @@
 
+1.0.0 / 2016-07-08
+==================
+
+  * Merge pull request #10 from ramasilveyra/react
+  * Alt of thumbnails equal title
+  * Don't bundle React on production bundle
+  * Bump dependencies
+  * Improve folder structure
+  * CSS improvements: font size and style, padding of Items and images
+  * Add NODE_ENV var to webpack
+  * Use .section-title with css-modules
+  * Remove height more dropdown
+  * Rename description to excerpt
+  * Fix height of dropdown
+  * Definitive links
+  * Documentation of Header and implement props API
+  * Switch to one bundle and css in external file
+  * Code style and remove unused code
+  * Remove unnecessary code of the old version
+  * Move test code to tools/playground-template.ejs
+  * Add theme-dark support and simpleList functionality.
+  * Fix caret position for item component.
+  * Fix hover color of items and button colors dark version
+  * Header dark version styles (only desktop).
+  * Add .json component titles and hide more link on mobile.
+  * Don't delete the default properties of menu-items.json on gulp data
+  * Mobile version gradients, close button micro interaction.
+  * Mobile version styles.
+  * Add style guide styles, remove css modules global styles.
+  * Add gulp task to update menu items
+  * Hover change highlight content.
+  * More dropdown, buttons (wip)
+  * Change dropdown component structure.
+  * Add icons and arrow support for items, change .json structure.
+  * css changes (wip)
+  * Add header components (new design - wip).
+  * Refactor webpack .styl loaders
+  * Example of css-modules
+  * Add missing devDep and enable css-modules by default
+  * Add carte-blanche support for an isolated development space
+  * Multiple bundles and browser sync
+  * New highlight posts.
+  * Set first highlight of list as default.
+  * Highlight change when hovering items.
+  * React header (wip)
+  * Change json elements of menu.
+  * Change json structure, add dropdown components.
+  * Remove complexity of arias/roles dropdown attrs
+  * React component version
+
 0.5.7 / 2016-05-12
 ==================
 
