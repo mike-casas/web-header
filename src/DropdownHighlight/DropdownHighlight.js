@@ -20,7 +20,7 @@ const DropdownHighlight = ({ data, parentClass }) =>
       : null
     }
     <div className={cx('content')}>
-      <img src={data.thumbnail} alt="" />
+      <img src={data.thumbnail} alt={data.title} />
       <h5 className={cx('title')}>{data.title}</h5>
       {data.excerpt
         ? <p className={cx('text')}>{data.excerpt}</p>
