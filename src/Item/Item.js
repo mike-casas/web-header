@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Dropdown from './Dropdown';
+import Dropdown from '../Dropdown';
 import styles from './Item.styl';
 import classNames from 'classnames/bind';
 

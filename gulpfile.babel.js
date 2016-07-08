@@ -13,7 +13,7 @@ import { isObject } from 'lodash';
 import superagent from 'superagent';
 import superagentPromise from 'superagent-promise';
 
-const menuItemsJson = path.join(__dirname, 'src', 'menu-items.json');
+const menuItemsJson = path.join(__dirname, 'src', 'data', 'menu-items.json');
 const request = superagentPromise(superagent, Promise);
 const readFile = Promise.promisify(fs.readFile);
 const writeFile = Promise.promisify(fs.writeFile);

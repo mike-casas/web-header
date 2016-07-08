@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import Head from './Head';
-import Item from './Item';
-import defaultMenuItems from './menu-items.json';
+import Head from '../Head';
+import Item from '../Item';
+import defaultMenuItems from '../data/menu-items.json';
 import styles from './WebHeader.styl';
 import classNames from 'classnames/bind';
 import cxN from 'classnames';
