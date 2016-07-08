@@ -1,30 +1,73 @@
 {
-  "name": "web-header",
-  "private": true,
-  "description": "Auth0's website and landings header",
+  "name": "auth0-web-header",
   "version": "0.5.7",
+  "description": "Auth0's website and landings header",
+  "main": "dist/",
   "scripts": {
-    "cdn": "grunt cdn"
+    "build": "NODE_ENV=production gulp build",
+    "start": "gulp dev",
+    "prepublish": "npm run build",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:js",
+    "test": "mocha \"src/**/*.spec.js\" --require test/setup.js --compilers js:babel-register && npm run lint"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "bump": "ianstormtaylor/bump",
-    "component": "^0.19.9",
-    "component-jade": "^0.5.0",
-    "component-minify": "^1.2.0",
-    "component-stylus": "^1.1.3",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-maxcdn": "https://github.com/siacomuzzi/grunt-maxcdn/tarball/0.0.1",
-    "grunt-aws-s3": "~0.9.3",
-    "grunt-shell": "^0.7.0",
-    "jade": "^1.7.0",
-    "matchdep": "^0.3.0",
-    "serve": "*"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0/web-header.git"
   },
+  "author": "Auth0 Inc. <support@auth0.com> (https://auth0.com)",
   "license": "MIT",
-  "main": "index.js"
+  "bugs": {
+    "url": "https://github.com/auth0/web-header/issues"
+  },
+  "homepage": "https://github.com/auth0/web-header#readme",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "peerDependencies": {
+    "react": "^15.1.0"
+  },
+  "devDependencies": {
+    "auth0-styleguide": "auth0/styleguide",
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "bluebird": "^3.4.0",
+    "browser-sync": "^2.13.0",
+    "carte-blanche": "^0.2.3",
+    "chai": "^3.5.0",
+    "component-playground": "^1.2.1",
+    "css-loader": "^0.23.1",
+    "enzyme": "^2.4.1",
+    "eslint": "^2.10.2",
+    "eslint-config-auth0": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0",
+    "eventsource-polyfill": "^0.9.6",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.13.1",
+    "mocha": "^2.5.3",
+    "poststylus": "^0.2.3",
+    "react-dom": "^0.14.0 || ^15.1.0",
+    "react-addons-test-utils": "^15.1.0",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.0",
+    "superagent": "^2.0.0",
+    "superagent-promise": "^1.1.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.1"
+  }
 }

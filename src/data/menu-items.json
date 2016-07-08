@@ -1,0 +1,264 @@
+[
+  {
+    "name": "Products",
+    "id": "products",
+    "simpleList": true,
+    "childrens": [
+      {
+        "componentType": "list",
+        "key": "product-list",
+        "items": [
+          {
+            "name": "Platform",
+            "id": "platform",
+            "href": "https://auth0.com/how-it-works",
+            "icon": "auth0"
+          },
+          {
+            "name": "Enterprise",
+            "id": "enterprise",
+            "href": "https://auth0.com/enterprise",
+            "icon": "auth0"
+          },
+          {
+            "name": "Lock",
+            "id": "lock",
+            "href": "https://auth0.com/lock",
+            "icon": "auth0"
+          },
+          {
+            "name": "Passwordless",
+            "id": "passwordless",
+            "href": "https://auth0.com/passwordless",
+            "icon": "auth0"
+          },
+          {
+            "name": "Wordpress",
+            "id": "wordpress",
+            "href": "https://auth0.com/wordpress",
+            "icon": "auth0"
+          },
+          {
+            "name": "Webtask",
+            "id": "webtask",
+            "href": "https://webtask.io/",
+            "icon": "webtask"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Why Auth0",
+    "id": "why-auth0",
+    "dropdownClass": "highlightDropdown",
+    "childrens": [
+      {
+        "componentType": "list",
+        "key": "why-auth0-list",
+        "hasArrows": true,
+        "items": [
+          {
+            "name": "Overview",
+            "id": "overview",
+            "href": "https://auth0.com/why-auth0",
+            "highlight": {
+              "componentTitle": "Featured in Overview",
+              "thumbnail": "https://auth0.com/lib/header/media/header-why-auth0.png",
+              "title": "Why Auth0?",
+              "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
+              "linkText": "Learn more about us",
+              "link": "https://auth0.com/why-auth0"
+            }
+          },
+          {
+            "name": "Customers",
+            "id": "customers",
+            "href": "https://auth0.com/customers",
+            "highlight": {
+              "componentTitle": "Featured in Customers",
+              "thumbnail": "https://auth0.com/lib/header/media/header-customers.png",
+              "title": "These are some of the companies that trust Auth0",
+              "excerpt": "Auth0 is used by many companies and apps to manage their authentication. Learn who are they and how they use Auth0 as an Identity Platform.",
+              "linkText": "See more customers",
+              "link": "https://auth0.com/customers"
+            }
+          },
+          {
+            "name": "Concepts",
+            "id": "learn-concepts",
+            "href": "https://auth0.com/learn/#concepts",
+            "highlight": {
+              "componentTitle": "Featured in Concepts",
+              "title": "Get Started with JSON Web Tokens",
+              "excerpt": "All you wanted to know about JSON Web Tokens but were afraid to ask.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/catalog-jwt-hero.png",
+              "link": "https://auth0.com/learn/json-web-tokens/",
+              "linkText": "See more"
+            }
+          },
+          {
+            "name": "Frameworks",
+            "id": "learn-frameworks",
+            "href": "https://auth0.com/learn/#frameworks",
+            "highlight": {
+              "componentTitle": "Featured in Frameworks",
+              "title": "AngularJS Authentication, the Easy Way",
+              "excerpt": "Add token authentication to your Angular 1.x or Angular 2 app in minutes with ready-to-go tools.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/catalog-angular-hero.png",
+              "link": "https://auth0.com/learn/angular-authentication/",
+              "linkText": "See more"
+            }
+          },
+          {
+            "name": "Growth",
+            "id": "learn-growth",
+            "href": "https://auth0.com/learn/#growth",
+            "highlight": {
+              "componentTitle": "Featured in Growth",
+              "title": "Build or Buy? 20 Identity Management Questions.",
+              "excerpt": "Identity Management is well understood - been doing it since the first computers. How hard can it be? Harder than you think - take the Build or Buy Quiz!",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/04/Build-v-Buy-Hero.png",
+              "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/",
+              "linkText": "See more"
+            }
+          },
+          {
+            "name": "Case Studies",
+            "id": "learn-case-studies",
+            "href": "https://auth0.com/learn#case-studies",
+            "highlight": {
+              "componentTitle": "Featured in Case Studies",
+              "title": "Harvard Medical School: Identity Secures NIH Research",
+              "excerpt": "Pre-eminent medical education and research institutions join forces to diagnose medical mysteries - secured by Auth0.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/04/hardvard-catalog.png",
+              "link": "https://auth0.com/learn/harvard-medical-school-identity-secures-nih-research/",
+              "linkText": "See more"
+            }
+          },
+          {
+            "name": "Use Cases",
+            "id": "learn-use-cases",
+            "href": "https://auth0.com/learn#use-cases",
+            "highlight": {
+              "componentTitle": "Featured in Use Cases",
+              "title": "Powering User Analytics With Identity",
+              "excerpt": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data about your users.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/analytics-catalog.png",
+              "link": "https://auth0.com/learn/powering-user-analytics-identity/",
+              "linkText": "See more"
+            }
+          },
+          {
+            "name": "Industries",
+            "id": "learn-industries",
+            "href": "https://auth0.com/learn#industries",
+            "highlight": {
+              "componentTitle": "Featured in Industries",
+              "title": "For the Telecommunications Industry, Identity Matters",
+              "excerpt": "Join other telecommunication players that leverage identity to engage their customers",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/Telecom-catalog.png",
+              "link": "https://auth0.com/learn/telecommunications-industry/",
+              "linkText": "See more"
+            }
+          }
+        ]
+      },
+      {
+        "componentType": "highlight",
+        "key": "default-highlight-overview",
+        "default": {
+          "componentTitle": "Featured in Overview",
+          "thumbnail": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
+          "title": "Why Auth0?",
+          "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
+          "linkText": "Learn more about us",
+          "link": "https://auth0.com/why-auth0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pricing",
+    "id": "pricing",
+    "href": "https://auth0.com/pricing"
+  },
+  {
+    "name": "Documentation",
+    "id": "documentation",
+    "href": "https://auth0.com/docs"
+  },
+  {
+    "name": "More",
+    "id": "more",
+    "dropdownClass": "moreDropdown",
+    "childrens": [
+      {
+        "componentType": "list",
+        "title": "Tech resources",
+        "key": "resources-list",
+        "items": [
+          {
+            "name": "Security",
+            "id": "security",
+            "href": "http://auth0.com/security"
+          },
+          {
+            "name": "Availability",
+            "id": "availability",
+            "href": "https://auth0.com/availability-trust"
+          },
+          {
+            "name": "Opensource",
+            "id": "opensource",
+            "href": "https://auth0.com/opensource"
+          }
+        ]
+      },
+      {
+        "componentType": "list",
+        "title": "Additional info",
+        "key": "adittional-list",
+        "items": [
+          {
+            "name": "About",
+            "id": "about",
+            "href": "http://auth0.com/about"
+          },
+          {
+            "name": "Support",
+            "id": "support",
+            "href": "http://auth0.com/support"
+          },
+          {
+            "name": "Partners",
+            "id": "partners",
+            "href": "http://auth0.com/partners"
+          },
+          {
+            "name": "Jobs",
+            "id": "jobs",
+            "href": "http://auth0.com/jobs"
+          }
+        ]
+      },
+      {
+        "componentType": "highlight",
+        "title": "Latest from Auth0 blog",
+        "key": "last-blog",
+        "id": "last-blog",
+        "default": {
+          "componentTitle": "Latest from <a href=\"https://auth0.com/blog\">Auth0 blog</a>",
+          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
+          "title": "Growth Hacking Is Dead, Long Live Growth Hacking",
+          "excerpt": "In the late 1990's, tech startups were expected to spend money on traditional marketing and advertising channels just like everyone else....",
+          "link": "https://auth0.com/blog/2016/07/05/growth-hacking-is-dead-long-live-growth-hacking/",
+          "time": "June 23",
+          "author": "Diego Poza",
+          "thumbnail": "https://cdn.auth0.com/blog/growth-hacking/logo.png",
+          "date": "July 5"
+        }
+      }
+    ]
+  }
+]

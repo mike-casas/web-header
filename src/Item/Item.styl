@@ -1,0 +1,106 @@
+@import '../styles/base'
+
+.item
+  cursor pointer
+
+  +breakpoint("desktop", "max")
+    margin-bottom 25px
+
+  +breakpoint("desktop")
+    float left
+
+    &:hover,
+    &:focus
+
+      .link
+        color $navbar-default-link-hover-color
+
+      // Show dropdown caret
+      .dropdownLink .dropdownCaret
+        margin-top 5px
+
+        &:after
+          opacity 1
+          visibility visible
+          transition-delay 0s
+
+      :global .headerItemDropdown
+        opacity 1
+        visibility visible
+        margin-top 5px
+        transition-delay 0s
+
+    &.theme-dark
+      .text,
+      .caret
+        color white
+        opacity 0.7
+
+      &:hover,
+      &:focus
+        .text,
+        .caret
+          opacity 1
+
+  &.item-more > a
+    +breakpoint("desktop", "max")
+      display none
+
+
+.link
+  text-decoration none
+  position relative
+  color currentColor
+  cursor pointer
+  padding 15px
+
+  +breakpoint("desktop", "max")
+    font-size 20px
+    padding-top 15px
+    padding-bottom 15px
+    padding-left 0
+    line-height 1.5
+
+  +breakpoint("desktop")
+    font-size 16px
+    padding 20px 15px
+
+.dropdownLink
+  composes link
+
+  .dropdownCaret
+    display inline-block
+    position absolute
+    z-index 1100
+    overflow hidden
+    text-align center
+    width 20px
+    height 12px
+    top 34px
+    left 50%
+    transform translateX(-50%)
+    margin-top 0
+    transition margin-top 0.2s
+
+    &:after
+      content ''
+      display inline-block
+      width 12px
+      height 12px
+      background-color white
+      border 1px solid rgba(black, 0.1)
+      transform rotate(45deg)
+      transition visibility 0s 0.2s, opacity 0.2s
+      opacity 0
+      visibility hidden
+
+.caret
+  display none
+
+  +breakpoint("desktop")
+    display inline-block
+    font-size 14px
+    margin-left 5px
+
+.positionRelative
+  position relative

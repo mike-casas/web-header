@@ -1,0 +1,33 @@
+@import '../styles/base'
+
+.dropdown
+  z-index 1000
+
+  +breakpoint("desktop")
+    color $color-text
+    position absolute
+    background-color white
+    border-radius 3px
+    top 32px
+    left 20px
+    border 1px solid rgba(black, 0.1)
+    box-shadow 0 2px 7px rgba(black, 0.05)
+    transition visibility 0s 0.2s, opacity 0.2s, margin-top 0.2s
+    opacity 0
+    visibility hidden
+    margin-top 0
+
+
+.highlightDropdown
+  composes dropdown
+
+  +breakpoint("desktop")
+    height 368px
+    width 592px
+
+
+.moreDropdown
+  composes dropdown
+
+  +breakpoint("desktop")
+    width 582px
