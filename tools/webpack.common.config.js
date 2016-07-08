@@ -44,6 +44,11 @@ const config = {
 
   plugins: [
     new ExtractTextPlugin('index.css'),
+    // Define free variables
+    // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': DEBUG ? '"development"' : '"production"'
+    }),
     // Assign the module and chunk ids by occurrence count
     // Consistent ordering of modules required if using any hashing ([hash] or [chunkhash])
     // https://webpack.github.io/docs/list-of-plugins.html#occurrenceorderplugin
