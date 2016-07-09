@@ -14,7 +14,7 @@ Props | Type | Default | Description
 ------ | ---- | ------- | -----------
 className | string | '' | Applied to the header root element.
 children | node | null | Can be used to render custom menu items via React components.
-menuItems | collection | null | Can be used to render custom menu items via a parsed JSON, see `src/menu-items.json`.
+menuItems | collection | null | Can be used to render custom menu items via a parsed JSON, see `src/data/menu-items.json`.
 theme | string | 'light' | Header theme, another option is 'dark'.
 featuredEnable | boolean | true | Enable or disable featured link next to the Auth0 logo.
 featuredLink | string | 'https://auth0.com/jobs' | Featured link URI.
@@ -26,7 +26,7 @@ primaryButtonText | string | 'Login' | Text of the primary button.
 secondaryButtonEnable | boolean | true | Secondary button link
 primaryButtonLink | string | '?contact=true' | Link of the secondary button, if it's different from `''` the primary button will be rendered as an anchor tag
 secondaryButtonOnClick | function | () => {} | Callback function for when secondary button is clicked.with this href and `primaryButtonOnClick` will be ignored.
-primaryButtonText | string | 'Login' | Text of the secondary button.
+secondaryButtonText | string | 'Login' | Text of the secondary button.
 
 ### Example
 

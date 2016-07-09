@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 const DropdownListItem = ({ hasArrow, parentClass, itemHoverHandler, item }) => {
   const logos = {
-    auth0: 'http://styleguide.auth0.com/lib/logos/img/badge.png',
+    auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
     webtask: 'https://webtask.io/images/symbol.svg'
   };
 

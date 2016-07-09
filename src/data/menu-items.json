@@ -201,7 +201,7 @@
           {
             "name": "Security",
             "id": "security",
-            "href": "http://auth0.com/security"
+            "href": "https://auth0.com/security"
           },
           {
             "name": "Availability",
@@ -223,22 +223,22 @@
           {
             "name": "About",
             "id": "about",
-            "href": "http://auth0.com/about"
+            "href": "https://auth0.com/about"
           },
           {
             "name": "Support",
             "id": "support",
-            "href": "http://auth0.com/support"
+            "href": "https://auth0.com/support"
           },
           {
             "name": "Partners",
             "id": "partners",
-            "href": "http://auth0.com/partners"
+            "href": "https://auth0.com/partners"
           },
           {
             "name": "Jobs",
             "id": "jobs",
-            "href": "http://auth0.com/jobs"
+            "href": "https://auth0.com/jobs"
           }
         ]
       },
