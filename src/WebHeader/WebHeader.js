@@ -69,12 +69,22 @@ class WebHeader extends Component {
   }
 
   handleResize() {
-    if (window.innerWidth < this.props.breakpoint) return this.setState({ mobileState: true });
-    return this.setState({ mobileState: false });
+    const mobileState = window.innerWidth < this.props.breakpoint;
+    this.setState({ mobileState }, this.addOverflowBody);
   }
 
   navbarDropdownHandler() {
-    this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen });
+    this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen }, this.addOverflowBody);
+  }
+
+  addOverflowBody() {
+    const { navbarDropdownIsOpen, mobileState } = this.state;
+
+    if (navbarDropdownIsOpen && mobileState) {
+      document.body.classList.add(cx('overflow'));
+    } else {
+      document.body.classList.remove(cx('overflow'));
+    }
   }
 
   renderButton(link, onClick, text, className) {
