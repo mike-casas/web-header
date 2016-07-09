@@ -111,19 +111,6 @@
             }
           },
           {
-            "name": "Growth",
-            "id": "learn-growth",
-            "href": "https://auth0.com/learn/#growth",
-            "highlight": {
-              "componentTitle": "Featured in Growth",
-              "title": "Build or Buy? 20 Identity Management Questions.",
-              "excerpt": "Identity Management is well understood - been doing it since the first computers. How hard can it be? Harder than you think - take the Build or Buy Quiz!",
-              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/04/Build-v-Buy-Hero.png",
-              "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/",
-              "linkText": "See more"
-            }
-          },
-          {
             "name": "Case Studies",
             "id": "learn-case-studies",
             "href": "https://auth0.com/learn#case-studies",
@@ -161,6 +148,19 @@
               "link": "https://auth0.com/learn/telecommunications-industry/",
               "linkText": "See more"
             }
+          },
+          {
+            "name": "Others",
+            "id": "learn-growth",
+            "href": "https://auth0.com/learn/#growth",
+            "highlight": {
+              "componentTitle": "Featured in Growth",
+              "title": "Build or Buy? 20 Identity Management Questions.",
+              "excerpt": "Identity Management is well understood - been doing it since the first computers. How hard can it be? Harder than you think - take the Build or Buy Quiz!",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/04/Build-v-Buy-Hero.png",
+              "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/",
+              "linkText": "See more"
+            }
           }
         ]
       },
@@ -169,7 +169,7 @@
         "key": "default-highlight-overview",
         "default": {
           "componentTitle": "Featured in Overview",
-          "thumbnail": "https://cdn.auth0.com/blog/ruby-auth-with-jwt/logo.png",
+          "thumbnail": "https://auth0.com/lib/header/media/header-why-auth0.png",
           "title": "Why Auth0?",
           "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
           "linkText": "Learn more about us",
@@ -249,14 +249,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\">Auth0 blog</a>",
-          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
-          "title": "Growth Hacking Is Dead, Long Live Growth Hacking",
-          "excerpt": "In the late 1990's, tech startups were expected to spend money on traditional marketing and advertising channels just like everyone else....",
-          "link": "https://auth0.com/blog/2016/07/05/growth-hacking-is-dead-long-live-growth-hacking/",
+          "avatar": "https://www.gravatar.com/avatar/df6c864847fba9687d962cb80b482764??s=60",
+          "title": "Why Your Project Estimations Are Always Wrong",
+          "excerpt": "If you've ever developed software for a client, someone's asked you “How long do you think that will take you?” If you've heard that ques...",
+          "link": "https://auth0.com/blog/2016/07/08/why-your-project-estimations-are-always-wrong/",
           "time": "June 23",
-          "author": "Diego Poza",
-          "thumbnail": "https://cdn.auth0.com/blog/growth-hacking/logo.png",
-          "date": "July 5"
+          "author": "Martin Gontovnikas",
+          "thumbnail": "https://cdn.auth0.com/blog/estimations/logo.png",
+          "date": "July 8"
         }
       }
     ]
