@@ -1,4 +1,11 @@
 
+1.0.2 / 2016-07-09
+==================
+
+  * Fix scroll on mobile when dropdown is open
+  * Fix gradient on safari
+  * Rename Growth to Others, fix default image of overview and update blog post
+
 1.0.1 / 2016-07-08
 ==================
 
