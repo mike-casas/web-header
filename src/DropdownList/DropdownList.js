@@ -7,11 +7,11 @@ const cx = classNames.bind(styles);
 
 const DropdownList = ({ data, itemHoverHandler, parentClass, closeHeaderDropdown }) =>
   <div className={cx('dropdownList', { moreDropdownList: parentClass === 'moreDropdown' })}>
+    {data.title
+      ? <h4 className={cx('section-title')}>{data.title}</h4>
+      : null
+    }
     <ul>
-      {data.title
-        ? <h4 className={cx('section-title')}>{data.title}</h4>
-        : null
-      }
       {data.items.map(item =>
         <DropdownListItem
           key={item.id}

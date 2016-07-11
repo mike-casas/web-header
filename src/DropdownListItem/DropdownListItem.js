@@ -27,7 +27,7 @@ const DropdownListItem = ({
     >
       <a href={item.href} onClick={closeHeaderDropdown}>
         {item.icon
-          ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" />
+          ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt="" />
           : null
         }
         <span className={cx('text')}>{item.name}</span>

@@ -161,14 +161,14 @@ class WebHeader extends Component {
               })}
             >
               <ul className={cx('navigationLeft')}>{!!children ? children : renderedMenuItems}</ul>
-              <ul
+              <div
                 className={cxN(cx('navigationRight'), {
                   'theme-dark': theme === 'dark' && !mobileState
                 })}
               >
                 {secondaryButtonEnable ? secondaryButton : null}
                 {primaryButtonEnable ? primaryButton : null}
-              </ul>
+              </div>
             </div>
           </div>
         </nav>
