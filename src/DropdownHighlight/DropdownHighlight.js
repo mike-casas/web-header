@@ -19,7 +19,7 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
       </h4>
       : null
     }
-    <div className={cx('content')}>
+    <a href={data.link} onClick={closeHeaderDropdown} className={cx('content')}>
       <img src={data.thumbnail} alt={data.title} />
       <h5 className={cx('title')}>{data.title}</h5>
       {data.excerpt
@@ -31,15 +31,10 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
         : null
       }
       {(data.linkText && data.link)
-        ?
-          <a
-            href={data.link}
-            className={cx('link')}
-            onClick={closeHeaderDropdown}
-          >{data.linkText}</a>
+        ? <div className={cx('link')}>{data.linkText}</div>
         : null
       }
-    </div>
+    </a>
   </div>
 ;
 
