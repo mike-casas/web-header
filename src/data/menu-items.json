@@ -61,6 +61,19 @@
         "hasArrows": true,
         "items": [
           {
+            "name": "Overview",
+            "id": "overview",
+            "href": "https://auth0.com/why-auth0",
+            "highlight": {
+              "componentTitle": "Featured in Overview",
+              "thumbnail": "https://auth0.com/lib/header/media/header-why-auth0.png",
+              "title": "Why Auth0?",
+              "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
+              "linkText": "Learn more about us",
+              "link": "https://auth0.com/why-auth0"
+            }
+          },
+          {
             "name": "Customers",
             "id": "customers",
             "href": "https://auth0.com/customers",
@@ -210,6 +223,11 @@
             "name": "Availability",
             "id": "availability",
             "href": "https://auth0.com/availability-trust"
+          },
+          {
+            "name": "Opensource",
+            "id": "opensource",
+            "href": "https://auth0.com/opensource"
           },
           {
             "name": "Jobs",
