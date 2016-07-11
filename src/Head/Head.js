@@ -10,7 +10,8 @@ const Head = ({
   featuredLink,
   featuredText,
   dropdownOpen,
-  theme
+  theme,
+  closeHeaderDropdown
 }) =>
   <div
     className={cx('head', [`theme-${theme}`], {
@@ -33,7 +34,12 @@ const Head = ({
         <span>Auth0</span>
       </a>
       {featured
-        ? <a href={featuredLink} className={cx('hiring', 'animated', 'bounce')}>{featuredText}</a>
+        ?
+        <a
+          href={featuredLink}
+          className={cx('hiring', 'animated', 'bounce')}
+          onClick={closeHeaderDropdown}
+        >{featuredText}</a>
         : null
       }
     </h1>
@@ -45,7 +51,8 @@ Head.propTypes = {
   featuredLink: PropTypes.string,
   featuredText: PropTypes.string,
   dropdownOpen: PropTypes.bool,
-  theme: PropTypes.string
+  theme: PropTypes.string,
+  closeHeaderDropdown: PropTypes.func
 };
 
 export default Head;

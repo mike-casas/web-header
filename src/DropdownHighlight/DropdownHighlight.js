@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const DropdownHighlight = ({ data, parentClass }) =>
+const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
   <div
     className={cx({
       highlight: parentClass !== 'moreDropdown',
@@ -31,7 +31,12 @@ const DropdownHighlight = ({ data, parentClass }) =>
         : null
       }
       {(data.linkText && data.link)
-        ? <a href={data.link} className={cx('link')}>{data.linkText}</a>
+        ?
+          <a
+            href={data.link}
+            className={cx('link')}
+            onClick={closeHeaderDropdown}
+          >{data.linkText}</a>
         : null
       }
     </div>
@@ -40,7 +45,8 @@ const DropdownHighlight = ({ data, parentClass }) =>
 
 DropdownHighlight.propTypes = {
   data: PropTypes.object,
-  parentClass: PropTypes.string
+  parentClass: PropTypes.string,
+  closeHeaderDropdown: PropTypes.func
 };
 
 export default DropdownHighlight;

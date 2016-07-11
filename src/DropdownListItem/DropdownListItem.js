@@ -4,7 +4,13 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const DropdownListItem = ({ hasArrow, parentClass, itemHoverHandler, item }) => {
+const DropdownListItem = ({
+  hasArrow,
+  parentClass,
+  itemHoverHandler,
+  item,
+  closeHeaderDropdown
+}) => {
   const logos = {
     auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
     webtask: 'https://webtask.io/images/symbol.svg'
@@ -19,7 +25,7 @@ const DropdownListItem = ({ hasArrow, parentClass, itemHoverHandler, item }) => 
       })}
       onMouseEnter={() => {itemHoverHandler(item.highlight);}}
     >
-      <a href={item.href}>
+      <a href={item.href} onClick={closeHeaderDropdown}>
         {item.icon
           ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" />
           : null
@@ -35,7 +41,8 @@ DropdownListItem.propTypes = {
   itemHoverHandler: PropTypes.func,
   dropdownReference: PropTypes.object,
   hasArrow: PropTypes.bool,
-  parentClass: PropTypes.string
+  parentClass: PropTypes.string,
+  closeHeaderDropdown: PropTypes.func
 };
 
 export default DropdownListItem;

@@ -47,13 +47,6 @@ class WebHeader extends Component {
     breakpoint: 992
   };
 
-  constructor(props) {
-    super(props);
-
-    this.navbarDropdownHandler = ::this.navbarDropdownHandler;
-    this.handleResize = ::this.handleResize;
-  }
-
   state = {
     navbarDropdownIsOpen: false,
     mobileState: true
@@ -68,13 +61,22 @@ class WebHeader extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  handleResize() {
+  handleResize = () => {
     const mobileState = window.innerWidth < this.props.breakpoint;
     this.setState({ mobileState }, this.addOverflowBody);
   }
 
-  navbarDropdownHandler() {
+  navbarDropdownHandler = () => {
     this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen }, this.addOverflowBody);
+  }
+
+  closeDropdownOnButtonClick = callback => event => {
+    if (callback) {
+      callback(event);
+    }
+    if (this.state.mobileState && this.state.navbarDropdownIsOpen) {
+      this.navbarDropdownHandler();
+    }
   }
 
   addOverflowBody() {
@@ -89,7 +91,7 @@ class WebHeader extends Component {
 
   renderButton(link, onClick, text, className) {
     return !!link
-      ? <a href={link} className={className}>{text}</a>
+      ? <a href={link} className={className} onClick={onClick}>{text}</a>
       : <button className={className} onClick={onClick}>{text}</button>;
   }
 
@@ -115,13 +117,13 @@ class WebHeader extends Component {
 
     const primaryButton = this.renderButton(
       primaryButtonLink,
-      primaryButtonOnClick,
+      this.closeDropdownOnButtonClick(primaryButtonOnClick),
       primaryButtonText,
       'btn btn-success btn-sm'
     );
     const secondaryButton = this.renderButton(
       secondaryButtonLink,
-      secondaryButtonOnClick,
+      this.closeDropdownOnButtonClick(secondaryButtonOnClick),
       secondaryButtonText,
       'btn btn-transparent btn-sm'
     );
@@ -131,6 +133,7 @@ class WebHeader extends Component {
         item={item}
         theme={theme}
         simpleList={item.simpleList}
+        closeHeaderDropdown={this.closeDropdownOnButtonClick()}
       />
     );
 
@@ -149,6 +152,7 @@ class WebHeader extends Component {
               featuredText={featuredText}
               dropdownOpen={navbarDropdownIsOpen}
               theme={theme}
+              closeHeaderDropdown={this.closeDropdownOnButtonClick()}
             />
             <div
               className={cx('collapse', {

@@ -9,7 +9,8 @@ const cx = classNames.bind(styles);
 class Dropdown extends Component {
 
   static propTypes = {
-    data: PropTypes.object
+    data: PropTypes.object,
+    closeHeaderDropdown: PropTypes.func
   };
 
   static defaultProps = {
@@ -35,17 +36,19 @@ class Dropdown extends Component {
   }
 
   render() {
+    const { data, closeHeaderDropdown } = this.props;
     return (
-      <div className={cx('dropdown', 'headerItemDropdown', this.props.data.dropdownClass)}>
-        {this.props.data.childrens.map((component) => {
+      <div className={cx('dropdown', 'headerItemDropdown', data.dropdownClass)}>
+        {data.childrens.map((component) => {
           switch (component.componentType) {
             case 'list':
               return (
                 <DropdownList
                   key={component.key}
                   data={component}
-                  parentClass={this.props.data.dropdownClass}
+                  parentClass={data.dropdownClass}
                   itemHoverHandler={this.itemHoverHandler}
+                  closeHeaderDropdown={closeHeaderDropdown}
                 />
               );
             case 'highlight':
@@ -53,7 +56,8 @@ class Dropdown extends Component {
                 <DropdownHighlight
                   key={component.key}
                   data={this.state.highlight}
-                  parentClass={this.props.data.dropdownClass}
+                  parentClass={data.dropdownClass}
+                  closeHeaderDropdown={closeHeaderDropdown}
                 />
               );
             default:

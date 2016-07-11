@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const Item = ({ item, theme, simpleList }) =>
+const Item = ({ item, theme, simpleList, closeHeaderDropdown }) =>
   <li
     className={cx('item', [`item-${item.id}`], [`theme-${theme}`], {
       positionRelative: simpleList
@@ -13,6 +13,7 @@ const Item = ({ item, theme, simpleList }) =>
   >
     <a
       href={item.href}
+      onClick={closeHeaderDropdown}
       className={cx({
         link: !item.childrens,
         dropdownLink: item.childrens
@@ -37,7 +38,7 @@ const Item = ({ item, theme, simpleList }) =>
       }
     </a>
     {item.childrens
-      ? <Dropdown data={item} />
+      ? <Dropdown data={item} closeHeaderDropdown={closeHeaderDropdown} />
       : null
     }
   </li>;
@@ -46,7 +47,8 @@ Item.propTypes = {
   className: PropTypes.string,
   item: PropTypes.object,
   theme: PropTypes.string,
-  simpleList: PropTypes.bool
+  simpleList: PropTypes.bool,
+  closeHeaderDropdown: PropTypes.func
 };
 
 export default Item;

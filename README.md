@@ -20,11 +20,11 @@ featuredEnable | boolean | true | Enable or disable featured link next to the Au
 featuredLink | string | 'https://auth0.com/jobs' | Featured link URI.
 featuredText | string | 'We\'re hiring!' | Featured link text.
 primaryButtonEnable | boolean | true | Enable or disable primary button.
-primaryButtonLink | string | '' | Link of the primary button, if it's different from `''` the primary button will be rendered as an anchor tag with this href and `primaryButtonOnClick` will be ignored.
+primaryButtonLink | string | '' | Link of the primary button, if it's different from `''` the primary button will be rendered as an anchor tag with this href.
 primaryButtonOnClick | function | () => {} | Callback function for when primary button is clicked.
 primaryButtonText | string | 'Login' | Text of the primary button.
-secondaryButtonEnable | boolean | true | Secondary button link
-primaryButtonLink | string | '?contact=true' | Link of the secondary button, if it's different from `''` the primary button will be rendered as an anchor tag
+secondaryButtonEnable | boolean | true | Secondary button link.
+secondaryButtonLink | string | '?contact=true' | Link of the secondary button, if it's different from `''` the primary button will be rendered as an anchor tag with this href.
 secondaryButtonOnClick | function | () => {} | Callback function for when secondary button is clicked.with this href and `primaryButtonOnClick` will be ignored.
 secondaryButtonText | string | 'Login' | Text of the secondary button.
 

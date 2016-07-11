@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const DropdownList = ({ data, itemHoverHandler, parentClass }) =>
+const DropdownList = ({ data, itemHoverHandler, parentClass, closeHeaderDropdown }) =>
   <div className={cx('dropdownList', { moreDropdownList: parentClass === 'moreDropdown' })}>
     <ul>
       {data.title
@@ -19,6 +19,7 @@ const DropdownList = ({ data, itemHoverHandler, parentClass }) =>
           itemHoverHandler={itemHoverHandler}
           hasArrow={data.hasArrows}
           parentClass={parentClass}
+          closeHeaderDropdown={closeHeaderDropdown}
         />
       )}
     </ul>
@@ -28,7 +29,8 @@ DropdownList.propTypes = {
   data: PropTypes.object,
   itemHoverHandler: PropTypes.func,
   dropdownReference: PropTypes.object,
-  parentClass: PropTypes.string
+  parentClass: PropTypes.string,
+  closeHeaderDropdown: PropTypes.func
 };
 
 export default DropdownList;
