@@ -1,4 +1,11 @@
 
+1.0.3 / 2016-07-11
+==================
+
+  * Fix HTML validation issues
+  * Don't render tag a when there isn't a href
+  * Close mobile dropdown on button click
+
 1.0.2 / 2016-07-09
 ==================
 
