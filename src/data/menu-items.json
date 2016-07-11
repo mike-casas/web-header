@@ -3,6 +3,7 @@
     "name": "Products",
     "id": "products",
     "simpleList": true,
+    "mobileHref": "https://auth0.com/why-auth0",
     "childrens": [
       {
         "componentType": "list",
@@ -52,7 +53,7 @@
     "name": "Why Auth0",
     "id": "why-auth0",
     "dropdownClass": "highlightDropdown",
-    "href": "https://auth0.com/why-auth0",
+    "mobileHref": "https://auth0.com/why-auth0",
     "childrens": [
       {
         "componentType": "list",

@@ -5,12 +5,13 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const Item = ({ item, theme, simpleList, closeHeaderDropdown }) => {
+const Item = ({ item, theme, simpleList, closeHeaderDropdown, mobile }) => {
   const linkClass = cx({
     link: !item.childrens,
     dropdownLink: item.childrens
   });
   const linkContent = <ItemContent name={item.name} childrens={item.childrens} theme={theme} />;
+  const linkHref = mobile ? item.mobileHref : item.href;
 
   return (
     <li
@@ -18,8 +19,8 @@ const Item = ({ item, theme, simpleList, closeHeaderDropdown }) => {
         positionRelative: simpleList
       })}
     >
-      {item.href
-        ? <a href={item.href} onClick={closeHeaderDropdown} className={linkClass}>{linkContent}</a>
+      {linkHref
+        ? <a href={linkHref} onClick={closeHeaderDropdown} className={linkClass}>{linkContent}</a>
         : <span tabIndex="0" className={linkClass}>{linkContent}</span>
       }
       {item.childrens
@@ -35,7 +36,8 @@ Item.propTypes = {
   item: PropTypes.object,
   theme: PropTypes.string,
   simpleList: PropTypes.bool,
-  closeHeaderDropdown: PropTypes.func
+  closeHeaderDropdown: PropTypes.func,
+  mobile: PropTypes.bool
 };
 
 export default Item;

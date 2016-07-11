@@ -134,6 +134,7 @@ class WebHeader extends Component {
         theme={theme}
         simpleList={item.simpleList}
         closeHeaderDropdown={this.closeDropdownOnButtonClick()}
+        mobile={mobileState}
       />
     );
 
