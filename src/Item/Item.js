@@ -11,7 +11,7 @@ const Item = ({ item, theme, simpleList, closeHeaderDropdown, mobile }) => {
     dropdownLink: item.childrens
   });
   const linkContent = <ItemContent name={item.name} childrens={item.childrens} theme={theme} />;
-  const linkHref = mobile ? item.mobileHref : item.href;
+  const linkHref = (mobile ? item.mobileHref : null) || item.href;
 
   return (
     <li
