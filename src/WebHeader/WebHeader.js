@@ -61,9 +61,17 @@ class WebHeader extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
+  setHeightDropdown = () => {
+    const height = this.state.mobileState ? `${window.innerHeight - 75}px` : '';
+    this.refs.dropdownContent.style.height = height;
+  }
+
   handleResize = () => {
     const mobileState = window.innerWidth < this.props.breakpoint;
-    this.setState({ mobileState }, this.addOverflowBody);
+    this.setState({ mobileState }, () => {
+      this.addOverflowBody();
+      this.setHeightDropdown();
+    });
   }
 
   navbarDropdownHandler = () => {
@@ -160,6 +168,7 @@ class WebHeader extends Component {
                 dropdownOpen: navbarDropdownIsOpen,
                 in: navbarDropdownIsOpen
               })}
+              ref="dropdownContent"
             >
               <ul className={cx('navigationLeft')}>{!!children ? children : renderedMenuItems}</ul>
               <div
