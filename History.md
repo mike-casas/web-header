@@ -1,4 +1,26 @@
 
+1.0.4 / 2016-07-12
+==================
+
+  * Preload images
+  * Add see all... to all learn categories
+  * Fix cursor pointer
+  * Fix mobile only links
+  * Increase z-index
+  * Remove defaults See more links and only add it specifying
+  * Update menu items links
+  * Fix for vh units on iOS devices
+  * Remove padding and backgorund from images
+  * Fix scroll when menu is open on Safari iOS
+  * Add overview and opensource
+  * Make highlight links
+  * Fix .highlightDropdown height
+  * Use short description for last blog post
+  * Custom links only on mobile
+  * Replace and  move links
+  * Change dropdown featured image styles.
+  * Update to styleguide 4.8.1
+
 1.0.3 / 2016-07-11
 ==================
 
