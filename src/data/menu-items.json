@@ -94,7 +94,7 @@
               "componentTitle": "Featured in Case Studies",
               "title": "Harvard Medical School: Identity Secures NIH Research",
               "excerpt": "Pre-eminent medical education and research institutions join forces to diagnose medical mysteries - secured by Auth0.",
-              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/04/hardvard-catalog.png",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/harvard_header.svg",
               "link": "https://auth0.com/learn/harvard-medical-school-identity-secures-nih-research/",
               "linkText": "See more"
             }
@@ -107,7 +107,7 @@
               "componentTitle": "Featured in Concepts",
               "title": "Get Started with JSON Web Tokens",
               "excerpt": "All you wanted to know about JSON Web Tokens but were afraid to ask.",
-              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/catalog-jwt-hero.png",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/jwt_header.svg",
               "link": "https://auth0.com/learn/json-web-tokens/",
               "linkText": "See more"
             }
@@ -133,7 +133,7 @@
               "componentTitle": "Featured in Industries",
               "title": "For the Telecommunications Industry, Identity Matters",
               "excerpt": "Join other telecommunication players that leverage identity to engage their customers",
-              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/Telecom-catalog.png",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/telecommunications_header.svg",
               "link": "https://auth0.com/learn/telecommunications-industry/",
               "linkText": "See more"
             }
@@ -146,7 +146,7 @@
               "componentTitle": "Featured in Growth",
               "title": "Build or Buy? 20 Identity Management Questions.",
               "excerpt": "Identity Management is well understood - been doing it since the first computers. How hard can it be? Harder than you think - take the Build or Buy Quiz!",
-              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/04/Build-v-Buy-Hero.png",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/buyvsbuild_header.svg",
               "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/",
               "linkText": "See more"
             }
@@ -243,15 +243,15 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\">Auth0 blog</a>",
-          "avatar": "https://www.gravatar.com/avatar/df6c864847fba9687d962cb80b482764??s=60",
-          "title": "Why Your Project Estimations Are Always Wrong",
-          "excerpt": "And how Auth0 can help you focus on your business",
-          "link": "https://auth0.com/blog/2016/07/08/why-your-project-estimations-are-always-wrong/",
+          "avatar": "https://s.gravatar.com/avatar/bc94ff6211e645a2bdb4fdc60e23ad85.jpg?s=200",
+          "title": "Docker 101 for Developers",
+          "excerpt": "Now is your chance to learn about Docker in this introductory webinar!",
+          "link": "https://auth0.com/blog/2016/07/12/docker-101-for-developers/",
           "linkText": "Read more",
           "time": "June 23",
-          "author": "Martin Gontovnikas",
-          "thumbnail": "https://cdn.auth0.com/blog/estimations/logo.png",
-          "date": "July 8"
+          "author": "Kassandra Perch",
+          "thumbnail": "https://cdn.auth0.com/blog/docker/logo.png",
+          "date": "July 12"
         }
       }
     ]
