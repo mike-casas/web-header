@@ -32,8 +32,8 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
       }
     </a>
     <div className={cx('content')}>
-      {(data.morelinks || []).map(({ href, text }) =>
-        <a href={href} className={cx('link')} onClick={closeHeaderDropdown}>{text}</a>
+      {(data.morelinks || []).map(({ href, text }, index) =>
+        <a href={href} className={cx('link')} onClick={closeHeaderDropdown} key={index}>{text}</a>
       )}
     </div>
   </div>
