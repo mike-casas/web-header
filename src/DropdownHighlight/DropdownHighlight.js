@@ -30,11 +30,12 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
         ? <span className={cx('time')}>{data.time}</span>
         : null
       }
-      {(data.linkText && data.link)
-        ? <div className={cx('link')}>{data.linkText}</div>
-        : null
-      }
     </a>
+    <div className={cx('content')}>
+      {(data.morelinks || []).map(({ href, text }) =>
+        <a href={href} className={cx('link')} onClick={closeHeaderDropdown}>{text}</a>
+      )}
+    </div>
   </div>
 ;
 
