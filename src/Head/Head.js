@@ -39,6 +39,7 @@ const Head = ({
           href={featuredLink}
           className={cx('hiring', 'animated', 'bounce')}
           onClick={closeHeaderDropdown}
+          rel="external"
         >{featuredText}</a>
         : null
       }
