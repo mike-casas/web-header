@@ -49,8 +49,7 @@ class WebHeader extends Component {
 
   state = {
     navbarDropdownIsOpen: false,
-    mobileState: true,
-    closeHoverDropdowns: false
+    mobileState: true
   };
 
   componentDidMount() {
@@ -82,13 +81,6 @@ class WebHeader extends Component {
   closeDropdownOnButtonClick = callback => event => {
     if (callback) {
       callback(event);
-    }
-    if (!this.state.mobileState) {
-      this.setState({ closeHoverDropdowns: true }, () => {
-        setTimeout(() => {
-          this.setState({ closeHoverDropdowns: false });
-        }, 900);
-      });
     }
     if (this.state.mobileState && this.state.navbarDropdownIsOpen) {
       this.navbarDropdownHandler();
@@ -129,7 +121,7 @@ class WebHeader extends Component {
       secondaryButtonOnClick,
       secondaryButtonText
     } = this.props;
-    const { navbarDropdownIsOpen, mobileState, closeHoverDropdowns } = this.state;
+    const { navbarDropdownIsOpen, mobileState } = this.state;
 
     const primaryButton = this.renderButton(
       primaryButtonLink,
@@ -151,7 +143,6 @@ class WebHeader extends Component {
         simpleList={item.simpleList}
         closeHeaderDropdown={this.closeDropdownOnButtonClick()}
         mobile={mobileState}
-        closeHoverDropdowns={closeHoverDropdowns}
       />
     );
 
