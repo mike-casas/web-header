@@ -19,7 +19,12 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
       </h4>
       : null
     }
-    <a href={data.link} onClick={closeHeaderDropdown} className={cx('content')}>
+    <a
+      href={data.link}
+      onClick={closeHeaderDropdown}
+      className={cx('content')}
+      rel={data.external ? 'external' : null}
+    >
       <img src={data.thumbnail} alt={data.title} />
       <h5 className={cx('title')}>{data.title}</h5>
       {data.excerpt
@@ -32,8 +37,14 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
       }
     </a>
     <div className={cx('content')}>
-      {(data.morelinks || []).map(({ href, text }, index) =>
-        <a href={href} className={cx('link')} onClick={closeHeaderDropdown} key={index}>{text}</a>
+      {(data.morelinks || []).map(({ href, text, external }, index) =>
+        <a
+          href={href}
+          className={cx('link')}
+          onClick={closeHeaderDropdown}
+          key={index}
+          rel={external ? 'external' : null}
+        >{text}</a>
       )}
     </div>
   </div>

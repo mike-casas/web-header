@@ -88,15 +88,18 @@
             "name": "Case Studies",
             "id": "learn-case-studies",
             "href": "https://auth0.com/learn#case-studies",
+            "external": true,
             "highlight": {
               "componentTitle": "Featured in Case Studies",
               "title": "Harvard Medical School: Identity Secures NIH Research",
               "excerpt": "Pre-eminent medical education and research institutions join forces to diagnose medical mysteries - secured by Auth0.",
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/harvard_header.svg",
               "link": "https://auth0.com/learn/harvard-medical-school-identity-secures-nih-research/",
+              "external": true,
               "morelinks": [{
                 "text": "See all case studies",
-                "href": "https://auth0.com/learn#case-studies"
+                "href": "https://auth0.com/learn#case-studies",
+                "external": true
               }]
             }
           },
@@ -104,15 +107,18 @@
             "name": "Concepts",
             "id": "learn-concepts",
             "href": "https://auth0.com/learn/#concepts",
+            "external": true,
             "highlight": {
               "componentTitle": "Featured in Concepts",
               "title": "Get Started with JSON Web Tokens",
               "excerpt": "All you wanted to know about JSON Web Tokens but were afraid to ask.",
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/jwt_header.svg",
               "link": "https://auth0.com/learn/json-web-tokens/",
+              "external": true,
               "morelinks": [{
                 "text": "See all concepts",
-                "href": "https://auth0.com/learn#concepts"
+                "href": "https://auth0.com/learn#concepts",
+                "external": true
               }]
             }
           },
@@ -120,15 +126,18 @@
             "name": "Use Cases",
             "id": "learn-use-cases",
             "href": "https://auth0.com/learn#use-cases",
+            "external": true,
             "highlight": {
               "componentTitle": "Featured in Use Cases",
               "title": "Powering User Analytics With Identity",
               "excerpt": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data about your users.",
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/analytics-catalog.png",
               "link": "https://auth0.com/learn/powering-user-analytics-identity/",
+              "external": true,
               "morelinks": [{
                 "text": "See all use cases",
-                "href": "https://auth0.com/learn#use-cases"
+                "href": "https://auth0.com/learn#use-cases",
+                "external": true
               }]
             }
           },
@@ -136,15 +145,18 @@
             "name": "Industries",
             "id": "learn-industries",
             "href": "https://auth0.com/learn#industries",
+            "external": true,
             "highlight": {
               "componentTitle": "Featured in Industries",
               "title": "For the Telecommunications Industry, Identity Matters",
               "excerpt": "Join other telecommunication players that leverage identity to engage their customers",
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/telecommunications_header.svg",
               "link": "https://auth0.com/learn/telecommunications-industry/",
+              "external": true,
               "morelinks": [{
                 "text": "See all industries",
-                "href": "https://auth0.com/learn#industries"
+                "href": "https://auth0.com/learn#industries",
+                "external": true
               }]
             }
           },
@@ -152,15 +164,18 @@
             "name": "Others",
             "id": "learn-growth",
             "href": "https://auth0.com/learn/#growth",
+            "external": true,
             "highlight": {
               "componentTitle": "Featured in Others",
               "title": "Build or Buy? 20 Identity Management Questions.",
               "excerpt": "Identity Management is well understood - been doing it since the first computers. How hard can it be? Harder than you think - take the Build or Buy Quiz!",
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/buyvsbuild_header.svg",
               "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/",
+              "external": true,
               "morelinks": [{
                 "text": "See others",
-                "href": "https://auth0.com/learn#growth"
+                "href": "https://auth0.com/learn#growth",
+                "external": true
               }]
             }
           }
@@ -187,7 +202,8 @@
   {
     "name": "Documentation",
     "id": "documentation",
-    "href": "https://auth0.com/docs"
+    "href": "https://auth0.com/docs",
+    "external": true
   },
   {
     "name": "More",
@@ -254,11 +270,12 @@
         "key": "last-blog",
         "id": "last-blog",
         "default": {
-          "componentTitle": "Latest from <a href=\"https://auth0.com/blog\">Auth0 blog</a>",
+          "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://s.gravatar.com/avatar/bc94ff6211e645a2bdb4fdc60e23ad85.jpg?s=200",
           "title": "Docker 101 for Developers",
           "excerpt": "Now is your chance to learn about Docker in this introductory webinar!",
           "link": "https://auth0.com/blog/2016/07/12/docker-101-for-developers/",
+          "external": true,
           "time": "June 23",
           "author": "Kassandra Perch",
           "thumbnail": "https://cdn.auth0.com/blog/docker/logo.png",

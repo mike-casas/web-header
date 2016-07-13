@@ -12,6 +12,7 @@ const Item = ({ item, theme, simpleList, closeHeaderDropdown, mobile }) => {
   });
   const linkContent = <ItemContent name={item.name} childrens={item.childrens} theme={theme} />;
   const linkHref = (mobile ? item.mobileHref : null) || item.href;
+  const linkExternal = item.external ? 'external' : null;
 
   return (
     <li
@@ -20,7 +21,13 @@ const Item = ({ item, theme, simpleList, closeHeaderDropdown, mobile }) => {
       })}
     >
       {linkHref
-        ? <a href={linkHref} onClick={closeHeaderDropdown} className={linkClass}>{linkContent}</a>
+        ?
+        <a
+          href={linkHref}
+          onClick={closeHeaderDropdown}
+          className={linkClass}
+          rel={linkExternal}
+        >{linkContent}</a>
         : <span tabIndex="0" className={linkClass}>{linkContent}</span>
       }
       {item.childrens

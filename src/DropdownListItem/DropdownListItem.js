@@ -28,6 +28,7 @@ class DropdownListItem extends Component {
       auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
       webtask: 'https://webtask.io/images/symbol.svg'
     };
+    const linkExternal = item.external ? 'external' : null;
     return (
       <li
         className={cx({
@@ -37,7 +38,7 @@ class DropdownListItem extends Component {
         })}
         onMouseEnter={() => {itemHoverHandler(item.highlight);}}
       >
-        <a href={item.href} onClick={closeHeaderDropdown}>
+        <a href={item.href} onClick={closeHeaderDropdown} rel={linkExternal}>
           {item.icon
             ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt="" />
             : null
