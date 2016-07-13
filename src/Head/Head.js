@@ -30,7 +30,7 @@ const Head = ({
       <span className={cx('iconBar')} />
     </button>
     <h1 className={cx('brand')}>
-      <a href="/" rel="home" className={cx('logo')}>
+      <a href="/" rel="home" className={cx('logo')} onClick={closeHeaderDropdown}>
         <span>Auth0</span>
       </a>
       {featured
