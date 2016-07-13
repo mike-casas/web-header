@@ -65,11 +65,15 @@
             "id": "overview",
             "href": "https://auth0.com/why-auth0",
             "highlight": {
-              "componentTitle": "Featured in Overview",
               "thumbnail": "https://auth0.com/lib/header/media/header-why-auth0.png",
               "title": "Why Auth0?",
               "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
-              "link": "https://auth0.com/why-auth0"
+              "link": "https://auth0.com/why-auth0",
+              "morelinks": [{
+                "text": "Learn more",
+                "href": "https://auth0.com/why-auth0",
+                "external": true
+              }]
             }
           },
           {
@@ -77,11 +81,15 @@
             "id": "customers",
             "href": "https://auth0.com/customers",
             "highlight": {
-              "componentTitle": "Featured in Customers",
               "thumbnail": "https://auth0.com/lib/header/media/header-customers.png",
               "title": "These are some of the companies that trust Auth0",
               "excerpt": "Auth0 is used by many companies and apps to manage their authentication. Learn who are they and how they use Auth0 as an Identity Platform.",
-              "link": "https://auth0.com/customers"
+              "link": "https://auth0.com/customers",
+              "morelinks": [{
+                "text": "Learn more",
+                "href": "https://auth0.com/customers",
+                "external": true
+              }]
             }
           },
           {
