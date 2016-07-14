@@ -193,7 +193,6 @@
         "componentType": "highlight",
         "key": "default-highlight-overview",
         "default": {
-          "componentTitle": "Featured in Overview",
           "thumbnail": "https://auth0.com/lib/header/media/header-why-auth0.png",
           "title": "Why Auth0?",
           "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
