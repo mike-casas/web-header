@@ -1,42 +1,33 @@
 @import '../styles/base'
 
-.siteHeader
-  border-bottom 1px solid rgba(black, 0.1)
+.header
   background-color white
+  border-bottom 1px solid rgba(black, 0.1)
   text-align left
 
   &.theme-dark
     +breakpoint("desktop")
-      border-bottom 1px solid rgba(white, 0.1)
       background-color transparent
-      position absolute
-      width 100%
+      border-bottom 1px solid rgba(white, 0.1)
       left 0
+      position absolute
       top 0
+      width 100%
       z-index 999
 
-  :global(.container)
-    width auto
-
-  &.dropdownOpen
+  &.is-dropdown-open
     +breakpoint("desktop", "max")
       height 75px
 
-      > nav
-        position fixed
-        top 0
-        left 0
-        right 0
-        bottom 0
-        background-color rgba(white, 0.97)
-        z-index 9100
-
-        .collapse
-          display block
-          height calc(100vh - 75px)
-          overflow-y scroll
-          padding-top 10px
-          padding-bottom 82px
+.menu.is-dropdown-open
+  +breakpoint("desktop", "max")
+    background-color rgba(white, 0.97)
+    bottom 0
+    left 0
+    position fixed
+    right 0
+    top 0
+    z-index 9100
 
 .collapse
   clearfix()
@@ -44,62 +35,78 @@
   +breakpoint("desktop", "max")
     display none
 
+  +breakpoint("desktop")
+    float left
+
+  &.is-dropdown-open
+    +breakpoint("desktop", "max")
+      -webkit-overflow-scrolling touch
+      display block
+      height calc(100vh - 75px)
+      overflow-y scroll
+      padding-bottom 82px
+      padding-top 10px
+
 .navigation
-  clearfix()
-  position relative
   list-style-type none
   margin 0
   padding 0
 
   +breakpoint("desktop")
-    vertical-center-elem(28px, $navbar-desktop-height)
-
-.navigationLeft
-  composes navigation
-
-  +breakpoint("desktop")
     float left
     margin-left 30px
 
-.navigationRight
-  composes navigation
+.navigation
+.buttons-group
+  clearfix()
+  position relative
 
+  +breakpoint("desktop")
+    vertical-center-elem(28px, $navbar-desktop-height)
+
+.buttons-group
   +breakpoint("desktop", "max")
-    position absolute
-    bottom 0
-    left 0
-    right 0
-    background-color white
-    text-align center
-    padding-top 25px
-    padding-bottom 25px
-
-    &:before
-      content ''
-      display block
-      background linear-gradient(to bottom, rgba(255, 255, 255, .001) 0%, white 100%)
-      bottom 100%
-      width 100%
-      height 20px
-      position absolute
-      display block
+    display none
 
   +breakpoint("desktop")
     float right
 
-  :global
-    .btn
-      font-size 11px
-      padding 8px 18px
+  &.is-dropdown-open
+    +breakpoint("desktop", "max")
+      background-color white
+      bottom 0
+      display block
+      left 0
+      padding-bottom 25px
+      padding-top 25px
+      position absolute
+      right 0
+      text-align center
 
-      + .btn
-        margin-left 18px
+      &:before
+        background linear-gradient(to bottom, rgba(255, 255, 255, .001) 0%, white 100%)
+        bottom 100%
+        content ''
+        display block
+        height 20px
+        position absolute
+        width 100%
+
+  :global .btn
+    font-size 11px
+    padding 8px 18px
+
+   :global .btn + .btn
+     margin-left 18px
+
+.header :global(.container)
+  width auto
+
+.header :focus
+  outline thin dotted
 
 .overflow
   height 100%
   overflow hidden !important
   position fixed
   width 100%
-
-.siteHeader :focus
-  outline thin dotted

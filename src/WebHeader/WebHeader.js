@@ -147,11 +147,11 @@ class WebHeader extends Component {
 
     return (
       <header
-        className={cx('siteHeader', [`theme-${theme}`], {
-          dropdownOpen: navbarDropdownIsOpen
-        }, className)}
+        className={cx('header', [`theme-${theme}`], className, {
+          'is-dropdown-open': navbarDropdownIsOpen
+        })}
       >
-        <nav>
+        <div className={cx('menu', { 'is-dropdown-open': navbarDropdownIsOpen })}>
           <div className="container">
             <Head
               toggleDropdownHandler={this.navbarDropdownHandler}
@@ -162,25 +162,26 @@ class WebHeader extends Component {
               theme={theme}
               closeHeaderDropdown={this.closeDropdownOnButtonClick()}
             />
-            <div
+            <nav
               className={cx('collapse', {
-                dropdownOpen: navbarDropdownIsOpen,
-                in: navbarDropdownIsOpen
+                'is-dropdown-open': navbarDropdownIsOpen
               })}
               ref="dropdownContent"
             >
-              <ul className={cx('navigationLeft')}>{!!children ? children : renderedMenuItems}</ul>
-              <div
-                className={cxN(cx('navigationRight'), {
-                  'theme-dark': theme === 'dark' && !mobileState
-                })}
-              >
-                {secondaryButtonEnable ? secondaryButton : null}
-                {primaryButtonEnable ? primaryButton : null}
-              </div>
+              <ul className={cx('navigation')}>{!!children ? children : renderedMenuItems}</ul>
+            </nav>
+            <div
+              className={cxN(cx('buttons-group', {
+                'is-dropdown-open': navbarDropdownIsOpen
+              }), {
+                'theme-dark': theme === 'dark' && !mobileState
+              })}
+            >
+              {secondaryButtonEnable ? secondaryButton : null}
+              {primaryButtonEnable ? primaryButton : null}
             </div>
           </div>
-        </nav>
+        </div>
       </header>
     );
   }
