@@ -1,4 +1,10 @@
 
+1.0.6 / 2016-07-14
+==================
+
+  * Remove title of default highlight of Why Auth0
+  * Ignore dark styles of button on mobile
+
 1.0.5 / 2016-07-14
 ==================
 
