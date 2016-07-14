@@ -182,7 +182,7 @@ class WebHeader extends Component {
               className={cxN(cx('buttons-group', {
                 'is-dropdown-open': navbarDropdownIsOpen
               }), {
-                'theme-dark': theme === 'dark' && !mobileState
+                'theme-dark': theme === 'dark'
               })}
             >
               {secondaryButtonEnable ? secondaryButton : null}

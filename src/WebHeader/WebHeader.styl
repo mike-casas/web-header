@@ -92,6 +92,20 @@
         position absolute
         width 100%
 
+  // Style .btn.btn-transparent on mobile always on his standard version ignoring .theme-dark style
+  :global .btn.btn-transparent
+    +breakpoint("desktop", "max")
+      background-color rgba(0, 0, 0, 0) !important
+      border-color rgba(0, 0, 0, 0) !important
+      box-shadow inset 0 0 0 1px rgba(0, 0, 0, .2) !important
+      color #333 !important
+
+    &:hover
+      +breakpoint("desktop", "max")
+        color #333 !important
+        background-color rgba(0, 0, 0, 0) !important
+        border-color transparent !important
+
   :global .btn
     font-size 11px
     padding 8px 18px
