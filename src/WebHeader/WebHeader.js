@@ -96,6 +96,12 @@ class WebHeader extends Component {
     }
   }
 
+  handleKeyDown = e => {
+    // Only enable focusable elements on key tab pressed
+    if (e.keyCode !== 9 || this.state.focusable) return;
+    this.setState({ focusable: true });
+  }
+
   renderButton(link, onClick, text, className) {
     return !!link
       ? <a href={link} className={className} onClick={onClick}>{text}</a>
@@ -120,7 +126,7 @@ class WebHeader extends Component {
       secondaryButtonOnClick,
       secondaryButtonText
     } = this.props;
-    const { navbarDropdownIsOpen, mobileState } = this.state;
+    const { navbarDropdownIsOpen, mobileState, focusable } = this.state;
 
     const primaryButton = this.renderButton(
       primaryButtonLink,
@@ -148,8 +154,10 @@ class WebHeader extends Component {
     return (
       <header
         className={cx('header', [`theme-${theme}`], className, {
-          'is-dropdown-open': navbarDropdownIsOpen
+          'is-dropdown-open': navbarDropdownIsOpen,
+          focusable
         })}
+        onKeyDown={this.handleKeyDown}
       >
         <div className={cx('menu', { 'is-dropdown-open': navbarDropdownIsOpen })}>
           <div className="container">

@@ -103,7 +103,10 @@
   width auto
 
 .header :focus
-  outline thin dotted
+  outline none
+
+.header.focusable :focus
+  outline thin dotted !important
 
 .overflow
   height 100%
