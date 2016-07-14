@@ -1,4 +1,23 @@
 
+1.0.5 / 2016-07-14
+==================
+
+  * Only enable focusable elements on key down
+  * Fix active style of Items
+  * Add support for momentum scrolling on iOS
+  * Set default outline on focus
+  * Close desktop dropdown on link clic and adds support for keyboard navigation
+  * Revert "Close desktop dropdowns on button click"
+  * Few content and styling updates
+  * Close desktop dropdowns on button click
+  * Revert nitti font changes
+  * Enforce color
+  * Add external also to featured flag
+  * Increase z-index
+  * Add attr rel external for pagejs
+  * Close dropdown on logo click
+  * Change Growth to Others
+
 1.0.4 / 2016-07-12
 ==================
 
