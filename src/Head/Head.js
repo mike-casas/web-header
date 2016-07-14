@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import styles from './Head.styl';
 import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+const cx = styles::classNames;
 
 const Head = ({
   toggleDropdownHandler,

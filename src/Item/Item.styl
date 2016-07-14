@@ -1,100 +1,42 @@
 @import '../styles/base'
 
 .item
-
   +breakpoint("desktop", "max")
     margin-bottom 25px
 
   +breakpoint("desktop")
     float left
 
-    &:hover,
-    &:focus
-
-      .link
-        color $navbar-default-link-hover-color
-
-      // Show dropdown caret
-      .dropdownLink .dropdownCaret
-        margin-top 5px
-
-        &:after
-          opacity 1
-          visibility visible
-          transition-delay 0s
-
-      :global .headerItemDropdown
-        opacity 1
-        visibility visible
-        margin-top 5px
-        transition-delay 0s
-
-    &.theme-dark
-      .text,
-      .caret
-        color white
-        opacity 0.7
-
-      &:hover,
-      &:focus
-        .text,
-        .caret
-          opacity 1
-
-  &.item-more > a
-    +breakpoint("desktop", "max")
-      display none
-
+  &.simple-list
+    position relative
 
 .link
-  text-decoration none
-  position relative
   color currentColor
   cursor pointer
-  padding 15px
   outline none
+  padding 15px
+  position relative
+  text-decoration none
 
   +breakpoint("desktop", "max")
     font-size 20px
-    padding-top 15px
+    line-height 1.5
     padding-bottom 15px
     padding-left 0
-    line-height 1.5
+    padding-top 15px
 
   +breakpoint("desktop")
     font-size 14px
     padding 20px
 
-.dropdownLink
-  composes link
+  .item-more &
+    +breakpoint("desktop", "max")
+      display none
 
-  .dropdownCaret
-    display inline-block
-    position absolute
-    z-index 1100
-    overflow hidden
-    text-align center
-    width 20px
-    height 12px
-    top 37px
-    left 50%
-    transform translateX(-50%)
-    margin-top 0
-    transition margin-top 0.2s
+  .item.is-dropdown-open &
+    color $navbar-default-link-hover-color
 
-    &:after
-      content ''
-      display inline-block
-      width 12px
-      height 12px
-      background-color white
-      border 1px solid rgba(black, 0.1)
-      transform rotate(45deg)
-      transition visibility 0s 0.2s, opacity 0.2s
-      opacity 0
-      visibility hidden
-
-.caret
+.item-caret
   display none
 
   +breakpoint("desktop")
@@ -102,5 +44,49 @@
     font-size 10px
     margin-left 5px
 
-.positionRelative
-  position relative
+.dropdown-caret
+.text
+  +breakpoint("desktop")
+    .theme-dark &
+    .theme-dark &
+      color white
+      opacity .7
+
+      &:hover
+      &:focus
+        opacity 1
+
+.dropdown-caret
+  display inline-block
+  height 12px
+  left 50%
+  margin-top 0
+  overflow hidden
+  position absolute
+  text-align center
+  top 37px
+  transform translateX(-50%)
+  transition margin-top .2s
+  width 20px
+  z-index 1100
+
+  &:after
+    background-color white
+    border 1px solid rgba(black, .1)
+    content ''
+    display inline-block
+    height 12px
+    opacity 0
+    transform rotate(45deg)
+    transition visibility 0s .2s, opacity .2s
+    visibility hidden
+    width 12px
+
+  .item.is-dropdown-open &
+    +breakpoint("desktop")
+      margin-top 5px
+
+      &:after
+        opacity 1
+        visibility visible
+        transition-delay 0s

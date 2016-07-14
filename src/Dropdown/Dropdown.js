@@ -4,42 +4,48 @@ import DropdownHighlight from '../DropdownHighlight';
 import styles from './Dropdown.styl';
 import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+const cx = styles::classNames;
 
 class Dropdown extends Component {
-
   static propTypes = {
     data: PropTypes.object,
-    closeHeaderDropdown: PropTypes.func
-  };
+    closeDropdowns: PropTypes.func,
+    open: PropTypes.bool
+  }
 
   static defaultProps = {
     data: {}
-  };
-
-  constructor(props) {
-    super(props);
-    this.itemHoverHandler = this.itemHoverHandler.bind(this);
-
-    // Set highlight object to default highlight of the dropdown
-    const highlightComponent = this.props.data.childrens.find((component) => {
-      if (component.default) return true;
-      return false;
-    });
-    if (!highlightComponent) return;
-    this.state = { highlight: highlightComponent.default };
   }
 
-  itemHoverHandler(highlight) {
+  state = {
+    highlight: {}
+  }
+
+  componentWillMount() {
+    const { data } = this.props;
+    // Set highlight object to default highlight of the dropdown
+    const highlightComponent = data.childrens.find(component => !!component.default);
+
+    if (!highlightComponent) return;
+
+    this.setState({ highlight: highlightComponent.default });
+  }
+
+  highlightHandler = highlight => {
     if (!highlight) return;
     this.setState({ highlight });
   }
 
   render() {
-    const { data, closeHeaderDropdown } = this.props;
+    const { data, closeDropdowns, open } = this.props;
+
     return (
-      <div className={cx('dropdown', 'headerItemDropdown', data.dropdownClass)}>
-        {data.childrens.map((component) => {
+      <div
+        className={cx('dropdown', data.dropdownClass, {
+          'is-open': open
+        })}
+      >
+        {data.childrens.map(component => {
           switch (component.componentType) {
             case 'list':
               return (
@@ -47,8 +53,8 @@ class Dropdown extends Component {
                   key={component.key}
                   data={component}
                   parentClass={data.dropdownClass}
-                  itemHoverHandler={this.itemHoverHandler}
-                  closeHeaderDropdown={closeHeaderDropdown}
+                  highlightHandler={this.highlightHandler}
+                  closeDropdowns={closeDropdowns}
                 />
               );
             case 'highlight':
@@ -57,7 +63,7 @@ class Dropdown extends Component {
                   key={component.key}
                   data={this.state.highlight}
                   parentClass={data.dropdownClass}
-                  closeHeaderDropdown={closeHeaderDropdown}
+                  closeDropdowns={closeDropdowns}
                 />
               );
             default:

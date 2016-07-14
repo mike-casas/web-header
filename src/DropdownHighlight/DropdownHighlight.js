@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import styles from './DropdownHighlight.styl';
 import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+const cx = styles::classNames;
 
-const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
+const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
   <div
     className={cx({
       highlight: parentClass !== 'moreDropdown',
@@ -21,7 +21,7 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
     }
     <a
       href={data.link}
-      onClick={closeHeaderDropdown}
+      onClick={closeDropdowns}
       className={cx('content')}
       rel={data.external ? 'external' : null}
     >
@@ -41,7 +41,7 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
         <a
           href={href}
           className={cx('link')}
-          onClick={closeHeaderDropdown}
+          onClick={closeDropdowns}
           key={index}
           rel={external ? 'external' : null}
         >{text}</a>
@@ -53,7 +53,7 @@ const DropdownHighlight = ({ data, parentClass, closeHeaderDropdown }) =>
 DropdownHighlight.propTypes = {
   data: PropTypes.object,
   parentClass: PropTypes.string,
-  closeHeaderDropdown: PropTypes.func
+  closeDropdowns: PropTypes.func
 };
 
 export default DropdownHighlight;

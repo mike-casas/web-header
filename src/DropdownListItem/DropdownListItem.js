@@ -2,16 +2,16 @@ import React, { Component, PropTypes } from 'react';
 import styles from './DropdownListItem.styl';
 import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+const cx = styles::classNames;
 
 class DropdownListItem extends Component {
   static propTypes = {
     item: PropTypes.object,
-    itemHoverHandler: PropTypes.func,
+    highlightHandler: PropTypes.func,
     dropdownReference: PropTypes.object,
     hasArrow: PropTypes.bool,
     parentClass: PropTypes.string,
-    closeHeaderDropdown: PropTypes.func
+    closeDropdowns: PropTypes.func
   }
 
   componentDidMount() {
@@ -23,7 +23,7 @@ class DropdownListItem extends Component {
   }
 
   render() {
-    const { hasArrow, parentClass, itemHoverHandler, item, closeHeaderDropdown } = this.props;
+    const { hasArrow, parentClass, highlightHandler, item, closeDropdowns } = this.props;
     const logos = {
       auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
       webtask: 'https://webtask.io/images/symbol.svg'
@@ -36,9 +36,10 @@ class DropdownListItem extends Component {
           arrowItem: hasArrow,
           moreItem: parentClass === 'moreDropdown'
         })}
-        onMouseEnter={() => {itemHoverHandler(item.highlight);}}
+        onMouseEnter={() => {highlightHandler(item.highlight);}}
+        onFocus={() => {highlightHandler(item.highlight);}}
       >
-        <a href={item.href} onClick={closeHeaderDropdown} rel={linkExternal}>
+        <a href={item.href} onClick={closeDropdowns} rel={linkExternal}>
           {item.icon
             ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt="" />
             : null

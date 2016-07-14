@@ -1,42 +1,85 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Dropdown from '../Dropdown';
 import styles from './Item.styl';
 import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+const cx = styles::classNames;
 
-const Item = ({ item, theme, simpleList, closeHeaderDropdown, mobile }) => {
-  const linkClass = cx({
-    link: !item.childrens,
-    dropdownLink: item.childrens
-  });
-  const linkContent = <ItemContent name={item.name} childrens={item.childrens} theme={theme} />;
-  const linkHref = (mobile ? item.mobileHref : null) || item.href;
-  const linkExternal = item.external ? 'external' : null;
+class Item extends Component {
+  state = {
+    openDropdown: false
+  }
 
-  return (
-    <li
-      className={cx('item', [`item-${item.id}`], [`theme-${theme}`], {
-        positionRelative: simpleList
-      })}
-    >
-      {linkHref
-        ?
-        <a
-          href={linkHref}
-          onClick={closeHeaderDropdown}
-          className={linkClass}
-          rel={linkExternal}
-        >{linkContent}</a>
-        : <span tabIndex="0" className={linkClass}>{linkContent}</span>
-      }
-      {item.childrens
-        ? <Dropdown data={item} closeHeaderDropdown={closeHeaderDropdown} />
-        : null
-      }
-    </li>
-  );
-};
+  handleDropdown = e => {
+    const { openDropdown } = this.state;
+    const { mobile } = this.props;
+    const isMobile = mobile;
+    const shouldOpenDropdown = ['mouseenter', 'focus'].indexOf(e.type) > -1;
+
+    if (shouldOpenDropdown === openDropdown || isMobile) return;
+
+    this.setState({ openDropdown: shouldOpenDropdown });
+  }
+
+  closeItemDropdown = () => {
+    const isDesktop = !this.props.mobile;
+    const isDropdownOpen = this.state.openDropdown;
+
+    if (isDesktop && isDropdownOpen) {
+      this.setState({ openDropdown: false });
+    }
+  }
+
+  closeDropdowns = () => {
+    this.closeItemDropdown();
+    this.props.closeHeaderDropdown();
+  }
+
+  render() {
+    const { item, theme, simpleList, mobile } = this.props;
+
+    const linkContent = <ItemContent name={item.name} childrens={item.childrens} theme={theme} />;
+    const linkHref = (mobile ? item.mobileHref : null) || item.href;
+    const linkExternal = item.external ? 'external' : null;
+
+    return (
+      <li
+        className={cx('item', [`item-${item.id}`], [`theme-${theme}`], {
+          'simple-list': simpleList,
+          'is-dropdown-open': this.state.openDropdown
+        })}
+        onMouseEnter={this.handleDropdown}
+        onFocus={this.handleDropdown}
+        onMouseLeave={this.handleDropdown}
+        onBlur={this.handleDropdown}
+      >
+        {linkHref
+          ?
+            <a
+              href={linkHref}
+              onClick={this.closeDropdowns}
+              className={cx('link')}
+              rel={linkExternal}
+            >{linkContent}</a>
+          :
+            <span
+              tabIndex="0"
+              className={cx('link')}
+            >{linkContent}</span>
+        }
+        {item.childrens
+          ?
+            <Dropdown
+              data={item}
+              closeDropdowns={this.closeDropdowns}
+              open={this.state.openDropdown}
+            />
+          : null
+        }
+      </li>
+    );
+  }
+}
 
 Item.propTypes = {
   className: PropTypes.string,
@@ -52,13 +95,12 @@ export default Item;
 const ItemContent = ({ name, childrens, theme }) =>
   <span>
     <span className={cx('text')}>{name}</span>
-    <span className={cx('dropdownCaret')}></span>
     {childrens ?
       <svg
         width="10"
         height="6"
         viewBox="62 7 10 6"
-        className={cx('caret')}
+        className={cx('item-caret')}
       >
         <path
           // eslint-disable-next-line max-len
@@ -68,6 +110,7 @@ const ItemContent = ({ name, childrens, theme }) =>
       </svg>
       : null
     }
+    {childrens ? <span className={cx('dropdown-caret')}></span> : null}
   </span>;
 
 ItemContent.propTypes = {

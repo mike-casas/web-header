@@ -6,7 +6,7 @@ import styles from './WebHeader.styl';
 import classNames from 'classnames/bind';
 import cxN from 'classnames';
 
-const cx = classNames.bind(styles);
+const cx = styles::classNames;
 
 class WebHeader extends Component {
   static propTypes = {
@@ -79,12 +79,11 @@ class WebHeader extends Component {
   }
 
   closeDropdownOnButtonClick = callback => event => {
-    if (callback) {
-      callback(event);
-    }
-    if (this.state.mobileState && this.state.navbarDropdownIsOpen) {
-      this.navbarDropdownHandler();
-    }
+    const isMobile = this.state.mobileState;
+    const isDropdownOpen = this.state.navbarDropdownIsOpen;
+
+    if (callback) callback(event);
+    if (isMobile && isDropdownOpen) this.navbarDropdownHandler();
   }
 
   addOverflowBody() {
