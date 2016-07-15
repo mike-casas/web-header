@@ -24,11 +24,11 @@ class Dropdown extends Component {
   componentWillMount() {
     const { data } = this.props;
     // Set highlight object to default highlight of the dropdown
-    const highlightComponent = data.childrens.find(component => !!component.default);
+    const highlightComponent = data.childrens.filter(component => !!component.default);
 
-    if (!highlightComponent) return;
+    if (!highlightComponent.length) return;
 
-    this.setState({ highlight: highlightComponent.default });
+    this.setState({ highlight: highlightComponent[0].default });
   }
 
   highlightHandler = highlight => {
