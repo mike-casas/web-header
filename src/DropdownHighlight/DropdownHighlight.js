@@ -31,8 +31,8 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
         ? <p className={cx('text')}>{data.excerpt}</p>
         : null
       }
-      {data.time
-        ? <span className={cx('time')}>{data.time}</span>
+      {data.date
+        ? <span className={cx('time')}>{data.date}</span>
         : null
       }
     </a>
