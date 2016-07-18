@@ -166,10 +166,10 @@
             "external": true,
             "highlight": {
               "componentTitle": "Featured in Industries",
-              "title": "For the Telecommunications Industry, Identity Matters",
-              "excerpt": "Join other telecommunication players that leverage identity to engage their customers",
-              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/telecommunications_header.svg",
-              "link": "https://auth0.com/learn/telecommunications-industry/",
+              "title": "Delight Your Customers with Auth0",
+              "excerpt": "Want to give your customers an awesome experience in your apps? Give them a pain-free login experience and cater to their desires with social data.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/B2C.svg",
+              "link": "https://auth0.com/learn/delight-your-customers-with-auth0/",
               "external": true,
               "morelinks": [
                 {
