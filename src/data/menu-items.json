@@ -69,11 +69,13 @@
               "title": "Why Auth0?",
               "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
               "link": "https://auth0.com/why-auth0",
-              "morelinks": [{
-                "text": "Learn more",
-                "href": "https://auth0.com/why-auth0",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "Learn more",
+                  "href": "https://auth0.com/why-auth0",
+                  "external": true
+                }
+              ]
             }
           },
           {
@@ -85,11 +87,13 @@
               "title": "These are some of the companies that trust Auth0",
               "excerpt": "Auth0 is used by many companies and apps to manage their authentication. Learn who are they and how they use Auth0 as an Identity Platform.",
               "link": "https://auth0.com/customers",
-              "morelinks": [{
-                "text": "Learn more",
-                "href": "https://auth0.com/customers",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "Learn more",
+                  "href": "https://auth0.com/customers",
+                  "external": true
+                }
+              ]
             }
           },
           {
@@ -104,11 +108,13 @@
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/harvard_header.svg",
               "link": "https://auth0.com/learn/harvard-medical-school-identity-secures-nih-research/",
               "external": true,
-              "morelinks": [{
-                "text": "See all case studies",
-                "href": "https://auth0.com/learn#case-studies",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "See all case studies",
+                  "href": "https://auth0.com/learn#case-studies",
+                  "external": true
+                }
+              ]
             }
           },
           {
@@ -123,11 +129,13 @@
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/jwt_header.svg",
               "link": "https://auth0.com/learn/json-web-tokens/",
               "external": true,
-              "morelinks": [{
-                "text": "See all concepts",
-                "href": "https://auth0.com/learn#concepts",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "See all concepts",
+                  "href": "https://auth0.com/learn#concepts",
+                  "external": true
+                }
+              ]
             }
           },
           {
@@ -142,11 +150,13 @@
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/analytics-catalog.png",
               "link": "https://auth0.com/learn/powering-user-analytics-identity/",
               "external": true,
-              "morelinks": [{
-                "text": "See all use cases",
-                "href": "https://auth0.com/learn#use-cases",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "See all use cases",
+                  "href": "https://auth0.com/learn#use-cases",
+                  "external": true
+                }
+              ]
             }
           },
           {
@@ -161,11 +171,13 @@
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/telecommunications_header.svg",
               "link": "https://auth0.com/learn/telecommunications-industry/",
               "external": true,
-              "morelinks": [{
-                "text": "See all industries",
-                "href": "https://auth0.com/learn#industries",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "See all industries",
+                  "href": "https://auth0.com/learn#industries",
+                  "external": true
+                }
+              ]
             }
           },
           {
@@ -180,11 +192,13 @@
               "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/buyvsbuild_header.svg",
               "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/",
               "external": true,
-              "morelinks": [{
-                "text": "See others",
-                "href": "https://auth0.com/learn#growth",
-                "external": true
-              }]
+              "morelinks": [
+                {
+                  "text": "See others",
+                  "href": "https://auth0.com/learn#growth",
+                  "external": true
+                }
+              ]
             }
           }
         ]
@@ -278,15 +292,15 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/bc94ff6211e645a2bdb4fdc60e23ad85.jpg?s=200",
-          "title": "Docker 101 for Developers",
-          "excerpt": "Now is your chance to learn about Docker in this introductory webinar!",
-          "link": "https://auth0.com/blog/2016/07/12/docker-101-for-developers/",
+          "avatar": "https://cdn.auth0.com/blog/authors/danarildson.jpg",
+          "title": "Announcing the Auth0 Partners Program",
+          "excerpt": "The Auth0 Partners Program allows system integrators and digital agencies to offload identity management to Auth0 so they can focus on building business value. Learn how and join today!",
+          "link": "https://auth0.com/blog/2016/07/18/announcing-auth0-partners-program/",
           "external": true,
           "time": "June 23",
-          "author": "Kassandra Perch",
-          "thumbnail": "https://cdn.auth0.com/blog/docker/logo.png",
-          "date": "July 12"
+          "author": "Dan Arildson",
+          "thumbnail": "https://cdn.auth0.com/blog/partners/logo.png",
+          "date": "July 18"
         }
       }
     ]
