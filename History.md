@@ -1,4 +1,10 @@
 
+1.0.8 / 2016-07-18
+==================
+
+  * Update Featured Industries
+  * Update last blog post
+
 1.0.7 / 2016-07-14
 ==================
 
