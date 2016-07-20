@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://cdn.auth0.com/blog/authors/danarildson.jpg",
-          "title": "Announcing the Auth0 Partners Program",
-          "excerpt": "The Auth0 Partners Program allows system integrators and digital agencies to offload identity management to Auth0 so they can focus on building business value. Learn how and join today!",
-          "link": "https://auth0.com/blog/2016/07/18/announcing-auth0-partners-program/",
+          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
+          "title": "Building Serverless Apps with AWS Lambda",
+          "excerpt": "Learn how to build a serverless app with Lambda, the function-as-a-service platform from Amazon. Find out how AWS Lambda stacks up against Webtask.",
+          "link": "https://auth0.com/blog/2016/07/19/building-serverless-apps-with-aws-lambda/",
           "external": true,
-          "author": "Dan Arildson",
-          "thumbnail": "https://cdn.auth0.com/blog/partners/logo.png",
-          "date": "July 18"
+          "author": "Ado Kukic",
+          "thumbnail": "https://cdn.auth0.com/blog/lambda-serverless/logo.png",
+          "date": "July 19"
         }
       }
     ]
