@@ -1,4 +1,10 @@
 
+1.0.11 / 2016-07-21
+===================
+
+  * Add again grunt cdn task
+  * Rename bundle files from index.[ext] to web-header.[ext]
+
 1.0.10 / 2016-07-20
 ===================
 
