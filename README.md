@@ -75,7 +75,7 @@ class Header extends Component {
 
 `src/styles/main.styl`
 ```stylus
-@import '../../node_modules/auth0-web-header/dist/index.css'
+@import '../../node_modules/auth0-web-header/dist/web-header.css'
 ```
 
 ## Development
