@@ -43,7 +43,7 @@ const config = {
   },
 
   plugins: [
-    new ExtractTextPlugin('index.css'),
+    new ExtractTextPlugin('web-header.css'),
     // Define free variables
     // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     new webpack.DefinePlugin({
