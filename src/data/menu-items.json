@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
-          "title": "Building Serverless Apps with AWS Lambda",
-          "excerpt": "Learn how to build a serverless app with Lambda, the function-as-a-service platform from Amazon. Find out how AWS Lambda stacks up against Webtask.",
-          "link": "https://auth0.com/blog/2016/07/19/building-serverless-apps-with-aws-lambda/",
+          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
+          "title": "Analyzing Social Connections Data: What can we learn?",
+          "excerpt": "How To Use Social Connections To Improve Retention And Security",
+          "link": "https://auth0.com/blog/2016/07/21/analysis-of-social-connection-data/",
           "external": true,
-          "author": "Ado Kukic",
-          "thumbnail": "https://cdn.auth0.com/blog/lambda-serverless/logo.png",
-          "date": "July 19"
+          "author": "Diego Poza",
+          "thumbnail": "https://cdn.auth0.com/blog/social-login-stats/logo.png",
+          "date": "July 21"
         }
       }
     ]
