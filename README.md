@@ -89,27 +89,10 @@ npm start
 ```
 And point your browser at `http://localhost:3001`.
 
-### Release
 
-Make sure you have [bump](https://github.com/ianstormtaylor/bump) and [git-extras](https://github.com/tj/git-extras)
-Follow the next steps:
+## Release
 
-``` bash
-  # Once finished your changes and commit them, run:
-  bump {patch,minor,major,VERSION}
-
-  # Then create the changelog for the release, using
-  # the retrieved version by last command:
-  git changelog --tag <version>
-
-  # Then, just run:
-  git add . && git release <version>
-
-  # Publish to npm
-  npm publish
-
-  # Done!
-```
+To release a new version just commit a package.json version change. And changelog entry, git tag, cdn deploy and npm publish will be triggered automatically.
 
 ## License
 

@@ -13,9 +13,11 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:js",
     "test": "mocha \"src/**/*.spec.js\" --require test/setup.js --compilers js:babel-register && npm run lint",
-    "precdn": "npm run build",
     "cdn": "grunt cdn",
-    "data": "gulp data"
+    "data": "gulp data",
+    "bump-patch": "bump patch",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s",
+    "release": "bash ./tools/release.sh"
   },
   "repository": {
     "type": "git",
@@ -46,9 +48,11 @@
     "babel-register": "^6.9.0",
     "bluebird": "^3.4.0",
     "browser-sync": "^2.13.0",
+    "bump-version": "^0.5.0",
     "carte-blanche": "^0.2.3",
     "chai": "^3.5.0",
     "component-playground": "^1.2.1",
+    "conventional-changelog-cli": "^1.2.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.4.1",
     "eslint": "^2.10.2",
