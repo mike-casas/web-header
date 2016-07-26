@@ -94,6 +94,12 @@ And point your browser at `http://localhost:3001`.
 
 To release a new version just commit a package.json version change. And changelog entry, git tag, cdn deploy and npm publish will be triggered automatically.
 
+
+## Issue Reporting
+
+If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
+
+
 ## License
 
 Auth0 Web Header is [MIT licensed](./LICENSE.md).
