@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://www.gravatar.com/avatar/7f4ec37467f2f7db6fffc7b4d2cc8dc2?size=200",
-          "title": "Customer Data is King: Four Ways to Know Your Customers Better",
-          "excerpt": "For B2C companies, nothing beats knowing who your customers are and what they want.",
-          "link": "https://auth0.com/blog/2016/07/22/customer-data-is-king-four-ways-to-know-your-customers-better/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Creating your first Symfony app and adding authentication",
+          "excerpt": "Learn how to build your first Symfony application and add authentication to it.",
+          "link": "https://auth0.com/blog/2016/07/26/creating-your-first-symfony-app-and-adding-authentication/",
           "external": true,
-          "author": "Ryan Chenkie",
-          "thumbnail": "https://cdn.auth0.com/blog/customer-data/customer-data-icon.png",
-          "date": "July 22"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/Symfony/Logo.png",
+          "date": "July 26"
         }
       }
     ]
