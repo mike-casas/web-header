@@ -55,6 +55,28 @@ if [ "$UPDATE_MENU_ITEMS" = true ]; then
 fi
 
 
+# Add changelog entry
+CHANGELOG_ENTRY="$VERSION"
+CHANGELOG_EXISTS=$(cat CHANGELOG.md | grep "## $CHANGELOG_ENTRY (")
+
+if [ ! -z "$CHANGELOG_EXISTS" ]; then
+  echo "There is already a changelog entry $CHANGELOG_EXISTS in CHANGELOG.md. Skiping changelog entry publish."
+else
+  echo "Deploying $CHANGELOG_ENTRY changelog entry to CHANGELOG.md"
+  # Update CHANGELOG.md
+  npm run changelog
+
+  # Commit change of version and changelog changes
+  git checkout master
+  git add .
+  git commit -m "Release $VERSION"
+
+  # Push first to make sure we're up-to-date
+  git remote add origin git@github.com:auth0/web-header.git
+  git push origin master
+fi
+
+
 # Publish git tag
 TAG_NAME="$VERSION"
 TAG_EXISTS=$(git tag -l "$TAG_NAME")
@@ -64,16 +86,6 @@ if [ ! -z "$TAG_EXISTS" ]; then
 else
   echo "Deploying $VERSION to git"
 
-  # Update CHANGELOG.md
-  npm run changelog
-
-  # Commit change of version and changelog changes
-  git commit -am "Release $VERSION"
-
-  # Push first to make sure we're up-to-date
-  git push origin master
-
-  # Git tag stuff (create and push)
   git tag $VERSION
   git tag latest -f
 
