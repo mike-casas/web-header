@@ -1,3 +1,11 @@
+<a name="1.0.15"></a>
+## 1.0.15 (2016-07-26)
+
+* Added release script ([7e1c7fc](https://github.com/auth0/web-header/commit/7e1c7fc))
+* Update highlights ([bf0520d](https://github.com/auth0/web-header/commit/bf0520d))
+
+
+
 <a name="1.0.14"></a>
 ## 1.0.14 (2016-07-22)
 
