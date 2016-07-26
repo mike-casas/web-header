@@ -1,3 +1,14 @@
+<a name="1.0.16"></a>
+## 1.0.16 (2016-07-26)
+
+* Add Issue Reporting to README ([0d53da5](https://github.com/auth0/web-header/commit/0d53da5))
+* Added release script ([7e1c7fc](https://github.com/auth0/web-header/commit/7e1c7fc))
+* Release 1.0.15 ([b9942d2](https://github.com/auth0/web-header/commit/b9942d2))
+* Separate changelog entry from git tag on the deploy script ([7a5961b](https://github.com/auth0/web-header/commit/7a5961b))
+* Update highlights ([bf0520d](https://github.com/auth0/web-header/commit/bf0520d))
+
+
+
 <a name="1.0.15"></a>
 ## 1.0.15 (2016-07-26)
 
