@@ -35,7 +35,8 @@ if [ "$UPDATE_MENU_ITEMS" = true ]; then
     # Update menu-items.json
     npm run data
     # Commit update
-    git commit -am "Update highlights"
+    git add src/data/menu-items.json
+    git commit -m "Update highlights"
   } || {
     echo "Menu items highlights are already updated"
     exit 1
@@ -48,7 +49,7 @@ VERSION=$(node -p "require('./package').version")
 
 if [ "$UPDATE_MENU_ITEMS" = true ]; then
   # Increment semver patch
-  npm run bump-patch
+  $(npm bin)/bump patch
 
   # Get new version
   VERSION=$(node -p "require('./package').version")
@@ -64,11 +65,11 @@ if [ ! -z "$CHANGELOG_EXISTS" ]; then
 else
   echo "Deploying $CHANGELOG_ENTRY changelog entry to CHANGELOG.md"
   # Update CHANGELOG.md
-  npm run changelog
+  $(npm bin)/conventional-changelog -i CHANGELOG.md -s
 
   # Commit change of version and changelog changes
   git checkout master
-  git add .
+  git add CHANGELOG.md package.json
   git commit -m "Release $VERSION"
 
   # Push first to make sure we're up-to-date
@@ -112,5 +113,5 @@ if [ ! -z "$CDN_EXISTS" ]; then
   echo "There is already a version $VERSION in the CDN. Skiping cdn publish."
 else
   echo "Deploying $VERSION to cdn"
-  npm run cdn
+  $(npm bin)/grunt cdn
 fi

@@ -1,6 +1,6 @@
 {
   "name": "auth0-web-header",
-  "version": "1.0.16",
+  "version": "1.0.18",
   "description": "Auth0's website and landings header",
   "main": "dist/web-header.js",
   "files": [
@@ -13,11 +13,7 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:js",
     "test": "mocha \"src/**/*.spec.js\" --require test/setup.js --compilers js:babel-register && npm run lint",
-    "cdn": "grunt cdn",
-    "data": "gulp data",
-    "bump-patch": "bump patch",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s",
-    "release": "bash ./tools/release.sh"
+    "data": "gulp data"
   },
   "repository": {
     "type": "git",
