@@ -1,3 +1,11 @@
+<a name="1.0.18"></a>
+## 1.0.18 (2016-07-27)
+
+* Refactor gulp data to make async request sequentially ([1ee1586](https://github.com/auth0/web-header/commit/1ee1586))
+* Release script and npm scripts improvements ([e8c98f2](https://github.com/auth0/web-header/commit/e8c98f2))
+
+
+
 <a name="1.0.16"></a>
 ## 1.0.16 (2016-07-26)
 
