@@ -22,11 +22,16 @@ const writeFile = Promise.promisify(fs.writeFile);
  * Update menu-items.json
  */
 gulp.task('data', () =>
-  Promise.all([
-    readFile(menuItemsJson),
-    request.get('https://auth0.com/blog/last.json'),
-    request.get('https://auth0.com/learn/api/header_featured.json')
-  ])
+  readFile(menuItemsJson)
+    .then(originalContent =>
+      request.get('https://auth0.com/blog/last.json')
+        .then(blogResponse =>
+          request.get('https://auth0.com/learn/api/header_featured.json')
+            .then(learnResponse =>
+              [originalContent, blogResponse, learnResponse]
+            )
+        )
+    )
     .then(parseData)
     .then(generateNewMenuItemsJson)
     .then(saveNewMenuItemsJson)
