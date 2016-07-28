@@ -1,3 +1,10 @@
+<a name="1.0.19"></a>
+## 1.0.19 (2016-07-28)
+
+* Update highlights ([69aad5f](https://github.com/auth0/web-header/commit/69aad5f))
+
+
+
 <a name="1.0.18"></a>
 ## 1.0.18 (2016-07-27)
 
