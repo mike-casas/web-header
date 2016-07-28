@@ -293,13 +293,13 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "Creating your first Symfony app and adding authentication",
-          "excerpt": "Learn how to build your first Symfony application and add authentication to it.",
-          "link": "https://auth0.com/blog/2016/07/26/creating-your-first-symfony-app-and-adding-authentication/",
+          "title": "Laracon 2016 Summary - Day One",
+          "excerpt": "Laravel 5.3 is here. Learn more and get caught up on all the news coming out of Laracon US 2016.",
+          "link": "https://auth0.com/blog/2016/07/28/laracon-summary-day-1/",
           "external": true,
           "author": "Prosper Otemuyiwa",
-          "thumbnail": "https://cdn.auth0.com/blog/Symfony/Logo.png",
-          "date": "July 26"
+          "thumbnail": "https://cdn.auth0.com/blog/laravel-auth/logo.png",
+          "date": "July 28"
         }
       }
     ]
