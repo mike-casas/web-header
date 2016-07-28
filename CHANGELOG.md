@@ -1,3 +1,10 @@
+<a name="1.0.21"></a>
+## 1.0.21 (2016-07-28)
+
+* Update highlights ([bde60b0](https://github.com/auth0/web-header/commit/bde60b0))
+
+
+
 <a name="1.0.20"></a>
 ## 1.0.20 (2016-07-28)
 
