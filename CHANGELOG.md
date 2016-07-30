@@ -1,3 +1,10 @@
+<a name="1.0.24"></a>
+## 1.0.24 (2016-07-30)
+
+* Update highlights ([c332580](https://github.com/auth0/web-header/commit/c332580))
+
+
+
 <a name="1.0.23"></a>
 ## 1.0.23 (2016-07-29)
 
