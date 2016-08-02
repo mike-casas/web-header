@@ -1,3 +1,10 @@
+<a name="1.0.25"></a>
+## 1.0.25 (2016-08-02)
+
+* Update highlights ([b38503a](https://github.com/auth0/web-header/commit/b38503a))
+
+
+
 <a name="1.0.24"></a>
 ## 1.0.24 (2016-07-30)
 
