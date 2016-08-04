@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
-          "title": "Analyzing Enterprise Connections Data: What can we learn?",
-          "excerpt": "How our Customer's Users Are Connecting To Enterprise Providers",
-          "link": "https://auth0.com/blog/analysis-of-enterprise-connections-data/",
+          "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
+          "title": "Creating Your First Elm App: From Authentication to Calling an API (Part 1)",
+          "excerpt": "Explore building an app in the functional, reactive front-end language Elm, complete with an API and JWT authentication.",
+          "link": "https://auth0.com/blog/creating-your-first-elm-app-part-1/",
           "external": true,
-          "author": "Diego Poza",
-          "thumbnail": "https://cdn.auth0.com/blog/social-login-stats/logo.png",
-          "date": "August 2"
+          "author": "Kim Maida",
+          "thumbnail": "https://cdn.auth0.com/blog/intro-to-elm/logo.png",
+          "date": "August 4"
         }
       }
     ]
