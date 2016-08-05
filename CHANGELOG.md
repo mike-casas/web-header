@@ -1,3 +1,10 @@
+<a name="1.0.28"></a>
+## 1.0.28 (2016-08-05)
+
+* fix support link to point to support center ([f2d1642](https://github.com/auth0/web-header/commit/f2d1642))
+
+
+
 <a name="1.0.27"></a>
 ## 1.0.27 (2016-08-05)
 
