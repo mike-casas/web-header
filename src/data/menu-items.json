@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
-          "title": "What is HTTP/2 All About?",
-          "excerpt": "HTTP/2 is the latest web standard that aims to improve the way we interact with the web. Learn all about HTTP/2 and how it affects you.",
-          "link": "https://auth0.com/blog/what-is-http2-all-about/",
+          "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
+          "title": "Creating Your First Elm App: From Authentication to Calling an API (Part 2)",
+          "excerpt": "Explore building an app in the functional, reactive front-end language Elm. This 2nd part focus on adding authentication to an Elm App.",
+          "link": "https://auth0.com/blog/creating-your-first-elm-app-part-2/",
           "external": true,
-          "author": "Ado Kukic",
-          "thumbnail": "https://cdn.auth0.com/blog/about-http/logo.png",
-          "date": "August 5"
+          "author": "Kim Maida",
+          "thumbnail": "https://cdn.auth0.com/blog/intro-to-elm/logo.png",
+          "date": "August 9"
         }
       }
     ]
