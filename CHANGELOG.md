@@ -1,3 +1,10 @@
+<a name="1.0.31"></a>
+## 1.0.31 (2016-08-11)
+
+* Update highlights ([ca3645b](https://github.com/auth0/web-header/commit/ca3645b))
+
+
+
 <a name="1.0.30"></a>
 ## 1.0.30 (2016-08-09)
 
