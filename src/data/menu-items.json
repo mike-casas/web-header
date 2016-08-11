@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
-          "title": "Creating Your First Elm App: From Authentication to Calling an API (Part 2)",
-          "excerpt": "Explore building an app in the functional, reactive front-end language Elm. This 2nd part focus on adding authentication to an Elm App.",
-          "link": "https://auth0.com/blog/creating-your-first-elm-app-part-2/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Bootstrapping a React project",
+          "excerpt": "Setting up a React application requires a lot. Learn how to bootstrap a React project without complexities!",
+          "link": "https://auth0.com/blog/bootstrapping-a-react-project/",
           "external": true,
-          "author": "Kim Maida",
-          "thumbnail": "https://cdn.auth0.com/blog/intro-to-elm/logo.png",
-          "date": "August 9"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/react-js/react.png",
+          "date": "August 11"
         }
       }
     ]
