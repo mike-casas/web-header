@@ -1,3 +1,10 @@
+<a name="1.0.32"></a>
+## 1.0.32 (2016-08-12)
+
+* Update highlights ([be3dd5c](https://github.com/auth0/web-header/commit/be3dd5c))
+
+
+
 <a name="1.0.31"></a>
 ## 1.0.31 (2016-08-11)
 
