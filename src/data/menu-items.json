@@ -293,13 +293,13 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://www.gravatar.com/avatar/df6c864847fba9687d962cb80b482764??s=60",
-          "title": "5 Killer Email Strategies For Better Lifecycle Marketing",
-          "excerpt": "How to keep your users engaged with your product throughout their time with it",
-          "link": "https://auth0.com/blog/5-killer-email-strategies-for-lifecycle-marketing/",
+          "title": "How Real Estate Companies Can Implement Open ID Connect With Auth0",
+          "excerpt": "All National Association of REALTORS affiliated listing services are now required to adopt the Open ID Connect standard",
+          "link": "https://auth0.com/blog/how-real-state-companies-can-implement-open-id-connect-with-auth0/",
           "external": true,
           "author": "Martin Gontovnikas",
-          "thumbnail": "https://cdn.auth0.com/blog/lifecycle-marketing/logo2.png",
-          "date": "August 12"
+          "thumbnail": "https://cdn.auth0.com/blog/reso-oidc/logo.png",
+          "date": "August 16"
         }
       }
     ]
