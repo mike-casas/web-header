@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://www.gravatar.com/avatar/df6c864847fba9687d962cb80b482764??s=60",
-          "title": "How Real Estate Companies Can Implement Open ID Connect With Auth0",
-          "excerpt": "All National Association of REALTORS affiliated listing services are now required to adopt the Open ID Connect standard",
-          "link": "https://auth0.com/blog/how-real-state-companies-can-implement-open-id-connect-with-auth0/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Aurelia 1.0: How to build a simple secured application",
+          "excerpt": "Aurelia 1.0 is out. Learn what's changed by building an application using ES6, aurelia-auth and much more!",
+          "link": "https://auth0.com/blog/aurelia-1.0-how-to-build-a-simple-secured-application/",
           "external": true,
-          "author": "Martin Gontovnikas",
-          "thumbnail": "https://cdn.auth0.com/blog/reso-oidc/logo.png",
-          "date": "August 16"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/aurelia-logo.png",
+          "date": "August 17"
         }
       }
     ]
