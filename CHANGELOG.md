@@ -1,3 +1,10 @@
+<a name="1.0.35"></a>
+## 1.0.35 (2016-08-19)
+
+* Update highlights ([d141de3](https://github.com/auth0/web-header/commit/d141de3))
+
+
+
 <a name="1.0.34"></a>
 ## 1.0.34 (2016-08-17)
 
