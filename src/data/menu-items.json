@@ -292,14 +292,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
-          "title": "Why You Should Follow Facebook And A/B Test Everything",
-          "excerpt": "How A/B Testing can help you taking decisions that make impact",
-          "link": "https://auth0.com/blog/why-you-should-ab-test-everything/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Creating your first app with AdonisJs and adding authentication",
+          "excerpt": "Learn how to build your first AdonisJs application and add authentication to it.",
+          "link": "https://auth0.com/blog/creating-your-first-app-with-adonisj-and-adding-authentication/",
           "external": true,
-          "author": "Diego Poza",
-          "thumbnail": "https://cdn.auth0.com/blog/ab-testing/logo.png",
-          "date": "August 19"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/blog/AdonisJSLogo.png",
+          "date": "August 23"
         }
       }
     ]
