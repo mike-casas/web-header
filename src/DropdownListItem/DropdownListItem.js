@@ -26,7 +26,8 @@ class DropdownListItem extends Component {
     const { hasArrow, parentClass, highlightHandler, item, closeDropdowns } = this.props;
     const logos = {
       auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
-      webtask: 'https://webtask.io/images/symbol.svg'
+      webtask: 'https://webtask.io/images/symbol.svg',
+      guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg'
     };
     const linkExternal = item.external ? 'external' : null;
     return (

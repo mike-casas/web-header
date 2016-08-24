@@ -34,10 +34,22 @@
             "icon": "auth0"
           },
           {
+            "name": "Breach Passwords",
+            "id": "breach-passwords",
+            "href": "https://auth0.com/breached-passwords",
+            "icon": "auth0"
+          },
+          {
             "name": "Wordpress",
             "id": "wordpress",
             "href": "https://auth0.com/wordpress",
             "icon": "auth0"
+          },
+          {
+            "name": "Guardian",
+            "id": "guardian",
+            "href": "https://auth0.com/guardian",
+            "icon": "guardian"
           },
           {
             "name": "Webtask",
