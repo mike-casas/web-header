@@ -34,8 +34,8 @@
             "icon": "auth0"
           },
           {
-            "name": "Breach Passwords",
-            "id": "breach-passwords",
+            "name": "Breached Passwords",
+            "id": "breached-passwords",
             "href": "https://auth0.com/breached-passwords",
             "icon": "auth0"
           },
