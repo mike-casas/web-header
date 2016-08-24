@@ -1,3 +1,10 @@
+<a name="1.1.5"></a>
+## 1.1.5 (2016-08-24)
+
+* Add learn more link. Fix #16 ([9f5bb27](https://github.com/auth0/web-header/commit/9f5bb27)), closes [#16](https://github.com/auth0/web-header/issues/16)
+
+
+
 <a name="1.1.4"></a>
 ## 1.1.4 (2016-08-24)
 
