@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "Creating your first app with AdonisJs and adding authentication",
-          "excerpt": "Learn how to build your first AdonisJs application and add authentication to it.",
-          "link": "https://auth0.com/blog/creating-your-first-app-with-adonisj-and-adding-authentication/",
+          "avatar": "https://en.gravatar.com/userimage/92476393/001c9ddc5ceb9829b6aaf24f5d28502a.png?size=200",
+          "title": "Announcing Password Breach Detection for Auth0",
+          "excerpt": "A new feature that could save you and your users a lot of trouble!",
+          "link": "https://auth0.com/blog/announcing-password-breach-detection/",
           "external": true,
-          "author": "Prosper Otemuyiwa",
-          "thumbnail": "https://cdn.auth0.com/blog/blog/AdonisJSLogo.png",
-          "date": "August 23"
+          "author": "Sebastián Peyrott",
+          "thumbnail": "https://cdn.auth0.com/blog/breach/logo.png",
+          "date": "August 24"
         }
       }
     ]
