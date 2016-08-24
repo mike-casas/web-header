@@ -97,8 +97,8 @@ const ItemContent = ({ name, childrens, theme }) =>
     <span className={cx('text')}>{name}</span>
     {childrens ?
       <svg
-        width="10"
-        height="6"
+        width="8"
+        height="4"
         viewBox="62 7 10 6"
         className={cx('item-caret')}
       >
