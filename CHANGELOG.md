@@ -1,3 +1,11 @@
+<a name="1.1.0"></a>
+# 1.1.0 (2016-08-24)
+
+* Add new menu items and guardian badge ([47e50af](https://github.com/auth0/web-header/commit/47e50af))
+* Release 1.1.0 ([5289f48](https://github.com/auth0/web-header/commit/5289f48))
+
+
+
 <a name="1.0.36"></a>
 ## 1.0.36 (2016-08-23)
 
