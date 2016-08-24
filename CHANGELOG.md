@@ -1,3 +1,10 @@
+<a name="1.1.1"></a>
+## 1.1.1 (2016-08-24)
+
+* Fix typo and spacing ([94fa9da](https://github.com/auth0/web-header/commit/94fa9da))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2016-08-24)
 
