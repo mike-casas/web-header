@@ -222,7 +222,13 @@
           "thumbnail": "https://auth0.com/lib/header/media/header-why-auth0.png",
           "title": "Why Auth0?",
           "excerpt": "Save time. Be Happy. Focus on what really matters. Authenticate and authorize apps and API's with any identity provider.",
-          "link": "https://auth0.com/why-auth0"
+          "morelinks": [
+            {
+              "text": "Learn more",
+              "href": "https://auth0.com/why-auth0",
+              "external": true
+            }
+          ]
         }
       }
     ]
