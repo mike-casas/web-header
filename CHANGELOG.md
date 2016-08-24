@@ -1,3 +1,10 @@
+<a name="1.1.4"></a>
+## 1.1.4 (2016-08-24)
+
+* Align dropdown with first menu item. ([d461964](https://github.com/auth0/web-header/commit/d461964))
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3 (2016-08-24)
 
