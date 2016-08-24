@@ -1,3 +1,11 @@
+<a name="1.1.3"></a>
+## 1.1.3 (2016-08-24)
+
+* Change items caret size and position. ([11aed8f](https://github.com/auth0/web-header/commit/11aed8f))
+* Release 1.1.3 ([a53e465](https://github.com/auth0/web-header/commit/a53e465))
+
+
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2016-08-24)
 
