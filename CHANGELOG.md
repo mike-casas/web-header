@@ -1,3 +1,10 @@
+<a name="1.1.6"></a>
+## 1.1.6 (2016-08-24)
+
+* Update highlights ([b21460c](https://github.com/auth0/web-header/commit/b21460c))
+
+
+
 <a name="1.1.5"></a>
 ## 1.1.5 (2016-08-24)
 
