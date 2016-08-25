@@ -311,13 +311,13 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://en.gravatar.com/userimage/92476393/001c9ddc5ceb9829b6aaf24f5d28502a.png?size=200",
-          "title": "Announcing Password Breach Detection for Auth0",
-          "excerpt": "A new feature that could save you and your users a lot of trouble!",
-          "link": "https://auth0.com/blog/announcing-password-breach-detection/",
+          "title": "Announcing Auth0 Guardian, Multifactor Made Easy",
+          "excerpt": "Forget about SMSs or manually entering codes, try Guardian!",
+          "link": "https://auth0.com/blog/announcing-Auth0-Guardian-a-new-way-to-login/",
           "external": true,
           "author": "Sebastián Peyrott",
-          "thumbnail": "https://cdn.auth0.com/blog/breach/logo.png",
-          "date": "August 24"
+          "thumbnail": "https://cdn.auth0.com/blog/guardian/logo.png",
+          "date": "August 25"
         }
       }
     ]
