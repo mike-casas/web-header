@@ -1,3 +1,10 @@
+<a name="1.1.7"></a>
+## 1.1.7 (2016-08-25)
+
+* Update highlights ([da9f6c4](https://github.com/auth0/web-header/commit/da9f6c4))
+
+
+
 <a name="1.1.6"></a>
 ## 1.1.6 (2016-08-24)
 
