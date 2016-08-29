@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# 1.2.0 (2016-08-29)
+
+* Add theme gray option ([a1ab0aa](https://github.com/auth0/web-header/commit/a1ab0aa))
+* Decrease react peer dependency to semver v15 ([404f868](https://github.com/auth0/web-header/commit/404f868))
+* Remove carte blanche ([bd7bfc3](https://github.com/auth0/web-header/commit/bd7bfc3))
+* Webpack logs more succinct ([e111544](https://github.com/auth0/web-header/commit/e111544))
+
+
+
 <a name="1.1.7"></a>
 ## 1.1.7 (2016-08-25)
 
