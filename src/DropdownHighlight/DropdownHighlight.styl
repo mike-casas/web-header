@@ -16,9 +16,23 @@
 
   .content
     display block
+    position relative
     width 100%
     margin-top 20px
     text-decoration none
+
+    +breakpoint("desktop", "max")
+      text-align center
+
+    > img
+      border-radius 50%
+      object-fit contain
+      background-color $bg-color-gray
+
+      +breakpoint("desktop")
+        position absolute
+        top 0
+        left 0
 
   .title
     font-size 18px
@@ -77,44 +91,37 @@
     border-left 1px solid rgba(black, 0.1)//$bg-color-gray
 
   .content
-    position relative
     padding-left 110px
 
     > img
-      position absolute
-      top 0px
-      left 0px
       width 90px
       height 90px
-      border-radius 50%
-      object-fit contain
 
 .moreHighlight
   composes baseHighlight
-  border-left 0
 
-  .content > img
-    width 64px
-    height 64px
-    border-radius 50%
-    background-color $bg-color-gray
+  .content
+    +breakpoint("desktop")
+      padding-left 84px
+
+    > img
+      width 64px
+      height 64px
 
   +breakpoint("desktop", "max")
-    text-align center
     padding 0
 
     .section-title
       text-align left
 
   +breakpoint("desktop")
-    width 280px
+    width 310px
     padding-left 12px
     padding-right 20px
     padding-bottom 20px
 
     .content
       width 100%
-      text-align center
 
   .title
     font-size 14px
