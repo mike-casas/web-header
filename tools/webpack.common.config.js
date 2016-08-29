@@ -84,9 +84,7 @@ const config = {
   debug: DEBUG,
 
   stats: {
-    colors: true,
-    reasons: DEBUG,
-    timings: true
+    colors: true
   },
 
   devtool: DEBUG ? 'inline-source-map' : null
