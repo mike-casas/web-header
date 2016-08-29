@@ -45,7 +45,6 @@
     "bluebird": "^3.4.0",
     "browser-sync": "^2.13.0",
     "bump-version": "^0.5.0",
-    "carte-blanche": "^0.2.3",
     "chai": "^3.5.0",
     "component-playground": "^1.2.1",
     "conventional-changelog-cli": "^1.2.0",
