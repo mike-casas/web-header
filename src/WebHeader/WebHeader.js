@@ -13,7 +13,7 @@ class WebHeader extends Component {
     className: PropTypes.string,
     children: PropTypes.node,
     menuItems: PropTypes.array,
-    theme: PropTypes.oneOf(['light', 'dark']),
+    theme: PropTypes.oneOf(['light', 'gray', 'dark']),
     featuredEnable: PropTypes.bool,
     featuredLink: PropTypes.string,
     featuredText: PropTypes.string,
