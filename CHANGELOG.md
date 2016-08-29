@@ -1,3 +1,11 @@
+<a name="1.2.1"></a>
+## 1.2.1 (2016-08-29)
+
+* Change "latest from Auth0 blog" layout structure. ([b2b89cd](https://github.com/auth0/web-header/commit/b2b89cd))
+* Make time text color lighter. ([64ba8b9](https://github.com/auth0/web-header/commit/64ba8b9))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2016-08-29)
 
