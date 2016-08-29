@@ -29,7 +29,7 @@
     "classnames": "^2.2.5"
   },
   "peerDependencies": {
-    "react": "^15.1.0"
+    "react": "^15.0.0"
   },
   "devDependencies": {
     "auth0-styleguide": "auth0/styleguide",
