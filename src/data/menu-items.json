@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
-          "title": "The EU Privacy Shield Is Here",
-          "excerpt": "The new body of rules promises to tighten up data security for consumers in Europe.",
-          "link": "https://auth0.com/blog/eu-privacy-shield-is-here/",
+          "avatar": "https://en.gravatar.com/userimage/92476393/001c9ddc5ceb9829b6aaf24f5d28502a.png?size=200",
+          "title": "Announcing Auth0 Guardian, Multifactor Made Easy",
+          "excerpt": "Forget about SMSs or manually entering codes, try Guardian!",
+          "link": "https://auth0.com/blog/announcing-Auth0-Guardian-a-new-way-to-login/",
           "external": true,
-          "author": "Diego Poza",
-          "thumbnail": "https://cdn.auth0.com/blog/eu-privacy-shield/logo.png",
-          "date": "August 30"
+          "author": "Sebastián Peyrott",
+          "thumbnail": "https://cdn.auth0.com/blog/guardian/logo.png",
+          "date": "August 25"
         }
       }
     ]
