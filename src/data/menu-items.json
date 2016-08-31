@@ -311,7 +311,7 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://en.gravatar.com/userimage/92476393/001c9ddc5ceb9829b6aaf24f5d28502a.png?size=200",
-          "title": "Stateless Sessions for Stateful Minds: JWTs Explained and How You Can Do The Switch",
+          "title": "Stateless Sessions for Stateful Minds: JWTs Explained and How You Can Make The Switch",
           "excerpt": "If you are interested in migrating to a stateless sessions approach, here's your guide!",
           "link": "https://auth0.com/blog/stateless-auth-for-stateful-minds/",
           "external": true,
