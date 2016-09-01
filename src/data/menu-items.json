@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/userimage/92476393/001c9ddc5ceb9829b6aaf24f5d28502a.png?size=200",
-          "title": "Stateless Sessions for Stateful Minds: JWTs Explained and How You Can Make The Switch",
-          "excerpt": "If you are interested in migrating to a stateless sessions approach, here's your guide!",
-          "link": "https://auth0.com/blog/stateless-auth-for-stateful-minds/",
+          "avatar": "https://s.gravatar.com/avatar/7752008352217db815996ab04aec46e6?s=80",
+          "title": "ASP.NET Core APIs in the fast lane with Swagger and Autorest",
+          "excerpt": "Document your ASP.NET Core Web APIs with Swagger and auto-generate authenticated clients quickly and easily with Autorest.",
+          "link": "https://auth0.com/blog/aspnet-core-apis-with-swagger-and-autorest/",
           "external": true,
-          "author": "Sebastián Peyrott",
-          "thumbnail": "https://cdn.auth0.com/blog/jwtalgos/logo.png",
-          "date": "August 31"
+          "author": "Matías Quaranta",
+          "thumbnail": "https://cdn.auth0.com/blog/aspnet-core-web-apis/swagger.png",
+          "date": "September 1"
         }
       }
     ]
