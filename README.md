@@ -4,7 +4,16 @@ Auth0's website and landings react component header
 
 ## Installation
 
-`npm install --save auth0-web-header`
+From npm:
+```bash
+npm install --save auth0-web-header
+```
+
+From CDN:
+```html
+<link rel="stylesheet" href="https://cdn.auth0.com/web-header/1.2.6/web-header.css" />
+<script src="https://cdn.auth0.com/web-header/1.2.6/web-header.js"></script>
+```
 
 ## Usage
 
