@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/7752008352217db815996ab04aec46e6?s=80",
-          "title": "ASP.NET Core APIs in the fast lane with Swagger and Autorest",
-          "excerpt": "Document your ASP.NET Core Web APIs with Swagger and auto-generate authenticated clients quickly and easily with Autorest.",
-          "link": "https://auth0.com/blog/aspnet-core-apis-with-swagger-and-autorest/",
+          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
+          "title": "Use NGINX Plus and Auth0 to Authenticate API Clients",
+          "excerpt": "The NGINX Plus R10 release comes with native support for the JWT authentication standard. Learn how this can change the way your app handles authentication.",
+          "link": "https://auth0.com/blog/use-nginx-plus-and-auth0-to-authenticate-api-clients/",
           "external": true,
-          "author": "Matías Quaranta",
-          "thumbnail": "https://cdn.auth0.com/blog/aspnet-core-web-apis/swagger.png",
-          "date": "September 1"
+          "author": "Ado Kukic",
+          "thumbnail": "https://cdn.auth0.com/blog/nginx-plus/nginx-logo.png",
+          "date": "September 6"
         }
       }
     ]
