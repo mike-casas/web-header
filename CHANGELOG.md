@@ -1,3 +1,11 @@
+<a name="1.2.7"></a>
+## 1.2.7 (2016-09-06)
+
+* Add CDN to installation docs ([755e4b6](https://github.com/auth0/web-header/commit/755e4b6))
+* Update highlights ([78d4947](https://github.com/auth0/web-header/commit/78d4947))
+
+
+
 <a name="1.2.6"></a>
 ## 1.2.6 (2016-09-01)
 
