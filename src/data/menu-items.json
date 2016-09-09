@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
-          "title": "Use NGINX Plus and Auth0 to Authenticate API Clients",
-          "excerpt": "The NGINX Plus R10 release comes with native support for the JWT authentication standard. Learn how this can change the way your app handles authentication.",
-          "link": "https://auth0.com/blog/use-nginx-plus-and-auth0-to-authenticate-api-clients/",
+          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
+          "title": "Analyzing Passwordless Connections Data: What can we learn?",
+          "excerpt": "Why Passwordless Login Is The Way Of The Future",
+          "link": "https://auth0.com/blog/analysis-of-passwordless-connections/",
           "external": true,
-          "author": "Ado Kukic",
-          "thumbnail": "https://cdn.auth0.com/blog/nginx-plus/nginx-logo.png",
-          "date": "September 6"
+          "author": "Diego Poza",
+          "thumbnail": "https://cdn.auth0.com/blog/analyzing-passwordless/logo.png",
+          "date": "September 9"
         }
       }
     ]
