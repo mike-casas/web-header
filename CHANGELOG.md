@@ -1,3 +1,10 @@
+<a name="1.2.8"></a>
+## 1.2.8 (2016-09-09)
+
+* Update highlights ([f179cd5](https://github.com/auth0/web-header/commit/f179cd5))
+
+
+
 <a name="1.2.7"></a>
 ## 1.2.7 (2016-09-06)
 
