@@ -1,3 +1,10 @@
+<a name="1.2.9"></a>
+## 1.2.9 (2016-09-14)
+
+* Update highlights ([c5bd329](https://github.com/auth0/web-header/commit/c5bd329))
+
+
+
 <a name="1.2.8"></a>
 ## 1.2.8 (2016-09-09)
 
