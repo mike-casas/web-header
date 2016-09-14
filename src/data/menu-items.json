@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
-          "title": "Analyzing Passwordless Connections Data: What can we learn?",
-          "excerpt": "Why Passwordless Login Is The Way Of The Future",
-          "link": "https://auth0.com/blog/analysis-of-passwordless-connections/",
+          "avatar": "https://en.gravatar.com/userimage/11371420/54f3fecf3ce3bbef2d7a62b4f0496de2.jpg?size=200",
+          "title": "Build a Serverless Slack Bot with Webtask.io",
+          "excerpt": "Learn how to create a bot that posts mentions in Zendesk to relevant Slack users using Auth0 Webtask platform",
+          "link": "https://auth0.com/blog/build-a-serverless-slack-bot-with-webtask/",
           "external": true,
-          "author": "Diego Poza",
-          "thumbnail": "https://cdn.auth0.com/blog/analyzing-passwordless/logo.png",
-          "date": "September 9"
+          "author": "Thameera Senanayaka",
+          "thumbnail": "https://cdn.auth0.com/blog/slackbot-with-webtaks/logo.png",
+          "date": "September 14"
         }
       }
     ]
