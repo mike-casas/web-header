@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/userimage/11371420/54f3fecf3ce3bbef2d7a62b4f0496de2.jpg?size=200",
-          "title": "Build a Serverless Slack Bot with Webtask.io",
-          "excerpt": "Learn how to create a bot that posts mentions in Zendesk to relevant Slack users using Auth0 Webtask platform",
-          "link": "https://auth0.com/blog/build-a-serverless-slack-bot-with-webtask/",
+          "avatar": "https://www.gravatar.com/avatar/df6c864847fba9687d962cb80b482764??s=60",
+          "title": "Use @NgModule to Manage Dependencies in your Angular 2 Apps",
+          "excerpt": "The Angular 2 @NgModule decorator allows for easier management of dependencies within the Angular 2 framework.",
+          "link": "https://auth0.com/blog/angular-2-ngmodules/",
           "external": true,
-          "author": "Thameera Senanayaka",
-          "thumbnail": "https://cdn.auth0.com/blog/slackbot-with-webtaks/logo.png",
-          "date": "September 14"
+          "author": "Martin Gontovnikas",
+          "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
+          "date": "September 15"
         }
       }
     ]
