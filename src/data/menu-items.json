@@ -316,7 +316,7 @@
           "link": "https://auth0.com/blog/securing-spring-boot-with-jwts/",
           "external": true,
           "author": "Dylan Meeus",
-          "thumbnail": "https://assets.toptal.io/uploads/blog/category/logo/59/spring.png",
+          "thumbnail": "https://cdn.auth0.com/blog/spring-boot-auth/logo.png",
           "date": "September 20"
         }
       }
