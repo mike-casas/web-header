@@ -1,3 +1,10 @@
+<a name="1.2.15"></a>
+## 1.2.15 (2016-09-23)
+
+* Update highlights ([1555635](https://github.com/auth0/web-header/commit/1555635))
+
+
+
 <a name="1.2.14"></a>
 ## 1.2.14 (2016-09-23)
 
