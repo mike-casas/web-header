@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/userimage/102277541/a28d70be6ae2b9389db9ad815cab510e.png?size=200",
-          "title": "Understanding Angular 2 change detection",
-          "excerpt": "Angular 2 introduces a new change detection system that makes apps much faster and allows developers fine-tune the process.",
-          "link": "https://auth0.com/blog/understanding-angular-2-change-detection/",
+          "avatar": "https://s.gravatar.com/avatar/6c0654e56c8c73ffee8f76fe03d18ccf?s=80",
+          "title": "Understanding Reactive Programming and RxJS",
+          "excerpt": "Using Reactive programming and RxJS, you can simplify your programming logic and make your programs easier to understand. Let's build a weather app to show this off!",
+          "link": "https://auth0.com/blog/understanding-reactive-programming-and-rxjs/",
           "external": true,
-          "author": "Wojciech Kwiatek",
-          "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
-          "date": "September 23"
+          "author": "Alex Sears",
+          "thumbnail": "https://cdn.auth0.com/blog/reactive-programming/logo.png",
+          "date": "September 27"
         }
       }
     ]
