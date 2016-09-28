@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/6c0654e56c8c73ffee8f76fe03d18ccf?s=80",
-          "title": "Understanding Reactive Programming and RxJS",
-          "excerpt": "Using Reactive programming and RxJS, you can simplify your programming logic and make your programs easier to understand. Let's build a weather app to show this off!",
-          "link": "https://auth0.com/blog/understanding-reactive-programming-and-rxjs/",
+          "avatar": "https://avatars3.githubusercontent.com/u/604869?v=3&s=200",
+          "title": "Announcing Auth0's Identity Glossary",
+          "excerpt": "A comprehensive list of important security and identity words.",
+          "link": "https://auth0.com/blog/announcing-identity-glossary/",
           "external": true,
-          "author": "Alex Sears",
-          "thumbnail": "https://cdn.auth0.com/blog/reactive-programming/logo.png",
-          "date": "September 27"
+          "author": "Diego Poza",
+          "thumbnail": "https://cdn.auth0.com/blog/identity-glossary/logo.png",
+          "date": "September 28"
         }
       }
     ]
