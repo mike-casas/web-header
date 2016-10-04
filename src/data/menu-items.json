@@ -311,7 +311,7 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "http://www.gravatar.com/avatar/b7e1e53144c06ecfdef91f0e4229a08a",
-          "title": "Comparing MVVM and Viper architectures: when to use one or the other",
+          "title": "Comparing MVVM and Viper architectures: When to use one or the other",
           "excerpt": "How MVVM and VIPER can be good alternatives to the traditional MVC in iOS projects",
           "link": "https://auth0.com/blog/compare-mvvm-and-viper-architectures/",
           "external": true,
