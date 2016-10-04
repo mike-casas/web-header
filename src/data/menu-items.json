@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
-          "title": "Angular 2 Authentication Tutorial",
-          "excerpt": "Angular 2.0 has officially been released. Learn how to quickly build apps and add authentication the right way.",
-          "link": "https://auth0.com/blog/angular-2-authentication/",
+          "avatar": "http://www.gravatar.com/avatar/b7e1e53144c06ecfdef91f0e4229a08a",
+          "title": "Comparing MVVM and Viper architectures: when to use one or the other",
+          "excerpt": "How MVVM and VIPER can be good alternatives to the traditional MVC in iOS projects",
+          "link": "https://auth0.com/blog/compare-mvvm-and-viper-architectures/",
           "external": true,
-          "author": "Ado Kukic",
-          "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
-          "date": "September 29"
+          "author": "Rafael Sacchi",
+          "thumbnail": "https://cdn.auth0.com/blog/mvvm-vs-viper/logo.png",
+          "date": "October 4"
         }
       }
     ]
