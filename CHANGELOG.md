@@ -1,3 +1,11 @@
+<a name="1.2.23"></a>
+## 1.2.23 (2016-10-05)
+
+* Bump version to 1.2.23 ([bed0549](https://github.com/auth0/web-header/commit/bed0549))
+* Change featured text to: free JWT ebook! ([75e9865](https://github.com/auth0/web-header/commit/75e9865))
+
+
+
 <a name="1.2.22"></a>
 ## 1.2.22 (2016-10-05)
 
