@@ -35,7 +35,7 @@ class WebHeader extends Component {
     theme: 'light',
     featuredEnable: true,
     featuredLink: 'https://auth0.com/e-books/jwt-handbook',
-    featuredText: 'Get the jwt<br />handbook',
+    featuredText: 'free jwt ebook!',
     primaryButtonEnable: true,
     primaryButtonLink: '',
     primaryButtonOnClick: () => {},
