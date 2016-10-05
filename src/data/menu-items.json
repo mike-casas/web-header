@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "http://www.gravatar.com/avatar/b7e1e53144c06ecfdef91f0e4229a08a",
-          "title": "Comparing MVVM and Viper architectures: When to use one or the other",
-          "excerpt": "How MVVM and VIPER can be good alternatives to the traditional MVC in iOS projects",
-          "link": "https://auth0.com/blog/compare-mvvm-and-viper-architectures/",
+          "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
+          "title": "Build Your First App with Polymer and Web Components",
+          "excerpt": "Build an app using web components and Polymer that interacts with an API and authenticates users with JSON Web Tokens.",
+          "link": "https://auth0.com/blog/build-your-first-app-with-polymer-and-web-components/",
           "external": true,
-          "author": "Rafael Sacchi",
-          "thumbnail": "https://cdn.auth0.com/blog/mvvm-vs-viper/logo.png",
-          "date": "October 4"
+          "author": "Kim Maida",
+          "thumbnail": "https://cdn.auth0.com/blog/polymer/Polymer-Logo-blog.png",
+          "date": "October 5"
         }
       }
     ]
