@@ -1,3 +1,11 @@
+<a name="1.2.22"></a>
+## 1.2.22 (2016-10-05)
+
+* Bump version to 1.2.21 ([6f11abe](https://github.com/auth0/web-header/commit/6f11abe))
+* New featured text: get the jwt handbook ([95aae17](https://github.com/auth0/web-header/commit/95aae17))
+
+
+
 <a name="1.2.21"></a>
 ## 1.2.21 (2016-10-05)
 
