@@ -37,10 +37,11 @@ const Head = ({
         ?
         <a
           href={featuredLink}
-          className={cx('hiring', 'animated', 'bounce')}
+          className={cx('featured', 'animated', 'bounce')}
           onClick={closeHeaderDropdown}
           rel="external"
-        >{featuredText}</a>
+          dangerouslySetInnerHTML={{ __html: featuredText }}
+        />
         : null
       }
     </h1>
