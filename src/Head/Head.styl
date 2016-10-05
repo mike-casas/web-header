@@ -52,24 +52,25 @@
   color rgba(0, 0, 0, 0)
 
 
-.hiring
+.featured
   display block
   position absolute
-  top 6px
+  top: -2px;
   left calc(100% + 10px)
   white-space nowrap
   background $color-blue-light
   text-transform uppercase
   text-decoration none
   font-weight 500
-  padding 2px 8px 0 8px
+  padding: 4px 8px;
   border-radius 3px
   color white !important
   font-size 11px
-  line-height 22px
+  line-height: 15px;
 
   +breakpoint("desktop")
-    left: calc(-100% - 10px);
+    top: -3px;
+    left: -100%;
 
   +breakpoint("desktop")
     +breakpoint("desktop-hd", "max")
