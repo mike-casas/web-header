@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
-          "title": "Managing Tech Job Stress When 9-5 is Unrealistic",
-          "excerpt": "Explore the many ways to manage job stress and burnout when overtime is an expectation.",
-          "link": "https://auth0.com/blog/managing-tech-job-stress-when-9-5-is-unrealistic/",
+          "avatar": "https://s.gravatar.com/avatar/7752008352217db815996ab04aec46e6?s=80",
+          "title": "Planet-scale authentication with Auth0 and Azure DocumentDB",
+          "excerpt": "Learn how to integrate Azure DocumentDB as your Auth0's custom user database and take advantage of this blazing fast cloud NoSQL database service.",
+          "link": "https://auth0.com/blog/auth0-with-azure-documentdb/",
           "external": true,
-          "author": "Kim Maida",
-          "thumbnail": "https://cdn.auth0.com/blog/managing-tech-job-stress/job-stress-logo.png",
-          "date": "October 7"
+          "author": "Matías Quaranta",
+          "thumbnail": "https://cdn.auth0.com/blog/auth0-and-documentdb/logo.png",
+          "date": "October 11"
         }
       }
     ]
