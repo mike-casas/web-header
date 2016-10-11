@@ -1,3 +1,10 @@
+<a name="1.2.26"></a>
+## 1.2.26 (2016-10-11)
+
+* Update highlights ([c9a794e](https://github.com/auth0/web-header/commit/c9a794e))
+
+
+
 <a name="1.2.25"></a>
 ## 1.2.25 (2016-10-07)
 
