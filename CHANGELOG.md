@@ -1,3 +1,10 @@
+<a name="1.2.27"></a>
+## 1.2.27 (2016-10-13)
+
+* Update highlights ([deae820](https://github.com/auth0/web-header/commit/deae820))
+
+
+
 <a name="1.2.26"></a>
 ## 1.2.26 (2016-10-11)
 
