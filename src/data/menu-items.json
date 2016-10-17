@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "5 things you can do with Yarn",
-          "excerpt": "Yarn is a new package manager for JavaScript by Facebook. Learn how to use Yarn to increase your productivity.",
-          "link": "https://auth0.com/blog/five-things-you-can-do-with-yarn/",
+          "avatar": "https://cdn.auth0.com/blog/profiles/fedemolina.png",
+          "title": "A Bad Login Experience Can Chase Customers Away",
+          "excerpt": "Intuitive design and simple layout is key to keeping people on your site.",
+          "link": "https://auth0.com/blog/bad-login-experiences/",
           "external": true,
-          "author": "Prosper Otemuyiwa",
-          "thumbnail": "https://cdn.auth0.com/blog/yarn-logo.png",
-          "date": "October 13"
+          "author": "Federico Molina",
+          "thumbnail": "https://cdn.auth0.com/blog/bad-login-experience/logo.png",
+          "date": "October 17"
         }
       }
     ]
