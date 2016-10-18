@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://cdn.auth0.com/blog/profiles/fedemolina.png",
-          "title": "A Bad Login Experience Can Chase Customers Away",
-          "excerpt": "Intuitive design and simple layout is key to keeping people on your site.",
-          "link": "https://auth0.com/blog/bad-login-experiences/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "SSO Login: Key Benefits and Implementation",
+          "excerpt": "Learn the benefits of Single Sign On login and how to achieve it with Auth0",
+          "link": "https://auth0.com/blog/sso-login-key-benefits-and-implementation/",
           "external": true,
-          "author": "Federico Molina",
-          "thumbnail": "https://cdn.auth0.com/blog/bad-login-experience/logo.png",
-          "date": "October 17"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/SSO-Logo.png",
+          "date": "October 18"
         }
       }
     ]
