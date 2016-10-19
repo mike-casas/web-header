@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "SSO Login: Key Benefits and Implementation",
-          "excerpt": "Learn the benefits of Single Sign On login and how to achieve it with Auth0",
-          "link": "https://auth0.com/blog/sso-login-key-benefits-and-implementation/",
+          "avatar": "https://cdn.auth0.com/blog/profiles/glennblock.jpg",
+          "title": "Slash Webtasks - All your chatops are belong to you",
+          "excerpt": "Introducing Slash Webtask, an amazingly simple new way to author custom Slack commands using Webtask right from within Slack. Nothing to deploy, nothing to build. All you need is code!",
+          "link": "https://auth0.com/blog/slash-webtasks-all-your-chatops-belong-to-you/",
           "external": true,
-          "author": "Prosper Otemuyiwa",
-          "thumbnail": "https://cdn.auth0.com/blog/SSO-Logo.png",
-          "date": "October 18"
+          "author": "Glenn Block",
+          "thumbnail": "https://cdn.auth0.com/blog/slash-webtask-all-your-chatops-are-belong-to-you/logo-webtask-slack.png",
+          "date": "October 19"
         }
       }
     ]
