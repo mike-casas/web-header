@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://cdn.auth0.com/blog/profiles/glennblock.jpg",
-          "title": "Slash Webtasks - All your ChatOps are belong to you",
-          "excerpt": "Introducing Slash Webtask, an amazingly simple new way to author custom Slack commands using Webtask right from within Slack. Nothing to deploy, nothing to build. All you need is code!",
-          "link": "https://auth0.com/blog/slash-webtasks-all-your-chatops-belong-to-you/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "How was the biggest attack in Internet history perpetrated?",
+          "excerpt": "Learn how the Dyn attack was perpetrated, how it could have been prevented and how to avoid similar attacks in the future",
+          "link": "https://auth0.com/blog/how-the-biggest-attack-in-internet-was-perpertrated/",
           "external": true,
-          "author": "Glenn Block",
-          "thumbnail": "https://cdn.auth0.com/blog/slash-webtask-all-your-chatops-are-belong-to-you/logo-webtask-slack.png",
-          "date": "October 19"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/biggest-internet-attack/logo.png",
+          "date": "October 25"
         }
       }
     ]
