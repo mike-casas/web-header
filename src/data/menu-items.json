@@ -311,7 +311,7 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "How was the biggest attack in Internet history perpetrated?",
+          "title": "How was the biggest DDoS attack in Internet history perpetrated?",
           "excerpt": "Learn how the Dyn attack was perpetrated, how it could have been prevented and how to avoid similar attacks in the future",
           "link": "https://auth0.com/blog/how-the-biggest-attack-in-internet-was-perpertrated/",
           "external": true,
