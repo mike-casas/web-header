@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "How was the biggest DDoS attack in Internet history perpetrated?",
-          "excerpt": "Learn how the Dyn attack was perpetrated, how it could have been prevented and how to avoid similar attacks in the future",
-          "link": "https://auth0.com/blog/how-the-biggest-attack-in-internet-was-perpetrated/",
+          "avatar": "https://s.gravatar.com/avatar/7752008352217db815996ab04aec46e6?s=80",
+          "title": "Using Azure DocumentDB and ASP.NET Core for extreme NoSQL performance",
+          "excerpt": "Let's delve into Azure DocumentDB with ASP.NET Core and learn common-case scenarios from a performance point of view.",
+          "link": "https://auth0.com/blog/documentdb-with-aspnetcore/",
           "external": true,
-          "author": "Prosper Otemuyiwa",
-          "thumbnail": "https://cdn.auth0.com/blog/biggest-internet-attack/logo.png",
-          "date": "October 25"
+          "author": "Matías Quaranta",
+          "thumbnail": "https://cdn.auth0.com/blog/auth0-and-documentdb/logo.png",
+          "date": "October 26"
         }
       }
     ]
