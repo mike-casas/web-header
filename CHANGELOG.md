@@ -1,3 +1,11 @@
+<a name="1.2.37"></a>
+## 1.2.37 (2016-10-28)
+
+* Change items opacity styles for solid colors. ([b16d686](https://github.com/auth0/web-header/commit/b16d686))
+* Fix opacity bug in safari - release 1.2.37 ([160fd21](https://github.com/auth0/web-header/commit/160fd21))
+
+
+
 <a name="1.2.36"></a>
 ## 1.2.36 (2016-10-27)
 
