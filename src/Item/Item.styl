@@ -38,16 +38,22 @@
 .text
   .item.theme-dark &
     +breakpoint("desktop")
-      color white
-      opacity .7
+      color darken(white, 25%)
 
   .item.is-dropdown-open.theme-dark &
     +breakpoint("desktop")
-      opacity 1
+      color $gray-lighter
 
 .item-caret
-  composes text
   display none
+
+  .item.theme-dark & path
+    +breakpoint("desktop")
+      fill darken(white, 25%)
+
+  .item.is-dropdown-open.theme-dark & path
+    +breakpoint("desktop")
+      fill $gray-lighter
 
   +breakpoint("desktop")
     display inline-block
