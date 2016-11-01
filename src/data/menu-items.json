@@ -310,14 +310,14 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://secure.gravatar.com/avatar/9d2e715baab928f5bedb837bfcb70b2b",
-          "title": "Angular 2 Testing In Depth: Services",
-          "excerpt": "Learn how to test services in Angular 2. We will start with setting up the environment and finish with using Dependency Injection.",
-          "link": "https://auth0.com/blog/angular-2-testing-in-depth-services/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Build a Universal JavaScript App with Next.js",
+          "excerpt": "Learn how to build Universal JavaScript apps with the new and shiny Next.js framework",
+          "link": "https://auth0.com/blog/building-universal-apps-with-nextjs/",
           "external": true,
-          "author": "Gábor Soós",
-          "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
-          "date": "October 27"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/next.jslogo.png",
+          "date": "November 1"
         }
       }
     ]
