@@ -1,3 +1,10 @@
+<a name="1.2.38"></a>
+## 1.2.38 (2016-11-01)
+
+* Update highlights ([ccc1ae2](https://github.com/auth0/web-header/commit/ccc1ae2))
+
+
+
 <a name="1.2.37"></a>
 ## 1.2.37 (2016-10-28)
 
