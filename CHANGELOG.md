@@ -1,3 +1,10 @@
+<a name="1.2.39"></a>
+## 1.2.39 (2016-11-02)
+
+* Bump Styleguide: now all the errors are fixed, so this css bundle too ([a9fd5b7](https://github.com/auth0/web-header/commit/a9fd5b7))
+
+
+
 <a name="1.2.38"></a>
 ## 1.2.38 (2016-11-01)
 
