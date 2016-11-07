@@ -1,3 +1,10 @@
+<a name="1.2.41"></a>
+## 1.2.41 (2016-11-07)
+
+* Update highlights ([de49edd](https://github.com/auth0/web-header/commit/de49edd))
+
+
+
 <a name="1.2.40"></a>
 ## 1.2.40 (2016-11-03)
 
