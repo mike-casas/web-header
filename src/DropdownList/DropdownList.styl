@@ -18,6 +18,23 @@
     padding 0
     padding-bottom 15px
 
+
+.stackedList
+  height: auto;
+    
+.twoColList
+  +breakpoint("desktop")
+    width: 100%;
+  
+  ul
+    clearfix();
+    width: 100%;
+  
+  li
+    +breakpoint("desktop")
+      float: left;
+      width: 50%;
+
 .moreDropdownList
   +breakpoint("desktop")
     padding-left 12px

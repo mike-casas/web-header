@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import DropdownList from '../DropdownList';
 import DropdownHighlight from '../DropdownHighlight';
+import DropdownListItem from '../DropdownListItem';
 import styles from './Dropdown.styl';
 import classNames from 'classnames/bind';
 
