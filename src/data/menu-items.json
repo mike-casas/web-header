@@ -102,7 +102,13 @@
             "name": "Case Studies",
             "id": "learn-case-studies",
             "href": "https://auth0.com/learn#case-studies",
-            "external": true
+            "external": true,
+            "highlight": {
+              "title": "Harvard Medical School: Identity Secures NIH Research",
+              "excerpt": "Pre-eminent medical education and research institutions join forces to diagnose medical mysteries - secured by Auth0.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/harvard_header.svg",
+              "link": "https://auth0.com/learn/harvard-medical-school-identity-secures-nih-research/"
+            }
           },
           {
             "name": "Concepts",
@@ -122,19 +128,37 @@
             "name": "Use Cases",
             "id": "learn-use-cases",
             "href": "https://auth0.com/learn#use-cases",
-            "external": true
+            "external": true,
+            "highlight": {
+              "title": "Powering User Analytics With Identity",
+              "excerpt": "Learn how Auth0 helps with your decision-making process, and makes it easy to gather data about your users.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/03/analytics-catalog.png",
+              "link": "https://auth0.com/learn/powering-user-analytics-identity/"
+            }
           },
           {
             "name": "Industries",
             "id": "learn-industries",
             "href": "https://auth0.com/learn#industries",
-            "external": true
+            "external": true,
+            "highlight": {
+              "title": "B2Cs should delight their customers. Learn how with Auth0.",
+              "excerpt": "Want to give your customers an awesome experience in your apps? Give them a pain-free login experience and cater to their desires with social data.",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/B2C.svg",
+              "link": "https://auth0.com/learn/b2c-delight-your-customers-with-auth0/"
+            }
           },
           {
             "name": "Others",
             "id": "learn-growth",
             "href": "https://auth0.com/learn/#growth",
-            "external": true
+            "external": true,
+            "highlight": {
+              "title": "Build or Buy? 20 Identity Management Questions.",
+              "excerpt": "Identity Management is well understood - been doing it since the first computers. How hard can it be? Harder than you think - take the Build or Buy Quiz!",
+              "thumbnail": "https://auth0.com/learn/wp-content/uploads/2016/07/buyvsbuild_header.svg",
+              "link": "https://auth0.com/learn/build-or-buy-20-identity-management-questions/"
+            }
           }
         ]
       }
