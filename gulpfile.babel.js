@@ -26,10 +26,7 @@ gulp.task('data', () =>
     .then(originalContent =>
       request.get('https://auth0.com/blog/last.json')
         .then(blogResponse =>
-          request.get('https://auth0.com/learn/api/header_featured.json')
-            .then(learnResponse =>
-              [originalContent, blogResponse, learnResponse]
-            )
+          [originalContent, blogResponse]
         )
     )
     .then(parseData)
@@ -43,48 +40,24 @@ gulp.task('data', () =>
 /**
  * Parse data
  */
-function parseData([originalContent, blogResponse, learnResponse]) {
+function parseData([originalContent, blogResponse]) {
   // Parse JSON of `src/menu-items.json` to js object
   const content = JSON.parse(originalContent.toString());
   // Parse results from endpoints
-  const [blog, learn] = [blogResponse.body, learnResponse.body];
+  const blog = blogResponse.body;
 
-  return [content, blog, learn];
+  return [content, blog];
 }
 
 /**
  * Generate new `src/menu-items.json`
  */
-function generateNewMenuItemsJson([content, blog, learn]) {
+function generateNewMenuItemsJson([content, blog]) {
   // List of replacements for `src/menu-items.json`
   const replacements = [{
     id: 'last-blog',
     key: 'default',
     value: setValue(blog)
-  }, {
-    id: 'learn-case-studies',
-    key: 'highlight',
-    value: setValue(learn['case-studies'])
-  }, {
-    id: 'learn-use-cases',
-    key: 'highlight',
-    value: setValue(learn['use-cases'])
-  }, {
-    id: 'learn-industries',
-    key: 'highlight',
-    value: setValue(learn.industries)
-  }, {
-    id: 'learn-concepts',
-    key: 'highlight',
-    value: setValue(learn.concepts)
-  }, {
-    id: 'learn-frameworks',
-    key: 'highlight',
-    value: setValue(learn.frameworks)
-  }, {
-    id: 'learn-growth',
-    key: 'highlight',
-    value: setValue(learn.growth)
   }];
   // Array of replacements IDs
   const replacementsIDs = replacements.map(item => item.id);
