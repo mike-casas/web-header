@@ -74,7 +74,7 @@
         "items": [
           {
             "prefix": "b2c",
-            "name": "Engage with Customers",
+            "name": "Customer Identity Management",
             "customClass": "singleItem",
             "icon": "b2c",
             "id": "b2c",
