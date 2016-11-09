@@ -28,7 +28,7 @@ class DropdownListItem extends Component {
       auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
       webtask: 'https://webtask.io/images/symbol.svg',
       guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg',
-      b2c: 'https://cdn.auth0.com/website/icons/b2c-icon.png'
+      b2c: 'https://cdn.auth0.com/website/b2b/engage.png'
     };
     const linkExternal = item.external ? 'external' : null;
     return (
