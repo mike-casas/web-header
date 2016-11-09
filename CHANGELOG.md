@@ -1,3 +1,10 @@
+<a name="1.2.42"></a>
+## 1.2.42 (2016-11-09)
+
+* Update highlights ([ff63351](https://github.com/auth0/web-header/commit/ff63351))
+
+
+
 <a name="1.2.41"></a>
 ## 1.2.41 (2016-11-07)
 
