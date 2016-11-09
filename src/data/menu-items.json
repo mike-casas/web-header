@@ -311,13 +311,13 @@
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
           "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
-          "title": "Migrating an Angular 1 App to Angular 2 - Part 1",
-          "excerpt": "Learn how to migrate real-world features of an Angular 1 application to a fresh Angular 2 build.",
-          "link": "https://auth0.com/blog/migrating-an-angular-1-app-to-angular-2-part-1/",
+          "title": "Migrating an Angular 1 App to Angular 2 - Part 2",
+          "excerpt": "Learn how to migrate real-world features of an Angular 1 application to a fresh Angular 2 build (Part 2).",
+          "link": "https://auth0.com/blog/migrating-an-angular-1-app-to-angular-2-part-2/",
           "external": true,
           "author": "Kim Maida",
           "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
-          "date": "November 7"
+          "date": "November 9"
         }
       }
     ]
