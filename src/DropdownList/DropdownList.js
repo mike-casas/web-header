@@ -6,7 +6,11 @@ import classNames from 'classnames/bind';
 const cx = styles::classNames;
 
 const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =>
-  <div className={cx('dropdownList', { moreDropdownList: parentClass === 'moreDropdown' })}>
+  <div className={cx('dropdownList', { 
+      moreDropdownList: parentClass === 'moreDropdown',
+      stackedList: data.stackedList,
+      twoColList: data.twoColLayout
+    })}>
     {data.title
       ? <h4 className={cx('section-title')}>{data.title}</h4>
       : null

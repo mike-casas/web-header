@@ -27,7 +27,8 @@ class DropdownListItem extends Component {
     const logos = {
       auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
       webtask: 'https://webtask.io/images/symbol.svg',
-      guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg'
+      guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg',
+      b2c: 'https://cdn.auth0.com/website/b2b/engage.png'
     };
     const linkExternal = item.external ? 'external' : null;
     return (
@@ -40,12 +41,19 @@ class DropdownListItem extends Component {
         onMouseEnter={() => {highlightHandler(item.highlight);}}
         onFocus={() => {highlightHandler(item.highlight);}}
       >
-        <a href={item.href} onClick={closeDropdowns} rel={linkExternal}>
+        
+        <a className={cx(item.customClass || '')} href={item.href} onClick={closeDropdowns} rel={linkExternal}>
           {item.icon
             ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt="" />
             : null
           }
-          <span className={cx('text')}>{item.name}</span>
+          <span className={cx('text')}>
+            {item.prefix 
+              ? <span className={cx('itemPrefix')}>{item.prefix}</span>
+              : null
+            }
+            {item.name}
+          </span>
         </a>
       </li>
     );
