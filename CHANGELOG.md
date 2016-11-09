@@ -1,3 +1,15 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2016-11-09)
+
+* Add updated stuff ([4b3d3b3](https://github.com/auth0/web-header/commit/4b3d3b3))
+* change title ([f47b96d](https://github.com/auth0/web-header/commit/f47b96d))
+* Changes 'why-auth0' for 'solutions' menu item. Deprecates /learn hover changing menu ([20d40c3](https://github.com/auth0/web-header/commit/20d40c3))
+* Disable learn highlights auto update ([4e7b337](https://github.com/auth0/web-header/commit/4e7b337))
+* Release 1.3.0 ([010d0b0](https://github.com/auth0/web-header/commit/010d0b0))
+* update link ([c5623ef](https://github.com/auth0/web-header/commit/c5623ef))
+
+
+
 <a name="1.2.42"></a>
 ## 1.2.42 (2016-11-09)
 
