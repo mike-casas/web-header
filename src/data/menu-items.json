@@ -216,7 +216,8 @@
           "external": true,
           "author": "Kim Maida",
           "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
-          "date": "November 9"
+          "date": "November 9",
+          "fullDate": "2016-11-09T08:30:00+00:00"
         }
       }
     ]
