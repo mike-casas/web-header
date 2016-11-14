@@ -1,3 +1,10 @@
+<a name="1.3.2"></a>
+## 1.3.2 (2016-11-14)
+
+* Update highlights ([c7619e0](https://github.com/auth0/web-header/commit/c7619e0))
+
+
+
 <a name="1.3.1"></a>
 ## 1.3.1 (2016-11-11)
 
