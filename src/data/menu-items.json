@@ -209,15 +209,15 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/userimage/20807150/4c9e5bd34750ec1dcedd71cb40b4a9ba.png",
-          "title": "Migrating an Angular 1 App to Angular 2 - Part 3",
-          "excerpt": "Learn how to migrate real-world features of an Angular 1 application to a fresh Angular 2 build (Part 3): routing + API with params and authentication.",
-          "link": "https://auth0.com/blog/migrating-an-angular-1-app-to-angular-2-part-3/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "Chrome Developer Summit 2016 - Summary",
+          "excerpt": "Check out our summary of the recently concluded Chrome Developer Summit.",
+          "link": "https://auth0.com/blog/chromedevsummit-summary/",
           "external": true,
-          "author": "Kim Maida",
-          "thumbnail": "https://cdn.auth0.com/blog/angular/logo.png",
-          "date": "November 14",
-          "fullDate": "2016-11-14T08:30:00+00:00"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/ChromedevSummitLogo.png",
+          "date": "November 15",
+          "fullDate": "2016-11-15T08:30:00+00:00"
         }
       }
     ]
