@@ -1,3 +1,10 @@
+<a name="1.3.6"></a>
+## 1.3.6 (2016-11-17)
+
+* Update highlights ([ffdf285](https://github.com/auth0/web-header/commit/ffdf285))
+
+
+
 <a name="1.3.5"></a>
 ## 1.3.5 (2016-11-16)
 
