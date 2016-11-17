@@ -1,3 +1,10 @@
+<a name="1.3.8"></a>
+## 1.3.8 (2016-11-17)
+
+* Update highlights ([66c1d9d](https://github.com/auth0/web-header/commit/66c1d9d))
+
+
+
 <a name="1.3.7"></a>
 ## 1.3.7 (2016-11-17)
 
