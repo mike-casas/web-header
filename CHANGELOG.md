@@ -1,3 +1,10 @@
+<a name="1.3.7"></a>
+## 1.3.7 (2016-11-17)
+
+* Update highlights ([9581bdb](https://github.com/auth0/web-header/commit/9581bdb))
+
+
+
 <a name="1.3.6"></a>
 ## 1.3.6 (2016-11-17)
 

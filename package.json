@@ -1,6 +1,6 @@
 {
   "name": "auth0-web-header",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "Auth0's website and landings header",
   "main": "dist/web-header.js",
   "files": [
