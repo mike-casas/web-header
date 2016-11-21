@@ -209,15 +209,15 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/5bdf34cb56195a699562bb1468013154.png",
-          "title": "Introducing the Auth0 Ambassador Program!",
-          "excerpt": "Introducing our new mentorship program that will help you master developer evangelism skills.",
-          "link": "https://auth0.com/blog/announcing-auth0-ambassador-program/",
+          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
+          "title": "Build and Authenticate a Node Js App with JSON Web Tokens",
+          "excerpt": "Node Js allows you to build backend applications with JavaScript. In this tutorial we'll take a look at how you can secure your Node Js applications with JSON Web Tokens (JWTs).",
+          "link": "https://auth0.com/blog/building-and-authenticating-nodejs-apps/",
           "external": true,
-          "author": "Kunal Batra",
-          "thumbnail": "https://cdn.auth0.com/blog/ambassador-program/logo.png",
-          "date": "November 17",
-          "fullDate": "2016-11-17T08:30:00+00:00"
+          "author": "Ado Kukic",
+          "thumbnail": "https://cdn.auth0.com/blog/nodejs-awesome-polls/nodejs_logo.png",
+          "date": "November 21",
+          "fullDate": "2016-11-21T08:30:00+00:00"
         }
       }
     ]
