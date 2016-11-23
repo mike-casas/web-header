@@ -209,15 +209,15 @@
         "id": "last-blog",
         "default": {
           "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200",
-          "title": "Build and Authenticate a Node Js App with JSON Web Tokens",
-          "excerpt": "Node Js allows you to build backend applications with JavaScript. In this tutorial we'll take a look at how you can secure your Node Js applications with JSON Web Tokens (JWTs).",
-          "link": "https://auth0.com/blog/building-and-authenticating-nodejs-apps/",
+          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
+          "title": "How Passwordless Authentication Works",
+          "excerpt": "Learn the nitty-gritty of Passwordless Authentication",
+          "link": "https://auth0.com/blog/how-passwordless-authentication-works/",
           "external": true,
-          "author": "Ado Kukic",
-          "thumbnail": "https://cdn.auth0.com/blog/nodejs-awesome-polls/nodejs_logo.png",
-          "date": "November 21",
-          "fullDate": "2016-11-21T08:30:00+00:00"
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "https://cdn.auth0.com/blog/PasswordlessLogo.png",
+          "date": "November 23",
+          "fullDate": "2016-11-23T08:30:00+00:00"
         }
       }
     ]
