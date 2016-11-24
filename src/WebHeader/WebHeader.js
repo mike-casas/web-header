@@ -5,14 +5,16 @@ import defaultMenuItems from '../data/menu-items.json';
 import styles from './WebHeader.styl';
 import classNames from 'classnames/bind';
 import cxN from 'classnames';
+import axios from 'axios';
+import generateNewMenuItemsJson from '../modules/update';
 
 const cx = styles::classNames;
+const blogLastApi = 'https://auth0.com/blog/last.json';
 
 class WebHeader extends Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
-    menuItems: PropTypes.array,
     theme: PropTypes.oneOf(['light', 'gray', 'dark']),
     featuredEnable: PropTypes.bool,
     featuredLink: PropTypes.string,
@@ -31,7 +33,6 @@ class WebHeader extends Component {
   static defaultProps = {
     className: '',
     children: null,
-    menuItems: defaultMenuItems,
     theme: 'light',
     featuredEnable: true,
     featuredLink: 'https://auth0.com/e-books/jwt-handbook',
@@ -49,12 +50,14 @@ class WebHeader extends Component {
 
   state = {
     navbarDropdownIsOpen: false,
-    mobileState: true
+    mobileState: true,
+    menuItems: defaultMenuItems
   };
 
   componentDidMount() {
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
+    this.updateBlogPost();
   }
 
   componentWillUnmount() {
@@ -64,6 +67,16 @@ class WebHeader extends Component {
   setHeightDropdown = () => {
     const height = this.state.mobileState ? `${window.innerHeight - 75}px` : '';
     this.refs.dropdownContent.style.height = height;
+  }
+
+  updateBlogPost = () => {
+    axios.get(blogLastApi)
+      .then(blogResponse => [this.state.menuItems, blogResponse.data])
+      .then(generateNewMenuItemsJson)
+      .then(newMenuItems => {
+        this.setState({ menuItems: newMenuItems });
+      })
+      .catch(err => console.info('Auth0WebHeader', err));
   }
 
   handleResize = () => {
@@ -112,7 +125,6 @@ class WebHeader extends Component {
     const {
       className,
       children,
-      menuItems,
       theme,
       featuredEnable,
       featuredLink,
@@ -126,7 +138,7 @@ class WebHeader extends Component {
       secondaryButtonOnClick,
       secondaryButtonText
     } = this.props;
-    const { navbarDropdownIsOpen, mobileState, focusable } = this.state;
+    const { navbarDropdownIsOpen, mobileState, focusable, menuItems } = this.state;
 
     const primaryButton = this.renderButton(
       primaryButtonLink,
@@ -140,9 +152,10 @@ class WebHeader extends Component {
       secondaryButtonText,
       'btn btn-transparent btn-sm'
     );
-    const renderedMenuItems = menuItems.map(item =>
+
+    const renderedMenuItems = menuItems.map((item, i) =>
       <Item
-        key={item.position + item.id}
+        key={i + item.id}
         item={item}
         theme={theme}
         simpleList={item.simpleList}

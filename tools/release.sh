@@ -27,34 +27,8 @@ NPM_USER=$(npm whoami)
 PACKAGE_NAME=$(node -p "require('./package').name")
 can_publish_npm $NPM_USER $PACKAGE_NAME
 
-
-# Update menu-items.json
-if [ "$UPDATE_MENU_ITEMS" = true ]; then
-  {
-    echo "Updating menu items highlights"
-    # Update menu-items.json
-    npm run data
-    # Commit update
-    git add src/data/menu-items.json
-    git commit -m "Update highlights"
-  } || {
-    echo "Menu items highlights are already updated"
-    exit 1
-  }
-fi
-
-
 # Bump version in package.json
 VERSION=$(node -p "require('./package').version")
-
-if [ "$UPDATE_MENU_ITEMS" = true ]; then
-  # Increment semver patch
-  $(npm bin)/bump patch
-
-  # Get new version
-  VERSION=$(node -p "require('./package').version")
-fi
-
 
 # Add changelog entry
 CHANGELOG_ENTRY="$VERSION"

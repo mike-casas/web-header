@@ -23,7 +23,6 @@ Props | Type | Default | Description
 ------ | ---- | ------- | -----------
 className | string | '' | Applied to the header root element.
 children | node | null | Can be used to render custom menu items via React components.
-menuItems | collection | null | Can be used to render custom menu items via a parsed JSON, see `src/data/menu-items.json`.
 theme | string | 'light' | Header theme, another option is 'dark'.
 featuredEnable | boolean | true | Enable or disable featured link next to the Auth0 logo.
 featuredLink | string | 'https://auth0.com/jobs' | Featured link URI.

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import DropdownList from '../DropdownList';
 import DropdownHighlight from '../DropdownHighlight';
-import DropdownListItem from '../DropdownListItem';
 import styles from './Dropdown.styl';
 import classNames from 'classnames/bind';
 
@@ -23,6 +22,14 @@ class Dropdown extends Component {
   }
 
   componentWillMount() {
+    this.setDefaultHighlight();
+  }
+
+  componentWillReceiveProps() {
+    this.setDefaultHighlight();
+  }
+
+  setDefaultHighlight = () => {
     const { data } = this.props;
     // Set highlight object to default highlight of the dropdown
     const highlightComponent = data.childrens.filter(component => !!component.default);
