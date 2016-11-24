@@ -1,3 +1,11 @@
+<a name="1.4.0"></a>
+# 1.4.0 (2016-11-24)
+
+* Release 1.4.0 ([1003e9e](https://github.com/auth0/web-header/commit/1003e9e))
+* Update menu items on mount ([430f072](https://github.com/auth0/web-header/commit/430f072))
+
+
+
 <a name="1.3.10"></a>
 ## 1.3.10 (2016-11-23)
 
