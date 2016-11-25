@@ -27,14 +27,18 @@ theme | string | 'light' | Header theme, another option is 'dark'.
 featuredEnable | boolean | true | Enable or disable featured link next to the Auth0 logo.
 featuredLink | string | 'https://auth0.com/jobs' | Featured link URI.
 featuredText | string | 'We\'re hiring!' | Featured link text.
-primaryButtonEnable | boolean | true | Enable or disable primary button.
-primaryButtonLink | string | '' | Link of the primary button, if it's different from `''` the primary button will be rendered as an anchor tag with this href.
-primaryButtonOnClick | function | () => {} | Callback function for when primary button is clicked.
-primaryButtonText | string | 'Login' | Text of the primary button.
-secondaryButtonEnable | boolean | true | Secondary button link.
-secondaryButtonLink | string | '?contact=true' | Link of the secondary button, if it's different from `''` the primary button will be rendered as an anchor tag with this href.
-secondaryButtonOnClick | function | () => {} | Callback function for when secondary button is clicked.with this href and `primaryButtonOnClick` will be ignored.
-secondaryButtonText | string | 'Login' | Text of the secondary button.
+loginButtonEnable | boolean | true | Enable or disable Login button.
+loginButtonLink | string | '' | Link of the Login button, if it's different from `''` the Login button will be rendered as an anchor tag with this href.
+loginButtonOnClick | function | () => {} | Callback function for when Login button is clicked.
+loginButtonText | string | 'Log in' | Text of the Login button.
+talkToSalesButtonEnable | boolean | true | Talk to sales button link.
+talkToSalesButtonLink | string | '?contact=true' | Link of the Talk to sales button, if it's different from `''` the Talk to sales button will be rendered as an anchor tag with this href.
+talkToSalesButtonOnClick | function | () => {} | Callback function for when Talk to sales button is clicked.
+talkToSalesButtonText | string | 'Talk to sales' | Text of the Talk to sales button.
+signupButtonEnable | boolean | true | Signup button link.
+signupButtonLink | string | '' | Link of the Signup button, if it's different from `''` the Signup button will be rendered as an anchor tag with this href.
+signupButtonOnClick | function | () => {} | Callback function for when Signup button is clicked.
+signupButtonText | string | 'Sign up' | Text of the Signup button.
 
 ### Example
 

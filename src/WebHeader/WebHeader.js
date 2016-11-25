@@ -19,14 +19,18 @@ class WebHeader extends Component {
     featuredEnable: PropTypes.bool,
     featuredLink: PropTypes.string,
     featuredText: PropTypes.string,
-    primaryButtonEnable: PropTypes.bool,
-    primaryButtonLink: PropTypes.string,
-    primaryButtonOnClick: PropTypes.func,
-    primaryButtonText: PropTypes.string,
-    secondaryButtonEnable: PropTypes.bool,
-    secondaryButtonLink: PropTypes.string,
-    secondaryButtonOnClick: PropTypes.func,
-    secondaryButtonText: PropTypes.string,
+    loginButtonEnable: PropTypes.bool,
+    loginButtonLink: PropTypes.string,
+    loginButtonOnClick: PropTypes.func,
+    loginButtonText: PropTypes.string,
+    signupButtonEnable: PropTypes.bool,
+    signupButtonLink: PropTypes.string,
+    signupButtonOnClick: PropTypes.func,
+    signupButtonText: PropTypes.string,
+    talkToSalesButtonEnable: PropTypes.bool,
+    talkToSalesButtonLink: PropTypes.string,
+    talkToSalesButtonOnClick: PropTypes.func,
+    talkToSalesButtonText: PropTypes.string,
     breakpoint: PropTypes.number
   };
 
@@ -37,14 +41,18 @@ class WebHeader extends Component {
     featuredEnable: true,
     featuredLink: 'https://auth0.com/e-books/jwt-handbook',
     featuredText: 'free jwt ebook!',
-    primaryButtonEnable: true,
-    primaryButtonLink: '',
-    primaryButtonOnClick: () => {},
-    primaryButtonText: 'Log in',
-    secondaryButtonEnable: true,
-    secondaryButtonLink: '?contact=true',
-    secondaryButtonOnClick: () => {},
-    secondaryButtonText: 'Talk to sales',
+    loginButtonEnable: true,
+    loginButtonLink: '',
+    loginButtonOnClick: () => {},
+    loginButtonText: 'Log In',
+    signupButtonEnable: true,
+    signupButtonLink: '',
+    signupButtonOnClick: () => {},
+    signupButtonText: 'Sign up',
+    talkToSalesButtonEnable: true,
+    talkToSalesButtonLink: '?contact=true',
+    talkToSalesButtonOnClick: () => {},
+    talkToSalesButtonText: 'Talk to sales',
     breakpoint: 992
   };
 
@@ -129,28 +137,38 @@ class WebHeader extends Component {
       featuredEnable,
       featuredLink,
       featuredText,
-      primaryButtonEnable,
-      primaryButtonLink,
-      primaryButtonOnClick,
-      primaryButtonText,
-      secondaryButtonEnable,
-      secondaryButtonLink,
-      secondaryButtonOnClick,
-      secondaryButtonText
+      signupButtonEnable,
+      signupButtonLink,
+      signupButtonOnClick,
+      signupButtonText,
+      talkToSalesButtonEnable,
+      talkToSalesButtonLink,
+      talkToSalesButtonOnClick,
+      talkToSalesButtonText,
+      loginButtonEnable,
+      loginButtonLink,
+      loginButtonOnClick,
+      loginButtonText
     } = this.props;
     const { navbarDropdownIsOpen, mobileState, focusable, menuItems } = this.state;
 
-    const primaryButton = this.renderButton(
-      primaryButtonLink,
-      this.closeDropdownOnButtonClick(primaryButtonOnClick),
-      primaryButtonText,
+    const signupButton = this.renderButton(
+      signupButtonLink,
+      this.closeDropdownOnButtonClick(signupButtonOnClick),
+      signupButtonText,
       'btn btn-success btn-sm'
     );
-    const secondaryButton = this.renderButton(
-      secondaryButtonLink,
-      this.closeDropdownOnButtonClick(secondaryButtonOnClick),
-      secondaryButtonText,
+    const talkToSalesButton = this.renderButton(
+      talkToSalesButtonLink,
+      this.closeDropdownOnButtonClick(talkToSalesButtonOnClick),
+      talkToSalesButtonText,
       'btn btn-transparent btn-sm'
+    );
+    const loginButton = this.renderButton(
+      loginButtonLink,
+      this.closeDropdownOnButtonClick(loginButtonOnClick),
+      loginButtonText,
+      `btn ${cx('login-button', { 'login-button--dark': theme === 'dark' })}`
     );
 
     const renderedMenuItems = menuItems.map((item, i) =>
@@ -198,8 +216,9 @@ class WebHeader extends Component {
                 'theme-dark': theme === 'dark'
               })}
             >
-              {secondaryButtonEnable ? secondaryButton : null}
-              {primaryButtonEnable ? primaryButton : null}
+              {loginButtonEnable && loginButton}
+              {talkToSalesButtonEnable && talkToSalesButton}
+              {signupButtonEnable && signupButton}
             </div>
           </div>
         </div>
