@@ -1,3 +1,11 @@
+<a name="2.0.0"></a>
+# 2.0.0 (2016-11-27)
+
+* Add Log In button ([51fe4ec](https://github.com/auth0/web-header/commit/51fe4ec))
+* Release 2.0.0 ([0e45065](https://github.com/auth0/web-header/commit/0e45065))
+
+
+
 <a name="1.4.0"></a>
 # 1.4.0 (2016-11-24)
 
