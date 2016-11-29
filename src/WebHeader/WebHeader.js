@@ -168,7 +168,7 @@ class WebHeader extends Component {
       loginButtonLink,
       this.closeDropdownOnButtonClick(loginButtonOnClick),
       loginButtonText,
-      `btn ${cx('login-button', { 'login-button--dark': theme === 'dark' })}`
+      cx('login-button', { 'login-button--dark': theme === 'dark' })
     );
 
     const renderedMenuItems = menuItems.map((item, i) =>
