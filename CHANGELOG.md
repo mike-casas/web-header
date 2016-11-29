@@ -1,3 +1,11 @@
+<a name="2.0.1"></a>
+## 2.0.1 (2016-11-29)
+
+* Release 2.0.1 ([8eb7b21](https://github.com/auth0/web-header/commit/8eb7b21))
+* Remove .btn class from plain link, Log In button ([b9659eb](https://github.com/auth0/web-header/commit/b9659eb))
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2016-11-27)
 
