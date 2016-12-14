@@ -25,8 +25,8 @@ className | string | '' | Applied to the header root element.
 children | node | null | Can be used to render custom menu items via React components.
 theme | string | 'light' | Header theme, another option is 'dark'.
 featuredEnable | boolean | true | Enable or disable featured link next to the Auth0 logo.
-featuredLink | string | 'https://auth0.com/jobs' | Featured link URI.
-featuredText | string | 'We\'re hiring!' | Featured link text.
+featuredLink | string | '' | Featured link URI.
+featuredText | string | '' | Featured link text.
 loginButtonEnable | boolean | true | Enable or disable Login button.
 loginButtonLink | string | '' | Link of the Login button, if it's different from `''` the Login button will be rendered as an anchor tag with this href.
 loginButtonOnClick | function | () => {} | Callback function for when Login button is clicked.

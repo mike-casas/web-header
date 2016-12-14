@@ -1,0 +1,17 @@
+[
+  {
+    "text": "We are hiring",
+    "probability": 0.5,
+    "link": "https://auth0.com/jobs"
+  },
+  {
+    "text": "Free JWT Book",
+    "probability": 0.5,
+    "link": "https://auth0.com/e-books/jwt-handbook"
+  },
+  {
+    "text": "Don't display",
+    "probability": 0,
+    "link": "https://auth0.com/asdlkqwasdmnnm"
+  }
+]

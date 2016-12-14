@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Head.styl';
+import ribbon from '../modules/ribbon';
 
 const cx = styles::classNames;
 
@@ -36,11 +37,11 @@ const Head = ({
       {featured
         ?
           <a
-            href={featuredLink}
+            href={featuredLink || ribbon.link}
             className={cx('featured', 'animated', 'bounce')}
             onClick={closeHeaderDropdown}
             rel="external"
-            dangerouslySetInnerHTML={{ __html: featuredText }}
+            dangerouslySetInnerHTML={{ __html: featuredText || ribbon.text }}
           />
         : null
       }
