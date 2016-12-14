@@ -1,16 +1,18 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames/bind';
 import DropdownListItem from '../DropdownListItem';
 import styles from './DropdownList.styl';
-import classNames from 'classnames/bind';
 
 const cx = styles::classNames;
 
 const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =>
-  <div className={cx('dropdownList', { 
+  <div
+    className={cx('dropdownList', {
       moreDropdownList: parentClass === 'moreDropdown',
       stackedList: data.stackedList,
       twoColList: data.twoColLayout
-    })}>
+    })}
+  >
     {data.title
       ? <h4 className={cx('section-title')}>{data.title}</h4>
       : null
@@ -32,7 +34,6 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
 DropdownList.propTypes = {
   data: PropTypes.object,
   highlightHandler: PropTypes.func,
-  dropdownReference: PropTypes.object,
   parentClass: PropTypes.string,
   closeDropdowns: PropTypes.func
 };

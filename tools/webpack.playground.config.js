@@ -1,8 +1,8 @@
 import { merge } from 'lodash';
-import commonConfig from './webpack.common.config.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import path from 'path';
+import commonConfig from './webpack.common.config';
 
 const config = merge({}, commonConfig, {
   entry: [

@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import commonConfig from './webpack.common.config.js';
+import commonConfig from './webpack.common.config';
 
 const config = merge({}, commonConfig, {
   output: {

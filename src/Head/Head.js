@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import styles from './Head.styl';
 import classNames from 'classnames/bind';
+import styles from './Head.styl';
 
 const cx = styles::classNames;
 
@@ -35,13 +35,13 @@ const Head = ({
       </a>
       {featured
         ?
-        <a
-          href={featuredLink}
-          className={cx('featured', 'animated', 'bounce')}
-          onClick={closeHeaderDropdown}
-          rel="external"
-          dangerouslySetInnerHTML={{ __html: featuredText }}
-        />
+          <a
+            href={featuredLink}
+            className={cx('featured', 'animated', 'bounce')}
+            onClick={closeHeaderDropdown}
+            rel="external"
+            dangerouslySetInnerHTML={{ __html: featuredText }}
+          />
         : null
       }
     </h1>

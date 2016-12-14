@@ -46,12 +46,12 @@ gulp.task('build', () =>
   Promise.all([
     bundle(moduleConfig)
   ])
-    .then(stats => {
-      stats.forEach(stat => {
+    .then((stats) => {
+      stats.forEach((stat) => {
         console.log(stat.toString(commonConfig.stats));
       });
     })
-    .catch(err => {
+    .catch((err) => {
       throw err;
     })
 );

@@ -1,7 +1,8 @@
 const pkg = require('./package');
+const matchdep = require('matchdep');
 
-module.exports = grunt => {
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+module.exports = (grunt) => {
+  matchdep.filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
     shell: {

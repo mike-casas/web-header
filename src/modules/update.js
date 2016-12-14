@@ -30,11 +30,11 @@ function setValue(object) {
 function getItem(id, from) {
   const found = [];
 
-  from.forEach(item => {
+  from.forEach((item) => {
     if (!item.childrens) return;
     found.push(findByID(item, 'childrens', id));
 
-    item.childrens.forEach(childItem => {
+    item.childrens.forEach((childItem) => {
       if (!childItem.items) return;
       found.push(findByID(childItem, 'items', id));
     });

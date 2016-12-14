@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import styles from './DropdownHighlight.styl';
 import classNames from 'classnames/bind';
+import styles from './DropdownHighlight.styl';
 
 const cx = styles::classNames;
 
@@ -15,8 +15,7 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
       <h4
         className={cx('section-title')}
         dangerouslySetInnerHTML={{ __html: data.componentTitle }}
-      >
-      </h4>
+      />
       : null
     }
     <a

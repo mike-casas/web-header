@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames/bind';
 import DropdownList from '../DropdownList';
 import DropdownHighlight from '../DropdownHighlight';
 import styles from './Dropdown.styl';
-import classNames from 'classnames/bind';
 
 const cx = styles::classNames;
 
@@ -39,7 +39,7 @@ class Dropdown extends Component {
     this.setState({ highlight: highlightComponent[0].default });
   }
 
-  highlightHandler = highlight => {
+  highlightHandler = (highlight) => {
     if (!highlight) return;
     this.setState({ highlight });
   }
@@ -53,7 +53,7 @@ class Dropdown extends Component {
           'is-open': open
         })}
       >
-        {data.childrens.map(component => {
+        {data.childrens.map((component) => {
           switch (component.componentType) {
             case 'list':
               return (

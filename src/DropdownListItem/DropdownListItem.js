@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './DropdownListItem.styl';
 import classNames from 'classnames/bind';
+import styles from './DropdownListItem.styl';
 
 const cx = styles::classNames;
 
@@ -8,13 +8,13 @@ class DropdownListItem extends Component {
   static propTypes = {
     item: PropTypes.object,
     highlightHandler: PropTypes.func,
-    dropdownReference: PropTypes.object,
     hasArrow: PropTypes.bool,
     parentClass: PropTypes.string,
     closeDropdowns: PropTypes.func
   }
 
   componentDidMount() {
+    /* eslint-env browser */
     const { item } = this.props;
     if (item.highlight && item.highlight.thumbnail) {
       const preloadImage = new Image();
@@ -38,17 +38,17 @@ class DropdownListItem extends Component {
           arrowItem: hasArrow,
           moreItem: parentClass === 'moreDropdown'
         })}
-        onMouseEnter={() => {highlightHandler(item.highlight);}}
-        onFocus={() => {highlightHandler(item.highlight);}}
+        onMouseEnter={() => { highlightHandler(item.highlight); }}
+        onFocus={() => { highlightHandler(item.highlight); }}
       >
-        
+
         <a className={cx(item.customClass || '')} href={item.href} onClick={closeDropdowns} rel={linkExternal}>
           {item.icon
             ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt="" />
             : null
           }
           <span className={cx('text')}>
-            {item.prefix 
+            {item.prefix
               ? <span className={cx('itemPrefix')}>{item.prefix}</span>
               : null
             }

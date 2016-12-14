@@ -1,16 +1,31 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames/bind';
 import Dropdown from '../Dropdown';
 import styles from './Item.styl';
-import classNames from 'classnames/bind';
 
 const cx = styles::classNames;
 
 class Item extends Component {
+  static propTypes = {
+    item: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      mobileHref: PropTypes.string,
+      dropdownClass: PropTypes.string,
+      simpleList: PropTypes.bool,
+      children: PropTypes.arrayOf(PropTypes.object)
+    }),
+    theme: PropTypes.string,
+    simpleList: PropTypes.bool,
+    closeHeaderDropdown: PropTypes.func,
+    mobile: PropTypes.bool
+  }
+
   state = {
     openDropdown: false
   }
 
-  handleDropdown = e => {
+  handleDropdown = (e) => {
     const { openDropdown } = this.state;
     const { mobile } = this.props;
     const isMobile = mobile;
@@ -81,15 +96,6 @@ class Item extends Component {
   }
 }
 
-Item.propTypes = {
-  className: PropTypes.string,
-  item: PropTypes.object,
-  theme: PropTypes.string,
-  simpleList: PropTypes.bool,
-  closeHeaderDropdown: PropTypes.func,
-  mobile: PropTypes.bool
-};
-
 export default Item;
 
 const ItemContent = ({ name, childrens, theme }) =>
@@ -110,7 +116,7 @@ const ItemContent = ({ name, childrens, theme }) =>
       </svg>
       : null
     }
-    {childrens ? <span className={cx('dropdown-caret')}></span> : null}
+    {childrens ? <span className={cx('dropdown-caret')} /> : null}
   </span>;
 
 ItemContent.propTypes = {

@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames/bind';
+import cxN from 'classnames';
+import axios from 'axios';
 import Head from '../Head';
 import Item from '../Item';
 import defaultMenuItems from '../data/menu-items.json';
 import styles from './WebHeader.styl';
-import classNames from 'classnames/bind';
-import cxN from 'classnames';
-import axios from 'axios';
 import generateNewMenuItemsJson from '../modules/update';
 
 const cx = styles::classNames;
@@ -56,6 +56,12 @@ class WebHeader extends Component {
     breakpoint: 992
   };
 
+  static renderButton(link, onClick, text, className) {
+    return link
+      ? <a href={link} className={className} onClick={onClick}>{text}</a>
+      : <button className={className} onClick={onClick}>{text}</button>;
+  }
+
   state = {
     navbarDropdownIsOpen: false,
     mobileState: true,
@@ -63,6 +69,7 @@ class WebHeader extends Component {
   };
 
   componentDidMount() {
+    /* eslint-env browser */
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
     this.updateBlogPost();
@@ -74,14 +81,14 @@ class WebHeader extends Component {
 
   setHeightDropdown = () => {
     const height = this.state.mobileState ? `${window.innerHeight - 75}px` : '';
-    this.refs.dropdownContent.style.height = height;
+    this.dropdownContent.style.height = height;
   }
 
   updateBlogPost = () => {
     axios.get(blogLastApi)
       .then(blogResponse => [this.state.menuItems, blogResponse.data])
       .then(generateNewMenuItemsJson)
-      .then(newMenuItems => {
+      .then((newMenuItems) => {
         this.setState({ menuItems: newMenuItems });
       })
       .catch(err => console.info('Auth0WebHeader', err));
@@ -99,7 +106,7 @@ class WebHeader extends Component {
     this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen }, this.addOverflowBody);
   }
 
-  closeDropdownOnButtonClick = callback => event => {
+  closeDropdownOnButtonClick = callback => (event) => {
     const isMobile = this.state.mobileState;
     const isDropdownOpen = this.state.navbarDropdownIsOpen;
 
@@ -117,16 +124,10 @@ class WebHeader extends Component {
     }
   }
 
-  handleKeyDown = e => {
+  handleKeyDown = (e) => {
     // Only enable focusable elements on key tab pressed
     if (e.keyCode !== 9 || this.state.focusable) return;
     this.setState({ focusable: true });
-  }
-
-  renderButton(link, onClick, text, className) {
-    return !!link
-      ? <a href={link} className={className} onClick={onClick}>{text}</a>
-      : <button className={className} onClick={onClick}>{text}</button>;
   }
 
   render() {
@@ -152,19 +153,19 @@ class WebHeader extends Component {
     } = this.props;
     const { navbarDropdownIsOpen, mobileState, focusable, menuItems } = this.state;
 
-    const signupButton = this.renderButton(
+    const signupButton = WebHeader.renderButton(
       signupButtonLink,
       this.closeDropdownOnButtonClick(signupButtonOnClick),
       signupButtonText,
       'btn btn-success btn-sm'
     );
-    const talkToSalesButton = this.renderButton(
+    const talkToSalesButton = WebHeader.renderButton(
       talkToSalesButtonLink,
       this.closeDropdownOnButtonClick(talkToSalesButtonOnClick),
       talkToSalesButtonText,
       'btn btn-transparent btn-sm'
     );
-    const loginButton = this.renderButton(
+    const loginButton = WebHeader.renderButton(
       loginButtonLink,
       this.closeDropdownOnButtonClick(loginButtonOnClick),
       loginButtonText,
@@ -181,7 +182,7 @@ class WebHeader extends Component {
         mobile={mobileState}
       />
     );
-
+    /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <header
         className={cx('header', [`theme-${theme}`], className, {
@@ -205,9 +206,9 @@ class WebHeader extends Component {
               className={cx('collapse', {
                 'is-dropdown-open': navbarDropdownIsOpen
               })}
-              ref="dropdownContent"
+              ref={(_ref) => { this.dropdownContent = _ref; }}
             >
-              <ul className={cx('navigation')}>{!!children ? children : renderedMenuItems}</ul>
+              <ul className={cx('navigation')}>{children || renderedMenuItems}</ul>
             </nav>
             <div
               className={cxN(cx('buttons-group', {
