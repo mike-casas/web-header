@@ -1,13 +1,7 @@
 import { merge } from 'lodash';
-import commonConfig from './webpack.common.config';
+import commonConfig from './webpack.common.config.babel';
 
 const config = merge({}, commonConfig, {
-  output: {
-    filename: 'web-header.js',
-    library: 'Auth0WebHeader',
-    libraryTarget: 'umd'
-  },
-
   externals: {
     react: {
       root: 'React',

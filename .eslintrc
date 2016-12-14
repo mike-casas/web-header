@@ -3,7 +3,7 @@
   "parser": "babel-eslint",
   "rules": {
     "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": ["tools/**/*.js", "**/*.spec.js", "Gruntfile.js", "gulpfile.babel.js"]
+      "devDependencies": ["tools/**/*.js", "**/*.spec.js"]
     }],
     "react/forbid-prop-types": "off"
   }

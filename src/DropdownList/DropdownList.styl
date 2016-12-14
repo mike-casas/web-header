@@ -21,15 +21,15 @@
 
 .stackedList
   height: auto;
-    
+
 .twoColList
   +breakpoint("desktop")
     width: 100%;
-  
+
   ul
     clearfix();
     width: 100%;
-  
+
   li
     +breakpoint("desktop")
       float: left;
@@ -45,4 +45,12 @@
       padding-left 20px
 
 .section-title
-  composes section-title from 'stylus!../DropdownHighlight/DropdownHighlight.styl'
+  padding-bottom 10px
+  margin 12px 0 10px 0
+  font-size 13px
+  font-weight 500
+  color #000 !important
+  border-bottom 1px solid $bg-color-gray
+
+  +breakpoint("desktop", "max")
+    margin-top 20px
