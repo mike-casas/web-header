@@ -15,7 +15,7 @@ const config = {
   ],
 
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../../build'),
     publicPath: '',
     filename: 'web-header.js',
     library: 'Auth0WebHeader',

@@ -78,14 +78,3 @@ else
   echo "Deploying $VERSION to npm"
   npm publish
 fi
-
-
-# Publish to cdn (only works on jenkins)
-CDN_EXISTS=$(curl -s -o /dev/null -w "%{http_code}" https://cdn.auth0.com/web-header/$VERSION/web-header.css | grep 200 || true)
-
-if [ ! -z "$CDN_EXISTS" ]; then
-  echo "There is already a version $VERSION in the CDN. Skiping cdn publish."
-else
-  echo "Deploying $VERSION to cdn"
-  $(npm bin)/grunt cdn
-fi
