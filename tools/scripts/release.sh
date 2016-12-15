@@ -78,3 +78,7 @@ else
   echo "Deploying $VERSION to npm"
   npm publish
 fi
+
+# Publish package to our CDN
+NODE_ENV=production npm run build -- --bail
+$(npm bin)/ccu
