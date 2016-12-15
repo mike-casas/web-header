@@ -1,3 +1,19 @@
+<a name="3.0.0"></a>
+# 3.0.0 (2016-12-15)
+
+* Fix eslint errors ([0b3fcd6](https://github.com/auth0/web-header/commit/0b3fcd6))
+* Fix release script ([2889c3b](https://github.com/auth0/web-header/commit/2889c3b))
+* Randomly display Header Ribbon variants from json with weight selection ([db41287](https://github.com/auth0/web-header/commit/db41287))
+* Release v3.0.0 ([76186be](https://github.com/auth0/web-header/commit/76186be))
+* Update eslint ([dac0e28](https://github.com/auth0/web-header/commit/dac0e28))
+* Update README with new cdn url and dev port ([35beded](https://github.com/auth0/web-header/commit/35beded))
+* Update to node v6 and npm v3 ([0dc0c54](https://github.com/auth0/web-header/commit/0dc0c54))
+* Update to styleguide v5 ([2ad88ce](https://github.com/auth0/web-header/commit/2ad88ce))
+* Update to webpack 2 + RHL v3 ([b0970bd](https://github.com/auth0/web-header/commit/b0970bd))
+* Use new cdn tool and change output bundles to build dir ([2ff45d0](https://github.com/auth0/web-header/commit/2ff45d0))
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1 (2016-11-29)
 
