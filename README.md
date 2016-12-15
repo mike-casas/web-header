@@ -11,8 +11,8 @@ npm install --save auth0-web-header
 
 From CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.auth0.com/web-header/1.2.6/web-header.css" />
-<script src="https://cdn.auth0.com/web-header/1.2.6/web-header.js"></script>
+<link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/3.0.0/web-header.css" />
+<script src="https://cdn.auth0.com/website/web-header/3.0.0/web-header.js"></script>
 ```
 
 ## Usage
@@ -87,7 +87,7 @@ class Header extends Component {
 
 `src/styles/main.styl`
 ```stylus
-@import '../../node_modules/auth0-web-header/dist/web-header.css'
+@import '../../node_modules/auth0-web-header/build/web-header.css'
 ```
 
 ## Development
@@ -99,7 +99,7 @@ cd web-header
 npm install
 npm start
 ```
-And point your browser at `http://localhost:3001`.
+And point your browser at `http://localhost:3000`.
 
 
 ## Release
