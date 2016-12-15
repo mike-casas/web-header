@@ -6,8 +6,8 @@
 export RELEASE=1
 
 # Verifies that is running from the right directory
-if ! [ -e tools/release.sh ]; then
-  echo >&2 "Please run tools/release.sh from the repo root"
+if ! [ -e tools/scripts/release.sh ]; then
+  echo >&2 "Please run tools/scripts/release.sh from the repo root"
   exit 1
 fi
 
