@@ -72,13 +72,14 @@ fi
 # Publish package to npm (npm-script prepublish builds Web Header)
 NPM_EXISTS=$(npm info $PACKAGE_NAME@$VERSION)
 
-if [ ! -z "$NPM_EXISTS" ]; then
-  echo "There is already a version $VERSION in npm. Skiping npm publish."
-else
+if [ "$NPM_EXISTS" == "undefined" ]; then
   echo "Deploying $VERSION to npm"
   # npm publish runs npm run prepublish
   npm publish
+else
+  echo "There is already a version $VERSION in npm. Skiping npm publish."
 fi
+
 
 # Publish package to our CDN
 $(npm bin)/ccu

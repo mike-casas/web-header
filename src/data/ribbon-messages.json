@@ -10,7 +10,7 @@
     "link": "https://auth0.com/e-books/jwt-handbook"
   },
   {
-    "text": "Free ng1 -> ng2 Book",
+    "text": "Free ng1 to ng2 Book",
     "probability": 0.5,
     "link": "https://auth0.com/e-books/migrating-to-angular2"
   }
