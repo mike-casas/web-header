@@ -1,3 +1,10 @@
+<a name="3.0.2"></a>
+## 3.0.2 (2016-12-16)
+
+* Release 3.0.2 ([61feee1](https://github.com/auth0/web-header/commit/61feee1))
+
+
+
 <a name="3.0.1"></a>
 ## 3.0.1 (2016-12-16)
 
