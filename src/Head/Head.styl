@@ -55,9 +55,9 @@
 .featured
   display block
   position absolute
-  top: 5px;
+  top: 50%;
   left calc(100% + 10px)
-  white-space nowrap
+  transform translateY(-50%)
   background $color-blue-light
   text-transform uppercase
   text-decoration none
@@ -67,9 +67,17 @@
   color white !important
   font-size 11px
   line-height: 15px;
+  text-align center
+  transform: translateY(-50%);
+  animation-name: bounce;
+  transform-origin: center bottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  min-width: 105px
 
   +breakpoint("desktop")
-    left: -120px;
+    right calc(100% + 10px)
+    left: auto;
 
   +breakpoint("desktop")
     +breakpoint("desktop-hd", "max")
@@ -79,11 +87,12 @@
   &:after
     position: absolute;
     content: "";
-    top: 6px;
+    top: 50%;
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
+    transform: translateY(-50%);
 
     +breakpoint("desktop", "max")
       left: -4px;
@@ -94,6 +103,28 @@
       right: -4px;
       border-right: 0;
       border-left: 5px solid #44C7F4;
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,-50%,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -70%, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -60%, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-52%,0);
+  }
+}
+
 
 .toggleButton
   position relative

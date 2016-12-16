@@ -7,8 +7,8 @@
     "build"
   ],
   "scripts": {
-    "build": "webpack --config tools/webpack/webpack.module.config.babel.js",
-    "start": "NODE_ENV=development babel-node tools/tasks/start.js",
+    "build": "webpack --config ./tools/webpack/webpack.module.config.babel.js",
+    "start": "NODE_ENV=development babel-node ./tools/tasks/start.js",
     "prepublish": "NODE_ENV=production npm run build -- --bail",
     "lint:js": "eslint .",
     "lint": "npm run lint:js",
