@@ -1,3 +1,16 @@
+<a name="3.0.1"></a>
+## 3.0.1 (2016-12-16)
+
+* Add cdn upload to release script ([38a1b63](https://github.com/auth0/web-header/commit/38a1b63))
+* Change ribbon messages ([a304409](https://github.com/auth0/web-header/commit/a304409))
+* Fix ribbon message and npm publish release script ([261e6f6](https://github.com/auth0/web-header/commit/261e6f6))
+* Improve release script to only build once ([18ffee8](https://github.com/auth0/web-header/commit/18ffee8))
+* Release 3.0.1 ([5cf41af](https://github.com/auth0/web-header/commit/5cf41af))
+* Remove npm run prepublish from release script ([71376ce](https://github.com/auth0/web-header/commit/71376ce))
+* Ribbon with dynamic height and width ([a761bf5](https://github.com/auth0/web-header/commit/a761bf5))
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0 (2016-12-15)
 
