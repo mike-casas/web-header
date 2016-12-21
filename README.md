@@ -19,6 +19,8 @@ From CDN:
 
 ### API
 
+#### Props
+
 Props | Type | Default | Description
 ------ | ---- | ------- | -----------
 className | string | '' | Applied to the header root element.
@@ -39,6 +41,16 @@ signupButtonEnable | boolean | true | Signup button link.
 signupButtonLink | string | '' | Link of the Signup button, if it's different from `''` the Signup button will be rendered as an anchor tag with this href.
 signupButtonOnClick | function | () => {} | Callback function for when Signup button is clicked.
 signupButtonText | string | 'Sign up' | Text of the Signup button.
+
+#### Methods
+
+Get a variant for the ribbon:
+
+```javascript
+import Auth0WebHeader from 'auth0-web-header'
+
+Auth0WebHeader.getRibbon()
+```
 
 ### Example
 

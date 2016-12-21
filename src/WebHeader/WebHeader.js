@@ -7,6 +7,7 @@ import Item from '../Item';
 import defaultMenuItems from '../data/menu-items.json';
 import styles from './WebHeader.styl';
 import generateNewMenuItemsJson from '../modules/update';
+import ribbon from '../modules/ribbon';
 
 const cx = styles::classNames;
 const blogLastApi = 'https://auth0.com/blog/last.json';
@@ -53,6 +54,14 @@ class WebHeader extends Component {
     talkToSalesButtonText: 'Talk to sales',
     breakpoint: 992
   };
+
+  /**
+   * Get ribbon variant
+   * @public
+   */
+  static getRibbon() {
+    return ribbon;
+  }
 
   static renderButton(link, onClick, text, className) {
     return link
