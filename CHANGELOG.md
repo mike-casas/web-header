@@ -1,3 +1,11 @@
+<a name="3.1.0"></a>
+# 3.1.0 (2016-12-21)
+
+* Add getRibbon() method ([d162e76](https://github.com/auth0/web-header/commit/d162e76))
+* Release 3.1.0 ([5c62818](https://github.com/auth0/web-header/commit/5c62818))
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2 (2016-12-16)
 
