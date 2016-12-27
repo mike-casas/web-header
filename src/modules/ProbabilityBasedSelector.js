@@ -1,3 +1,5 @@
+import './polyfills';
+
 export default class ProbabilityBasedSelector {
   constructor(variants) {
     this.variants = variants;
