@@ -1,3 +1,12 @@
+<a name="3.1.1"></a>
+## 3.1.1 (2016-12-27)
+
+* Add [].find() polyfill ([32cc1bf](https://github.com/auth0/web-header/commit/32cc1bf))
+* Release 3.1.1 ([b012c05](https://github.com/auth0/web-header/commit/b012c05))
+* Remove legacy gulpfile ([afade0b](https://github.com/auth0/web-header/commit/afade0b))
+
+
+
 <a name="3.1.0"></a>
 # 3.1.0 (2016-12-21)
 
