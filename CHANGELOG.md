@@ -1,3 +1,11 @@
+<a name="3.1.2"></a>
+## 3.1.2 (2016-12-28)
+
+* Little refactor on ribbon variant selection to avoid cache ([aea60d6](https://github.com/auth0/web-header/commit/aea60d6))
+* Release 3.1.2 ([e08935b](https://github.com/auth0/web-header/commit/e08935b))
+
+
+
 <a name="3.1.1"></a>
 ## 3.1.1 (2016-12-27)
 
