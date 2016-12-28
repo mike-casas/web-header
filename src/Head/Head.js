@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Head.styl';
-import ribbon from '../modules/ribbon';
+import getRibbonVariant from '../modules/ribbon';
 
 const cx = styles::classNames;
 
@@ -13,40 +13,44 @@ const Head = ({
   dropdownOpen,
   theme,
   closeHeaderDropdown
-}) =>
-  <div
-    className={cx('head', [`theme-${theme}`], {
-      dropdownOpen
-    })}
-  >
-    <button
-      type="button"
-      className={cx('toggleButton', 'collapsed', { closeButton: dropdownOpen })}
-      onClick={toggleDropdownHandler}
+}) => {
+  const ribbonVariant = getRibbonVariant();
+  return (
+    <div
+      className={cx('head', [`theme-${theme}`], {
+        dropdownOpen
+      })}
     >
-      <span className="sr-only">Toggle navigation</span>
-      <span className={cx('iconBar')} />
-      <span className={cx('iconBar')} />
-      <span className={cx('iconBar')} />
-      <span className={cx('iconBar')} />
-    </button>
-    <h1 className={cx('brand')}>
-      <a href="/" rel="home" className={cx('logo')} onClick={closeHeaderDropdown}>
-        <span>Auth0</span>
-      </a>
-      {featured
-        ?
-          <a
-            href={featuredLink || ribbon.link}
-            className={cx('featured')}
-            onClick={closeHeaderDropdown}
-            rel="external"
-            dangerouslySetInnerHTML={{ __html: featuredText || ribbon.text }}
-          />
-        : null
-      }
-    </h1>
-  </div>;
+      <button
+        type="button"
+        className={cx('toggleButton', 'collapsed', { closeButton: dropdownOpen })}
+        onClick={toggleDropdownHandler}
+      >
+        <span className="sr-only">Toggle navigation</span>
+        <span className={cx('iconBar')} />
+        <span className={cx('iconBar')} />
+        <span className={cx('iconBar')} />
+        <span className={cx('iconBar')} />
+      </button>
+      <h1 className={cx('brand')}>
+        <a href="/" rel="home" className={cx('logo')} onClick={closeHeaderDropdown}>
+          <span>Auth0</span>
+        </a>
+        {featured
+          ?
+            <a
+              href={featuredLink || ribbonVariant.link}
+              className={cx('featured')}
+              onClick={closeHeaderDropdown}
+              rel="external"
+              dangerouslySetInnerHTML={{ __html: featuredText || ribbonVariant.text }}
+            />
+          : null
+        }
+      </h1>
+    </div>
+  );
+};
 
 Head.propTypes = {
   toggleDropdownHandler: PropTypes.func,

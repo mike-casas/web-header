@@ -7,7 +7,7 @@ import Item from '../Item';
 import defaultMenuItems from '../data/menu-items.json';
 import styles from './WebHeader.styl';
 import generateNewMenuItemsJson from '../modules/update';
-import ribbon from '../modules/ribbon';
+import getRibbonVariant from '../modules/ribbon';
 
 const cx = styles::classNames;
 const blogLastApi = 'https://auth0.com/blog/last.json';
@@ -60,7 +60,7 @@ class WebHeader extends Component {
    * @public
    */
   static getRibbon() {
-    return ribbon;
+    return getRibbonVariant();
   }
 
   static renderButton(link, onClick, text, className) {
