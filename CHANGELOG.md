@@ -1,3 +1,10 @@
+<a name="3.1.3"></a>
+## 3.1.3 (2016-12-28)
+
+* Use last blog post API with more permissive CORS policy ([453fbcb](https://github.com/auth0/web-header/commit/453fbcb))
+
+
+
 <a name="3.1.2"></a>
 ## 3.1.2 (2016-12-28)
 
