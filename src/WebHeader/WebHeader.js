@@ -10,7 +10,7 @@ import generateNewMenuItemsJson from '../modules/update';
 import getRibbonVariant from '../modules/ribbon';
 
 const cx = styles::classNames;
-const blogLastApi = 'https://auth0.com/blog/last.json';
+const blogLastApi = 'https://auth0-marketing.run.webtask.io/last-blog-post';
 
 class WebHeader extends Component {
   static propTypes = {
