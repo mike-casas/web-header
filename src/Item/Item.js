@@ -67,6 +67,7 @@ class Item extends Component {
         onFocus={this.handleDropdown}
         onMouseLeave={this.handleDropdown}
         onBlur={this.handleDropdown}
+        role="menuitem" aria-haspopup="true"
       >
         {linkHref
           ?

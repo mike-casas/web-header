@@ -17,7 +17,7 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
       ? <h4 className={cx('section-title')}>{data.title}</h4>
       : null
     }
-    <ul>
+    <ul role="menubar" aria-hidden="false">
       {data.items.map(item =>
         <DropdownListItem
           key={item.id}

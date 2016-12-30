@@ -52,6 +52,7 @@ class Dropdown extends Component {
         className={cx('dropdown', data.dropdownClass, {
           'is-open': open
         })}
+        aria-hidden={open ? 'false' : 'true'}
       >
         {data.childrens.map((component) => {
           switch (component.componentType) {

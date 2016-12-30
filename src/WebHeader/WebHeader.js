@@ -214,8 +214,14 @@ class WebHeader extends Component {
                 'is-dropdown-open': navbarDropdownIsOpen
               })}
               ref={(_ref) => { this.dropdownContent = _ref; }}
+              role="navigation" aria-label="Main menu"
             >
-              <ul className={cx('navigation')}>{children || renderedMenuItems}</ul>
+              <ul 
+              className={cx('navigation')}
+              role="menubar"
+              >
+                {children || renderedMenuItems}
+              </ul>
             </nav>
             <div
               className={cxN(cx('buttons-group', {

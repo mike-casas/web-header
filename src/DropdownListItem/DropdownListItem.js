@@ -40,6 +40,7 @@ class DropdownListItem extends Component {
         })}
         onMouseEnter={() => { highlightHandler(item.highlight); }}
         onFocus={() => { highlightHandler(item.highlight); }}
+        role="menuitem"
       >
 
         <a className={cx(item.customClass || '')} href={item.href} onClick={closeDropdowns} rel={linkExternal}>
