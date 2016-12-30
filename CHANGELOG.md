@@ -1,3 +1,11 @@
+<a name="3.1.4"></a>
+## 3.1.4 (2016-12-30)
+
+* Add aria header (#27) ([bd37ac1](https://github.com/auth0/web-header/commit/bd37ac1))
+* Added a couple of ARIA Attributes to the header ([e630bfd](https://github.com/auth0/web-header/commit/e630bfd))
+
+
+
 <a name="3.1.3"></a>
 ## 3.1.3 (2016-12-28)
 
