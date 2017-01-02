@@ -25,7 +25,7 @@ class DropdownListItem extends Component {
   render() {
     const { hasArrow, parentClass, highlightHandler, item, closeDropdowns } = this.props;
     const logos = {
-      auth0: 'https://styleguide.auth0.com/lib/logos/img/badge.png',
+      auth0: 'https://cdn.auth0.com/styleguide/4.8.32/lib/logos/img/badge.png',
       webtask: 'https://webtask.io/images/symbol.svg',
       guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg',
       b2c: 'https://cdn.auth0.com/website/b2b/engage.png'
