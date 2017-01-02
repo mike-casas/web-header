@@ -1,3 +1,10 @@
+<a name="3.1.5"></a>
+## 3.1.5 (2017-01-02)
+
+* Use badge.png from our cdn ([1362403](https://github.com/auth0/web-header/commit/1362403))
+
+
+
 <a name="3.1.4"></a>
 ## 3.1.4 (2016-12-30)
 
