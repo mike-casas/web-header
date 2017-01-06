@@ -1,3 +1,11 @@
+<a name="3.1.6"></a>
+## 3.1.6 (2017-01-06)
+
+* Changing 'Guardian' to 'Multifactor' ([b98c742](https://github.com/auth0/web-header/commit/b98c742))
+* Release 3.1.6 ([a6fe171](https://github.com/auth0/web-header/commit/a6fe171))
+
+
+
 <a name="3.1.5"></a>
 ## 3.1.5 (2017-01-02)
 
