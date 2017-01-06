@@ -46,9 +46,9 @@
             "icon": "auth0"
           },
           {
-            "name": "Guardian",
+            "name": "Multifactor Authentication",
             "id": "guardian",
-            "href": "https://auth0.com/guardian",
+            "href": "https://auth0.com/multifactor-authentication",
             "icon": "guardian"
           },
           {
