@@ -1,3 +1,11 @@
+<a name="3.1.7"></a>
+## 3.1.7 (2017-01-06)
+
+* Fix dropdown width ([63a2a11](https://github.com/auth0/web-header/commit/63a2a11))
+* Release 3.1.7 ([8fc5505](https://github.com/auth0/web-header/commit/8fc5505))
+
+
+
 <a name="3.1.6"></a>
 ## 3.1.6 (2017-01-06)
 
