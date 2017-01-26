@@ -1,3 +1,10 @@
+<a name="3.1.8"></a>
+## 3.1.8 (2017-01-26)
+
+* Fix log in button color on mobile ([8ba9b05](https://github.com/auth0/web-header/commit/8ba9b05))
+
+
+
 <a name="3.1.7"></a>
 ## 3.1.7 (2017-01-06)
 
