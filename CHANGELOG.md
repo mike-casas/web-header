@@ -1,3 +1,10 @@
+<a name="3.1.9"></a>
+## 3.1.9 (2017-02-22)
+
+* Add Healthcare Guide ribbon message ([bdd1817](https://github.com/auth0/web-header/commit/bdd1817))
+
+
+
 <a name="3.1.8"></a>
 ## 3.1.8 (2017-01-26)
 
