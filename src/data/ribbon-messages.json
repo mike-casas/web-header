@@ -6,12 +6,17 @@
   },
   {
     "text": "Free JWT Book",
-    "probability": 0.5,
+    "probability": 0.3333333333333333,
     "link": "https://auth0.com/e-books/jwt-handbook"
   },
   {
     "text": "Free ng1 to ng2 Book",
-    "probability": 0.5,
+    "probability": 0.3333333333333333,
     "link": "https://auth0.com/e-books/migrating-to-angular2"
+  },
+  {
+    "text": "Healthcare Guide",
+    "probability": 0.3333333333333333,
+    "link": "https://resources.auth0.com/prevent-healthcare-data-breaches-iam/"
   }
 ]
