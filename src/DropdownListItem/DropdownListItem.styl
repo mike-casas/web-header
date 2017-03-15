@@ -11,16 +11,46 @@
 
 .item
   position relative
-  
+
   > a.singleItem
     font-weight: 500;
     color: #333;
     margin-bottom: 15px;
-    
+
     .icon
       +breakpoint("desktop")
         max-width: 40px;
         max-height: 40px;
+
+  > a.solutionsItem
+    padding-top: 6px
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+    opacity: 1
+
+    .icon {
+      opacity: 1;
+      filter: none;
+    }
+
+    .text {
+      // color: #C67BB2;
+    }
+
+    .icon
+      +breakpoint("desktop")
+        max-width: 40px;
+        max-height: 40px;
+
+  &:nth-child(2) {
+    > a.solutionsItem {
+      padding-top: 0;
+      .text {
+        // color: #18B48E;
+      }
+    }
+  }
 
   > a
     cursor pointer

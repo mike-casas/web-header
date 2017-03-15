@@ -73,12 +73,20 @@
         "stackedList": true,
         "items": [
           {
-            "prefix": "b2c",
-            "name": "Customer Identity Management",
-            "customClass": "singleItem",
+            "name": "Auth0 for your Customers",
+            "customClass": "solutionsItem",
             "icon": "b2c",
             "id": "b2c",
-            "href": "https://auth0.com/b2c-customer-identity-management"
+            "href": "https://auth0.com/b2c-customer-identity-management",
+            "alt": "B2C icon"
+          },
+          {
+            "name": "Auth0 for your Business Partners",
+            "customClass": "solutionsItem",
+            "icon": "b2b",
+            "id": "b2b",
+            "href": "https://auth0.com/b2b",
+            "alt": "B2B"
           }
         ]
       },

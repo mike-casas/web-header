@@ -28,7 +28,8 @@ class DropdownListItem extends Component {
       auth0: 'https://cdn.auth0.com/styleguide/4.8.32/lib/logos/img/badge.png',
       webtask: 'https://webtask.io/images/symbol.svg',
       guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg',
-      b2c: 'https://cdn.auth0.com/website/b2b/engage.png'
+      b2c: 'https://cdn.auth0.com/website/header/b2c-logo-pill.svg',
+      b2b: 'https://cdn.auth0.com/website/header/b2b-logo-pill.svg'
     };
     const linkExternal = item.external ? 'external' : null;
     return (
@@ -45,7 +46,7 @@ class DropdownListItem extends Component {
 
         <a className={cx(item.customClass || '')} href={item.href} onClick={closeDropdowns} rel={linkExternal}>
           {item.icon
-            ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt="" />
+            ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt={item.alt} />
             : null
           }
           <span className={cx('text')}>
