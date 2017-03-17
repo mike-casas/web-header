@@ -1,3 +1,11 @@
+<a name="3.2.1"></a>
+## 3.2.1 (2017-03-17)
+
+* Release 3.2.1 ([8710cdf](https://github.com/auth0/web-header/commit/8710cdf))
+* updated b2b new url ([9e91d7a](https://github.com/auth0/web-header/commit/9e91d7a))
+
+
+
 <a name="3.2.0"></a>
 # 3.2.0 (2017-03-17)
 
