@@ -85,8 +85,8 @@
             "customClass": "solutionsItem",
             "icon": "b2b",
             "id": "b2b",
-            "href": "https://auth0.com/b2b",
-            "alt": "B2B"
+            "href": "https://auth0.com/b2b-enterprise-identity-management",
+            "alt": "B2B icon"
           }
         ]
       },
