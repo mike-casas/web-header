@@ -1,3 +1,11 @@
+<a name="3.2.0"></a>
+# 3.2.0 (2017-03-17)
+
+* new styles for the b2b item in nav ([00cbccf](https://github.com/auth0/web-header/commit/00cbccf))
+* Release 3.2.0 ([9fc5406](https://github.com/auth0/web-header/commit/9fc5406))
+
+
+
 <a name="3.1.9"></a>
 ## 3.1.9 (2017-02-22)
 
