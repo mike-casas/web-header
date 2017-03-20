@@ -1,1 +1,1 @@
-export default from './WebHeader';
+export default from './components/WebHeader';

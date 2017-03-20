@@ -1,0 +1,49 @@
+@import '../../styles/base'
+
+.footer-link
+  color #4A4A4A
+  display inline-block
+  position relative
+  width 100%
+  
+  &:hover
+    color #222
+  
+  +breakpoint("desktop", "max")
+    display none
+  
+  b
+    font-weight normal
+    color #222
+
+  &:after
+    content ""
+    width 0
+    height 0
+    border-style solid
+    border-width 5px 0 5px 6px
+    border-color transparent transparent transparent #eb5224
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    margin-left 10px
+      
+  &:nth-child(2)
+    margin-left 60px
+
+  .icon
+    margin-right 10px
+    position relative
+    top -2px
+  
+  .text
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    max-width calc(100% - 40px)
+    display inline-block
+    vertical-align top
+  
+  svg
+    display inline-block
+    vertical-align middle

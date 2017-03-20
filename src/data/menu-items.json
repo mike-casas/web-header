@@ -1,61 +1,51 @@
 [
   {
-    "name": "Products",
-    "id": "products",
-    "simpleList": true,
-    "mobileHref": "https://auth0.com/why-auth0",
+    "name": "Platform",
+    "id": "platform",
+    "dropdownClass": "platformDropdown",
     "childrens": [
       {
         "componentType": "list",
-        "key": "product-list",
+        "title": "Modern Identity Platform",
+        "description": "The enterprise-grade platform for modern identity. <a href=\"https://auth0.com\" rel=\"external\">Read more</a>",
+        "key": "platform-list",
+        "titleHref": "ttps://auth0.com/",
+        "twoColLayoutBig": true,
         "items": [
           {
-            "name": "Platform",
-            "id": "platform",
-            "href": "https://auth0.com/how-it-works",
-            "icon": "auth0"
-          },
-          {
-            "name": "Enterprise",
-            "id": "enterprise",
-            "href": "https://auth0.com/enterprise",
-            "icon": "auth0"
-          },
-          {
             "name": "Lock",
+            "description": "The Auth0 Login Box. Secure your websites and mobile apps.",
             "id": "lock",
             "href": "https://auth0.com/lock",
-            "icon": "auth0"
+            "icon": "lock"
+          },
+          {
+            "name": "Breached Passwords Detection",
+            "description": "Protect your users and services from password leaks.",
+            "id": "breached-passwords",
+            "href": "https://auth0.com/breached-passwords",
+            "icon": "breached"
           },
           {
             "name": "Passwordless",
+            "description": "Allow users to login without the need to remember a password.",
             "id": "passwordless",
             "href": "https://auth0.com/passwordless",
-            "icon": "auth0"
+            "icon": "passwordless"
           },
           {
-            "name": "Breached Passwords",
-            "id": "breached-passwords",
-            "href": "https://auth0.com/breached-passwords",
-            "icon": "auth0"
-          },
-          {
-            "name": "Wordpress",
+            "name": "Wordpress plugin",
+            "description": "Connect WordPress to every login system on Earth. Really.",
             "id": "wordpress",
             "href": "https://auth0.com/wordpress",
-            "icon": "auth0"
+            "icon": "wordpress"
           },
           {
             "name": "Multifactor Authentication",
+            "description": "The most usable and friction-free multifactor authentication experience.",
             "id": "guardian",
             "href": "https://auth0.com/multifactor-authentication",
-            "icon": "guardian"
-          },
-          {
-            "name": "Webtask",
-            "id": "webtask",
-            "href": "https://webtask.io/",
-            "icon": "webtask"
+            "icon": "multifactor"
           }
         ]
       }
@@ -65,78 +55,237 @@
     "name": "Solutions",
     "id": "solutions",
     "dropdownClass": "solutionsDropdown",
-    "mobileHref": "https://auth0.com/why-auth0",
+    "twoBlockLayout": true,
     "childrens": [
       {
         "componentType": "list",
-        "key": "solution-list",
+        "title": "Use Cases",
+        "key": "use-cases-list",
         "stackedList": true,
         "items": [
           {
-            "name": "Auth0 for your Customers",
-            "customClass": "solutionsItem",
+            "name": "For your Customers",
+            "customClass": "solutionsItem-b2c",
             "icon": "b2c",
             "id": "b2c",
             "href": "https://auth0.com/b2c-customer-identity-management",
             "alt": "B2C icon"
           },
           {
-            "name": "Auth0 for your Business Partners",
-            "customClass": "solutionsItem",
+            "name": "For your Business Partners",
+            "customClass": "solutionsItem-b2b",
             "icon": "b2b",
             "id": "b2b",
             "href": "https://auth0.com/b2b-enterprise-identity-management",
             "alt": "B2B icon"
+          },
+          {
+            "name": "For your Enterprise",
+            "customClass": "solutionsItem-b2e",
+            "icon": "b2e",
+            "id": "b2e",
+            "href": "https://auth0.com/b2b-enterprise-identity-management",
+            "alt": "B2E icon"
           }
         ]
       },
       {
         "componentType": "list",
-        "title": "Learn more about Auth0",
-        "key": "learn-about-auth0-list",
-        "twoColLayout": true,
-        "items": [
+        "title": "Solutions",
+        "key": "solutions-list",
+        "highlight": true,
+        "subItems": [
           {
-            "name": "Overview",
-            "id": "overview",
-            "href": "https://auth0.com/why-auth0"
-          },
+            "titleList": "INDUSTRIES",
+            "items": [
+              {
+                "name": "Healthcare",
+                "id": "healthcare",
+                "href": "https://auth0.com/learn/why-hipaa-compliance-is-vital-your-business/"
+              },
+              {
+                "name": "Telecommunications",
+                "id": "telecommunications",
+                "href": "https://auth0.com/learn/telecommunications-industry/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "footerLinks": [
+      {
+        "id": "read-case-studies",
+        "name": "Read our Case Studies",
+        "href": "https://auth0.com/learn/#case-studies",
+        "icon": "blog"
+      }
+    ]
+  },
+  {
+    "name": "Why Auth0",
+    "id": "why-auth0",
+    "dropdownClass": "whyDropdown",
+    "twoBlockLayout": true,
+    "childrens": [
+      {
+        "componentType": "list",
+        "title": "Company",
+        "key": "company-list",
+        "items": [
           {
             "name": "Customers",
             "id": "customers",
             "href": "https://auth0.com/customers"
           },
           {
-            "name": "Case Studies",
-            "id": "learn-case-studies",
-            "href": "https://auth0.com/learn/#case-studies",
-            "external": true
+            "name": "Security, Privacy & Compliance",
+            "id": "security",
+            "href": "https://auth0.com/security"
           },
           {
-            "name": "Concepts",
-            "id": "learn-concepts",
-            "href": "https://auth0.com/learn/#concepts",
-            "external": true
-          },
-          {
-            "name": "Use Cases",
-            "id": "learn-use-cases",
-            "href": "https://auth0.com/learn/#use-cases",
-            "external": true
-          },
-          {
-            "name": "Industries",
-            "id": "learn-industries",
-            "href": "https://auth0.com/learn/#industries",
-            "external": true
-          },
-          {
-            "name": "Others",
-            "id": "learn-growth",
-            "href": "https://auth0.com/learn/#growth",
-            "external": true
+            "name": "High Availability",
+            "id": "availability",
+            "href": "https://auth0.com/availability-trust"
           }
         ]
+      },
+      {
+        "componentType": "list",
+        "title": "Resources",
+        "key": "resources-list",
+        "twoColLayout": true,
+        "highlight": true,
+        "titleHref": "https://auth0.com/resources/",
+        "items": [
+          {
+            "name": "Whitepapers",
+            "id": "whitepapers",
+            "href": "https://auth0.com/resources/whitepapers"
+          },
+          {
+            "name": "Videos",
+            "id": "videos",
+            "href": "https://auth0.com/resources/videos"
+          },
+          {
+            "name": "Ebooks",
+            "id": "ebooks",
+            "href": "https://auth0.com/resources/ebooks"
+          },
+          {
+            "name": "Blog",
+            "id": "blog",
+            "href": "https://auth0.com/blog/"
+          },
+          {
+            "name": "Webinar",
+            "id": "webinar",
+            "href": "https://auth0.com/resources/webinars"
+          },
+          {
+            "name": "Case Studies",
+            "id": "case-studies",
+            "href": "https://auth0.com/learn/#case-studies"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Developers",
+    "id": "developers",
+    "dropdownClass": "developersDropdown",
+    "twoBlockLayout": true,
+    "childrens": [
+      {
+        "componentType": "list",
+        "title": "Documentation",
+        "key": "documentation-list",
+        "titleHref": "https://auth0.com/docs",
+        "subItems": [
+          {
+            "titleList": "GET STARTED",
+            "items": [
+              {
+                "name": "Javascript",
+                "id": "javascript",
+                "href": "https://auth0.com/docs/quickstart/spa/vanillajs",
+                "icon": "javascript"
+              },
+              {
+                "name": "iOS",
+                "id": "ios",
+                "href": "https://auth0.com/docs/quickstart/native/ios",
+                "icon": "ios"
+              },
+              {
+                "name": "Android",
+                "id": "android",
+                "href": "https://auth0.com/docs/quickstart/native/android",
+                "icon": "android"
+              },
+              {
+                "name": "All Quickstarts",
+                "id": "all-quickstarts",
+                "href": "https://auth0.com/docs/quickstart/",
+                "icon": "quickstarts"
+              }
+            ]
+          },
+          {
+            "titleList": "SECTIONS",
+            "items": [
+              {
+                "name": "APIs",
+                "id": "apis",
+                "href": "https://auth0.com/docs/apiS"
+              },
+              {
+                "name": "Protocols",
+                "id": "protocols",
+                "href": "https://auth0.com/docs/protocols"
+              },
+              {
+                "name": "Libraries",
+                "id": "libraries",
+                "href": "https://auth0.com/docs/libraries"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "componentType": "list",
+        "title": "Resources",
+        "key": "resources-list",
+        "highlight": true,
+        "items": [
+          {
+            "name": "Open Source",
+            "id": "open-source",
+            "href": "https://auth0.com/opensource"
+          },
+          {
+            "name": "Auth0 University",
+            "id": "university",
+            "href": "https://auth0.com/university/"
+          },
+          {
+            "name": "Identity Glossary",
+            "id": "indentity-glossaryt",
+            "href": "https://auth0.com/identity-glossary"
+          }
+        ]
+      }
+    ],
+    "footerLinks": [
+      {
+        "id": "latest-blog",
+        "name": "<b>Latest from Auth0 Blog:</b> Introducing Auth0 Extend: The new way to extend your SaaS",
+        "href": "https://auth0.com/blog/introducing-auth0-extend-the-new-way-to-extend-your-saas/",
+        "icon": "blog",
+        "external": true
       }
     ]
   },
@@ -144,90 +293,5 @@
     "name": "Pricing",
     "id": "pricing",
     "href": "https://auth0.com/pricing"
-  },
-  {
-    "name": "Documentation",
-    "id": "documentation",
-    "href": "https://auth0.com/docs",
-    "external": true
-  },
-  {
-    "name": "More",
-    "id": "more",
-    "dropdownClass": "moreDropdown",
-    "childrens": [
-      {
-        "componentType": "list",
-        "title": "Additional info",
-        "key": "adittional-list",
-        "items": [
-          {
-            "name": "About",
-            "id": "about",
-            "href": "https://auth0.com/about"
-          },
-          {
-            "name": "Support",
-            "id": "support",
-            "href": "https://support.auth0.com"
-          },
-          {
-            "name": "Partners",
-            "id": "partners",
-            "href": "https://auth0.com/partners"
-          },
-          {
-            "name": "Press",
-            "id": "press",
-            "href": "https://auth0.com/press"
-          }
-        ]
-      },
-      {
-        "componentType": "list",
-        "title": "Tech resources",
-        "key": "resources-list",
-        "items": [
-          {
-            "name": "Security",
-            "id": "security",
-            "href": "https://auth0.com/security"
-          },
-          {
-            "name": "Availability",
-            "id": "availability",
-            "href": "https://auth0.com/availability-trust"
-          },
-          {
-            "name": "Opensource",
-            "id": "opensource",
-            "href": "https://auth0.com/opensource"
-          },
-          {
-            "name": "Jobs",
-            "id": "jobs",
-            "href": "https://auth0.com/jobs"
-          }
-        ]
-      },
-      {
-        "componentType": "highlight",
-        "title": "Latest from Auth0 blog",
-        "key": "last-blog",
-        "id": "last-blog",
-        "default": {
-          "componentTitle": "Latest from <a href=\"https://auth0.com/blog\" rel=\"external\">Auth0 blog</a>",
-          "avatar": "https://en.gravatar.com/avatar/1097492785caf9ffeebffeb624202d8f?s=200",
-          "title": "How Passwordless Authentication Works",
-          "excerpt": "Learn the nitty-gritty of Passwordless Authentication",
-          "link": "https://auth0.com/blog/how-passwordless-authentication-works/",
-          "external": true,
-          "author": "Prosper Otemuyiwa",
-          "thumbnail": "https://cdn.auth0.com/website/header/passwordless.png",
-          "date": "November 23",
-          "fullDate": "2016-11-23T08:30:00+00:00"
-        }
-      }
-    ]
   }
 ]

@@ -2,6 +2,23 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import styles from './DropdownListItem.styl';
 
+import ProductsSVG from '../../svg/ProductsSVG';
+import JavascriptSVG from '../../svg/JavascriptSVG';
+import AndroidSVG from '../../svg/AndroidSVG';
+import IosSVG from '../../svg/iosSVG';
+import DefaultSVG from '../../svg/DefaultSVG';
+import B2eSVG from '../../svg/b2eSVG';
+import B2bSVG from '../../svg/b2bSVG';
+import B2cSVG from '../../svg/b2cSVG';
+import GuardianSVG from '../../svg/GuardianSVG';
+import WebtaskSVG from '../../svg/WebtaskSVG';
+import BreachedSVG from '../../svg/BreachedSVG';
+import LockSVG from '../../svg/LockSVG';
+import MtmSVG from '../../svg/mtmSVG';
+import MultifactorSVG from '../../svg/MultifactorSVG';
+import PasswordlessSVG from '../../svg/PasswordlessSVG';
+import WordpressSVG from '../../svg/WordpressSVG';
+
 const cx = styles::classNames;
 
 class DropdownListItem extends Component {
@@ -25,11 +42,22 @@ class DropdownListItem extends Component {
   render() {
     const { hasArrow, parentClass, highlightHandler, item, closeDropdowns } = this.props;
     const logos = {
-      auth0: 'https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png',
-      webtask: 'https://cdn.auth0.com/website/header/webtask.svg',
-      guardian: 'https://cdn.auth0.com/website/header/guardian.svg',
-      b2c: 'https://cdn.auth0.com/website/header/b2c.svg',
-      b2b: 'https://cdn.auth0.com/website/header/b2b.svg'
+      webtask: <WebtaskSVG />,
+      guardian: <GuardianSVG />,
+      b2c: <B2cSVG />,
+      b2b: <B2bSVG />,
+      b2e: <B2eSVG />,
+      logoDefault: <DefaultSVG />,
+      javascript: <JavascriptSVG />,
+      ios: <IosSVG />,
+      android: <AndroidSVG />,
+      quickstarts: <ProductsSVG />,
+      breached: <BreachedSVG />,
+      lock: <LockSVG />,
+      mtm: <MtmSVG />,
+      multifactor: <MultifactorSVG />,
+      passwordless: <PasswordlessSVG />,
+      wordpress: <WordpressSVG />
     };
     const linkExternal = item.external ? 'external' : null;
     return (
@@ -46,16 +74,21 @@ class DropdownListItem extends Component {
 
         <a className={cx(item.customClass || '')} href={item.href} onClick={closeDropdowns} rel={linkExternal}>
           {item.icon
-            ? <img src={logos[item.icon]} className={cx('icon')} role="presentation" alt={item.alt} />
+            ? <figure className={cx('icon')}>{logos[item.icon]}</figure>
             : null
           }
           <span className={cx('text')}>
+            {item.name}
+
             {item.prefix
               ? <span className={cx('itemPrefix')}>{item.prefix}</span>
               : null
             }
-            {item.name}
           </span>
+          {item.description
+            ? <p className={cx('item-description')}>{item.description}</p>
+            : null
+          }
         </a>
       </li>
     );

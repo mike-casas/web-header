@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import DropdownList from '../DropdownList';
 import DropdownHighlight from '../DropdownHighlight';
+import FooterList from '../FooterList';
 import styles from './Dropdown.styl';
 
 const cx = styles::classNames;
@@ -50,7 +51,8 @@ class Dropdown extends Component {
     return (
       <div
         className={cx('dropdown', data.dropdownClass, {
-          'is-open': open
+          'is-open': open,
+          twoBlock: data.twoBlockLayout
         })}
         aria-hidden={open ? 'false' : 'true'}
       >
@@ -79,6 +81,19 @@ class Dropdown extends Component {
               return null;
           }
         })}
+
+        {data.footerLinks
+          ? <footer className={cx('footer-list')}>
+              {data.footerLinks.map(footer =>
+                <FooterList
+                  key={footer.id}
+                  footer={footer}
+                  closeDropdowns={closeDropdowns}
+                />
+              )}
+            </footer>
+          : null
+        }
       </div>
     );
   }

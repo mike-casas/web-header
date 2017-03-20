@@ -1,22 +1,9 @@
 [
   {
-    "text": "We are hiring",
-    "probability": 0,
-    "link": "https://auth0.com/jobs"
-  },
-  {
-    "text": "Free JWT Book",
-    "probability": 0.3333333333333333,
-    "link": "https://auth0.com/e-books/jwt-handbook"
-  },
-  {
-    "text": "Free ng1 to ng2 Book",
-    "probability": 0.3333333333333333,
-    "link": "https://auth0.com/e-books/migrating-to-angular2"
-  },
-  {
-    "text": "Healthcare Guide",
-    "probability": 0.3333333333333333,
-    "link": "https://resources.auth0.com/prevent-healthcare-data-breaches-iam/"
+    "link": "https://auth0.com/extend",
+    "linkText": "Read More",
+    "text": "Introducing Auth0 Extend<span>Better platform extensibility for your SaaS.</span>",
+    "iconColor": "3445DC",
+    "probability": 0.3333333333333333
   }
 ]

@@ -3,11 +3,14 @@ import classNames from 'classnames/bind';
 import cxN from 'classnames';
 import axios from 'axios';
 import Head from '../Head';
+import FeaturedHead from '../FeaturedHead';
 import Item from '../Item';
-import defaultMenuItems from '../data/menu-items.json';
+import FooterMobile from '../FooterMobile';
+import defaultMenuItems from '../../data/menu-items.json';
+import defaultMenuItemsMobile from '../../data/mobile-items.json';
 import styles from './WebHeader.styl';
-import generateNewMenuItemsJson from '../modules/update';
-import getRibbonVariant from '../modules/ribbon';
+import generateNewMenuItemsJson from '../../modules/update';
+import getRibbonVariant from '../../modules/ribbon';
 
 const cx = styles::classNames;
 const blogLastApi = 'https://auth0-marketing.run.webtask.io/last-blog-post';
@@ -51,7 +54,7 @@ class WebHeader extends Component {
     talkToSalesButtonEnable: true,
     talkToSalesButtonLink: '?contact=true',
     talkToSalesButtonOnClick: () => {},
-    talkToSalesButtonText: 'Talk to sales',
+    talkToSalesButtonText: 'Talk to Sales',
     breakpoint: 992
   };
 
@@ -72,7 +75,8 @@ class WebHeader extends Component {
   state = {
     navbarDropdownIsOpen: false,
     mobileState: true,
-    menuItems: defaultMenuItems
+    menuItems: defaultMenuItems,
+    menuItemsMobile: defaultMenuItemsMobile
   };
 
   componentDidMount() {
@@ -87,7 +91,7 @@ class WebHeader extends Component {
   }
 
   setHeightDropdown = () => {
-    const height = this.state.mobileState ? `${window.innerHeight - 75}px` : '';
+    const height = this.state.mobileState ? `${window.innerHeight - 70}px` : '';
     this.dropdownContent.style.height = height;
   }
 
@@ -158,25 +162,32 @@ class WebHeader extends Component {
       loginButtonOnClick,
       loginButtonText
     } = this.props;
-    const { navbarDropdownIsOpen, mobileState, focusable, menuItems } = this.state;
+    const { navbarDropdownIsOpen, mobileState, focusable, menuItems, menuItemsMobile } = this.state;
 
     const signupButton = WebHeader.renderButton(
       signupButtonLink,
       this.closeDropdownOnButtonClick(signupButtonOnClick),
       signupButtonText,
-      'btn btn-success btn-sm'
+      'btn btn-success btn-sm signup-button'
     );
     const talkToSalesButton = WebHeader.renderButton(
       talkToSalesButtonLink,
       this.closeDropdownOnButtonClick(talkToSalesButtonOnClick),
       talkToSalesButtonText,
-      'btn btn-transparent btn-sm'
+      'btn btn-transparent btn-sm talk-button'
     );
     const loginButton = WebHeader.renderButton(
       loginButtonLink,
       this.closeDropdownOnButtonClick(loginButtonOnClick),
       loginButtonText,
       cx('login-button', { 'login-button--dark': theme === 'dark' })
+    );
+
+    const renderedMenuMobile = menuItemsMobile.map((mobileLinks, i) =>
+      <FooterMobile
+        key={mobileLinks.id}
+        mobileLinks={mobileLinks}
+      />
     );
 
     const renderedMenuItems = menuItems.map((item, i) =>
@@ -198,41 +209,66 @@ class WebHeader extends Component {
         })}
         onKeyDown={this.handleKeyDown}
       >
+        <FeaturedHead
+          featured={featuredEnable}
+          featuredLink={featuredLink}
+          featuredText={featuredText}
+          dropdownOpen={navbarDropdownIsOpen}
+          theme={theme}
+          closeHeaderDropdown={this.closeDropdownOnButtonClick()}
+        />
         <div className={cx('menu', { 'is-dropdown-open': navbarDropdownIsOpen })}>
           <div className="container">
             <Head
               toggleDropdownHandler={this.navbarDropdownHandler}
-              featured={featuredEnable}
-              featuredLink={featuredLink}
-              featuredText={featuredText}
               dropdownOpen={navbarDropdownIsOpen}
               theme={theme}
               closeHeaderDropdown={this.closeDropdownOnButtonClick()}
             />
-            <nav
-              className={cx('collapse', {
+
+            <div className={cx('collapse', {
                 'is-dropdown-open': navbarDropdownIsOpen
               })}
               ref={(_ref) => { this.dropdownContent = _ref; }}
-              role="navigation" aria-label="Main menu"
             >
-              <ul 
-              className={cx('navigation')}
-              role="menubar"
+
+              <nav
+                className={cx('main-navigation')}
+                role="navigation" aria-label="Main menu"
               >
-                {children || renderedMenuItems}
-              </ul>
-            </nav>
-            <div
-              className={cxN(cx('buttons-group', {
-                'is-dropdown-open': navbarDropdownIsOpen
-              }), {
-                'theme-dark': theme === 'dark'
-              })}
-            >
-              {loginButtonEnable && loginButton}
-              {talkToSalesButtonEnable && talkToSalesButton}
-              {signupButtonEnable && signupButton}
+                <ul 
+                className={cx('navigation')}
+                role="menubar"
+                >
+                  {children || renderedMenuItems}
+                  <li
+                    className={cxN({
+                      'theme-dark': theme === 'dark'
+                    })}
+                  >
+                    {talkToSalesButtonEnable && talkToSalesButton}
+                  </li>
+                </ul>
+
+                <div className={cx('menu-mobile')}>
+                  {talkToSalesButtonEnable && talkToSalesButton}
+
+                  <ul>
+                    {renderedMenuMobile}
+                  </ul>
+                </div>
+                
+              </nav>
+              
+              <div
+                className={cxN(cx('buttons-group'), {
+                  'theme-dark': theme === 'dark'
+                })}
+              >
+                {loginButtonEnable && loginButton}
+                {signupButtonEnable && signupButton}
+              </div>
+
             </div>
           </div>
         </div>

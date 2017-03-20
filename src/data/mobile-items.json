@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Customers",
+    "id":  "customers",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Blog",
+    "id":  "blog",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Case Studies",
+    "id":  "case-studies",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Press Releases",
+    "id":  "press-releases",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Documentation",
+    "id":  "documentation",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Resources",
+    "id":  "resources",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Support",
+    "id":  "support",
+    "href": "http://auth0.com/"
+  },
+  {
+    "name": "Security",
+    "id":  "security",
+    "href": "http://auth0.com/"
+  }
+]
