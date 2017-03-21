@@ -1,3 +1,11 @@
+<a name="3.2.2"></a>
+## 3.2.2 (2017-03-21)
+
+* Fix solutions padding bottom bug. Remove old code. ([9f7f3cd](https://github.com/auth0/web-header/commit/9f7f3cd))
+* Release patch 3.2.2 ([4920428](https://github.com/auth0/web-header/commit/4920428))
+
+
+
 <a name="3.2.1"></a>
 ## 3.2.1 (2017-03-17)
 
