@@ -4,9 +4,14 @@ Auth0's website and landings react component header
 
 ## Installation
 
-From npm:
+From npm client:
 ```bash
 npm install --save auth0-web-header
+```
+
+From yarn client:
+```bash
+yarn add auth0-web-header
 ```
 
 From CDN:
@@ -108,8 +113,8 @@ Run:
 ```
 git clone git@github.com:auth0/web-header.git
 cd web-header
-npm install
-npm start
+yarn
+yarn start
 ```
 And point your browser at `http://localhost:3000`.
 
