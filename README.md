@@ -110,14 +110,18 @@ class Header extends Component {
 ## Development
 
 Run:
-```
+
+```bash
 git clone git@github.com:auth0/web-header.git
 cd web-header
 yarn
 yarn start
 ```
-And point your browser at `http://localhost:3000`.
 
+And point your browser to the playgrounds:
+
+- [Mobile Playground](http://localhost:3000/?mobile)
+- [Desktop Playground](http://localhost:3000)
 
 ## Release
 
