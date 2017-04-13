@@ -109,7 +109,7 @@
           {
             "name": "Case Studies",
             "id": "learn-case-studies",
-            "href": "https://auth0.com/learn#case-studies",
+            "href": "https://auth0.com/learn/#case-studies",
             "external": true
           },
           {
@@ -121,13 +121,13 @@
           {
             "name": "Use Cases",
             "id": "learn-use-cases",
-            "href": "https://auth0.com/learn#use-cases",
+            "href": "https://auth0.com/learn/#use-cases",
             "external": true
           },
           {
             "name": "Industries",
             "id": "learn-industries",
-            "href": "https://auth0.com/learn#industries",
+            "href": "https://auth0.com/learn/#industries",
             "external": true
           },
           {
