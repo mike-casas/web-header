@@ -1,3 +1,15 @@
+<a name="3.2.3"></a>
+## 3.2.3 (2017-04-13)
+
+* Add /?mobile to playground ([2fc97ad](https://github.com/auth0/web-header/commit/2fc97ad))
+* Add trailing slash to hashbang links ([e6774d5](https://github.com/auth0/web-header/commit/e6774d5))
+* Release patch 3.2.3 ([a2586c1](https://github.com/auth0/web-header/commit/a2586c1))
+* Remove unused deps and add support for yarn ([037aba7](https://github.com/auth0/web-header/commit/037aba7))
+* Update eslint deps and config file ([7d235b8](https://github.com/auth0/web-header/commit/7d235b8))
+* Update webpack config and deps ([561dd30](https://github.com/auth0/web-header/commit/561dd30))
+
+
+
 <a name="3.2.2"></a>
 ## 3.2.2 (2017-03-21)
 
