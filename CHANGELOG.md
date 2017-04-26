@@ -1,3 +1,11 @@
+<a name="3.2.4"></a>
+## 3.2.4 (2017-04-26)
+
+* Update package.json ([9c8b678](https://github.com/auth0/web-header/commit/9c8b678))
+* updated icons for b2b and b2c ([da980fb](https://github.com/auth0/web-header/commit/da980fb))
+
+
+
 <a name="3.2.3"></a>
 ## 3.2.3 (2017-04-13)
 
