@@ -115,7 +115,7 @@ Run:
 git clone git@github.com:auth0/web-header.git
 cd web-header
 yarn
-yarn start
+yarn run start:dev
 ```
 
 And point your browser to the playgrounds:

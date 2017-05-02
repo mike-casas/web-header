@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "build": "webpack --config ./tools/webpack/webpack.module.config.babel.js",
-    "start": "NODE_ENV=development babel-node ./tools/tasks/start.js",
+    "build:heroku": "NODE_ENV=production webpack --config ./tools/webpack/webpack.playground.config.babel.js",
+    "start": "npm run build:heroku && serve build",
+    "start:dev": "NODE_ENV=development babel-node ./tools/tasks/start.js",
     "prepublish": "NODE_ENV=production npm run build -- --bail",
     "lint:js": "eslint .",
     "lint": "npm run lint:js",
@@ -70,6 +72,7 @@
     "react": "^15.4.1",
     "react-dom": "^0.14.0 || ^15.1.0",
     "react-hot-loader": "^3.0.0-beta.6",
+    "serve": "^5.1.4",
     "style-loader": "^0.16.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
