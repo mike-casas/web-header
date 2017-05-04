@@ -1,3 +1,12 @@
+<a name="3.2.5"></a>
+## 3.2.5 (2017-05-04)
+
+* Add heroku apps support ([ea136c0](https://github.com/auth0/web-header/commit/ea136c0))
+* Add Heroku generated app.json ([2ab91a7](https://github.com/auth0/web-header/commit/2ab91a7))
+* Bump cdn tool and release patch ([86cecfb](https://github.com/auth0/web-header/commit/86cecfb))
+
+
+
 <a name="3.2.4"></a>
 ## 3.2.4 (2017-04-26)
 
