@@ -1,6 +1,6 @@
 {
   "name": "auth0-web-header",
-  "version": "3.2.4",
+  "version": "3.2.5",
   "description": "Auth0's website and landings header",
   "main": "build/web-header.js",
   "files": [
@@ -53,7 +53,7 @@
     "babel-register": "^6.9.0",
     "bump-version": "^0.5.0",
     "chai": "^3.5.0",
-    "component-cdn-uploader": "github:auth0/component-cdn-uploader#1.0.0",
+    "component-cdn-uploader": "github:auth0/component-cdn-uploader#v1.3.0",
     "conventional-changelog-cli": "^1.2.0",
     "css-loader": "^0.28.0",
     "enzyme": "^2.4.1",
