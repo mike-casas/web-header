@@ -126,7 +126,6 @@ And point your browser to the playgrounds:
 ## Release
 
 To release a new version just commit a package.json version change. And changelog entry, git tag, cdn deploy and npm publish will be triggered automatically.
-Minor version changes or patches will be deployed automatically to dependent projects (website, blog, learn), Docs needs manual update.
 
 ## Issue Reporting
 
