@@ -1,3 +1,12 @@
+<a name="3.2.6"></a>
+## 3.2.6 (2017-05-05)
+
+* Change image to compressed version ([1f02a24](https://github.com/auth0/web-header/commit/1f02a24))
+* Release patch version ([2e09f90](https://github.com/auth0/web-header/commit/2e09f90))
+* Update README.md ([a3c8040](https://github.com/auth0/web-header/commit/a3c8040))
+
+
+
 <a name="3.2.5"></a>
 ## 3.2.5 (2017-05-04)
 
