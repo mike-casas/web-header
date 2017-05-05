@@ -25,11 +25,11 @@ class DropdownListItem extends Component {
   render() {
     const { hasArrow, parentClass, highlightHandler, item, closeDropdowns } = this.props;
     const logos = {
-      auth0: 'https://cdn.auth0.com/styleguide/4.8.32/lib/logos/img/badge.png',
-      webtask: 'https://webtask.io/images/symbol.svg',
-      guardian: 'https://cdn.auth0.com/blog/guardian-assets/guardian.svg',
-      b2c: 'https://cdn2.auth0.com/website/header/b2c-icon.svg',
-      b2b: 'https://cdn2.auth0.com/website/header/b2b-icon.svg'
+      auth0: 'https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png',
+      webtask: 'https://cdn.auth0.com/website/header/webtask.svg',
+      guardian: 'https://cdn.auth0.com/website/header/guardian.svg',
+      b2c: 'https://cdn.auth0.com/website/header/b2c.svg',
+      b2b: 'https://cdn.auth0.com/website/header/b2b.svg'
     };
     const linkExternal = item.external ? 'external' : null;
     return (
