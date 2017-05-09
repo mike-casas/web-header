@@ -1446,9 +1446,9 @@ compare-func@^1.3.1:
     array-ify "^1.0.0"
     dot-prop "^3.0.0"
 
-"component-cdn-uploader@github:auth0/component-cdn-uploader#1.0.0":
-  version "1.0.0"
-  resolved "https://codeload.github.com/auth0/component-cdn-uploader/tar.gz/3ac306410fd13053a1c7c39856b90f29199298fc"
+"component-cdn-uploader@github:auth0/component-cdn-uploader#v1.3.0":
+  version "1.3.0"
+  resolved "https://codeload.github.com/auth0/component-cdn-uploader/tar.gz/db2000a7bf0ab581e8733eb1e072878c941acf7f"
   dependencies:
     chalk "^1.1.3"
     meow "^3.7.0"
