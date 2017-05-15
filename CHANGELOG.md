@@ -1,3 +1,12 @@
+<a name="3.2.7"></a>
+## 3.2.7 (2017-05-15)
+
+* Release patch version ([976b2bb](https://github.com/auth0/web-header/commit/976b2bb))
+* Update axios dep ([d1563d3](https://github.com/auth0/web-header/commit/d1563d3))
+* Update yarn.lock, fix cdn tool version ([e39c802](https://github.com/auth0/web-header/commit/e39c802))
+
+
+
 <a name="3.2.6"></a>
 ## 3.2.6 (2017-05-05)
 
