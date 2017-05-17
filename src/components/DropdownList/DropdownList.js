@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import DropdownListItem from '../DropdownListItem';
 import FooterList from '../FooterList';
@@ -19,7 +20,7 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
     {data.title
       ? <header className={cx('header-title')}>
           {data.titleHref
-            ? <a 
+            ? <a
                 className={cx('section-title', {'hasArrow': data.titleHref})}
                 href={data.titleHref}
               >

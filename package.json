@@ -37,7 +37,8 @@
     "lodash": "^4.13.1"
   },
   "peerDependencies": {
-    "react": "^15.0.0"
+    "react": "^15.5.4",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -69,8 +70,9 @@
     "lodash": "^4.13.1",
     "mocha": "^2.5.3",
     "poststylus": "^0.2.3",
-    "react": "^15.4.1",
-    "react-dom": "^0.14.0 || ^15.1.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "prop-types": "^15.5.10",
     "react-hot-loader": "^3.0.0-beta.6",
     "serve": "^5.1.4",
     "style-loader": "^0.16.1",

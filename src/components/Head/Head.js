@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Head.styl';
 
@@ -9,7 +10,7 @@ const Head = ({
   dropdownOpen,
   theme,
   closeHeaderDropdown
-}) => 
+}) =>
   <div
     className={cx('head', [`theme-${theme}`], {
       dropdownOpen

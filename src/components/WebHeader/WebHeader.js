@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import cxN from 'classnames';
 import axios from 'axios';
@@ -236,7 +237,7 @@ class WebHeader extends Component {
                 className={cx('main-navigation')}
                 role="navigation" aria-label="Main menu"
               >
-                <ul 
+                <ul
                 className={cx('navigation')}
                 role="menubar"
                 >
@@ -257,9 +258,9 @@ class WebHeader extends Component {
                     {renderedMenuMobile}
                   </ul>
                 </div>
-                
+
               </nav>
-              
+
               <div
                 className={cxN(cx('buttons-group'), {
                   'theme-dark': theme === 'dark'
