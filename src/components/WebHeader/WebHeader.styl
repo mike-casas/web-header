@@ -1,5 +1,11 @@
 @import '../../styles/base'
 
+.header-main
+  +breakpoint("desktop")
+    &.is-featured
+      .header
+        padding-top 52px
+
 .header
   background-color white
   border-bottom 1px solid rgba(black, 0.1)

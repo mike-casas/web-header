@@ -13,7 +13,6 @@ const FeaturedHead = ({
   featuredText,
   theme,
   dropdownOpen,
-  closeHeaderDropdown
 }) => {
   const ribbonVariant = getRibbonVariant();
   return (
@@ -25,7 +24,6 @@ const FeaturedHead = ({
             <p dangerouslySetInnerHTML={{ __html: ribbonVariant.title }}/>
             <a
               href={featuredLink || ribbonVariant.link}
-              onClick={closeHeaderDropdown}
               rel="external"
             >
               { featuredText || ribbonVariant.linkText }
@@ -42,8 +40,7 @@ FeaturedHead.propTypes = {
   featuredLink: PropTypes.string,
   featuredText: PropTypes.string,
   theme: PropTypes.string,
-  dropdownOpen: PropTypes.bool,
-  closeHeaderDropdown: PropTypes.func
+  dropdownOpen: PropTypes.bool
 };
 
 export default FeaturedHead;

@@ -203,73 +203,75 @@ class WebHeader extends Component {
     );
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
-      <header
-        className={cx('header', [`theme-${theme}`], className, {
-          'is-dropdown-open': navbarDropdownIsOpen,
-          focusable
-        })}
-        onKeyDown={this.handleKeyDown}
-      >
+      <header className={cx('header-main', { 'is-featured': featuredEnable })}>
         <FeaturedHead
           featured={featuredEnable}
           featuredLink={featuredLink}
           featuredText={featuredText}
           dropdownOpen={navbarDropdownIsOpen}
           theme={theme}
-          closeHeaderDropdown={this.closeDropdownOnButtonClick()}
         />
-        <div className={cx('menu', { 'is-dropdown-open': navbarDropdownIsOpen })}>
-          <div className="container">
-            <Head
-              toggleDropdownHandler={this.navbarDropdownHandler}
-              dropdownOpen={navbarDropdownIsOpen}
-              theme={theme}
-              closeHeaderDropdown={this.closeDropdownOnButtonClick()}
-            />
 
-            <div className={cx('collapse', {
-                'is-dropdown-open': navbarDropdownIsOpen
-              })}
-              ref={(_ref) => { this.dropdownContent = _ref; }}
-            >
+        <div
+          className={cx('header', [`theme-${theme}`], className, {
+            'is-dropdown-open': navbarDropdownIsOpen,
+            focusable
+          })}
+          onKeyDown={this.handleKeyDown}
+        >
+          <div className={cx('menu', { 'is-dropdown-open': navbarDropdownIsOpen })}>
+            <div className="container">
+              <Head
+                toggleDropdownHandler={this.navbarDropdownHandler}
+                dropdownOpen={navbarDropdownIsOpen}
+                theme={theme}
+                closeHeaderDropdown={this.closeDropdownOnButtonClick()}
+              />
 
-              <nav
-                className={cx('main-navigation')}
-                role="navigation" aria-label="Main menu"
+              <div className={cx('collapse', {
+                  'is-dropdown-open': navbarDropdownIsOpen
+                })}
+                ref={(_ref) => { this.dropdownContent = _ref; }}
               >
-                <ul
-                className={cx('navigation')}
-                role="menubar"
+
+                <nav
+                  className={cx('main-navigation')}
+                  role="navigation" aria-label="Main menu"
                 >
-                  {children || renderedMenuItems}
-                  <li
-                    className={cxN({
-                      'theme-dark': theme === 'dark'
-                    })}
+                  <ul
+                  className={cx('navigation')}
+                  role="menubar"
                   >
-                    {talkToSalesButtonEnable && talkToSalesButton}
-                  </li>
-                </ul>
-
-                <div className={cx('menu-mobile')}>
-                  {talkToSalesButtonEnable && talkToSalesButton}
-
-                  <ul>
-                    {renderedMenuMobile}
+                    {children || renderedMenuItems}
+                    <li
+                      className={cxN({
+                        'theme-dark': theme === 'dark'
+                      })}
+                    >
+                      {talkToSalesButtonEnable && talkToSalesButton}
+                    </li>
                   </ul>
+
+                  <div className={cx('menu-mobile')}>
+                    {talkToSalesButtonEnable && talkToSalesButton}
+
+                    <ul>
+                      {renderedMenuMobile}
+                    </ul>
+                  </div>
+
+                </nav>
+
+                <div
+                  className={cxN(cx('buttons-group'), {
+                    'theme-dark': theme === 'dark'
+                  })}
+                >
+                  {loginButtonEnable && loginButton}
+                  {signupButtonEnable && signupButton}
                 </div>
 
-              </nav>
-
-              <div
-                className={cxN(cx('buttons-group'), {
-                  'theme-dark': theme === 'dark'
-                })}
-              >
-                {loginButtonEnable && loginButton}
-                {signupButtonEnable && signupButton}
               </div>
-
             </div>
           </div>
         </div>
