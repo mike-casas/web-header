@@ -31,7 +31,6 @@
     "npm": ">=3.10.3 <4"
   },
   "dependencies": {
-    "@auth0/styleguide-core": "^2.0.5",
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "lodash": "^4.13.1"
@@ -41,6 +40,7 @@
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
+    "@auth0/styleguide-core": "^2.0.5",
     "autoprefixer": "^6.3.6",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.9.0",
