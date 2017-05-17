@@ -1,3 +1,11 @@
+<a name="4.0.4"></a>
+## 4.0.4 (2017-05-17)
+
+* fixed z-index ([3af17ca](https://github.com/auth0/web-header/commit/3af17ca))
+* Release 4.0.4 ([78047f9](https://github.com/auth0/web-header/commit/78047f9))
+
+
+
 <a name="4.0.3"></a>
 ## 4.0.3 (2017-05-17)
 
