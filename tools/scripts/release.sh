@@ -24,6 +24,7 @@ can_publish_npm() {
 
 # Checks if actual npm user can publish a new package version
 NPM_USER=$(npm whoami)
+GIT_BRANCH="4.x"
 PACKAGE_NAME=$(node -p "require('./package').name")
 can_publish_npm $NPM_USER $PACKAGE_NAME
 
@@ -42,13 +43,13 @@ else
   $(npm bin)/conventional-changelog -i CHANGELOG.md -s
 
   # Commit change of version and changelog changes
-  git checkout master
+  git checkout $GIT_BRANCH
   git add CHANGELOG.md package.json
   git commit -m "Release $VERSION"
 
   # Push first to make sure we're up-to-date
   git remote add origin git@github.com:auth0/web-header.git
-  git push origin master
+  git push origin $GIT_BRANCH
 fi
 
 
