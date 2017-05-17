@@ -22,7 +22,7 @@ const FeaturedHead = ({
     })}>
       {featured
         ? <div className={cx('featured-content')}>
-            <p dangerouslySetInnerHTML={{ __html: ribbonVariant.text }}/>
+            <p dangerouslySetInnerHTML={{ __html: ribbonVariant.title }}/>
             <a
               href={featuredLink || ribbonVariant.link}
               onClick={closeHeaderDropdown}
