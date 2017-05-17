@@ -26,10 +26,6 @@
     "url": "https://github.com/auth0/web-header/issues"
   },
   "homepage": "https://github.com/auth0/web-header#readme",
-  "engines": {
-    "node": ">=6.5.0 <7",
-    "npm": ">=3.10.3 <4"
-  },
   "dependencies": {
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
