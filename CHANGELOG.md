@@ -1,3 +1,12 @@
+<a name="4.0.3"></a>
+## 4.0.3 (2017-05-17)
+
+* fixed anchor broken ([4c65aa8](https://github.com/auth0/web-header/commit/4c65aa8))
+* header minor fix ([8e74535](https://github.com/auth0/web-header/commit/8e74535))
+* Release 4.0.3 ([5777f2d](https://github.com/auth0/web-header/commit/5777f2d))
+
+
+
 <a name="4.0.2"></a>
 ## 4.0.2 (2017-05-17)
 
