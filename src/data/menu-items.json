@@ -274,8 +274,7 @@
     "footerLinks": [
       {
         "id": "latest-blog",
-        "name": "<b>Latest from Auth0 Blog:</b> Introducing Auth0 Extend: The new way to extend your SaaS",
-        "href": "https://auth0.com/blog/introducing-auth0-extend-the-new-way-to-extend-your-saas/",
+        "name": "<b>Latest from Auth0 Blog:</b> ",
         "icon": "blog",
         "external": true
       }

@@ -6,8 +6,7 @@ import { isObject } from 'lodash';
 export default function generateNewMenuItemsJson([content, blog]) {
   // List of replacements for `src/menu-items.json`
   const replacements = [{
-    id: 'last-blog',
-    key: 'default',
+    id: 'latest-blog',
     value: setValue(blog)
   }];
   // Array of replacements IDs
@@ -38,13 +37,22 @@ function getItem(id, from) {
       if (!childItem.items) return;
       found.push(findByID(childItem, 'items', id));
     });
+
+    if (!item.footerLinks) return;
+    item.footerLinks.forEach((footerChildItem) => {
+      if (footerChildItem.id === id) {
+        found.push(footerChildItem);
+      }
+    });
   });
 
   return found.filter(item => item !== false)[0];
 }
 
 function findByID(item, key, id) {
-  const find = item[key].filter(child => child.id === id);
+  const list = item[key];
+  if (!list) return false;
+  const find = list.filter(child => child.id === id);
 
   return find.length ? find[0] : false;
 }
@@ -54,8 +62,8 @@ function makeItemsReplacements(items, replacements) {
   items.forEach((item, index) => {
     const replaceSource = replacements[index];
     if (!item) return;
-    if (replaceSource.value === null) return delete item[replaceSource.key];
 
-    item[replaceSource.key] = Object.assign({}, item[replaceSource.key], replaceSource.value);
+    item.name += replaceSource.value.title;
+    item.href = replaceSource.value.link;
   });
 }
