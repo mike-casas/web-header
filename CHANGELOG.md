@@ -1,3 +1,22 @@
+<a name="4.0.0-beta.1"></a>
+# 4.0.0-beta.1 (2017-05-17)
+
+* Fix docs api link ([2d6222c](https://github.com/auth0/web-header/commit/2d6222c))
+* Fix How it Works link ([77b96d8](https://github.com/auth0/web-header/commit/77b96d8))
+* Fix link ([3a6141b](https://github.com/auth0/web-header/commit/3a6141b))
+* Fix mobile links ([b9eac5f](https://github.com/auth0/web-header/commit/b9eac5f))
+* Move PropTypes to prop-types pkg ([ea21568](https://github.com/auth0/web-header/commit/ea21568))
+* Move styleguide core to dev deps ([1be0a13](https://github.com/auth0/web-header/commit/1be0a13))
+* Move webpack-node-externals to devDeps ([6783c46](https://github.com/auth0/web-header/commit/6783c46))
+* New header design ([461e80e](https://github.com/auth0/web-header/commit/461e80e))
+* Release beta.1 ([5ba8c30](https://github.com/auth0/web-header/commit/5ba8c30))
+* Release under a0 npm org and in next tag ([1a40c57](https://github.com/auth0/web-header/commit/1a40c57))
+* Remove all deps from npm package, left some on the cdn bundle ([ef2bb9c](https://github.com/auth0/web-header/commit/ef2bb9c))
+* Remove b2e page ([df68b67](https://github.com/auth0/web-header/commit/df68b67))
+* Remove engines from package.json ([f0e5962](https://github.com/auth0/web-header/commit/f0e5962))
+
+
+
 <a name="3.2.7"></a>
 ## 3.2.7 (2017-05-15)
 
