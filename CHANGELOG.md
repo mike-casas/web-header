@@ -1,3 +1,12 @@
+<a name="4.0.0-beta.2"></a>
+# 4.0.0-beta.2 (2017-05-17)
+
+* beta2 ([ab790a2](https://github.com/auth0/web-header/commit/ab790a2))
+* fix talk to sale button and anchor ([c426c1e](https://github.com/auth0/web-header/commit/c426c1e))
+* Update installation steps ([56e38e8](https://github.com/auth0/web-header/commit/56e38e8))
+
+
+
 <a name="4.0.0-beta.1"></a>
 # 4.0.0-beta.1 (2017-05-17)
 
