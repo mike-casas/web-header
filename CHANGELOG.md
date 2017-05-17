@@ -1,3 +1,13 @@
+<a name="4.0.2"></a>
+## 4.0.2 (2017-05-17)
+
+* fixed broken loading ([839db9b](https://github.com/auth0/web-header/commit/839db9b))
+* Release 4.0.2 ([42e3b53](https://github.com/auth0/web-header/commit/42e3b53))
+* Replace global css selector with css modules class ([9acdb6b](https://github.com/auth0/web-header/commit/9acdb6b))
+* updated featured structure ([ef8aca1](https://github.com/auth0/web-header/commit/ef8aca1))
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1 (2017-05-17)
 
