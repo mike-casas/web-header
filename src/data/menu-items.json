@@ -34,13 +34,6 @@
             "icon": "passwordless"
           },
           {
-            "name": "Wordpress plugin",
-            "description": "Connect WordPress to every login system on Earth. Really.",
-            "id": "wordpress",
-            "href": "https://auth0.com/wordpress",
-            "icon": "wordpress"
-          },
-          {
             "name": "Multifactor Authentication",
             "description": "The most usable and friction-free multifactor authentication experience.",
             "id": "guardian",
