@@ -31,8 +31,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
-    "lodash": "^4.13.1",
-    "webpack-node-externals": "^1.6.0"
+    "lodash": "^4.13.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
@@ -80,7 +79,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^2.3.3",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.1"
+    "webpack-hot-middleware": "^2.12.1",
+    "webpack-node-externals": "^1.6.0"
   },
   "cdn-component": {
     "name": "web-header",
