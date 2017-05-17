@@ -10,6 +10,26 @@
 * minor fix ([a4e7bb2](https://github.com/auth0/web-header/commit/a4e7bb2))
 * Release 4.0.0 ([a2ec25a](https://github.com/auth0/web-header/commit/a2ec25a))
 * Release 4.0.0 ([b079085](https://github.com/auth0/web-header/commit/b079085))
+* Release 4.0.0 ([9047f6f](https://github.com/auth0/web-header/commit/9047f6f))
+* Release 4.0.0-beta.3 ([a9463a3](https://github.com/auth0/web-header/commit/a9463a3))
+* removed wordpress ([419cf6a](https://github.com/auth0/web-header/commit/419cf6a))
+* update auth0 logo desktop view ([34153ba](https://github.com/auth0/web-header/commit/34153ba))
+* Update installation steps ([56e38e8](https://github.com/auth0/web-header/commit/56e38e8))
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0 (2017-05-17)
+
+* beta2 ([ab790a2](https://github.com/auth0/web-header/commit/ab790a2))
+* featured moved up ([bf96e5e](https://github.com/auth0/web-header/commit/bf96e5e))
+* Fix branch of release script ([a05ca60](https://github.com/auth0/web-header/commit/a05ca60))
+* Fix installation steps ([ea74529](https://github.com/auth0/web-header/commit/ea74529))
+* Fix last blog post ([9496180](https://github.com/auth0/web-header/commit/9496180))
+* fix talk to sale button and anchor ([c426c1e](https://github.com/auth0/web-header/commit/c426c1e))
+* minor fix ([a4e7bb2](https://github.com/auth0/web-header/commit/a4e7bb2))
+* Release 4.0.0 ([a2ec25a](https://github.com/auth0/web-header/commit/a2ec25a))
+* Release 4.0.0 ([b079085](https://github.com/auth0/web-header/commit/b079085))
 * Release 4.0.0-beta.3 ([a9463a3](https://github.com/auth0/web-header/commit/a9463a3))
 * removed wordpress ([419cf6a](https://github.com/auth0/web-header/commit/419cf6a))
 * update auth0 logo desktop view ([34153ba](https://github.com/auth0/web-header/commit/34153ba))
