@@ -37,7 +37,7 @@
   vertical-center-elem(30px, $navbar-mobile-height)
 
   +breakpoint("desktop")
-    vertical-center-elem(30px, $navbar-desktop-height)
+    vertical-center-elem(36px, $navbar-desktop-height)
 
 .logo
   display block
@@ -48,6 +48,10 @@
   background-repeat no-repeat
   font-size 0
   color rgba(0, 0, 0, 0)
+  
+  +breakpoint("desktop")
+    width 100px
+    height 36px
 
 @keyframes bounce {
   from, 20%, 53%, 80%, to {
