@@ -24,7 +24,7 @@ can_publish_npm() {
 
 # Checks if actual npm user can publish a new package version
 NPM_USER=$(npm whoami)
-GIT_BRANCH="4.x"
+GIT_BRANCH="master"
 PACKAGE_NAME=$(node -p "require('./package').name")
 can_publish_npm $NPM_USER $PACKAGE_NAME
 
