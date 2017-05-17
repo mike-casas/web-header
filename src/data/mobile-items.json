@@ -2,41 +2,41 @@
   {
     "name": "Customers",
     "id":  "customers",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/customers"
   },
   {
     "name": "Blog",
     "id":  "blog",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/blog"
   },
   {
     "name": "Case Studies",
     "id":  "case-studies",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/learn/#case-studies"
   },
   {
     "name": "Press Releases",
     "id":  "press-releases",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/press"
   },
   {
     "name": "Documentation",
     "id":  "documentation",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/docs"
   },
   {
     "name": "Resources",
     "id":  "resources",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/resources"
   },
   {
     "name": "Support",
     "id":  "support",
-    "href": "http://auth0.com/"
+    "href": "https://support.auth0.com/"
   },
   {
     "name": "Security",
     "id":  "security",
-    "href": "http://auth0.com/"
+    "href": "https://auth0.com/security"
   }
 ]
