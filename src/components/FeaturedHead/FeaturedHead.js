@@ -21,13 +21,11 @@ const FeaturedHead = ({
     })}>
       {featured
         ? <div className={cx('featured-content')}>
-            <p dangerouslySetInnerHTML={{ __html: ribbonVariant.title }}/>
             <a
               href={featuredLink || ribbonVariant.link}
               rel="external"
-            >
-              { featuredText || ribbonVariant.linkText }
-            </a>
+              dangerouslySetInnerHTML={{ __html: featuredText || ribbonVariant.linkText }}
+            />
           </div>
         : null
       }

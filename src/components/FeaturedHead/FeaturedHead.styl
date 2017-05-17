@@ -3,6 +3,8 @@
 .featured
   text-align center
   background-color white
+  z-index 9999
+  position relative
   
   .featured-content
     height 52px
@@ -22,33 +24,29 @@
       transform translateY(-50%)
       right 100%
     
-    p
-      display inline-block
-      font-weight 500
-      color rgba(black, .84)
-      font-size 14px
-      margin 0
-    
     span
       font-weight normal
       color rgba(black, .64)
       position relative
-      
-      &:before
-        content ": "
-        font-weight 500
-        color rgba(black, .84)
-        right 100%
+      font-size 13px
+      +breakpoint("desktop")
+        font-size 14px
     
     a
       color black
       position relative
-      padding-right 10px
-      margin-left 5px
+      font-size 13px
+      margin-left 6px
+      +breakpoint("desktop")
+        font-size 14px
       
       &:hover
         color rgba(black, .84)
       
+    > a
+      padding-right 10px
+      margin-left 0
+        
       &:after
         content ""
         width 0
@@ -72,6 +70,15 @@
         color rgba(black, .64)
       span
         display none
+      
+      a
+        padding 0
+        a
+          display none
+      
+      > a
+        &:after
+          margin-left 10px
   
   &.theme-light
     background-color black
