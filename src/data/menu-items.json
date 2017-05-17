@@ -9,7 +9,7 @@
         "title": "Modern Identity Platform",
         "description": "The enterprise-grade platform for modern identity. <a href=\"https://auth0.com\" rel=\"external\">Read more</a>",
         "key": "platform-list",
-        "titleHref": "ttps://auth0.com/",
+        "titleHref": "https://auth0.com/",
         "twoColLayoutBig": true,
         "items": [
           {
