@@ -6,12 +6,12 @@ Auth0's website and landings react component header
 
 From npm client:
 ```bash
-npm install --save @auth0/web-header prop-types@^15.5.10
+npm install --save @auth0/web-header react@^15.5.4 prop-types@^15.5.10
 ```
 
 From yarn client:
 ```bash
-yarn add @auth0/web-header prop-types@^15.5.10
+yarn add @auth0/web-header react@^15.5.4 prop-types@^15.5.10
 ```
 
 From CDN:
