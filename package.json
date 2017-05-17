@@ -7,7 +7,9 @@
     "build"
   ],
   "scripts": {
-    "build": "webpack --config ./tools/webpack/webpack.module.config.babel.js",
+    "build": "npm run build:normal && npm run build:cdn",
+    "build:normal": "webpack --config ./tools/webpack/webpack.module.config.babel.js",
+    "build:cdn": "CDN=true webpack --config ./tools/webpack/webpack.module.config.babel.js",
     "build:heroku": "NODE_ENV=production webpack --config ./tools/webpack/webpack.playground.config.babel.js",
     "start": "npm run build:heroku && serve build",
     "start:dev": "NODE_ENV=development babel-node ./tools/tasks/start.js",
@@ -29,11 +31,12 @@
   "dependencies": {
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "webpack-node-externals": "^1.6.0"
   },
   "peerDependencies": {
-    "react": "^15.5.4",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4"
   },
   "devDependencies": {
     "@auth0/styleguide-core": "^2.0.5",
@@ -66,9 +69,9 @@
     "lodash": "^4.13.1",
     "mocha": "^2.5.3",
     "poststylus": "^0.2.3",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "prop-types": "^15.5.10",
     "react-hot-loader": "^3.0.0-beta.6",
     "serve": "^5.1.4",
     "style-loader": "^0.16.1",
@@ -85,6 +88,6 @@
     "mainBundleFile": "web-header.js",
     "remoteBasePath": "website",
     "bucket": "assets.us.auth0.com",
-    "localPath": "build"
+    "localPath": "cdn"
   }
 }

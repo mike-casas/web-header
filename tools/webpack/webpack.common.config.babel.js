@@ -8,12 +8,13 @@ if (!process.env.NODE_ENV) {
 }
 
 const DEBUG = process.env.NODE_ENV === 'development';
+const CDN = !!process.env.CDN;
 
 const config = {
   entry: ['./src'],
 
   output: {
-    path: path.join(__dirname, '../../build'),
+    path: CDN ? path.join(__dirname, '../../cdn') : path.join(__dirname, '../../build'),
     publicPath: '',
     filename: 'web-header.js',
     library: 'Auth0WebHeader',
@@ -97,7 +98,8 @@ const config = {
           output: {
             comments: false,
             screw_ie8: true
-          }
+          },
+          sourceMap: true
         })
       ]
     ),
@@ -110,7 +112,7 @@ const config = {
     colors: true
   },
 
-  devtool: DEBUG ? 'inline-source-map' : false
+  devtool: DEBUG ? 'cheap-module-source-map' : 'source-map'
 };
 
 export default config;
