@@ -62,10 +62,8 @@ else
   echo "Deploying $VERSION to git"
 
   git tag $VERSION
-  git tag latest -f
 
   git push origin $VERSION
-  git push origin latest -f
 fi
 
 
@@ -75,7 +73,7 @@ NPM_EXISTS=$(npm info $PACKAGE_NAME@$VERSION)
 if [ "$NPM_EXISTS" == "undefined" ]; then
   echo "Deploying $VERSION to npm"
   # npm publish runs npm run prepublish
-  npm publish
+  npm publish --access public --tag next
 else
   echo "There is already a version $VERSION in npm. Skiping npm publish."
 fi

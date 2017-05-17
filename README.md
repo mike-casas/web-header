@@ -16,8 +16,8 @@ yarn add auth0-web-header
 
 From CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/3.0.0/web-header.css" />
-<script src="https://cdn.auth0.com/website/web-header/3.0.0/web-header.js"></script>
+<link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/4.0.0/web-header.css" />
+<script src="https://cdn.auth0.com/website/web-header/4.0.0/web-header.js"></script>
 ```
 
 ## Usage
