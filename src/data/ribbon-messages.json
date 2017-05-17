@@ -1,7 +1,7 @@
 [
   {
     "link": "https://auth0.com/extend",
-    "linkText": "Introducing Auth0 Extend. <span>Better platform extensibility for your SaaS.</span> <a>Read More</a>",
+    "linkText": "Introducing Auth0 Extend. <i>Better platform extensibility for your SaaS.</i> <span>Read More</span>",
     "iconColor": "3445DC",
     "probability": 0.3333333333333333
   }

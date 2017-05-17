@@ -9,10 +9,9 @@
   .featured-content
     height 52px
     line-height 52px
-    color rgba(black, .64)
+    color rgba(black, .84)
     position relative
     display inline-block
-    padding-left 10px
     
     &:before
       content ""
@@ -24,29 +23,15 @@
       transform translateY(-50%)
       right 100%
     
-    span
-      font-weight normal
-      color rgba(black, .64)
-      position relative
-      font-size 13px
-      +breakpoint("desktop")
-        font-size 14px
-    
     a
-      color black
+      font-weight normal
+      color rgba(black, .84)
       position relative
+      padding 0 10px
       font-size 13px
-      margin-left 6px
       +breakpoint("desktop")
         font-size 14px
       
-      &:hover
-        color rgba(black, .84)
-      
-    > a
-      padding-right 10px
-      margin-left 0
-        
       &:after
         content ""
         width 0
@@ -58,6 +43,21 @@
         top 50%
         transform translateY(-50%)
         left 100%
+    
+    i
+      color rgba(black, .64)
+      font-style initial
+      
+    span
+      color black
+      position relative
+      font-size 13px
+      margin-left 6px
+      +breakpoint("desktop")
+        font-size 14px
+      
+      &:hover
+        color rgba(black, .84)
   
   +breakpoint("desktop", "max")
     box-shadow inset 0 -1px 0 0 #E6E6E6
@@ -68,15 +68,13 @@
     .featured-content
       p
         color rgba(black, .64)
+      i,
       span
         display none
       
       a
-        padding 0
-        a
-          display none
-      
-      > a
+        padding-right 0
+        
         &:after
           margin-left 10px
   
@@ -87,7 +85,7 @@
       p
         color rgba(white, .84)
       
-      span
+      i
         color rgba(white, .64)
       
       a
