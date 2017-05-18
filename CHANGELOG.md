@@ -1,3 +1,14 @@
+<a name="4.0.5"></a>
+## 4.0.5 (2017-05-18)
+
+* Fix external links for website ([23a8111](https://github.com/auth0/web-header/commit/23a8111))
+* Fix ios docs link ([ab55ca1](https://github.com/auth0/web-header/commit/ab55ca1))
+* fix width percent in safari ([ca4ce8e](https://github.com/auth0/web-header/commit/ca4ce8e))
+* Fix z-index ([35c9031](https://github.com/auth0/web-header/commit/35c9031))
+* Release patch version ([ec92df3](https://github.com/auth0/web-header/commit/ec92df3))
+
+
+
 <a name="4.0.4"></a>
 ## 4.0.4 (2017-05-17)
 
