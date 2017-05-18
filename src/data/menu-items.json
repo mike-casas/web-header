@@ -86,12 +86,14 @@
               {
                 "name": "Healthcare",
                 "id": "healthcare",
-                "href": "https://auth0.com/learn/why-hipaa-compliance-is-vital-your-business/"
+                "href": "https://auth0.com/learn/why-hipaa-compliance-is-vital-your-business/",
+                "external": true
               },
               {
                 "name": "Telecommunications",
                 "id": "telecommunications",
-                "href": "https://auth0.com/learn/telecommunications-industry/"
+                "href": "https://auth0.com/learn/telecommunications-industry/",
+                "external": true
               }
             ]
           }
@@ -103,7 +105,8 @@
         "id": "read-case-studies",
         "name": "Read our Case Studies",
         "href": "https://auth0.com/learn/#case-studies",
-        "icon": "blog"
+        "icon": "blog",
+        "external": true
       }
     ]
   },
@@ -142,26 +145,31 @@
         "twoColLayout": true,
         "highlight": true,
         "titleHref": "https://auth0.com/resources/",
+        "external": true,
         "items": [
           {
             "name": "Whitepapers",
             "id": "whitepapers",
-            "href": "https://auth0.com/resources/whitepapers"
+            "href": "https://auth0.com/resources/whitepapers",
+            "external": true
           },
           {
             "name": "Videos",
             "id": "videos",
-            "href": "https://auth0.com/resources/videos"
+            "href": "https://auth0.com/resources/videos",
+            "external": true
           },
           {
             "name": "Ebooks",
             "id": "ebooks",
-            "href": "https://auth0.com/resources/ebooks"
+            "href": "https://auth0.com/resources/ebooks",
+            "external": true
           },
           {
             "name": "Blog",
             "id": "blog",
-            "href": "https://auth0.com/blog/"
+            "href": "https://auth0.com/blog/",
+            "external": true
           },
           {
             "name": "Webinar",
@@ -171,7 +179,8 @@
           {
             "name": "Case Studies",
             "id": "case-studies",
-            "href": "https://auth0.com/learn/#case-studies"
+            "href": "https://auth0.com/learn/#case-studies",
+            "external": true
           }
         ]
       }
@@ -188,6 +197,7 @@
         "title": "Documentation",
         "key": "documentation-list",
         "titleHref": "https://auth0.com/docs",
+        "external": true,
         "subItems": [
           {
             "titleList": "GET STARTED",
@@ -196,25 +206,29 @@
                 "name": "Javascript",
                 "id": "javascript",
                 "href": "https://auth0.com/docs/quickstart/spa/vanillajs",
-                "icon": "javascript"
+                "icon": "javascript",
+                "external": true
               },
               {
                 "name": "iOS",
                 "id": "ios",
                 "href": "https://auth0.com/docs/quickstart/native/ios",
-                "icon": "ios"
+                "icon": "ios",
+                "external": true
               },
               {
                 "name": "Android",
                 "id": "android",
                 "href": "https://auth0.com/docs/quickstart/native/android",
-                "icon": "android"
+                "icon": "android",
+                "external": true
               },
               {
                 "name": "All Quickstarts",
                 "id": "all-quickstarts",
                 "href": "https://auth0.com/docs/quickstart/",
-                "icon": "quickstarts"
+                "icon": "quickstarts",
+                "external": true
               }
             ]
           },
@@ -224,17 +238,20 @@
               {
                 "name": "APIs",
                 "id": "apis",
-                "href": "https://auth0.com/docs/api"
+                "href": "https://auth0.com/docs/api",
+                "external": true
               },
               {
                 "name": "Protocols",
                 "id": "protocols",
-                "href": "https://auth0.com/docs/protocols"
+                "href": "https://auth0.com/docs/protocols",
+                "external": true
               },
               {
                 "name": "Libraries",
                 "id": "libraries",
-                "href": "https://auth0.com/docs/libraries"
+                "href": "https://auth0.com/docs/libraries",
+                "external": true
               }
             ]
           }
@@ -254,7 +271,8 @@
           {
             "name": "Auth0 University",
             "id": "university",
-            "href": "https://auth0.com/university/"
+            "href": "https://auth0.com/university/",
+            "external": true
           },
           {
             "name": "Identity Glossary",
