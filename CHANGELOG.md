@@ -1,3 +1,11 @@
+<a name="4.0.6"></a>
+## 4.0.6 (2017-05-18)
+
+* Adjust z-index for featured item ([79458fa](https://github.com/auth0/web-header/commit/79458fa))
+* Release patch ([6dd0155](https://github.com/auth0/web-header/commit/6dd0155))
+
+
+
 <a name="4.0.5"></a>
 ## 4.0.5 (2017-05-18)
 
