@@ -212,7 +212,7 @@
               {
                 "name": "iOS",
                 "id": "ios",
-                "href": "https://auth0.com/docs/quickstart/native/ios",
+                "href": "https://auth0.com/docs/quickstart/native/ios-swift",
                 "icon": "ios",
                 "external": true
               },
