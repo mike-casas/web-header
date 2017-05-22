@@ -269,10 +269,20 @@
             "href": "https://auth0.com/opensource"
           },
           {
+            "name": "Community",
+            "id": "community",
+            "href": "https://community.auth0.com/"
+          },
+          {
             "name": "Auth0 University",
             "id": "university",
             "href": "https://auth0.com/university/",
             "external": true
+          },
+          {
+            "name": "Knowledge Base",
+            "id": "knowledge-base",
+            "href": "https://auth0.com/learn"
           },
           {
             "name": "Identity Glossary",
