@@ -84,7 +84,7 @@ class Dropdown extends Component {
         })}
 
         {data.footerLinks
-          ? <footer className={cx('footer-list')}>
+          ? <footer className={cx('footer-list', {'footer-highlight': data.footerHighlight})}>
               {data.footerLinks.map(footer =>
                 <FooterList
                   key={footer.id}

@@ -6,6 +6,7 @@ import styles from './FooterList.styl';
 import PricingSVG from '../../svg/PricingSVG';
 import ProductsSVG from '../../svg/ProductsSVG';
 import BlogSVG from '../../svg/BlogSVG';
+import ExtendSVG from '../../svg/ExtendSVG';
 
 const cx = styles::classNames;
 
@@ -20,7 +21,8 @@ class FooterList extends Component {
     const logos = {
       pricing: <PricingSVG />,
       products: <ProductsSVG />,
-      blog: <BlogSVG />
+      blog: <BlogSVG />,
+      extend: <ExtendSVG />
     };
 
     const linkExternal = footer.external ? 'external' : null;
