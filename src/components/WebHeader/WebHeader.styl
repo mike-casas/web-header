@@ -5,6 +5,11 @@
     &.is-notification-open
       .header.theme-dark
         padding-top 45px
+    
+    &:not(.is-notification-open)
+      .header.theme-dark
+        padding-top 0px
+        transition .5s
 
   p
     font-size 14px
