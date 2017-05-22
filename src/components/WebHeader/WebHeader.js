@@ -75,6 +75,7 @@ class WebHeader extends Component {
 
   state = {
     navbarDropdownIsOpen: false,
+    notificationIsOpen: true,
     mobileState: true,
     menuItems: defaultMenuItems,
     menuItemsMobile: defaultMenuItemsMobile
@@ -142,6 +143,10 @@ class WebHeader extends Component {
     this.setState({ focusable: true });
   }
 
+  notificationHandler = () => {
+    this.setState({ notificationIsOpen: !this.state.notificationIsOpen });
+  }
+
   render() {
     const {
       className,
@@ -163,7 +168,7 @@ class WebHeader extends Component {
       loginButtonOnClick,
       loginButtonText
     } = this.props;
-    const { navbarDropdownIsOpen, mobileState, focusable, menuItems, menuItemsMobile } = this.state;
+    const { navbarDropdownIsOpen, mobileState, focusable, menuItems, menuItemsMobile, notificationIsOpen } = this.state;
 
     const signupButton = WebHeader.renderButton(
       signupButtonLink,
@@ -203,13 +208,15 @@ class WebHeader extends Component {
     );
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
-      <header className={cx('header-main', { 'is-featured': featuredEnable })}>
+      <header className={cx('header-main', { 'is-notification-open': notificationIsOpen })}>
         <FeaturedHead
           featured={featuredEnable}
           featuredLink={featuredLink}
           featuredText={featuredText}
           dropdownOpen={navbarDropdownIsOpen}
+          notificationOpen={notificationIsOpen}
           theme={theme}
+          closeNotificationHandler={this.notificationHandler}
         />
 
         <div

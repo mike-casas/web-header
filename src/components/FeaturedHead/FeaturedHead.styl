@@ -6,22 +6,14 @@
   z-index 1000
   position relative
   
+  &:not(.notificationOpen)
+    display none
+  
   .featured-content
     height 45px
     line-height 45px
     color rgba(black, .84)
     position relative
-    display inline-block
-    
-    &:before
-      content ""
-      background-color #3445DC
-      width 12px
-      height 12px
-      position absolute
-      top 50%
-      transform translateY(-50%)
-      right 100%
     
     a
       font-weight normal
@@ -31,6 +23,16 @@
       font-size 13px
       +breakpoint("desktop")
         font-size 14px
+      
+      &:before
+        content ""
+        background-color #3445DC
+        width 12px
+        height 12px
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        right 100%
       
       &:after
         content ""
@@ -44,11 +46,19 @@
         transform translateY(-50%)
         left 100%
     
-    i
+    .featured-title
+      &:after
+        content "."
+    
+    .featured-description
       color rgba(black, .64)
       font-style initial
+      margin-left 4px
       
-    span
+      &:after
+        content "."
+      
+    .featured-more
       color black
       position relative
       font-size 13px
@@ -56,8 +66,27 @@
       +breakpoint("desktop")
         font-size 14px
       
-      &:hover
+    &:hover
+      .featured-more
         color rgba(black, .84)
+    
+    .close-notification
+      background-color transparent
+      background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJXZWJzaXRlLU5hdmlnYXRpb24iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ik1vYmlsZS0tLU9wZW4iIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzMuMDAwMDAwLCAtMjcuMDAwMDAwKSIgZmlsbD0iIzgzODM4MyIgc3Ryb2tlPSIjODM4MzgzIj4gICAgICAgICAgICA8ZyBpZD0iSGVhZGVyIj4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTM0MS45MTc2NTksMzUuNTIwNzEzIEMzNDIuMDI3NDQ3LDM1LjYzMDY0OTggMzQyLjAyNzQ0NywzNS44MDg1NDc2IDM0MS45MTc2NTksMzUuOTE4MDU2MSBDMzQxLjgwNzg3MiwzNi4wMjc5OTI5IDM0MS42Mjk5ODUsMzYuMDI3OTkyOSAzNDEuNTIwMzQsMzUuOTE4MDU2MSBMMzM4LDMyLjM5NzUwODIgTDMzNC40Nzk2NiwzNS45MTgwNTYxIEMzMzQuMzY5ODczLDM2LjAyNzk5MjkgMzM0LjE5MTk4NSwzNi4wMjc5OTI5IDMzNC4wODIzNDEsMzUuOTE4MDU2MSBDMzMzLjk3MjU1MywzNS44MDg0MDQ4IDMzMy45NzI1NTMsMzUuNjMwNTA3MSAzMzQuMDgyMzQxLDM1LjUyMDcxMyBMMzM3LjYwMjgyMywzMi4wMDAxNjUxIEwzMzQuMDgyMzQxLDI4LjQ3OTkwMjcgQzMzMy45NzI1NTMsMjguMzcwMjUxNSAzMzMuOTcyNTUzLDI4LjE5MjA2ODIgMzM0LjA4MjM0MSwyOC4wODI1NTk3IEMzMzQuMTkyMTI4LDI3Ljk3MjQ4MDEgMzM0LjM3MDAxNSwyNy45NzI0ODAxIDMzNC40Nzk2NiwyOC4wODI1NTk3IEwzMzgsMzEuNjAyOTY0OCBMMzQxLjUyMDM0LDI4LjA4MjU1OTcgQzM0MS42MzAxMjcsMjcuOTcyNDgwMSAzNDEuODA4MDE1LDI3Ljk3MjQ4MDEgMzQxLjkxNzY1OSwyOC4wODI1NTk3IEMzNDIuMDI3NDQ3LDI4LjE5MjIxMSAzNDIuMDI3NDQ3LDI4LjM3MDM5NDMgMzQxLjkxNzY1OSwyOC40Nzk5MDI3IEwzMzguMzk3MzIsMzIuMDAwMTY1MSBMMzQxLjkxNzY1OSwzNS41MjA3MTMgWiIgaWQ9IlNoYXBlIj48L3BhdGg+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
+      background-repeat no-repeat
+      background-position center
+      width 10px
+      height 10px
+      border none
+      padding 10px
+      margin 0
+      font-weight 500
+      position absolute
+      right 0
+      top 50%
+      transform translateY(-50%)
+      outline none
+      box-sizing content-box
   
   +breakpoint("desktop", "max")
     box-shadow inset 0 -1px 0 0 #E6E6E6
@@ -66,13 +95,16 @@
       display none
     
     .featured-content
-      p
-        color rgba(black, .64)
-      i,
-      span
+      
+      .featured-title
+        &:after
+          content none
+        
+      .featured-description,
+      .featured-more
         display none
       
-      a
+      .featured-more
         padding-right 0
         
         &:after
@@ -84,16 +116,17 @@
     .featured-content
       a
         color white
-        
-      p
-        color rgba(white, .84)
       
-      i
+      .featured-description
         color rgba(white, .64)
       
-      span
+      .featured-more
         color white
         
-        &:hover
+      &:hover
+        .featured-more
           color rgba(white, .84)
+      
+      .close-notification
+        background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJXZWJzaXRlLU5hdmlnYXRpb24iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ik1vYmlsZS0tLU9wZW4iIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzMuMDAwMDAwLCAtMjcuMDAwMDAwKSIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjRkZGRkZGIj4gICAgICAgICAgICA8ZyBpZD0iSGVhZGVyIj4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTM0MS45MTc2NTksMzUuNTIwNzEzIEMzNDIuMDI3NDQ3LDM1LjYzMDY0OTggMzQyLjAyNzQ0NywzNS44MDg1NDc2IDM0MS45MTc2NTksMzUuOTE4MDU2MSBDMzQxLjgwNzg3MiwzNi4wMjc5OTI5IDM0MS42Mjk5ODUsMzYuMDI3OTkyOSAzNDEuNTIwMzQsMzUuOTE4MDU2MSBMMzM4LDMyLjM5NzUwODIgTDMzNC40Nzk2NiwzNS45MTgwNTYxIEMzMzQuMzY5ODczLDM2LjAyNzk5MjkgMzM0LjE5MTk4NSwzNi4wMjc5OTI5IDMzNC4wODIzNDEsMzUuOTE4MDU2MSBDMzMzLjk3MjU1MywzNS44MDg0MDQ4IDMzMy45NzI1NTMsMzUuNjMwNTA3MSAzMzQuMDgyMzQxLDM1LjUyMDcxMyBMMzM3LjYwMjgyMywzMi4wMDAxNjUxIEwzMzQuMDgyMzQxLDI4LjQ3OTkwMjcgQzMzMy45NzI1NTMsMjguMzcwMjUxNSAzMzMuOTcyNTUzLDI4LjE5MjA2ODIgMzM0LjA4MjM0MSwyOC4wODI1NTk3IEMzMzQuMTkyMTI4LDI3Ljk3MjQ4MDEgMzM0LjM3MDAxNSwyNy45NzI0ODAxIDMzNC40Nzk2NiwyOC4wODI1NTk3IEwzMzgsMzEuNjAyOTY0OCBMMzQxLjUyMDM0LDI4LjA4MjU1OTcgQzM0MS42MzAxMjcsMjcuOTcyNDgwMSAzNDEuODA4MDE1LDI3Ljk3MjQ4MDEgMzQxLjkxNzY1OSwyOC4wODI1NTk3IEMzNDIuMDI3NDQ3LDI4LjE5MjIxMSAzNDIuMDI3NDQ3LDI4LjM3MDM5NDMgMzQxLjkxNzY1OSwyOC40Nzk5MDI3IEwzMzguMzk3MzIsMzIuMDAwMTY1MSBMMzQxLjkxNzY1OSwzNS41MjA3MTMgWiIgaWQ9IlNoYXBlIj48L3BhdGg+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
       
