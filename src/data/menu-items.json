@@ -94,6 +94,12 @@
             "titleList": "INDUSTRIES",
             "items": [
               {
+                "name": "Retail",
+                "id": "retail",
+                "href": "https://auth0.com/learn/retail/",
+                "external": true
+              },
+              {
                 "name": "Healthcare",
                 "id": "healthcare",
                 "href": "https://auth0.com/learn/why-hipaa-compliance-is-vital-your-business/",
