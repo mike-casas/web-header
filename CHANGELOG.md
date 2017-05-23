@@ -1,3 +1,20 @@
+<a name="4.0.7"></a>
+## 4.0.7 (2017-05-23)
+
+* added close button on notification bar and restructure msg text ([9eabe8e](https://github.com/auth0/web-header/commit/9eabe8e))
+* added knowledge and community link ([f98c5fc](https://github.com/auth0/web-header/commit/f98c5fc))
+* added platform footer ([d2f8bfe](https://github.com/auth0/web-header/commit/d2f8bfe))
+* added retail link on solutions ([f88fe98](https://github.com/auth0/web-header/commit/f88fe98))
+* bg color without opacity and links with font weight normal on mobile view ([928cc8e](https://github.com/auth0/web-header/commit/928cc8e))
+* changed notification bar height ([45734a4](https://github.com/auth0/web-header/commit/45734a4))
+* fix extend icon ([e38e6c9](https://github.com/auth0/web-header/commit/e38e6c9))
+* items with less separation ([7baf7cb](https://github.com/auth0/web-header/commit/7baf7cb))
+* notification close transition ([bc69010](https://github.com/auth0/web-header/commit/bc69010))
+* Release patch ([61249dd](https://github.com/auth0/web-header/commit/61249dd))
+* updated passdwordless icon ([9594638](https://github.com/auth0/web-header/commit/9594638))
+
+
+
 <a name="4.0.6"></a>
 ## 4.0.6 (2017-05-18)
 
