@@ -1,6 +1,5 @@
 import defaultFeaturedMessages from '../data/featured-messages.json';
 import ProbabilityBasedSelector from './ProbabilityBasedSelector';
-import { isNode } from './utils';
 
 export default function getFeaturedVariant(url, customFeaturedMessages) {
   const featuredMessages = customFeaturedMessages || defaultFeaturedMessages;
@@ -24,7 +23,7 @@ function filterFeaturedMessages(featuredMessages, url = defaultUrl()) {
 }
 
 function defaultUrl() {
-  if (isNode) {
+  if (typeof window === 'undefined' || !window.location || !window.location.href) {
     return null;
   }
   /* eslint-env browser */
