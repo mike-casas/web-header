@@ -11,7 +11,6 @@ import defaultMenuItems from '../../data/menu-items.json';
 import defaultMenuItemsMobile from '../../data/mobile-items.json';
 import styles from './WebHeader.styl';
 import generateNewMenuItemsJson from '../../modules/update';
-import getRibbonVariant from '../../modules/ribbon';
 
 const cx = styles::classNames;
 const blogLastApi = 'https://auth0-marketing.run.webtask.io/last-blog-post';
@@ -22,8 +21,11 @@ class WebHeader extends Component {
     children: PropTypes.node,
     theme: PropTypes.oneOf(['light', 'gray', 'dark']),
     featuredEnable: PropTypes.bool,
+    featuredIconColor: PropTypes.string,
     featuredLink: PropTypes.string,
-    featuredText: PropTypes.string,
+    featuredTitle: PropTypes.string,
+    featuredDescription: PropTypes.string,
+    featuredCTA: PropTypes.string,
     loginButtonEnable: PropTypes.bool,
     loginButtonLink: PropTypes.string,
     loginButtonOnClick: PropTypes.func,
@@ -44,6 +46,11 @@ class WebHeader extends Component {
     children: null,
     theme: 'light',
     featuredEnable: true,
+    featuredIconColor: null,
+    featuredLink: null,
+    featuredTitle: null,
+    featuredDescription: null,
+    featuredCTA: null,
     loginButtonEnable: true,
     loginButtonLink: '',
     loginButtonOnClick: () => {},
@@ -58,14 +65,6 @@ class WebHeader extends Component {
     talkToSalesButtonText: 'Talk to Sales',
     breakpoint: 992
   };
-
-  /**
-   * Get ribbon variant
-   * @public
-   */
-  static getRibbon() {
-    return getRibbonVariant();
-  }
 
   static renderButton(link, onClick, text, className) {
     return link
@@ -153,8 +152,11 @@ class WebHeader extends Component {
       children,
       theme,
       featuredEnable,
+      featuredIconColor,
       featuredLink,
-      featuredText,
+      featuredTitle,
+      featuredDescription,
+      featuredCTA,
       signupButtonEnable,
       signupButtonLink,
       signupButtonOnClick,
@@ -209,15 +211,19 @@ class WebHeader extends Component {
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <header className={cx('header-main', { 'is-notification-open': notificationIsOpen })}>
-        <FeaturedHead
-          featured={featuredEnable}
-          featuredLink={featuredLink}
-          featuredText={featuredText}
-          dropdownOpen={navbarDropdownIsOpen}
-          notificationOpen={notificationIsOpen}
-          theme={theme}
-          closeNotificationHandler={this.notificationHandler}
-        />
+        {featuredEnable && (
+          <FeaturedHead
+            iconColor={featuredIconColor}
+            link={featuredLink}
+            title={featuredTitle}
+            description={featuredDescription}
+            cta={featuredCTA}
+            dropdownOpen={navbarDropdownIsOpen}
+            notificationOpen={notificationIsOpen}
+            theme={theme}
+            closeNotificationHandler={this.notificationHandler}
+          />
+        )}
 
         <div
           className={cx('header', [`theme-${theme}`], className, {

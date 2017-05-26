@@ -1,0 +1,19 @@
+[
+  {
+    "link": "https://auth0.com/extend",
+    "title": "Introducing Auth0 Extend.",
+    "description": "Better platform extensibility for your SaaS.",
+    "cta": "Read More",
+    "iconColor": "#3445DC",
+    "probability": 0.5
+  },
+  {
+    "link": "http://auth0.com/jobs#job-openings",
+    "title": "We are hiring!",
+    "description": "If you care deeply about quality, team work and want to build software that people love.",
+    "cta": "Join Us!",
+    "iconColor": "#eb5424",
+    "probability": 0.5,
+    "include": "auth0.com\/blog"
+  }
+]

@@ -32,8 +32,11 @@ className | string | '' | Applied to the header root element.
 children | node | null | Can be used to render custom menu items via React components.
 theme | string | 'light' | Header theme, another option is 'dark'.
 featuredEnable | boolean | true | Enable or disable featured link next to the Auth0 logo.
-featuredLink | string | '' | Featured link URI.
-featuredText | string | '' | Featured link text.
+featuredIconColor | string | null | Featured icon color (hex).
+featuredLink | string | null | Featured link URL.
+featuredTitle | string | null | Featured link title text.
+featuredDescription | string | null | Featured link description text.
+featuredCTA | string | null | Featured link cta text.
 loginButtonEnable | boolean | true | Enable or disable Login button.
 loginButtonLink | string | '' | Link of the Login button, if it's different from `''` the Login button will be rendered as an anchor tag with this href.
 loginButtonOnClick | function | () => {} | Callback function for when Login button is clicked.
@@ -49,12 +52,12 @@ signupButtonText | string | 'Sign up' | Text of the Signup button.
 
 #### Methods
 
-Get a variant for the ribbon:
+Get a variant for the featured banner:
 
 ```javascript
-import Auth0WebHeader from 'auth0-web-header'
+import { getFeaturedVariant } from 'auth0-web-header'
 
-Auth0WebHeader.getRibbon()
+getFeaturedVariant('https://auth0.com/blog/')
 ```
 
 ### Example
