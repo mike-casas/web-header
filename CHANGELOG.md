@@ -1,3 +1,11 @@
+<a name="4.0.8"></a>
+## 4.0.8 (2017-05-26)
+
+* Fix featured and add We are hiring ([2688c23](https://github.com/auth0/web-header/commit/2688c23))
+* Release patch ([aa57839](https://github.com/auth0/web-header/commit/aa57839))
+
+
+
 <a name="4.0.7"></a>
 ## 4.0.7 (2017-05-23)
 
