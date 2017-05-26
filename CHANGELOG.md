@@ -1,3 +1,10 @@
+<a name="4.0.9"></a>
+## 4.0.9 (2017-05-26)
+
+* Fix node support and use componentWillMount() to choose another variant only on node ([551efc9](https://github.com/auth0/web-header/commit/551efc9))
+
+
+
 <a name="4.0.8"></a>
 ## 4.0.8 (2017-05-26)
 
