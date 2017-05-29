@@ -1,3 +1,11 @@
+<a name="4.0.10"></a>
+## 4.0.10 (2017-05-29)
+
+* Change hiring description featured message ([8c4ef56](https://github.com/auth0/web-header/commit/8c4ef56))
+* Patch release ([ac9923e](https://github.com/auth0/web-header/commit/ac9923e))
+
+
+
 <a name="4.0.9"></a>
 ## 4.0.9 (2017-05-26)
 
