@@ -110,6 +110,12 @@
                 "id": "telecommunications",
                 "href": "https://auth0.com/learn/telecommunications-industry/",
                 "external": true
+              },
+              {
+                "name": "More",
+                "id": "more-solutions",
+                "href": "https://auth0.com/customers#categories",
+                "external": true
               }
             ]
           }
