@@ -1,3 +1,13 @@
+<a name="4.0.11"></a>
+## 4.0.11 (2017-05-30)
+
+* added more solutions ([d8879ec](https://github.com/auth0/web-header/commit/d8879ec))
+* aligned close button ([a1ffb6d](https://github.com/auth0/web-header/commit/a1ffb6d))
+* fix aligment ([85f78f1](https://github.com/auth0/web-header/commit/85f78f1))
+* patch release ([7c63e33](https://github.com/auth0/web-header/commit/7c63e33))
+
+
+
 <a name="4.0.10"></a>
 ## 4.0.10 (2017-05-29)
 
