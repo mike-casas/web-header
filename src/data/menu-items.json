@@ -274,6 +274,12 @@
                 "id": "libraries",
                 "href": "https://auth0.com/docs/libraries",
                 "external": true
+              },
+              {
+                "name": "Identity Providers",
+                "id": "identity-providers",
+                "href": "https://auth0.com/docs/identityproviders",
+                "external": true
               }
             ]
           }
