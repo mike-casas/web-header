@@ -1,3 +1,11 @@
+<a name="4.0.12"></a>
+## 4.0.12 (2017-06-05)
+
+* added identity providers link ([7e7e93e](https://github.com/auth0/web-header/commit/7e7e93e))
+* patch release ([2afbe7b](https://github.com/auth0/web-header/commit/2afbe7b))
+
+
+
 <a name="4.0.11"></a>
 ## 4.0.11 (2017-05-30)
 
