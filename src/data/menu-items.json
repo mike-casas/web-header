@@ -96,19 +96,19 @@
               {
                 "name": "Retail",
                 "id": "retail",
-                "href": "https://auth0.com/learn/retail/",
+                "href": "https://auth0.com/learn/retail",
                 "external": true
               },
               {
                 "name": "Healthcare",
                 "id": "healthcare",
-                "href": "https://auth0.com/learn/why-hipaa-compliance-is-vital-your-business/",
+                "href": "https://auth0.com/learn/why-hipaa-compliance-is-vital-your-business",
                 "external": true
               },
               {
                 "name": "Telecommunications",
                 "id": "telecommunications",
-                "href": "https://auth0.com/learn/telecommunications-industry/",
+                "href": "https://auth0.com/learn/telecommunications-industry",
                 "external": true
               },
               {
@@ -166,7 +166,7 @@
         "key": "resources-list",
         "twoColLayout": true,
         "highlight": true,
-        "titleHref": "https://auth0.com/resources/",
+        "titleHref": "https://auth0.com/resources",
         "external": true,
         "items": [
           {
@@ -190,7 +190,7 @@
           {
             "name": "Blog",
             "id": "blog",
-            "href": "https://auth0.com/blog/",
+            "href": "https://auth0.com/blog/business",
             "external": true
           },
           {
@@ -248,7 +248,7 @@
               {
                 "name": "All Quickstarts",
                 "id": "all-quickstarts",
-                "href": "https://auth0.com/docs/quickstart/",
+                "href": "https://auth0.com/docs/quickstart",
                 "icon": "quickstarts",
                 "external": true
               }
@@ -304,7 +304,7 @@
           {
             "name": "Auth0 University",
             "id": "university",
-            "href": "https://auth0.com/university/",
+            "href": "https://auth0.com/university",
             "external": true
           },
           {
