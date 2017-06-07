@@ -1,3 +1,11 @@
+<a name="4.0.13"></a>
+## 4.0.13 (2017-06-07)
+
+* changed blog link ([065e91e](https://github.com/auth0/web-header/commit/065e91e))
+* patch release ([1b2fad7](https://github.com/auth0/web-header/commit/1b2fad7))
+
+
+
 <a name="4.0.12"></a>
 ## 4.0.12 (2017-06-05)
 
