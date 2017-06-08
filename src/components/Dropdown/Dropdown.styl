@@ -17,7 +17,7 @@
     overflow hidden
 
     min-width 150px
-    
+
     pointer-events none
 
 .dropdown.is-open
@@ -50,11 +50,11 @@
 .solutionsDropdown
   +breakpoint("desktop")
     width 510px
-  
-  +breakpoint("desktop", "max")  
+
+  +breakpoint("desktop", "max")
     header
       display none
-    
+
 .solutionsDropdown.twoBlock
   +breakpoint("desktop")
     > div:nth-child(1)
@@ -86,8 +86,8 @@
 .developersDropdown
   +breakpoint("desktop")
     width 595px
-    right -165px
-    
+    transform: translateX(-165px);
+
 .developersDropdown.twoBlock
   +breakpoint("desktop")
     > div:nth-child(1)
@@ -105,11 +105,11 @@
   padding 15px 30px
   border-top 1px solid #DEDEDE
   clear both
-  
+
   &.footer-highlight
     background-color #F2F2F2
     text-align center
     border-top none
-  
+
   +breakpoint("desktop", "max")
     display none
