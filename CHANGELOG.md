@@ -1,3 +1,18 @@
+<a name="4.0.14"></a>
+## 4.0.14 (2017-06-08)
+
+* Add prettier precommit ([275562b](https://github.com/auth0/web-header/commit/275562b))
+* Lower react peerDep requeriments ([cb2f15a](https://github.com/auth0/web-header/commit/cb2f15a))
+* Move prop-types to dependencies ([4385b56](https://github.com/auth0/web-header/commit/4385b56))
+* Release patch ([41a7d76](https://github.com/auth0/web-header/commit/41a7d76))
+* Remove serve from package.json and yarn.lock ([1e52a9b](https://github.com/auth0/web-header/commit/1e52a9b))
+* Replace serve with heroku-buildpack-static ([1ce7e1c](https://github.com/auth0/web-header/commit/1ce7e1c))
+* Run prettier ([b1525e3](https://github.com/auth0/web-header/commit/b1525e3))
+* Switch eslint to prettier config ([b30b0ff](https://github.com/auth0/web-header/commit/b30b0ff))
+* Update eslint ([1d690a6](https://github.com/auth0/web-header/commit/1d690a6))
+
+
+
 <a name="4.0.13"></a>
 ## 4.0.13 (2017-06-07)
 
