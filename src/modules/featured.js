@@ -23,10 +23,10 @@ function filterFeaturedMessages(featuredMessages, url = defaultUrl()) {
 }
 
 function defaultUrl() {
-  if (typeof window === 'undefined' || !window.location || !window.location.href) {
+  if (typeof window === 'undefined' || !window.location || !window.location.pathname) {
     return null;
   }
   /* eslint-env browser */
 
-  return window.location.href;
+  return window.location.pathname;
 }
