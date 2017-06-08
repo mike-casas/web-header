@@ -47,14 +47,7 @@ class FeaturedHead extends Component {
     } = this.props;
 
     return (
-      <div
-        className={cx(
-          'featured',
-          [`theme-${theme}`],
-          { dropdownOpen },
-          { notificationOpen }
-        )}
-      >
+      <div className={cx('featured', [`theme-${theme}`], { dropdownOpen }, { notificationOpen })}>
         <div className={cx('featured-content')}>
           <a href={link || featuredVariant.link} rel="external">
             <span

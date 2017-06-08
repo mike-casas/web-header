@@ -94,17 +94,18 @@ class WebHeader extends Component {
   setHeightDropdown = () => {
     const height = this.state.mobileState ? `${window.innerHeight - 70}px` : '';
     this.dropdownContent.style.height = height;
-  }
+  };
 
   updateBlogPost = () => {
-    axios.get(blogLastApi)
+    axios
+      .get(blogLastApi)
       .then(blogResponse => [this.state.menuItems, blogResponse.data])
       .then(generateNewMenuItemsJson)
-      .then((newMenuItems) => {
+      .then(newMenuItems => {
         this.setState({ menuItems: newMenuItems });
       })
       .catch(err => console.info('Auth0WebHeader', err));
-  }
+  };
 
   handleResize = () => {
     const mobileState = window.innerWidth < this.props.breakpoint;
@@ -112,19 +113,19 @@ class WebHeader extends Component {
       this.addOverflowBody();
       this.setHeightDropdown();
     });
-  }
+  };
 
   navbarDropdownHandler = () => {
     this.setState({ navbarDropdownIsOpen: !this.state.navbarDropdownIsOpen }, this.addOverflowBody);
-  }
+  };
 
-  closeDropdownOnButtonClick = callback => (event) => {
+  closeDropdownOnButtonClick = callback => event => {
     const isMobile = this.state.mobileState;
     const isDropdownOpen = this.state.navbarDropdownIsOpen;
 
     if (callback) callback(event);
     if (isMobile && isDropdownOpen) this.navbarDropdownHandler();
-  }
+  };
 
   addOverflowBody() {
     const { navbarDropdownIsOpen, mobileState } = this.state;
@@ -136,15 +137,15 @@ class WebHeader extends Component {
     }
   }
 
-  handleKeyDown = (e) => {
+  handleKeyDown = e => {
     // Only enable focusable elements on key tab pressed
     if (e.keyCode !== 9 || this.state.focusable) return;
     this.setState({ focusable: true });
-  }
+  };
 
   notificationHandler = () => {
     this.setState({ notificationIsOpen: !this.state.notificationIsOpen });
-  }
+  };
 
   render() {
     const {
@@ -170,7 +171,14 @@ class WebHeader extends Component {
       loginButtonOnClick,
       loginButtonText
     } = this.props;
-    const { navbarDropdownIsOpen, mobileState, focusable, menuItems, menuItemsMobile, notificationIsOpen } = this.state;
+    const {
+      navbarDropdownIsOpen,
+      mobileState,
+      focusable,
+      menuItems,
+      menuItemsMobile,
+      notificationIsOpen
+    } = this.state;
 
     const signupButton = WebHeader.renderButton(
       signupButtonLink,
@@ -192,10 +200,7 @@ class WebHeader extends Component {
     );
 
     const renderedMenuMobile = menuItemsMobile.map((mobileLinks, i) =>
-      <FooterMobile
-        key={mobileLinks.id}
-        mobileLinks={mobileLinks}
-      />
+      <FooterMobile key={mobileLinks.id} mobileLinks={mobileLinks} />
     );
 
     const renderedMenuItems = menuItems.map((item, i) =>
@@ -211,7 +216,7 @@ class WebHeader extends Component {
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <header className={cx('header-main', { 'is-notification-open': notificationIsOpen })}>
-        {featuredEnable && (
+        {featuredEnable &&
           <FeaturedHead
             iconColor={featuredIconColor}
             link={featuredLink}
@@ -222,8 +227,7 @@ class WebHeader extends Component {
             notificationOpen={notificationIsOpen}
             theme={theme}
             closeNotificationHandler={this.notificationHandler}
-          />
-        )}
+          />}
 
         <div
           className={cx('header', [`theme-${theme}`], className, {
@@ -241,20 +245,17 @@ class WebHeader extends Component {
                 closeHeaderDropdown={this.closeDropdownOnButtonClick()}
               />
 
-              <div className={cx('collapse', {
+              <div
+                className={cx('collapse', {
                   'is-dropdown-open': navbarDropdownIsOpen
                 })}
-                ref={(_ref) => { this.dropdownContent = _ref; }}
+                ref={_ref => {
+                  this.dropdownContent = _ref;
+                }}
               >
 
-                <nav
-                  className={cx('main-navigation')}
-                  role="navigation" aria-label="Main menu"
-                >
-                  <ul
-                  className={cx('navigation')}
-                  role="menubar"
-                  >
+                <nav className={cx('main-navigation')} role="navigation" aria-label="Main menu">
+                  <ul className={cx('navigation')} role="menubar">
                     {children || renderedMenuItems}
                     <li
                       className={cxN({

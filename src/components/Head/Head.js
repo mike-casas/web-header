@@ -5,12 +5,7 @@ import styles from './Head.styl';
 
 const cx = styles::classNames;
 
-const Head = ({
-  toggleDropdownHandler,
-  dropdownOpen,
-  theme,
-  closeHeaderDropdown
-}) =>
+const Head = ({ toggleDropdownHandler, dropdownOpen, theme, closeHeaderDropdown }) =>
   <div
     className={cx('head', [`theme-${theme}`], {
       dropdownOpen

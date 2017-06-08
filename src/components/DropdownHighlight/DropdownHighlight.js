@@ -12,13 +12,12 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
       moreHighlight: parentClass === 'moreDropdown'
     })}
   >
-    {data.componentTitle ?
-      <h4
-        className={cx('section-title')}
-        dangerouslySetInnerHTML={{ __html: data.componentTitle }}
-      />
-      : null
-    }
+    {data.componentTitle
+      ? <h4
+          className={cx('section-title')}
+          dangerouslySetInnerHTML={{ __html: data.componentTitle }}
+        />
+      : null}
     <a
       href={data.link}
       onClick={closeDropdowns}
@@ -27,14 +26,8 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
     >
       <img src={data.thumbnail} alt={data.title} />
       <h5 className={cx('title')}>{data.title}</h5>
-      {data.excerpt
-        ? <p className={cx('text')}>{data.excerpt}</p>
-        : null
-      }
-      {data.date
-        ? <span className={cx('time')}>{data.date}</span>
-        : null
-      }
+      {data.excerpt ? <p className={cx('text')}>{data.excerpt}</p> : null}
+      {data.date ? <span className={cx('time')}>{data.date}</span> : null}
     </a>
     <div className={cx('content')}>
       {(data.morelinks || []).map(({ href, text, external }, index) =>
@@ -44,11 +37,12 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
           onClick={closeDropdowns}
           key={index}
           rel={external ? 'external' : null}
-        >{text}</a>
+        >
+          {text}
+        </a>
       )}
     </div>
-  </div>
-;
+  </div>;
 
 DropdownHighlight.propTypes = {
   data: PropTypes.object,

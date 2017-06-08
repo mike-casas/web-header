@@ -5,10 +5,12 @@ import { isObject } from 'lodash';
  */
 export default function generateNewMenuItemsJson([content, blog]) {
   // List of replacements for `src/menu-items.json`
-  const replacements = [{
-    id: 'latest-blog',
-    value: setValue(blog)
-  }];
+  const replacements = [
+    {
+      id: 'latest-blog',
+      value: setValue(blog)
+    }
+  ];
   // Array of replacements IDs
   const replacementsIDs = replacements.map(item => item.id);
   // Get items (objects) from `src/menu-items.json` by replacements IDs
@@ -29,17 +31,17 @@ function setValue(object) {
 function getItem(id, from) {
   const found = [];
 
-  from.forEach((item) => {
+  from.forEach(item => {
     if (!item.childrens) return;
     found.push(findByID(item, 'childrens', id));
 
-    item.childrens.forEach((childItem) => {
+    item.childrens.forEach(childItem => {
       if (!childItem.items) return;
       found.push(findByID(childItem, 'items', id));
     });
 
     if (!item.footerLinks) return;
-    item.footerLinks.forEach((footerChildItem) => {
+    item.footerLinks.forEach(footerChildItem => {
       if (footerChildItem.id === id) {
         found.push(footerChildItem);
       }

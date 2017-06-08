@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const b2bStyle = {
@@ -13,12 +12,11 @@ const b2bStyle = {
   fontWeight: 500,
   textTransform: 'uppercase',
   padding: 7
-}
+};
 
 const b2bSVG = () =>
   <span style={b2bStyle}>
     b2b
   </span>;
-
 
 export default b2bSVG;

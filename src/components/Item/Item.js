@@ -20,13 +20,13 @@ class Item extends Component {
     simpleList: PropTypes.bool,
     closeHeaderDropdown: PropTypes.func,
     mobile: PropTypes.bool
-  }
+  };
 
   state = {
     openDropdown: false
-  }
+  };
 
-  handleDropdown = (e) => {
+  handleDropdown = e => {
     const { openDropdown } = this.state;
     const { mobile } = this.props;
     const isMobile = mobile;
@@ -35,7 +35,7 @@ class Item extends Component {
     if (shouldOpenDropdown === openDropdown || isMobile) return;
 
     this.setState({ openDropdown: shouldOpenDropdown });
-  }
+  };
 
   closeItemDropdown = () => {
     const isDesktop = !this.props.mobile;
@@ -44,12 +44,12 @@ class Item extends Component {
     if (isDesktop && isDropdownOpen) {
       this.setState({ openDropdown: false });
     }
-  }
+  };
 
   closeDropdowns = () => {
     this.closeItemDropdown();
     this.props.closeHeaderDropdown();
-  }
+  };
 
   render() {
     const { item, theme, simpleList, mobile } = this.props;
@@ -68,31 +68,26 @@ class Item extends Component {
         onFocus={this.handleDropdown}
         onMouseLeave={this.handleDropdown}
         onBlur={this.handleDropdown}
-        role="menuitem" aria-haspopup="true"
+        role="menuitem"
+        aria-haspopup="true"
       >
         {linkHref
-          ?
-            <a
+          ? <a
               href={linkHref}
               onClick={this.closeDropdowns}
               className={cx('link')}
               rel={linkExternal}
-            >{linkContent}</a>
-          :
-            <span
-              tabIndex="0"
-              className={cx('link')}
-            >{linkContent}</span>
-        }
+            >
+              {linkContent}
+            </a>
+          : <span tabIndex="0" className={cx('link')}>{linkContent}</span>}
         {item.childrens
-          ?
-            <Dropdown
+          ? <Dropdown
               data={item}
               closeDropdowns={this.closeDropdowns}
               open={this.state.openDropdown}
             />
-          : null
-        }
+          : null}
       </li>
     );
   }
@@ -103,21 +98,15 @@ export default Item;
 const ItemContent = ({ name, childrens, theme }) =>
   <span>
     <span className={cx('text')}>{name}</span>
-    {childrens ?
-      <svg
-        width="8"
-        height="4"
-        viewBox="62 7 10 6"
-        className={cx('item-caret')}
-      >
-        <path
-          // eslint-disable-next-line max-len
-          d="M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z"
-          fill={theme === 'dark' ? '#fff' : '#000'}
-        />
-      </svg>
-      : null
-    }
+    {childrens
+      ? <svg width="8" height="4" viewBox="62 7 10 6" className={cx('item-caret')}>
+          <path
+            // eslint-disable-next-line max-len
+            d="M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z"
+            fill={theme === 'dark' ? '#fff' : '#000'}
+          />
+        </svg>
+      : null}
     {childrens ? <span className={cx('dropdown-caret')} /> : null}
   </span>;
 

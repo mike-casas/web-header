@@ -21,23 +21,20 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
       ? <header className={cx('header-title')}>
           {data.titleHref
             ? <a
-                className={cx('section-title', {'hasArrow': data.titleHref})}
+                className={cx('section-title', { hasArrow: data.titleHref })}
                 href={data.titleHref}
               >
                 {data.title}
               </a>
-            : <h4 className={cx('section-title')}>{data.title}</h4>
-          }
+            : <h4 className={cx('section-title')}>{data.title}</h4>}
           {data.description
             ? <span
                 className={cx('section-description')}
                 dangerouslySetInnerHTML={{ __html: data.description }}
               />
-            : null
-          }
+            : null}
         </header>
-      : null
-    }
+      : null}
     {data.subItems
       ? <div className={cx('multi-list')}>
           {data.subItems.map(subItem =>
@@ -45,53 +42,47 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
 
               {subItem.titleList
                 ? <span className={cx('title-list')}>
-                    {subItem.titleList }
+                    {subItem.titleList}
                   </span>
-                : null
-              }
+                : null}
 
-              {(subItem.items || []).map(item =>
-                <DropdownListItem
-                  key={item.id}
-                  item={item}
-                  highlightHandler={highlightHandler}
-                  hasArrow={subItem.hasArrows}
-                  parentClass={parentClass}
-                  closeDropdowns={closeDropdowns}
-                />
-              )}
+              {(subItem.items || [])
+                .map(item =>
+                  <DropdownListItem
+                    key={item.id}
+                    item={item}
+                    highlightHandler={highlightHandler}
+                    hasArrow={subItem.hasArrows}
+                    parentClass={parentClass}
+                    closeDropdowns={closeDropdowns}
+                  />
+                )}
             </ul>
           )}
         </div>
-      : null
-    }
+      : null}
     {data.items
       ? <ul role="menubar">
-          {(data.items || []).map(item =>
-            <DropdownListItem
-              key={item.id}
-              item={item}
-              highlightHandler={highlightHandler}
-              hasArrow={data.hasArrows}
-              parentClass={parentClass}
-              closeDropdowns={closeDropdowns}
-            />
-          )}
+          {(data.items || [])
+            .map(item =>
+              <DropdownListItem
+                key={item.id}
+                item={item}
+                highlightHandler={highlightHandler}
+                hasArrow={data.hasArrows}
+                parentClass={parentClass}
+                closeDropdowns={closeDropdowns}
+              />
+            )}
         </ul>
-      : null
-    }
+      : null}
     {data.footerLinks
       ? <footer className={cx('footer-list')}>
           {data.footerLinks.map(footer =>
-            <FooterList
-              key={footer.id}
-              footer={footer}
-              closeDropdowns={closeDropdowns}
-            />
+            <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
           )}
         </footer>
-      : null
-    }
+      : null}
 
   </div>;
 

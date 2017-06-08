@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const b2cStyle = {
@@ -13,7 +12,7 @@ const b2cStyle = {
   fontWeight: 500,
   textTransform: 'uppercase',
   padding: 7
-}
+};
 
 const b2cSVG = () =>
   <span style={b2cStyle}>

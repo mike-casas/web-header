@@ -6,13 +6,13 @@ const CDN = !!process.env.CDN;
 
 const externals = CDN
   ? {
-    react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react'
+      react: {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react'
+      }
     }
-  }
   : [nodeExternals({ modulesFromFile: true })];
 
 const config = merge({}, commonConfig, {

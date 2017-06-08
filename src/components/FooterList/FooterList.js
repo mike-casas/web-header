@@ -14,7 +14,7 @@ class FooterList extends Component {
   static propTypes = {
     footer: PropTypes.object,
     closeDropdowns: PropTypes.func
-  }
+  };
 
   render() {
     const { footer, closeDropdowns } = this.props;
@@ -27,17 +27,15 @@ class FooterList extends Component {
 
     const linkExternal = footer.external ? 'external' : null;
     return (
-
-        <a className={cx('footer-link')} href={footer.href} onClick={closeDropdowns} rel={linkExternal}>
-          {footer.icon
-            ? <span className={cx('icon')}>{logos[footer.icon]}</span>
-            : null
-          }
-          <span
-            className={cx('text')}
-            dangerouslySetInnerHTML={{ __html: footer.name }}
-          />
-        </a>
+      <a
+        className={cx('footer-link')}
+        href={footer.href}
+        onClick={closeDropdowns}
+        rel={linkExternal}
+      >
+        {footer.icon ? <span className={cx('icon')}>{logos[footer.icon]}</span> : null}
+        <span className={cx('text')} dangerouslySetInnerHTML={{ __html: footer.name }} />
+      </a>
     );
   }
 }

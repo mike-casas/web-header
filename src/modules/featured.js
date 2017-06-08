@@ -9,7 +9,7 @@ export default function getFeaturedVariant(url, customFeaturedMessages) {
 }
 
 function filterFeaturedMessages(featuredMessages, url = defaultUrl()) {
-  const filteredMessages = featuredMessages.filter((featuredMessage) => {
+  const filteredMessages = featuredMessages.filter(featuredMessage => {
     if (!featuredMessage.include) {
       return true;
     }

@@ -13,15 +13,15 @@ class Dropdown extends Component {
     data: PropTypes.object,
     closeDropdowns: PropTypes.func,
     open: PropTypes.bool
-  }
+  };
 
   static defaultProps = {
     data: {}
-  }
+  };
 
   state = {
     highlight: {}
-  }
+  };
 
   componentWillMount() {
     this.setDefaultHighlight();
@@ -39,12 +39,12 @@ class Dropdown extends Component {
     if (!highlightComponent.length) return;
 
     this.setState({ highlight: highlightComponent[0].default });
-  }
+  };
 
-  highlightHandler = (highlight) => {
+  highlightHandler = highlight => {
     if (!highlight) return;
     this.setState({ highlight });
-  }
+  };
 
   render() {
     const { data, closeDropdowns, open } = this.props;
@@ -57,7 +57,7 @@ class Dropdown extends Component {
         })}
         aria-hidden={open ? 'false' : 'true'}
       >
-        {data.childrens.map((component) => {
+        {data.childrens.map(component => {
           switch (component.componentType) {
             case 'list':
               return (
@@ -84,17 +84,12 @@ class Dropdown extends Component {
         })}
 
         {data.footerLinks
-          ? <footer className={cx('footer-list', {'footer-highlight': data.footerHighlight})}>
+          ? <footer className={cx('footer-list', { 'footer-highlight': data.footerHighlight })}>
               {data.footerLinks.map(footer =>
-                <FooterList
-                  key={footer.id}
-                  footer={footer}
-                  closeDropdowns={closeDropdowns}
-                />
+                <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
               )}
             </footer>
-          : null
-        }
+          : null}
       </div>
     );
   }

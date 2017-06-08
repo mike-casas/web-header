@@ -29,7 +29,7 @@ class DropdownListItem extends Component {
     hasArrow: PropTypes.bool,
     parentClass: PropTypes.string,
     closeDropdowns: PropTypes.func
-  }
+  };
 
   componentDidMount() {
     /* eslint-env browser */
@@ -68,28 +68,28 @@ class DropdownListItem extends Component {
           arrowItem: hasArrow,
           moreItem: parentClass === 'moreDropdown'
         })}
-        onMouseEnter={() => { highlightHandler(item.highlight); }}
-        onFocus={() => { highlightHandler(item.highlight); }}
+        onMouseEnter={() => {
+          highlightHandler(item.highlight);
+        }}
+        onFocus={() => {
+          highlightHandler(item.highlight);
+        }}
         role="menuitem"
       >
 
-        <a className={cx(item.customClass || '')} href={item.href} onClick={closeDropdowns} rel={linkExternal}>
-          {item.icon
-            ? <figure className={cx('icon')}>{logos[item.icon]}</figure>
-            : null
-          }
+        <a
+          className={cx(item.customClass || '')}
+          href={item.href}
+          onClick={closeDropdowns}
+          rel={linkExternal}
+        >
+          {item.icon ? <figure className={cx('icon')}>{logos[item.icon]}</figure> : null}
           <span className={cx('text')}>
             {item.name}
 
-            {item.prefix
-              ? <span className={cx('itemPrefix')}>{item.prefix}</span>
-              : null
-            }
+            {item.prefix ? <span className={cx('itemPrefix')}>{item.prefix}</span> : null}
           </span>
-          {item.description
-            ? <p className={cx('item-description')}>{item.description}</p>
-            : null
-          }
+          {item.description ? <p className={cx('item-description')}>{item.description}</p> : null}
         </a>
       </li>
     );
