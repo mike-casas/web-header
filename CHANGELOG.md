@@ -1,3 +1,12 @@
+<a name="4.0.15"></a>
+## 4.0.15 (2017-06-08)
+
+* Change featured message from full url to pathname ([85eb608](https://github.com/auth0/web-header/commit/85eb608))
+* Fix developers dropdown in full width mode ([668e763](https://github.com/auth0/web-header/commit/668e763))
+* Release patch ([3547e4b](https://github.com/auth0/web-header/commit/3547e4b))
+
+
+
 <a name="4.0.14"></a>
 ## 4.0.14 (2017-06-08)
 
