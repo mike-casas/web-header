@@ -302,9 +302,9 @@
             "href": "https://community.auth0.com/"
           },
           {
-            "name": "Auth0 University",
-            "id": "university",
-            "href": "https://auth0.com/university",
+            "name": "Auth0 Blog",
+            "id": "blog-tech",
+            "href": "https://auth0.com/blog/tech/",
             "external": true
           },
           {
