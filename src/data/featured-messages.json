@@ -13,7 +13,6 @@
     "description": "If you care deeply about quality, teamwork, and want to build software that people love.",
     "cta": "Join Us!",
     "iconColor": "#eb5424",
-    "probability": 0.5,
-    "include": "/blog"
+    "probability": 0.5
   }
 ]
