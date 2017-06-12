@@ -1,3 +1,12 @@
+<a name="4.0.16"></a>
+## 4.0.16 (2017-06-12)
+
+* Hiring featured message on all urls ([1953120](https://github.com/auth0/web-header/commit/1953120))
+* Patch release ([0c4bf11](https://github.com/auth0/web-header/commit/0c4bf11))
+* Use Auth0 Blog instead of Auth0 University link ([58fbda2](https://github.com/auth0/web-header/commit/58fbda2))
+
+
+
 <a name="4.0.15"></a>
 ## 4.0.15 (2017-06-08)
 
