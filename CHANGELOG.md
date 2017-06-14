@@ -1,3 +1,11 @@
+<a name="4.0.17"></a>
+## 4.0.17 (2017-06-14)
+
+* Patch release ([0514a88](https://github.com/auth0/web-header/commit/0514a88))
+* title color with same icon color ([e1e1192](https://github.com/auth0/web-header/commit/e1e1192))
+
+
+
 <a name="4.0.16"></a>
 ## 4.0.16 (2017-06-12)
 
