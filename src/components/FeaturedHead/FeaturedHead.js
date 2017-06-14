@@ -56,7 +56,12 @@ class FeaturedHead extends Component {
                 backgroundColor: iconColor || featuredVariant.iconColor
               }}
             />
-            <span className={cx('featured-title')}>
+            <span
+              className={cx('featured-title')}
+              style={{
+                color: iconColor || featuredVariant.iconColor
+              }}
+            >
               {title || featuredVariant.title}
             </span>
             <span className={cx('featured-description')}>
