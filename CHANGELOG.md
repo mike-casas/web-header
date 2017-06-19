@@ -1,3 +1,10 @@
+<a name="4.0.19"></a>
+## 4.0.19 (2017-06-19)
+
+* Change cta featured message and send patch release ([db7e26c](https://github.com/auth0/web-header/commit/db7e26c))
+
+
+
 <a name="4.0.18"></a>
 ## 4.0.18 (2017-06-19)
 
