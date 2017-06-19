@@ -1,3 +1,11 @@
+<a name="4.0.18"></a>
+## 4.0.18 (2017-06-19)
+
+* Change featured message ([c6fcd35](https://github.com/auth0/web-header/commit/c6fcd35))
+* Patch release ([adb6b59](https://github.com/auth0/web-header/commit/adb6b59))
+
+
+
 <a name="4.0.17"></a>
 ## 4.0.17 (2017-06-14)
 
