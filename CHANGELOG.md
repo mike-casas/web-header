@@ -1,3 +1,11 @@
+<a name="4.0.20"></a>
+## 4.0.20 (2017-06-26)
+
+* added about us and careers links ([a1cd8ce](https://github.com/auth0/web-header/commit/a1cd8ce))
+* patch release ([61cbf6d](https://github.com/auth0/web-header/commit/61cbf6d))
+
+
+
 <a name="4.0.19"></a>
 ## 4.0.19 (2017-06-19)
 
