@@ -1,3 +1,12 @@
+<a name="4.0.21"></a>
+## 4.0.21 (2017-06-27)
+
+* Add new funding featured message, and remove forrester msg ([2018bb3](https://github.com/auth0/web-header/commit/2018bb3))
+* Improve mobile playground, iframe resizable ([2a38af3](https://github.com/auth0/web-header/commit/2a38af3))
+* Release v4.0.21 ([6ce2191](https://github.com/auth0/web-header/commit/6ce2191))
+
+
+
 <a name="4.0.20"></a>
 ## 4.0.20 (2017-06-26)
 
