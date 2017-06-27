@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import React from 'react';
 import WebHeader from '../../../../src';
-import Section from '../../components';
+import { Iframe, Section } from '../../components';
 
 const App = () => {
   if (
@@ -9,6 +9,15 @@ const App = () => {
     window.location &&
     window.location.search &&
     window.location.search.indexOf('mobile') > -1
+  ) {
+    return <Iframe url="/?iframe" />;
+  }
+
+  if (
+    window &&
+    window.location &&
+    window.location.search &&
+    window.location.search.indexOf('iframe') > -1
   ) {
     return <WebHeader theme="dark" />;
   }
