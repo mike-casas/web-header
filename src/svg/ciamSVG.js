@@ -1,6 +1,6 @@
 import React from 'react';
 
-const b2cStyle = {
+const ciamStyle = {
   backgroundColor: '#C879B2',
   width: 46,
   height: 30,
@@ -14,9 +14,9 @@ const b2cStyle = {
   padding: 7
 };
 
-const b2cSVG = () =>
-  <span style={b2cStyle}>
-    b2c
+const ciamSVG = () =>
+  <span style={ciamStyle}>
+    ciam
   </span>;
 
-export default b2cSVG;
+export default ciamSVG;

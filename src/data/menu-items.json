@@ -69,10 +69,10 @@
           {
             "name": "For your Customers",
             "customClass": "solutionsItem-b2c",
-            "icon": "b2c",
-            "id": "b2c",
+            "icon": "ciam",
+            "id": "ciam",
             "href": "https://auth0.com/b2c-customer-identity-management",
-            "alt": "B2C icon"
+            "alt": "CIAM icon"
           },
           {
             "name": "For your Business Partners",
@@ -81,6 +81,14 @@
             "id": "b2b",
             "href": "https://auth0.com/b2b-enterprise-identity-management",
             "alt": "B2B icon"
+          },
+          {
+            "name": "For your Employees",
+            "customClass": "solutionsItem-b2e",
+            "icon": "b2e",
+            "id": "b2e",
+            "href": "https://auth0.com/b2e-identity-management-for-employees",
+            "alt": "B2E icon"
           }
         ]
       },

@@ -10,7 +10,7 @@ import IosSVG from '../../svg/iosSVG';
 import DefaultSVG from '../../svg/DefaultSVG';
 import B2eSVG from '../../svg/b2eSVG';
 import B2bSVG from '../../svg/b2bSVG';
-import B2cSVG from '../../svg/b2cSVG';
+import CiamSVG from '../../svg/ciamSVG';
 import GuardianSVG from '../../svg/GuardianSVG';
 import WebtaskSVG from '../../svg/WebtaskSVG';
 import BreachedSVG from '../../svg/BreachedSVG';
@@ -45,7 +45,7 @@ class DropdownListItem extends Component {
     const logos = {
       webtask: <WebtaskSVG />,
       guardian: <GuardianSVG />,
-      b2c: <B2cSVG />,
+      ciam: <CiamSVG />,
       b2b: <B2bSVG />,
       b2e: <B2eSVG />,
       logoDefault: <DefaultSVG />,
