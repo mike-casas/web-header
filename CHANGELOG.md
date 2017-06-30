@@ -1,3 +1,12 @@
+<a name="4.0.22"></a>
+## 4.0.22 (2017-06-30)
+
+* new B2C logo (CIAM) + B2E logo ([5e24e48](https://github.com/auth0/web-header/commit/5e24e48))
+* Release patch ([60bd0ce](https://github.com/auth0/web-header/commit/60bd0ce))
+* Update installation step ([beb549e](https://github.com/auth0/web-header/commit/beb549e))
+
+
+
 <a name="4.0.21"></a>
 ## 4.0.21 (2017-06-27)
 
