@@ -170,11 +170,6 @@
             "href": "https://auth0.com/about"
           },
           {
-            "name": "Careers",
-            "id": "careers",
-            "href": "https://auth0.com/jobs"
-          },
-          {
             "name": "Customers",
             "id": "customers",
             "href": "https://auth0.com/customers"
@@ -188,6 +183,11 @@
             "name": "High Availability",
             "id": "availability",
             "href": "https://auth0.com/availability-trust"
+          },
+          {
+            "name": "Careers",
+            "id": "careers",
+            "href": "https://auth0.com/jobs"
           },
           {
             "name": "Press",
