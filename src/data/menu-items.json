@@ -117,7 +117,13 @@
               {
                 "name": "Retail",
                 "id": "retail",
-                "href": "https://auth0.com/learn/retail",
+                "href": "https://auth0.com/retail",
+                "external": true
+              },
+              {
+                "name": "B2B SaaS",
+                "id": "b2b-saas",
+                "href": "https://auth0.com/learn/b2b-saas",
                 "external": true
               },
               {
