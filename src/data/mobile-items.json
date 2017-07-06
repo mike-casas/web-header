@@ -1,5 +1,10 @@
 [
   {
+    "name": "About Us",
+    "id":  "about-us",
+    "href": "https://auth0.com/about"
+  },
+  {
     "name": "Customers",
     "id":  "customers",
     "href": "https://auth0.com/customers"
@@ -38,5 +43,10 @@
     "name": "Security",
     "id":  "security",
     "href": "https://auth0.com/security"
+  },
+  {
+    "name": "Careers",
+    "id":  "careers",
+    "href": "https://auth0.com/jobs"
   }
 ]

@@ -7,11 +7,24 @@
       {
         "componentType": "list",
         "title": "Modern Identity Platform",
-        "description": "The enterprise-grade platform for modern identity. <a href=\"https://auth0.com/how-it-works\" rel=\"external\">Read more</a>",
+        "description": "The enterprise-grade platform for modern identity.",
         "key": "platform-list",
-        "titleHref": "https://auth0.com/how-it-works",
         "twoColLayoutBig": true,
         "items": [
+          {
+            "name": "User Management",
+            "description": "The simplest and easiest to use tools to help administrators manage users.",
+            "id": "user-management",
+            "href": "https://auth0.com/user-management",
+            "icon": "userManagement"
+          },
+          {
+            "name": "Passwordless",
+            "description": "Allow users to login without the need to remember a password.",
+            "id": "passwordless",
+            "href": "https://auth0.com/passwordless",
+            "icon": "passwordless"
+          },
           {
             "name": "Lock",
             "description": "The Auth0 Login Box. Secure your websites and mobile apps.",
@@ -27,18 +40,18 @@
             "icon": "breached"
           },
           {
-            "name": "Passwordless",
-            "description": "Allow users to login without the need to remember a password.",
-            "id": "passwordless",
-            "href": "https://auth0.com/passwordless",
-            "icon": "passwordless"
-          },
-          {
             "name": "Multifactor Authentication",
             "description": "The most usable and friction-free multifactor authentication experience.",
             "id": "guardian",
             "href": "https://auth0.com/multifactor-authentication",
             "icon": "multifactor"
+          },
+          {
+            "name": "Wordpress plugin",
+            "description": "Connect WordPress to every login system on Earth. Really.",
+            "id": "wordpress",
+            "href": "https://auth0.com/wordpress",
+            "icon": "wordpress"
           }
         ]
       }
@@ -157,6 +170,11 @@
             "href": "https://auth0.com/about"
           },
           {
+            "name": "Careers",
+            "id": "careers",
+            "href": "https://auth0.com/jobs"
+          },
+          {
             "name": "Customers",
             "id": "customers",
             "href": "https://auth0.com/customers"
@@ -172,9 +190,9 @@
             "href": "https://auth0.com/availability-trust"
           },
           {
-            "name": "Careers",
-            "id": "careers",
-            "href": "https://auth0.com/jobs"
+            "name": "Press",
+            "id": "press",
+            "href": "https://auth0.com/press"
           }
         ]
       },
@@ -182,7 +200,6 @@
         "componentType": "list",
         "title": "Resources",
         "key": "resources-list",
-        "twoColLayout": true,
         "highlight": true,
         "titleHref": "https://auth0.com/resources",
         "external": true,
