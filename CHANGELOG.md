@@ -1,3 +1,11 @@
+<a name="4.0.23"></a>
+## 4.0.23 (2017-07-06)
+
+* added new options: user management, wordpress and press ([8b71dff](https://github.com/auth0/web-header/commit/8b71dff))
+* Release patch ([96a70bf](https://github.com/auth0/web-header/commit/96a70bf))
+
+
+
 <a name="4.0.22"></a>
 ## 4.0.22 (2017-06-30)
 
