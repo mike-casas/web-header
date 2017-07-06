@@ -1,3 +1,11 @@
+<a name="4.0.25"></a>
+## 4.0.25 (2017-07-06)
+
+* release patch ([b18e0a1](https://github.com/auth0/web-header/commit/b18e0a1))
+* update retail link and added b2b saas ([5021edf](https://github.com/auth0/web-header/commit/5021edf))
+
+
+
 <a name="4.0.24"></a>
 ## 4.0.24 (2017-07-06)
 
