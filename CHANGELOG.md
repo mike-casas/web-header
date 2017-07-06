@@ -1,3 +1,12 @@
+<a name="4.0.24"></a>
+## 4.0.24 (2017-07-06)
+
+* moved careers ([0040641](https://github.com/auth0/web-header/commit/0040641))
+* Release patch ([6d29c97](https://github.com/auth0/web-header/commit/6d29c97))
+* update margin platform items ([d789ca8](https://github.com/auth0/web-header/commit/d789ca8))
+
+
+
 <a name="4.0.23"></a>
 ## 4.0.23 (2017-07-06)
 
