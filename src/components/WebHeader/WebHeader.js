@@ -184,7 +184,7 @@ class WebHeader extends Component {
       signupButtonLink,
       this.closeDropdownOnButtonClick(signupButtonOnClick),
       signupButtonText,
-      'btn btn-success btn-sm signup-button'
+      `btn btn-success btn-sm ${cx('signup-button')}`
     );
     const talkToSalesButton = WebHeader.renderButton(
       talkToSalesButtonLink,

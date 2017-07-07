@@ -200,15 +200,17 @@
   +breakpoint("desktop")
     color #fff
 
-button[class$="signup-button"]
-  vertical-align top
+.signup-button {
+  vertical-align: top;
 
-  +breakpoint("desktop", "max")
-    width calc(50% - 5px)
-    font-size 12px !important
-    padding 15px 0 !important
-    line-height 1.5
-    margin-left 5px
+  +breakpoint("desktop", "max") {
+    font-size: 12px !important;
+    line-height: 1.5;
+    margin-left: 5px;
+    padding: 15px 0 !important;
+    width: calc(50% - 5px);
+  }
+}
 
 .menu-mobile
   background-color #F2F2F2
