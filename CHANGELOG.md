@@ -1,3 +1,11 @@
+<a name="4.0.26"></a>
+## 4.0.26 (2017-07-07)
+
+* Patch release ([8fec5d3](https://github.com/auth0/web-header/commit/8fec5d3))
+* fix: developers dropdown columns ([3f6ed70](https://github.com/auth0/web-header/commit/3f6ed70))
+
+
+
 <a name="4.0.25"></a>
 ## 4.0.25 (2017-07-06)
 
