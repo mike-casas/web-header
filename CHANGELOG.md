@@ -1,3 +1,11 @@
+<a name="4.0.27"></a>
+## 4.0.27 (2017-07-07)
+
+* Patch release ([b9e6b4d](https://github.com/auth0/web-header/commit/b9e6b4d))
+* fix: signup button custom class ([a29deac](https://github.com/auth0/web-header/commit/a29deac))
+
+
+
 <a name="4.0.26"></a>
 ## 4.0.26 (2017-07-07)
 
