@@ -8,7 +8,7 @@
   ul
     list-style-type none
     padding 0 20px 20px
-    
+
     +breakpoint("desktop")
       padding 15px 30px 25px
 
@@ -26,7 +26,7 @@
 .highlight
   background-color #F2F2F2
   height auto
-  
+
   +breakpoint("desktop", "max")
     display none
 
@@ -38,18 +38,18 @@
   ul
     clearfix()
     width 100%
-    
+
     flex-flow row wrap
     display flex
 
   li
     display block
     width 100%
-    
+
     +breakpoint("desktop")
       flex-basis 49.8%
       max-width 49.8%
-      
+
 .moreDropdownList
   +breakpoint("desktop")
     padding-left 12px
@@ -61,11 +61,11 @@
 
 .header-title
   padding 20px
-  
+
   +breakpoint("desktop")
     border-bottom 1px solid #DEDEDE
     padding 18px 30px 15px
-  
+
   .section-title
     border 0
     font-size 16px
@@ -75,15 +75,15 @@
     color black
     display inline-block
     position relative
-    
+
     +breakpoint("desktop")
       font-size 15px
       color #222
-      
+
     &.hasArrow
       padding-right 10px
       line-height 1.1
-      
+
       &:after
         content ""
         width 0
@@ -95,57 +95,57 @@
         top 50%
         transform translateY(-50%)
         left 100%
-  
+
   .section-description
     display none
     color rgba(black, .64)
-    
+
     +breakpoint("desktop")
       display block
 
 .twoColListBig.twoColListBig
   li
     margin-top 15px
-    
+
     +breakpoint("desktop", "max")
       &:first-child
         margin-top 0
-    
+
     +breakpoint("desktop")
       margin 10px 0 10px
       &:nth-child(odd)
         padding-right 30px
-    
+
     a
       height auto
       display block
       line-height 36px
-      
+
       +breakpoint("desktop")
         line-height 2
-      
+
       figure
         float left
         max-width 36px
         max-height 36px
-        
+
         +breakpoint("desktop")
           max-width 53px
           max-height 53px
           top 8px
-          
+
         svg
           width 36px
           height 36px
-          
+
           +breakpoint("desktop")
             width 53px
             height 53px
-      
+
       span
         +breakpoint("desktop")
           font-weight 500
-        
+
       p
         color rgba(#404040,.7)
         margin 0
@@ -153,13 +153,13 @@
         line-height 1.7
         font-size 14px
         margin 0
-        
+
         +breakpoint("desktop", "max")
           display none
 
 .multi-list
   clearfix()
-  
+
   .title-list
     color #838383
     font-size 12px
@@ -167,8 +167,8 @@
     line-height 36px
     font-weight 500
     display block
-  
-  // ul
-  //   float left
-  //   width 50%
-    
+
+  ul:not(:only-of-type) {
+    float: left;
+    width: 50%;
+  }
