@@ -7,7 +7,13 @@ const cx = styles::classNames;
 
 class FooterMobile extends Component {
   static propTypes = {
-    mobileLinks: PropTypes.object
+    mobileLinks: PropTypes.object,
+    onClick: PropTypes.func.isRequired
+  };
+
+  clickHandler = () => {
+    this.props.onClick();
+    return true;
   };
 
   render() {
@@ -16,7 +22,12 @@ class FooterMobile extends Component {
     const linkExternal = mobileLinks.external ? 'external' : null;
     return (
       <li>
-        <a className={cx('mobile-link')} href={mobileLinks.href} rel={linkExternal}>
+        <a
+          className={cx('mobile-link')}
+          onClick={this.clickHandler}
+          href={mobileLinks.href}
+          rel={linkExternal}
+        >
           {mobileLinks.name}
         </a>
       </li>

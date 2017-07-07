@@ -68,8 +68,12 @@ class WebHeader extends Component {
 
   static renderButton(link, onClick, text, className) {
     return link
-      ? <a href={link} className={className} onClick={onClick}>{text}</a>
-      : <button className={className} onClick={onClick}>{text}</button>;
+      ? <a href={link} className={className} onClick={onClick}>
+          {text}
+        </a>
+      : <button className={className} onClick={onClick}>
+          {text}
+        </button>;
   }
 
   state = {
@@ -200,7 +204,11 @@ class WebHeader extends Component {
     );
 
     const renderedMenuMobile = menuItemsMobile.map((mobileLinks, i) =>
-      <FooterMobile key={mobileLinks.id} mobileLinks={mobileLinks} />
+      <FooterMobile
+        onClick={this.navbarDropdownHandler}
+        key={mobileLinks.id}
+        mobileLinks={mobileLinks}
+      />
     );
 
     const renderedMenuItems = menuItems.map((item, i) =>
@@ -253,7 +261,6 @@ class WebHeader extends Component {
                   this.dropdownContent = _ref;
                 }}
               >
-
                 <nav className={cx('main-navigation')} role="navigation" aria-label="Main menu">
                   <ul className={cx('navigation')} role="menubar">
                     {children || renderedMenuItems}
@@ -273,7 +280,6 @@ class WebHeader extends Component {
                       {renderedMenuMobile}
                     </ul>
                   </div>
-
                 </nav>
 
                 <div
@@ -284,7 +290,6 @@ class WebHeader extends Component {
                   {loginButtonEnable && loginButton}
                   {signupButtonEnable && signupButton}
                 </div>
-
               </div>
             </div>
           </div>
