@@ -1,3 +1,12 @@
+<a name="4.0.28"></a>
+## 4.0.28 (2017-08-15)
+
+* Add b2b saas and media links ([a9c8cae](https://github.com/auth0/web-header/commit/a9c8cae))
+* Hide header when FooterMobile link is clicked ([35dced2](https://github.com/auth0/web-header/commit/35dced2))
+* Patch release ([0bb55fa](https://github.com/auth0/web-header/commit/0bb55fa))
+
+
+
 <a name="4.0.27"></a>
 ## 4.0.27 (2017-07-07)
 
