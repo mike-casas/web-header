@@ -123,7 +123,13 @@
               {
                 "name": "B2B SaaS",
                 "id": "b2b-saas",
-                "href": "https://auth0.com/learn/b2b-saas",
+                "href": "https://auth0.com/b2b-saas",
+                "external": true
+              },
+              {
+                "name": "Media",
+                "id": "media",
+                "href": "https://auth0.com/learn/media",
                 "external": true
               },
               {
