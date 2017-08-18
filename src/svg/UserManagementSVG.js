@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WordpressSVG = () =>
+const UserManagementSVG = () =>
   <svg height="53px" width="53px" version="1.1" viewBox="0 0 53 53">
     <g fill="none" stroke="none" strokeLinecap="square" strokeWidth="1">
       <g transform="translate(-195.000000, -258.000000)">
@@ -40,4 +40,4 @@ const WordpressSVG = () =>
     </g>
   </svg>;
 
-export default WordpressSVG;
+export default UserManagementSVG;

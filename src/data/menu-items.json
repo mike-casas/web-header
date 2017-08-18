@@ -45,13 +45,6 @@
             "id": "guardian",
             "href": "https://auth0.com/multifactor-authentication",
             "icon": "multifactor"
-          },
-          {
-            "name": "Wordpress plugin",
-            "description": "Connect WordPress to every login system on Earth. Really.",
-            "id": "wordpress",
-            "href": "https://auth0.com/wordpress",
-            "icon": "wordpress"
           }
         ]
       }

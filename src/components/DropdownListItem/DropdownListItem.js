@@ -18,7 +18,6 @@ import LockSVG from '../../svg/LockSVG';
 import MtmSVG from '../../svg/mtmSVG';
 import MultifactorSVG from '../../svg/MultifactorSVG';
 import PasswordlessSVG from '../../svg/PasswordlessSVG';
-import WordpressSVG from '../../svg/WordpressSVG';
 import UserManagementSVG from '../../svg/UserManagementSVG';
 
 const cx = styles::classNames;
@@ -59,7 +58,6 @@ class DropdownListItem extends Component {
       mtm: <MtmSVG />,
       multifactor: <MultifactorSVG />,
       passwordless: <PasswordlessSVG />,
-      wordpress: <WordpressSVG />,
       userManagement: <UserManagementSVG />
     };
     const linkExternal = item.external ? 'external' : null;
