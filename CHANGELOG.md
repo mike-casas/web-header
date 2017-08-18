@@ -1,3 +1,11 @@
+<a name="4.0.29"></a>
+## 4.0.29 (2017-08-18)
+
+* Remove wp link ([5928012](https://github.com/auth0/web-header/commit/5928012))
+* Trigger patch release ([e7507cf](https://github.com/auth0/web-header/commit/e7507cf))
+
+
+
 <a name="4.0.28"></a>
 ## 4.0.28 (2017-08-15)
 
