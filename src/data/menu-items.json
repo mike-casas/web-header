@@ -100,7 +100,7 @@
       },
       {
         "componentType": "list",
-        "title": "Solutions",
+        "title": "Use Auth0 in",
         "key": "solutions-list",
         "highlight": true,
         "subItems": [
