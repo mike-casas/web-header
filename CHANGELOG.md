@@ -1,3 +1,12 @@
+<a name="4.0.30"></a>
+## 4.0.30 (2017-09-07)
+
+* added initiatives column ([e0e677c](https://github.com/auth0/web-header/commit/e0e677c))
+* changed solutions sub title to use auth0 in ([9beb820](https://github.com/auth0/web-header/commit/9beb820))
+* Patch release ([beb5b43](https://github.com/auth0/web-header/commit/beb5b43))
+
+
+
 <a name="4.0.29"></a>
 ## 4.0.29 (2017-08-18)
 
