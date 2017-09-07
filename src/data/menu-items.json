@@ -144,6 +144,23 @@
                 "external": true
               }
             ]
+          },
+          {
+            "titleList": "INITIATIVES",
+            "items": [
+              {
+                "name": "App Modernization",
+                "id": "app-modernization",
+                "href": "https://auth0.com/app-modernization",
+                "external": true
+              },
+              {
+                "name": "GDPR",
+                "id": "gdpr-blog",
+                "href": "https://auth0.com/blog/get-ready-for-gdpr/",
+                "external": true
+              }
+            ]
           }
         ]
       }
