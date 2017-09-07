@@ -1,3 +1,11 @@
+<a name="4.0.31"></a>
+## 4.0.31 (2017-09-07)
+
+* Fix typo: Webinar => Webinars ([6ef8cba](https://github.com/auth0/web-header/commit/6ef8cba))
+* Trigger patch release ([e97b111](https://github.com/auth0/web-header/commit/e97b111))
+
+
+
 <a name="4.0.30"></a>
 ## 4.0.30 (2017-09-07)
 
