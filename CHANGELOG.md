@@ -1,3 +1,11 @@
+<a name="4.0.32"></a>
+## 4.0.32 (2017-09-13)
+
+* Add new featured message ([1886555](https://github.com/auth0/web-header/commit/1886555))
+* Trigger patch release ([041a08e](https://github.com/auth0/web-header/commit/041a08e))
+
+
+
 <a name="4.0.31"></a>
 ## 4.0.31 (2017-09-07)
 
