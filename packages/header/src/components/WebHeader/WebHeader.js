@@ -12,7 +12,7 @@ import defaultMenuItemsMobile from '../../data/mobile-items.json';
 import styles from './WebHeader.styl';
 import generateNewMenuItemsJson from '../../modules/update';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 const blogLastApi = 'https://auth0-marketing.run.webtask.io/last-blog-post';
 
 class WebHeader extends Component {
@@ -69,13 +69,15 @@ class WebHeader extends Component {
   };
 
   static renderButton(link, onClick, text, className) {
-    return link
-      ? <a href={link} className={className} onClick={onClick}>
-          {text}
-        </a>
-      : <button className={className} onClick={onClick}>
-          {text}
-        </button>;
+    return link ? (
+      <a href={link} className={className} onClick={onClick}>
+        {text}
+      </a>
+    ) : (
+      <button className={className} onClick={onClick}>
+        {text}
+      </button>
+    );
   }
 
   state = {
@@ -83,11 +85,20 @@ class WebHeader extends Component {
     notificationIsOpen: true,
     mobileState: true,
     menuItems: defaultMenuItems,
-    menuItemsMobile: defaultMenuItemsMobile
+    menuItemsMobile: defaultMenuItemsMobile,
+    loading: true
   };
 
   componentDidMount() {
     /* eslint-env browser */
+    const { headerMenuItemsInjector } = window;
+    const callback = items => this.injectMenuItems(items);
+    if (headerMenuItemsInjector) {
+      headerMenuItemsInjector.onMenuItemsLoad(callback);
+    } else {
+      window.headerMenuItemsInjectorCallback = callback;
+    }
+
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
     this.updateBlogPost();
@@ -100,6 +111,13 @@ class WebHeader extends Component {
   setHeightDropdown = () => {
     const height = this.state.mobileState ? `${window.innerHeight - 70}px` : '';
     this.dropdownContent.style.height = height;
+  };
+
+  injectMenuItems = items => {
+    this.setState({
+      menuItems: items,
+      loading: false
+    });
   };
 
   updateBlogPost = () => {
@@ -206,15 +224,15 @@ class WebHeader extends Component {
       cx('login-button', { 'login-button--dark': theme === 'dark' })
     );
 
-    const renderedMenuMobile = menuItemsMobile.map((mobileLinks, i) =>
+    const renderedMenuMobile = menuItemsMobile.map((mobileLinks, i) => (
       <FooterMobile
         onClick={this.navbarDropdownHandler}
         key={mobileLinks.id}
         mobileLinks={mobileLinks}
       />
-    );
+    ));
 
-    const renderedMenuItems = menuItems.map((item, i) =>
+    const renderedMenuItems = menuItems.map((item, i) => (
       <Item
         key={i + item.id}
         item={item}
@@ -223,11 +241,11 @@ class WebHeader extends Component {
         closeHeaderDropdown={this.closeDropdownOnButtonClick()}
         mobile={mobileState}
       />
-    );
+    ));
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <header className={cx('header-main', { 'is-notification-open': notificationIsOpen })}>
-        {featuredEnable &&
+        {featuredEnable && (
           <FeaturedHead
             iconColor={featuredIconColor}
             link={featuredLink}
@@ -238,7 +256,8 @@ class WebHeader extends Component {
             notificationOpen={notificationIsOpen}
             theme={theme}
             closeNotificationHandler={this.notificationHandler}
-          />}
+          />
+        )}
 
         <div
           className={cx('header', [`theme-${theme}`], className, {
@@ -279,9 +298,7 @@ class WebHeader extends Component {
                   <div className={cx('menu-mobile')}>
                     {talkToSalesButtonEnable && talkToSalesButton}
 
-                    <ul>
-                      {renderedMenuMobile}
-                    </ul>
+                    <ul>{renderedMenuMobile}</ul>
                   </div>
                 </nav>
 
