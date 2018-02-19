@@ -1,5 +1,5 @@
 {
-  "name": "@auth0/header",
+  "name": "@auth0/web-header",
   "version": "4.1.5",
   "description": "Auth0's website and landings header",
   "main": "build/web-header.js",
