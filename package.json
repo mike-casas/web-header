@@ -6,6 +6,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    "build": "yarn run build:injector",
+    "build:injector": "rollup -c packages/menu-items-injector/rollup.config.js",
     "test": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint .",

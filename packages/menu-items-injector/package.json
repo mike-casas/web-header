@@ -1,7 +1,4 @@
 {
   "name": "@auth0/menu-items-injector",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "rollup -c"
-  }
+  "version": "1.0.0"
 }
