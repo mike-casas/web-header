@@ -13,9 +13,7 @@
     "build:heroku": "NODE_ENV=production webpack --config ./tools/webpack/webpack.playground.config.babel.js",
     "heroku-postbuild": "npm run build:heroku",
     "start:dev": "NODE_ENV=development babel-node ./tools/tasks/start.js",
-    "prepublish": "NODE_ENV=production npm run build -- --bail",
-    "lint:js": "eslint .",
-    "lint": "npm run lint:js"
+    "prepublish": "NODE_ENV=production npm run build -- --bail"
   },
   "repository": {
     "type": "git",
