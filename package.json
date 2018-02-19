@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage",
     "lint": "eslint .",
     "precommit": "lint-staged"
   },
@@ -35,7 +36,6 @@
     ]
   },
   "jest": {
-    "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.js",
       "!**/node_modules/**",

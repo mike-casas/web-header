@@ -1,4 +1,4 @@
-import menuItemsInjectorInitializer from '../';
+import init from '../';
 
 describe('menu-items-injector', () => {
   let window;
@@ -7,7 +7,15 @@ describe('menu-items-injector', () => {
     window = {};
   });
 
-  describe('on init', () => {});
-
-  describe('when the header bundle loaded first', () => {});
+  describe('on init', () => {
+    beforeEach(() => {
+      init(window);
+    });
+    it('loads the menu itmes injector', () => {
+      expect(window.headerMenuItemsInjector).toBeTruthy();
+    });
+    it('loads the menu itmes injector callback', () => {
+      expect(window.headerMenuItemsInjector).toBeTruthy();
+    });
+  });
 });
