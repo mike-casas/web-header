@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './FeaturedHead.styl';
 import getFeaturedVariant from '../../modules/featured';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
 let featuredVariant = getFeaturedVariant();
 
@@ -67,9 +67,7 @@ class FeaturedHead extends Component {
             <span className={cx('featured-description')}>
               {description || featuredVariant.description}
             </span>
-            <span className={cx('featured-more')}>
-              {cta || featuredVariant.cta}
-            </span>
+            <span className={cx('featured-more')}>{cta || featuredVariant.cta}</span>
           </a>
           <button
             type="button"

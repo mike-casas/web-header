@@ -1,15 +1,27 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "modules": false
-      }
-    ]
-  ],
+  "presets": ["env", "react"],
+  "plugins": ["transform-export-extensions", "transform-class-properties"],
   "env": {
-    "test": {
-      "presets": ["env"]
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ],
+        "react"
+      ],
+      "plugins": ["transform-export-extensions", "transform-class-properties"]
+    },
+    "development": {
+      "plugins": [
+        "transform-export-extensions",
+        "transform-class-properties",
+        "react-hot-loader/babel",
+        "transform-react-jsx-source",
+        "transform-react-jsx-self"
+      ]
     }
   }
 }

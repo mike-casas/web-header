@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './DropdownHighlight.styl';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
-const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
+const DropdownHighlight = ({ data, parentClass, closeDropdowns }) => (
   <div
     className={cx({
       highlight: parentClass !== 'moreDropdown',
       moreHighlight: parentClass === 'moreDropdown'
     })}
   >
-    {data.componentTitle
-      ? <h4
-          className={cx('section-title')}
-          dangerouslySetInnerHTML={{ __html: data.componentTitle }}
-        />
-      : null}
+    {data.componentTitle ? (
+      <h4
+        className={cx('section-title')}
+        dangerouslySetInnerHTML={{ __html: data.componentTitle }}
+      />
+    ) : null}
     <a
       href={data.link}
       onClick={closeDropdowns}
@@ -30,7 +30,7 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
       {data.date ? <span className={cx('time')}>{data.date}</span> : null}
     </a>
     <div className={cx('content')}>
-      {(data.morelinks || []).map(({ href, text, external }, index) =>
+      {(data.morelinks || []).map(({ href, text, external }, index) => (
         <a
           href={href}
           className={cx('link')}
@@ -40,9 +40,10 @@ const DropdownHighlight = ({ data, parentClass, closeDropdowns }) =>
         >
           {text}
         </a>
-      )}
+      ))}
     </div>
-  </div>;
+  </div>
+);
 
 DropdownHighlight.propTypes = {
   data: PropTypes.object,

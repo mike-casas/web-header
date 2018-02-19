@@ -5,9 +5,9 @@ import DropdownListItem from '../DropdownListItem';
 import FooterList from '../FooterList';
 import styles from './DropdownList.styl';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
-const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =>
+const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) => (
   <div
     className={cx('dropdownList', {
       moreDropdownList: parentClass === 'moreDropdown',
@@ -17,74 +17,68 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
       highlight: data.highlight
     })}
   >
-    {data.title
-      ? <header className={cx('header-title')}>
-          {data.titleHref
-            ? <a
-                className={cx('section-title', { hasArrow: data.titleHref })}
-                href={data.titleHref}
-              >
-                {data.title}
-              </a>
-            : <h4 className={cx('section-title')}>{data.title}</h4>}
-          {data.description
-            ? <span
-                className={cx('section-description')}
-                dangerouslySetInnerHTML={{ __html: data.description }}
-              />
-            : null}
-        </header>
-      : null}
-    {data.subItems
-      ? <div className={cx('multi-list')}>
-          {data.subItems.map(subItem =>
-            <ul role="menubar" key={subItem.titleList}>
+    {data.title ? (
+      <header className={cx('header-title')}>
+        {data.titleHref ? (
+          <a className={cx('section-title', { hasArrow: data.titleHref })} href={data.titleHref}>
+            {data.title}
+          </a>
+        ) : (
+          <h4 className={cx('section-title')}>{data.title}</h4>
+        )}
+        {data.description ? (
+          <span
+            className={cx('section-description')}
+            dangerouslySetInnerHTML={{ __html: data.description }}
+          />
+        ) : null}
+      </header>
+    ) : null}
+    {data.subItems ? (
+      <div className={cx('multi-list')}>
+        {data.subItems.map(subItem => (
+          <ul role="menubar" key={subItem.titleList}>
+            {subItem.titleList ? (
+              <span className={cx('title-list')}>{subItem.titleList}</span>
+            ) : null}
 
-              {subItem.titleList
-                ? <span className={cx('title-list')}>
-                    {subItem.titleList}
-                  </span>
-                : null}
-
-              {(subItem.items || [])
-                .map(item =>
-                  <DropdownListItem
-                    key={item.id}
-                    item={item}
-                    highlightHandler={highlightHandler}
-                    hasArrow={subItem.hasArrows}
-                    parentClass={parentClass}
-                    closeDropdowns={closeDropdowns}
-                  />
-                )}
-            </ul>
-          )}
-        </div>
-      : null}
-    {data.items
-      ? <ul role="menubar">
-          {(data.items || [])
-            .map(item =>
+            {(subItem.items || []).map(item => (
               <DropdownListItem
                 key={item.id}
                 item={item}
                 highlightHandler={highlightHandler}
-                hasArrow={data.hasArrows}
+                hasArrow={subItem.hasArrows}
                 parentClass={parentClass}
                 closeDropdowns={closeDropdowns}
               />
-            )}
-        </ul>
-      : null}
-    {data.footerLinks
-      ? <footer className={cx('footer-list')}>
-          {data.footerLinks.map(footer =>
-            <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
-          )}
-        </footer>
-      : null}
-
-  </div>;
+            ))}
+          </ul>
+        ))}
+      </div>
+    ) : null}
+    {data.items ? (
+      <ul role="menubar">
+        {(data.items || []).map(item => (
+          <DropdownListItem
+            key={item.id}
+            item={item}
+            highlightHandler={highlightHandler}
+            hasArrow={data.hasArrows}
+            parentClass={parentClass}
+            closeDropdowns={closeDropdowns}
+          />
+        ))}
+      </ul>
+    ) : null}
+    {data.footerLinks ? (
+      <footer className={cx('footer-list')}>
+        {data.footerLinks.map(footer => (
+          <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
+        ))}
+      </footer>
+    ) : null}
+  </div>
+);
 
 DropdownList.propTypes = {
   data: PropTypes.object,

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Head.styl';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
-const Head = ({ toggleDropdownHandler, dropdownOpen, theme, closeHeaderDropdown }) =>
+const Head = ({ toggleDropdownHandler, dropdownOpen, theme, closeHeaderDropdown }) => (
   <div
     className={cx('head', [`theme-${theme}`], {
       dropdownOpen
@@ -27,7 +27,8 @@ const Head = ({ toggleDropdownHandler, dropdownOpen, theme, closeHeaderDropdown 
         <span>Auth0</span>
       </a>
     </h1>
-  </div>;
+  </div>
+);
 
 Head.propTypes = {
   toggleDropdownHandler: PropTypes.func,

@@ -8,7 +8,7 @@ import ProductsSVG from '../../svg/ProductsSVG';
 import BlogSVG from '../../svg/BlogSVG';
 import ExtendSVG from '../../svg/ExtendSVG';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
 class FooterList extends Component {
   static propTypes = {

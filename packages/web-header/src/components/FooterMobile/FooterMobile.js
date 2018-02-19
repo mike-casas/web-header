@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './FooterMobile.styl';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
 class FooterMobile extends Component {
   static propTypes = {

@@ -6,7 +6,7 @@ import DropdownHighlight from '../DropdownHighlight';
 import FooterList from '../FooterList';
 import styles from './Dropdown.styl';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
 class Dropdown extends Component {
   static propTypes = {
@@ -83,13 +83,13 @@ class Dropdown extends Component {
           }
         })}
 
-        {data.footerLinks
-          ? <footer className={cx('footer-list', { 'footer-highlight': data.footerHighlight })}>
-              {data.footerLinks.map(footer =>
-                <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
-              )}
-            </footer>
-          : null}
+        {data.footerLinks ? (
+          <footer className={cx('footer-list', { 'footer-highlight': data.footerHighlight })}>
+            {data.footerLinks.map(footer => (
+              <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
+            ))}
+          </footer>
+        ) : null}
       </div>
     );
   }

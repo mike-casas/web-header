@@ -21,7 +21,7 @@ import PasswordlessSVG from '../../svg/PasswordlessSVG';
 import UserManagementSVG from '../../svg/UserManagementSVG';
 import SingleSignOnSVG from '../../svg/SingleSignOnSVG';
 
-const cx = styles::classNames;
+const cx = classNames.bind(styles);
 
 class DropdownListItem extends Component {
   static propTypes = {
@@ -78,7 +78,6 @@ class DropdownListItem extends Component {
         }}
         role="menuitem"
       >
-
         <a
           className={cx(item.customClass || '')}
           href={item.href}
