@@ -1,3 +1,4 @@
+import fs from 'fs';
 import menuItems from '../../default-menu-items/menu-items.json';
 
 class MenuItemsInjector {
