@@ -1,0 +1,143 @@
+@import '../../styles/base'
+
+.item
+  margin 0
+  
+  +breakpoint("desktop", "max")
+    border-top 1px solid rgba(black, .10)
+    
+    &:first-child
+      border-top 0
+
+  +breakpoint("desktop")
+    display inline-block
+    text-align left
+    margin 0 15px
+
+  &.simple-list
+    position relative
+
+.link
+  cursor pointer
+  padding 20px
+  position relative
+  text-decoration none
+  display block
+  font-size 16px
+  color black
+  
+  +breakpoint("desktop", "max")
+    font-weight 500
+    &:hover
+      color black
+    
+    a&
+      .text
+        padding-right 10px
+        position relative
+        
+        &:after
+          content ""
+          width 0
+          height 0
+          border-style solid
+          border-width 5px 0 5px 6px
+          border-color transparent transparent transparent #eb5224
+          position absolute
+          top 50%
+          transform translateY(-50%)
+          left 100%
+
+  +breakpoint("desktop")
+    color currentColor
+    font-size 14px
+    margin 0
+    padding 0
+    line-height 31px
+    
+    > span
+      padding 30px 0
+
+  .item-more &
+    +breakpoint("desktop", "max")
+      display none
+
+  .item.is-dropdown-open &
+    color $navbar-default-link-hover-color
+
+.text
+  .item.theme-dark &
+    +breakpoint("desktop")
+      color darken(white, 25%)
+
+  .item.is-dropdown-open.theme-dark &
+    +breakpoint("desktop")
+      color $gray-lighter
+
+.item-caret
+  display none
+
+  .item.theme-dark & path
+    +breakpoint("desktop")
+      fill darken(white, 25%)
+
+  .item.is-dropdown-open.theme-dark & path
+    +breakpoint("desktop")
+      fill $gray-lighter
+
+  +breakpoint("desktop")
+    display inline-block
+    font-size 10px
+    margin-left 6px
+    position relative
+    bottom 2px
+
+.dropdown-caret
+  display inline-block
+  height 12px
+  left 50%
+  margin-top 0
+  overflow hidden
+  position absolute
+  text-align center
+  top 20px
+  transform translateX(-50%)
+  transition margin-top .2s
+  width 20px
+  z-index 1100
+
+  &:after
+    background-color white
+    box-shadow 0 0 4px rgba(black, .25)
+    content ''
+    display inline-block
+    height 12px
+    opacity 0
+    transform rotate(45deg)
+    transition visibility 0s .2s, opacity .2s
+    visibility hidden
+    width 12px
+
+  .item.is-dropdown-open &
+    +breakpoint("desktop")
+      margin-top 20px
+
+      &:after
+        opacity 1
+        visibility visible
+        transition-delay 0s
+
+.item-why-auth0,
+.item-developers
+  +breakpoint("desktop", "max")
+    display none
+
+.item-platform
+  .link
+    +breakpoint("desktop", "max")
+      display none
+
+.item-solutions
+  .link
+    +breakpoint("desktop", "max")
+      padding-bottom 9px

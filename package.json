@@ -1,0 +1,9 @@
+{
+  "name": "header",
+  "version": "1.0.0",
+  "description": "Header monorepo",
+  "repository": "git@github.com:auth0/header.git",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": ["packages/*"]
+}

@@ -1,0 +1,177 @@
+@import '../../styles/base'
+
+.dropdownList
+  float left
+  width 100%
+  height 100%
+
+  ul
+    list-style-type none
+    padding 0 20px 20px
+
+    +breakpoint("desktop")
+      padding 15px 30px 25px
+    
+      &+ul
+        padding-left 0
+
+  +breakpoint("desktop", "max")
+    float none
+    width 100%
+    margin 0
+    height auto
+    padding 0
+
+
+.stackedList
+  height: auto;
+
+.highlight
+  background-color #F2F2F2
+  height auto
+
+  +breakpoint("desktop", "max")
+    display none
+
+.twoColList,
+.twoColListBig
+  +breakpoint("desktop")
+    width 100%
+
+  ul
+    clearfix()
+    width 100%
+
+    flex-flow row wrap
+    display flex
+
+  li
+    display block
+    width 100%
+
+    +breakpoint("desktop")
+      flex-basis 49.8%
+      max-width 49.8%
+
+.moreDropdownList
+  +breakpoint("desktop")
+    padding-left 12px
+    padding-right 12px
+    width 150px
+
+    &:first-child
+      padding-left 20px
+
+.header-title
+  padding 20px
+
+  +breakpoint("desktop")
+    border-bottom 1px solid #DEDEDE
+    padding 18px 30px 15px
+
+  .section-title
+    border 0
+    font-size 16px
+    padding-bottom 0
+    margin 0
+    font-weight 500
+    color black
+    display inline-block
+    position relative
+
+    +breakpoint("desktop")
+      font-size 15px
+      color #222
+
+    &.hasArrow
+      padding-right 10px
+      line-height 1.1
+
+      &:after
+        content ""
+        width 0
+        height 0
+        border-style solid
+        border-width 5px 0 5px 6px
+        border-color transparent transparent transparent #eb5224
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        left 100%
+
+  .section-description
+    display none
+    color rgba(black, .64)
+
+    +breakpoint("desktop")
+      display block
+
+.twoColListBig.twoColListBig
+  li
+    margin-top 15px
+
+    +breakpoint("desktop", "max")
+      &:first-child
+        margin-top 0
+
+    +breakpoint("desktop")
+      margin 10px 0 10px
+      &:nth-child(odd)
+        padding-right 30px
+
+    a
+      height auto
+      display block
+      line-height 36px
+
+      +breakpoint("desktop")
+        line-height 2
+
+      figure
+        float left
+        max-width 36px
+        max-height 36px
+
+        +breakpoint("desktop")
+          max-width 53px
+          max-height 53px
+          top 8px
+
+        svg
+          width 36px
+          height 36px
+
+          +breakpoint("desktop")
+            width 53px
+            height 53px
+
+      span
+        +breakpoint("desktop")
+          font-weight 500
+
+      p
+        color rgba(#404040,.7)
+        margin 0
+        padding-left 66px
+        line-height 1.7
+        font-size 14px
+        margin 0
+
+        +breakpoint("desktop", "max")
+          display none
+
+.multi-list
+  clearfix()
+
+  .title-list
+    color #838383
+    font-size 12px
+    letter-spacing 1px
+    line-height 36px
+    font-weight 500
+    display block
+
+  ul:not(:only-of-type) {
+    float: left;
+    width: 50%;
+  }
