@@ -5,5 +5,13 @@
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": ["tools/**/*.js", "**/*.spec.js"]
     }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["packages/*/src/**/__test__/**/*.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
