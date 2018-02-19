@@ -7,15 +7,57 @@ describe('menu-items-injector', () => {
     window = {};
   });
 
-  describe('on init', () => {
-    beforeEach(() => {
-      init(window);
+  describe('init', () => {
+    let headerMenuItemsInjector;
+    let headerMenuItemsInjectorCallback;
+
+    describe('normal flow', () => {
+      beforeEach(() => {
+        init(window);
+        headerMenuItemsInjector = window.headerMenuItemsInjector;
+      });
+
+      it('should load the menu itmes injector', () => {
+        expect(headerMenuItemsInjector).toBeTruthy();
+      });
+
+      it('should load the menu itmes injector callback', () => {
+        expect(headerMenuItemsInjector.onMenuItemsLoad).toBeTruthy();
+      });
+
+      it('should load the menu itmes', () => {
+        expect(headerMenuItemsInjector.menuItems).toBeTruthy();
+      });
     });
-    it('loads the menu itmes injector', () => {
-      expect(window.headerMenuItemsInjector).toBeTruthy();
+
+    describe('when the header bundle loads first', () => {
+      beforeEach(() => {
+        window.headerMenuItemsInjectorCallback = headerMenuItemsInjectorCallback = jest.fn();
+        init(window);
+      });
+
+      it('should call the callback to inject items to the header', () => {
+        expect(headerMenuItemsInjectorCallback).toBeCalledWith(headerMenuItemsInjector.menuItems);
+      });
     });
-    it('loads the menu itmes injector callback', () => {
-      expect(window.headerMenuItemsInjector).toBeTruthy();
+  });
+
+  describe('onMenuItemsLoad', () => {
+    let headerMenuItemsInjector;
+    let headerMenuItemsInjectorCallback;
+    let callback;
+
+    describe('normal flow', () => {
+      beforeEach(() => {
+        callback = jest.fn();
+        init(window);
+        headerMenuItemsInjector = window.headerMenuItemsInjector;
+        headerMenuItemsInjector.onMenuItemsLoad(callback);
+      });
+
+      it('should load the menu itmes injector', () => {
+        expect(callback).toBeCalledWith(headerMenuItemsInjector.menuItems);
+      });
     });
   });
 });

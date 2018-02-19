@@ -1,13 +1,16 @@
-import menuItems from '../../default-menu-items/menu-items.json';
+import defaultMenuItems from '../../default-menu-items/menu-items.json';
 
 class MenuItemsInjector {
+  constructor(menuItems) {
+    this.menuItems = menuItems;
+  }
   onMenuItemsLoad(callback) {
-    callback(menuItems);
+    callback(this.menuItems);
   }
 }
 
 export default function init(window) {
-  const headerMenuItemsInjector = new MenuItemsInjector();
+  const headerMenuItemsInjector = new MenuItemsInjector(defaultMenuItems);
   const { headerMenuItemsInjectorCallback } = window;
   if (headerMenuItemsInjectorCallback) {
     headerMenuItemsInjector.onMenuItemsLoad(headerMenuItemsInjectorCallback);
