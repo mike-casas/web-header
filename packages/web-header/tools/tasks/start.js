@@ -23,6 +23,8 @@ app.use(
   })
 );
 
+app.use('/injector', express.static(path.join(__dirname, '../../../menu-items-injector/build')));
+
 app.use(hotMiddleware(compiler));
 
 app.use('*', (req, res, next) => {
@@ -32,7 +34,10 @@ app.use('*', (req, res, next) => {
   compiler.outputFileSystem.readFile(filename, (err, result) => {
     if (err) return next(err);
 
-    return res.set('content-type', 'text/html').send(result).end();
+    return res
+      .set('content-type', 'text/html')
+      .send(result)
+      .end();
   });
 });
 

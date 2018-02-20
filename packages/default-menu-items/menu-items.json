@@ -4,7 +4,7 @@
       "name": "Platform",
       "id": "platform",
       "dropdownClass": "platformDropdown",
-      "children": [
+      "childrens": [
         {
           "componentType": "list",
           "title": "Modern Identity Platform",
@@ -73,7 +73,7 @@
       "id": "solutions",
       "dropdownClass": "solutionsDropdown",
       "twoBlockLayout": true,
-      "children": [
+      "childrens": [
         {
           "componentType": "list",
           "title": "Use Cases",
@@ -188,7 +188,7 @@
       "id": "why-auth0",
       "dropdownClass": "whyDropdown",
       "twoBlockLayout": true,
-      "children": [
+      "childrens": [
         {
           "componentType": "list",
           "title": "Company",
@@ -288,7 +288,7 @@
       "id": "developers",
       "dropdownClass": "developersDropdown",
       "twoBlockLayout": true,
-      "children": [
+      "childrens": [
         {
           "componentType": "list",
           "title": "Documentation",

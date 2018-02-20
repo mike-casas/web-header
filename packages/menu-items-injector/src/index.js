@@ -5,16 +5,16 @@ class MenuItemsInjector {
     this.menuItems = menuItems;
   }
   onMenuItemsLoad(callback) {
-    callback(this.menuItems);
+    callback(this.menuItems.sections);
   }
 }
 
 export default function init(window) {
-  const headerMenuItemsInjector = new MenuItemsInjector(defaultMenuItems);
+  const headerMenuItemsInjector = (window.headerMenuItemsInjector = new MenuItemsInjector(
+    defaultMenuItems
+  ));
   const { headerMenuItemsInjectorCallback } = window;
   if (headerMenuItemsInjectorCallback) {
     headerMenuItemsInjector.onMenuItemsLoad(headerMenuItemsInjectorCallback);
   }
-
-  window.headerMenuItemsInjector = headerMenuItemsInjector;
 }
