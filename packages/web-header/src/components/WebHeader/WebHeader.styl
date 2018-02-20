@@ -14,6 +14,29 @@
   p
     font-size 14px
 
+  :global(.loading) {
+    color: transparent !important;
+    background-color: black;
+    opacity: 0.1;
+    border-radius: 3px;
+    animation: pulse 1.5s infinite;
+    user-select: none;
+    cursor: default;
+
+    & > * {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.07;
+    }
+  }
+
 .header
   background-color white
   border-bottom 1px solid rgba(black, 0.1)

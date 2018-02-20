@@ -12,7 +12,8 @@ class Dropdown extends Component {
   static propTypes = {
     data: PropTypes.object,
     closeDropdowns: PropTypes.func,
-    open: PropTypes.bool
+    open: PropTypes.bool,
+    loading: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -47,7 +48,7 @@ class Dropdown extends Component {
   };
 
   render() {
-    const { data, closeDropdowns, open } = this.props;
+    const { data, closeDropdowns, open, loading } = this.props;
 
     return (
       <div
@@ -67,6 +68,7 @@ class Dropdown extends Component {
                   parentClass={data.dropdownClass}
                   highlightHandler={this.highlightHandler}
                   closeDropdowns={closeDropdowns}
+                  loading={loading}
                 />
               );
             case 'highlight':
@@ -76,6 +78,7 @@ class Dropdown extends Component {
                   data={this.state.highlight}
                   parentClass={data.dropdownClass}
                   closeDropdowns={closeDropdowns}
+                  loading={loading}
                 />
               );
             default:
@@ -86,7 +89,12 @@ class Dropdown extends Component {
         {data.footerLinks ? (
           <footer className={cx('footer-list', { 'footer-highlight': data.footerHighlight })}>
             {data.footerLinks.map(footer => (
-              <FooterList key={footer.id} footer={footer} closeDropdowns={closeDropdowns} />
+              <FooterList
+                key={footer.id}
+                footer={footer}
+                closeDropdowns={closeDropdowns}
+                loading={loading}
+              />
             ))}
           </footer>
         ) : null}

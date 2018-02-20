@@ -11,7 +11,7 @@
 
     +breakpoint("desktop")
       padding 15px 30px 25px
-    
+
       &+ul
         padding-left 0
 
@@ -84,7 +84,6 @@
       color #222
 
     &.hasArrow
-      padding-right 10px
       line-height 1.1
 
       &:after
@@ -97,6 +96,7 @@
         position absolute
         top 50%
         transform translateY(-50%)
+        margin-left 10px
         left 100%
 
   .section-description
@@ -151,11 +151,11 @@
 
       p
         color rgba(#404040,.7)
-        margin 0
-        padding-left 66px
+        margin-left 66px
         line-height 1.7
         font-size 14px
-        margin 0
+        margin-top: 0;
+        margin-bottom: 0;
 
         +breakpoint("desktop", "max")
           display none

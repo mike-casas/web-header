@@ -202,7 +202,8 @@ class WebHeader extends Component {
       focusable,
       menuItems,
       menuItemsMobile,
-      notificationIsOpen
+      notificationIsOpen,
+      loading
     } = this.state;
 
     const signupButton = WebHeader.renderButton(
@@ -240,6 +241,7 @@ class WebHeader extends Component {
         simpleList={item.simpleList}
         closeHeaderDropdown={this.closeDropdownOnButtonClick()}
         mobile={mobileState}
+        loading={loading}
       />
     ));
     /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -256,6 +258,7 @@ class WebHeader extends Component {
             notificationOpen={notificationIsOpen}
             theme={theme}
             closeNotificationHandler={this.notificationHandler}
+            loading={loading}
           />
         )}
 

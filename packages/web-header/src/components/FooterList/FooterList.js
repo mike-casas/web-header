@@ -13,11 +13,12 @@ const cx = classNames.bind(styles);
 class FooterList extends Component {
   static propTypes = {
     footer: PropTypes.object,
-    closeDropdowns: PropTypes.func
+    closeDropdowns: PropTypes.func,
+    loading: PropTypes.bool.isRequired
   };
 
   render() {
-    const { footer, closeDropdowns } = this.props;
+    const { footer, closeDropdowns, loading } = this.props;
     const logos = {
       pricing: <PricingSVG />,
       products: <ProductsSVG />,
@@ -33,8 +34,11 @@ class FooterList extends Component {
         onClick={closeDropdowns}
         rel={linkExternal}
       >
-        {footer.icon ? <span className={cx('icon')}>{logos[footer.icon]}</span> : null}
-        <span className={cx('text')} dangerouslySetInnerHTML={{ __html: footer.name }} />
+        {footer.icon ? <span className={cx('icon', { loading })}>{logos[footer.icon]}</span> : null}
+        <span
+          className={cx('text', { loading })}
+          dangerouslySetInnerHTML={{ __html: footer.name }}
+        />
       </a>
     );
   }

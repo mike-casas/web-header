@@ -18,7 +18,8 @@ class FeaturedHead extends Component {
     theme: PropTypes.string,
     dropdownOpen: PropTypes.bool,
     notificationOpen: PropTypes.bool,
-    closeNotificationHandler: PropTypes.func
+    closeNotificationHandler: PropTypes.func,
+    loading: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -43,7 +44,8 @@ class FeaturedHead extends Component {
       theme,
       dropdownOpen,
       notificationOpen,
-      closeNotificationHandler
+      closeNotificationHandler,
+      loading
     } = this.props;
 
     return (
@@ -57,17 +59,17 @@ class FeaturedHead extends Component {
               }}
             />
             <span
-              className={cx('featured-title')}
+              className={cx('featured-title', { loading })}
               style={{
                 color: iconColor || featuredVariant.iconColor
               }}
             >
               {title || featuredVariant.title}
             </span>
-            <span className={cx('featured-description')}>
+            <span className={cx('featured-description', { loading })}>
               {description || featuredVariant.description}
             </span>
-            <span className={cx('featured-more')}>{cta || featuredVariant.cta}</span>
+            <span className={cx('featured-more', { loading })}>{cta || featuredVariant.cta}</span>
           </a>
           <button
             type="button"

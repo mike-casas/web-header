@@ -29,7 +29,8 @@ class DropdownListItem extends Component {
     highlightHandler: PropTypes.func,
     hasArrow: PropTypes.bool,
     parentClass: PropTypes.string,
-    closeDropdowns: PropTypes.func
+    closeDropdowns: PropTypes.func,
+    loading: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -42,7 +43,7 @@ class DropdownListItem extends Component {
   }
 
   render() {
-    const { hasArrow, parentClass, highlightHandler, item, closeDropdowns } = this.props;
+    const { hasArrow, parentClass, highlightHandler, item, closeDropdowns, loading } = this.props;
     const logos = {
       webtask: <WebtaskSVG />,
       guardian: <GuardianSVG />,
@@ -84,13 +85,19 @@ class DropdownListItem extends Component {
           onClick={closeDropdowns}
           rel={linkExternal}
         >
-          {item.icon ? <figure className={cx('icon')}>{logos[item.icon]}</figure> : null}
+          {item.icon ? (
+            <figure className={cx('icon', { loading })}>{logos[item.icon]}</figure>
+          ) : null}
           <span className={cx('text')}>
-            {item.name}
+            <span className={cx({ loading })}>{item.name}</span>
 
-            {item.prefix ? <span className={cx('itemPrefix')}>{item.prefix}</span> : null}
+            {item.prefix ? (
+              <span className={cx('itemPrefix', { loading })}>{item.prefix}</span>
+            ) : null}
           </span>
-          {item.description ? <p className={cx('item-description')}>{item.description}</p> : null}
+          {item.description ? (
+            <p className={cx('item-description', { loading })}>{item.description}</p>
+          ) : null}
         </a>
       </li>
     );

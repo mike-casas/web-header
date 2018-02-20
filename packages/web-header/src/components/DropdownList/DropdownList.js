@@ -7,7 +7,7 @@ import styles from './DropdownList.styl';
 
 const cx = classNames.bind(styles);
 
-const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) => (
+const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns, loading }) => (
   <div
     className={cx('dropdownList', {
       moreDropdownList: parentClass === 'moreDropdown',
@@ -20,15 +20,18 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
     {data.title ? (
       <header className={cx('header-title')}>
         {data.titleHref ? (
-          <a className={cx('section-title', { hasArrow: data.titleHref })} href={data.titleHref}>
+          <a
+            className={cx('section-title', { hasArrow: data.titleHref, loading })}
+            href={data.titleHref}
+          >
             {data.title}
           </a>
         ) : (
-          <h4 className={cx('section-title')}>{data.title}</h4>
+          <h4 className={cx('section-title', { loading })}>{data.title}</h4>
         )}
         {data.description ? (
           <span
-            className={cx('section-description')}
+            className={cx('section-description', { loading })}
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
         ) : null}
@@ -39,7 +42,7 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
         {data.subItems.map(subItem => (
           <ul role="menubar" key={subItem.titleList}>
             {subItem.titleList ? (
-              <span className={cx('title-list')}>{subItem.titleList}</span>
+              <span className={cx('title-list', { loading })}>{subItem.titleList}</span>
             ) : null}
 
             {(subItem.items || []).map(item => (
@@ -50,6 +53,7 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
                 hasArrow={subItem.hasArrows}
                 parentClass={parentClass}
                 closeDropdowns={closeDropdowns}
+                loading={loading}
               />
             ))}
           </ul>
@@ -66,6 +70,7 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns }) =
             hasArrow={data.hasArrows}
             parentClass={parentClass}
             closeDropdowns={closeDropdowns}
+            loading={loading}
           />
         ))}
       </ul>
@@ -84,7 +89,8 @@ DropdownList.propTypes = {
   data: PropTypes.object,
   highlightHandler: PropTypes.func,
   parentClass: PropTypes.string,
-  closeDropdowns: PropTypes.func
+  closeDropdowns: PropTypes.func,
+  loading: PropTypes.bool.isRequired
 };
 
 export default DropdownList;

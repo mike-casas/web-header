@@ -19,7 +19,8 @@ class Item extends Component {
     theme: PropTypes.string,
     simpleList: PropTypes.bool,
     closeHeaderDropdown: PropTypes.func,
-    mobile: PropTypes.bool
+    mobile: PropTypes.bool,
+    loading: PropTypes.bool.isRequired
   };
 
   state = {
@@ -52,7 +53,7 @@ class Item extends Component {
   };
 
   render() {
-    const { item, theme, simpleList, mobile } = this.props;
+    const { item, theme, simpleList, mobile, loading } = this.props;
 
     const linkContent = <ItemContent name={item.name} childrens={item.childrens} theme={theme} />;
     const linkHref = (mobile ? item.mobileHref : null) || item.href;
@@ -90,6 +91,7 @@ class Item extends Component {
             data={item}
             closeDropdowns={this.closeDropdowns}
             open={this.state.openDropdown}
+            loading={loading}
           />
         ) : null}
       </li>
