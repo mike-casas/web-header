@@ -14,7 +14,12 @@ export default function init(window) {
     defaultMenuItems
   ));
   const { headerMenuItemsInjectorCallback } = window;
-  if (headerMenuItemsInjectorCallback) {
+  if (headerMenuItemsInjectorCallback && !Array.isArray(headerMenuItemsInjectorCallback)) {
     headerMenuItemsInjector.onMenuItemsLoad(headerMenuItemsInjectorCallback);
+  }
+  if (headerMenuItemsInjectorCallback && Array.isArray(headerMenuItemsInjectorCallback)) {
+    headerMenuItemsInjectorCallback.forEach(callback => {
+      headerMenuItemsInjector.onMenuItemsLoad(callback);
+    });
   }
 }

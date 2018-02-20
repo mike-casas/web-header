@@ -23,7 +23,7 @@ app.use(
   })
 );
 
-app.use('/injector', express.static(path.join(__dirname, '../../../menu-items-injector/build')));
+app.use('/injector', express.static(path.join(__dirname, '../../../menu-items-injector/cdn')));
 
 app.use(hotMiddleware(compiler));
 

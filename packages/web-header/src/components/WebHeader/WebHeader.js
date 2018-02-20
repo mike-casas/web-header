@@ -93,10 +93,17 @@ class WebHeader extends Component {
     /* eslint-env browser */
     const { headerMenuItemsInjector } = window;
     const callback = items => this.injectMenuItems(items);
+
     if (headerMenuItemsInjector) {
       headerMenuItemsInjector.onMenuItemsLoad(callback);
-    } else {
-      window.headerMenuItemsInjectorCallback = callback;
+    }
+
+    if (!headerMenuItemsInjector && window.headerMenuItemsInjectorCallback) {
+      window.headerMenuItemsInjectorCallback.push(callback);
+    }
+
+    if (!headerMenuItemsInjector && !window.headerMenuItemsInjectorCallback) {
+      window.headerMenuItemsInjectorCallback = [callback];
     }
 
     this.handleResize();
