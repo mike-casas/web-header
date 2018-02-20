@@ -1,5 +1,5 @@
 import WebHeader from './components/WebHeader';
-import getFeaturedVariant from './modules/featured';
+import getFeaturedMessage from './modules/featured';
 
 export default WebHeader;
-export { getFeaturedVariant };
+export { getFeaturedMessage };

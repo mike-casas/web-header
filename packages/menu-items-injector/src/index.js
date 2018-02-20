@@ -1,25 +1,25 @@
-import defaultMenuItems from '../../default-menu-items/menu-items.json';
+import defaultContent from '../../default-content/content.json';
 
-class MenuItemsInjector {
-  constructor(menuItems) {
-    this.menuItems = menuItems;
+class ContentInjector {
+  constructor(content) {
+    this.content = content;
   }
-  onMenuItemsLoad(callback) {
-    callback(this.menuItems.sections);
+  onContentLoad(callback) {
+    callback(this.content);
   }
 }
 
 export default function init(window) {
-  const headerMenuItemsInjector = (window.headerMenuItemsInjector = new MenuItemsInjector(
-    defaultMenuItems
+  const headerContentInjector = (window.headerContentInjector = new ContentInjector(
+    defaultContent
   ));
-  const { headerMenuItemsInjectorCallback } = window;
-  if (headerMenuItemsInjectorCallback && !Array.isArray(headerMenuItemsInjectorCallback)) {
-    headerMenuItemsInjector.onMenuItemsLoad(headerMenuItemsInjectorCallback);
+  const { headerContentInjectorCallback } = window;
+  if (headerContentInjectorCallback && !Array.isArray(headerContentInjectorCallback)) {
+    headerContentInjector.onContentLoad(headerContentInjectorCallback);
   }
-  if (headerMenuItemsInjectorCallback && Array.isArray(headerMenuItemsInjectorCallback)) {
-    headerMenuItemsInjectorCallback.forEach(callback => {
-      headerMenuItemsInjector.onMenuItemsLoad(callback);
+  if (headerContentInjectorCallback && Array.isArray(headerContentInjectorCallback)) {
+    headerContentInjectorCallback.forEach(callback => {
+      headerContentInjector.onContentLoad(callback);
     });
   }
 }

@@ -52,12 +52,12 @@ signupButtonText | string | 'Sign up' | Text of the Signup button.
 
 #### Methods
 
-Get a variant for the featured banner:
+Get a message for the featured banner:
 
 ```javascript
-import { getFeaturedVariant } from 'auth0-web-header'
+import { getFeaturedMessage } from 'auth0-web-header'
 
-getFeaturedVariant('https://auth0.com/blog/')
+getFeaturedMessage()
 ```
 
 ### Example

@@ -8,55 +8,55 @@ describe('menu-items-injector', () => {
   });
 
   describe('init', () => {
-    let headerMenuItemsInjector;
-    let headerMenuItemsInjectorCallback;
+    let headerContentInjector;
+    let headerContentInjectorCallback;
 
     describe('normal flow', () => {
       beforeEach(() => {
         init(window);
-        headerMenuItemsInjector = window.headerMenuItemsInjector;
+        headerContentInjector = window.headerContentInjector;
       });
 
-      it('should load the menu itmes injector', () => {
-        expect(headerMenuItemsInjector).toBeTruthy();
+      it('should load the content injector', () => {
+        expect(headerContentInjector).toBeTruthy();
       });
 
-      it('should load the menu itmes injector callback', () => {
-        expect(headerMenuItemsInjector.onMenuItemsLoad).toBeTruthy();
+      it('should load the content injector callback', () => {
+        expect(headerContentInjector.onContentLoad).toBeTruthy();
       });
 
-      it('should load the menu itmes', () => {
-        expect(headerMenuItemsInjector.menuItems).toBeTruthy();
+      it('should load the content', () => {
+        expect(headerContentInjector.content).toBeTruthy();
       });
     });
 
     describe('when the header bundle loads first', () => {
       beforeEach(() => {
-        window.headerMenuItemsInjectorCallback = headerMenuItemsInjectorCallback = jest.fn();
+        window.headerContentInjectorCallback = headerContentInjectorCallback = jest.fn();
         init(window);
       });
 
       it('should call the callback to inject items to the header', () => {
-        expect(headerMenuItemsInjectorCallback).toBeCalledWith(headerMenuItemsInjector.menuItems);
+        expect(headerContentInjectorCallback).toBeCalledWith(headerContentInjector.content);
       });
     });
   });
 
-  describe('onMenuItemsLoad', () => {
-    let headerMenuItemsInjector;
-    let headerMenuItemsInjectorCallback;
+  describe('onContentLoad', () => {
+    let headerContentInjector;
+    let headerContentInjectorCallback;
     let callback;
 
     describe('normal flow', () => {
       beforeEach(() => {
         callback = jest.fn();
         init(window);
-        headerMenuItemsInjector = window.headerMenuItemsInjector;
-        headerMenuItemsInjector.onMenuItemsLoad(callback);
+        headerContentInjector = window.headerContentInjector;
+        headerContentInjector.onContentLoad(callback);
       });
 
-      it('should load the menu itmes injector', () => {
-        expect(callback).toBeCalledWith(headerMenuItemsInjector.menuItems);
+      it('should load the content injector', () => {
+        expect(callback).toBeCalledWith(headerContentInjector.content);
       });
     });
   });

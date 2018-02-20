@@ -11,6 +11,7 @@ import defaultMenuItems from '../../data/menu-items.json';
 import defaultMenuItemsMobile from '../../data/mobile-items.json';
 import styles from './WebHeader.styl';
 import generateNewMenuItemsJson from '../../modules/update';
+import getFeaturedMessage from '../../modules/featured';
 
 const cx = classNames.bind(styles);
 const blogLastApi = 'https://auth0-marketing.run.webtask.io/last-blog-post';
@@ -86,24 +87,25 @@ class WebHeader extends Component {
     mobileState: true,
     menuItems: defaultMenuItems,
     menuItemsMobile: defaultMenuItemsMobile,
+    featuredMessage: getFeaturedMessage(),
     loading: true
   };
 
   componentDidMount() {
     /* eslint-env browser */
-    const { headerMenuItemsInjector } = window;
-    const callback = items => this.injectMenuItems(items);
+    const { headerContentInjector } = window;
+    const callback = items => this.injectContent(items);
 
-    if (headerMenuItemsInjector) {
-      headerMenuItemsInjector.onMenuItemsLoad(callback);
+    if (headerContentInjector) {
+      headerContentInjector.onMenuItemsLoad(callback);
     }
 
-    if (!headerMenuItemsInjector && window.headerMenuItemsInjectorCallback) {
-      window.headerMenuItemsInjectorCallback.push(callback);
+    if (!headerContentInjector && window.headerContentInjectorCallback) {
+      window.headerContentInjectorCallback.push(callback);
     }
 
-    if (!headerMenuItemsInjector && !window.headerMenuItemsInjectorCallback) {
-      window.headerMenuItemsInjectorCallback = [callback];
+    if (!headerContentInjector && !window.headerContentInjectorCallback) {
+      window.headerContentInjectorCallback = [callback];
     }
 
     this.handleResize();
@@ -120,9 +122,10 @@ class WebHeader extends Component {
     this.dropdownContent.style.height = height;
   };
 
-  injectMenuItems = items => {
+  injectContent = content => {
     this.setState({
-      menuItems: items,
+      menuItems: content.menuItems,
+      featuredMessage: getFeaturedMessage(content.featuredMessages),
       loading: false
     });
   };
@@ -210,6 +213,7 @@ class WebHeader extends Component {
       menuItems,
       menuItemsMobile,
       notificationIsOpen,
+      featuredMessage,
       loading
     } = this.state;
 
@@ -266,6 +270,7 @@ class WebHeader extends Component {
             theme={theme}
             closeNotificationHandler={this.notificationHandler}
             loading={loading}
+            {...featuredMessage}
           />
         )}
 
