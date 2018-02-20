@@ -15,7 +15,19 @@ function generateBuild({ cdn = false } = {}) {
       rollupNodeResolve(),
       rollupCommonjs(),
       rollupJson(),
-      rollupBabel(),
+      rollupBabel({
+        babelrc: false,
+        presets: [
+          [
+            'env',
+            {
+              modules: false
+            }
+          ],
+          'react'
+        ],
+        plugins: ['transform-export-extensions', 'transform-class-properties']
+      }),
       ...(cdn ? [rollupUglify()] : [])
     ],
     sourcemap: true,
