@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 import path from 'path';
+import fs from 'fs';
 import express from 'express';
 import webpack from 'webpack';
 import devMiddleware from 'webpack-dev-middleware';
@@ -26,6 +27,17 @@ app.use(
 app.use('/injector', express.static(path.join(__dirname, '../../../menu-items-injector/cdn')));
 
 app.use(hotMiddleware(compiler));
+
+app.set('jsonp callback name', 'cb');
+app.get('/menu-content', (req, res) => {
+  const menuContent = fs.readFile(
+    path.join(__dirname, '../../../default-content/content.json'),
+    'utf8',
+    (err, data) => {
+      res.jsonp(JSON.parse(data));
+    }
+  );
+});
 
 app.use('*', (req, res, next) => {
   // Use as view the index.html file generated in memory by html-webpack-plugin.

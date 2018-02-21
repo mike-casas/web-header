@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './FeaturedHead.styl';
-import getFeaturedVariant from '../../modules/featured';
 
 const cx = classNames.bind(styles);
-
-let featuredVariant = getFeaturedVariant();
 
 class FeaturedHead extends Component {
   static propTypes = {
@@ -30,10 +27,6 @@ class FeaturedHead extends Component {
     cta: null
   };
 
-  componentWillMount() {
-    featuredVariant = getFeaturedVariant();
-  }
-
   render() {
     const {
       iconColor,
@@ -51,25 +44,23 @@ class FeaturedHead extends Component {
     return (
       <div className={cx('featured', [`theme-${theme}`], { dropdownOpen }, { notificationOpen })}>
         <div className={cx('featured-content')}>
-          <a href={link || featuredVariant.link} rel="external">
+          <a href={link} rel="external">
             <span
               className={cx('featured-icon')}
               style={{
-                backgroundColor: iconColor || featuredVariant.iconColor
+                backgroundColor: iconColor
               }}
             />
             <span
               className={cx('featured-title', { loading })}
               style={{
-                color: iconColor || featuredVariant.iconColor
+                color: iconColor
               }}
             >
-              {title || featuredVariant.title}
+              {title}
             </span>
-            <span className={cx('featured-description', { loading })}>
-              {description || featuredVariant.description}
-            </span>
-            <span className={cx('featured-more', { loading })}>{cta || featuredVariant.cta}</span>
+            <span className={cx('featured-description', { loading })}>{description}</span>
+            <span className={cx('featured-more', { loading })}>{cta}</span>
           </a>
           <button
             type="button"
