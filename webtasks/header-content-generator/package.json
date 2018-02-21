@@ -1,0 +1,12 @@
+{
+  "name": "header-content-generator",
+  "main": "./index",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "contentful": "^5.1.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.5",
+    "webtask-tools": "^3.2.0"
+  }
+}

@@ -2,6 +2,7 @@
   "extends": "auth0/prettier",
   "parser": "babel-eslint",
   "rules": {
+    "jsx-a11y/href-no-hash": "off",
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": ["tools/**/*.js", "**/*.spec.js"]
     }]
