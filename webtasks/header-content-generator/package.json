@@ -1,6 +1,7 @@
 {
   "name": "header-content-generator",
   "main": "./index",
+  "version": "1.0.0",
   "dependencies": {
     "axios": "^0.18.0",
     "basic-auth": "^2.0.0",
