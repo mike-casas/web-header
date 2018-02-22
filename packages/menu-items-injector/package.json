@@ -1,4 +1,23 @@
 {
   "name": "@auth0/menu-items-injector",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "main": "build/menu-items-injector.js",
+  "files": [
+    "build"
+  ],
+  "cdn-component": {
+    "name": "menu-items-injector",
+    "cdn": "https://cdn.auth0.com",
+    "mainBundleFile": "menu-items-injector.min.js",
+    "remoteBasePath": "website",
+    "bucket": "assets.us.auth0.com",
+    "localPath": "cdn"
+  },
+  "gitpkg": {
+    "registry": "git@github.com:auth0/pgr.git"
+  },
+  "devDependencies": {
+    "component-cdn-uploader": "github:auth0/component-cdn-uploader#v1.3.0",
+    "gitpkg": "^1.0.0-beta.1"
+  }
 }
