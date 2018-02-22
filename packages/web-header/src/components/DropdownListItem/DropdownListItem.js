@@ -3,24 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './DropdownListItem.styl';
 
-import ProductsSVG from '../../svg/ProductsSVG';
-import JavascriptSVG from '../../svg/JavascriptSVG';
-import AndroidSVG from '../../svg/AndroidSVG';
-import IosSVG from '../../svg/iosSVG';
-import DefaultSVG from '../../svg/DefaultSVG';
-import B2eSVG from '../../svg/b2eSVG';
-import B2bSVG from '../../svg/b2bSVG';
-import CiamSVG from '../../svg/ciamSVG';
-import GuardianSVG from '../../svg/GuardianSVG';
-import WebtaskSVG from '../../svg/WebtaskSVG';
-import BreachedSVG from '../../svg/BreachedSVG';
-import LockSVG from '../../svg/LockSVG';
-import MtmSVG from '../../svg/mtmSVG';
-import MultifactorSVG from '../../svg/MultifactorSVG';
-import PasswordlessSVG from '../../svg/PasswordlessSVG';
-import UserManagementSVG from '../../svg/UserManagementSVG';
-import SingleSignOnSVG from '../../svg/SingleSignOnSVG';
-
 const cx = classNames.bind(styles);
 
 class DropdownListItem extends Component {
@@ -44,25 +26,6 @@ class DropdownListItem extends Component {
 
   render() {
     const { hasArrow, parentClass, highlightHandler, item, closeDropdowns, loading } = this.props;
-    const logos = {
-      webtask: <WebtaskSVG />,
-      guardian: <GuardianSVG />,
-      ciam: <CiamSVG />,
-      b2b: <B2bSVG />,
-      b2e: <B2eSVG />,
-      logoDefault: <DefaultSVG />,
-      javascript: <JavascriptSVG />,
-      ios: <IosSVG />,
-      android: <AndroidSVG />,
-      quickstarts: <ProductsSVG />,
-      breached: <BreachedSVG />,
-      lock: <LockSVG />,
-      mtm: <MtmSVG />,
-      multifactor: <MultifactorSVG />,
-      passwordless: <PasswordlessSVG />,
-      userManagement: <UserManagementSVG />,
-      singleSignOn: <SingleSignOnSVG />
-    };
     const linkExternal = item.external ? 'external' : null;
     return (
       <li
@@ -80,14 +43,41 @@ class DropdownListItem extends Component {
         role="menuitem"
       >
         <a
-          className={cx(item.customClass || '')}
+          className={cx({
+            'icon-css': item.iconColor && item.iconText
+          })}
           href={item.href}
           onClick={closeDropdowns}
           rel={linkExternal}
         >
-          {item.icon ? (
-            <figure className={cx('icon', { loading })}>{logos[item.icon]}</figure>
-          ) : null}
+          {item.icon && (
+            <figure
+              className={cx('icon', { loading })}
+              dangerouslySetInnerHTML={{ __html: item.icon }}
+            />
+          )}
+          {item.iconColor &&
+            item.iconText && (
+              <figure className={cx('icon', { loading })}>
+                <span
+                  style={{
+                    backgroundColor: item.iconColor,
+                    width: 46,
+                    height: 30,
+                    display: 'inline-block',
+                    color: '#F5F7F9',
+                    borderRadius: 3,
+                    textAlign: 'center',
+                    fontSize: 12,
+                    fontWeight: 500,
+                    textTransform: 'uppercase',
+                    padding: 7
+                  }}
+                >
+                  {item.iconText}
+                </span>
+              </figure>
+            )}
           <span className={cx('text')}>
             <span className={cx({ loading })}>{item.name}</span>
 

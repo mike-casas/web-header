@@ -29,18 +29,13 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  Promise.all(getContent()).then(response => {
-    const headerContent = generateHeaderContent({
-      featuredMessages: response[0],
-      platformSection: response[1],
-      solutionsSection: response[2],
-      whyAuth0Section: response[3],
-      developersSection: response[4],
-      lastBlogPost: response[5]
-    });
+  Promise.all(getContent())
+    .then(downloadHeaderAssets)
+    .then(stuff => {
+      const headerContent = generateHeaderContent(stuff);
 
-    res.jsonp(headerContent);
-  });
+      res.jsonp(headerContent);
+    });
 });
 
 module.exports = Webtask.fromExpress(app);
@@ -54,8 +49,34 @@ function getContent() {
     contentfulClient.getEntries({ content_type: 'developersSection' }),
     axios
       .get('https://auth0-marketing.run.webtask.io/last-blog-post')
-      .then(response => response.data)
+      .then(response => response.data),
+    contentfulClient.getAssets()
   ];
+}
+
+function downloadHeaderAssets(response) {
+  const rawAssets = response[6].items;
+  const stuff = {
+    featuredMessages: response[0],
+    platformSection: response[1],
+    solutionsSection: response[2],
+    whyAuth0Section: response[3],
+    developersSection: response[4],
+    lastBlogPost: response[5]
+  };
+  const headerAssets = rawAssets.filter(asset => asset.fields.file.contentType === 'image/svg+xml');
+  const downloadAssets = headerAssets.map(asset =>
+    axios.get(`https:${asset.fields.file.url}`).then(assetResponse => assetResponse.data)
+  );
+
+  return Promise.all(downloadAssets).then(downloadedAssets => {
+    const assets = downloadedAssets.map((asset, i) => ({
+      url: headerAssets[i].fields.file.url,
+      asset
+    }));
+    stuff.assets = assets;
+    return stuff;
+  });
 }
 
 function generateHeaderContent(data) {
@@ -64,6 +85,7 @@ function generateHeaderContent(data) {
   const solutions = data.solutionsSection.items[0].fields;
   const whyAuth0 = data.whyAuth0Section.items[0].fields;
   const developers = data.developersSection.items[0].fields;
+  const assets = data.assets;
 
   return {
     featuredMessages: featuredMessages.map(items => ({
@@ -92,8 +114,7 @@ function generateHeaderContent(data) {
               id: _.kebabCase(item.fields.name),
               href: item.fields.link,
               external: item.fields.external,
-              icon: 'singleSignOn'
-              // TODO: icon: 'singleSignOn'
+              icon: inlineAsset(assets, item.fields.icon)
             }))
           }
         ],
@@ -103,8 +124,7 @@ function generateHeaderContent(data) {
             id: _.kebabCase(platform.footerText),
             name: platform.footerText,
             href: platform.footerLink,
-            icon: 'extend',
-            // TODO: icon: 'extend',
+            icon: inlineAsset(assets, platform.footerIcon),
             external: true
           }
         ]
@@ -124,10 +144,9 @@ function generateHeaderContent(data) {
               name: item.fields.name,
               id: _.kebabCase(item.fields.name),
               href: item.fields.link,
-              external: item.fields.external
-              // TODO
-              // customClass: 'solutionsItem-b2c',
-              // alt: 'CIAM icon'
+              external: item.fields.external,
+              iconColor: item.fields.textIconColor,
+              iconText: item.fields.textIconLabel
             }))
           },
           {
@@ -162,8 +181,7 @@ function generateHeaderContent(data) {
             id: 'read-case-studies',
             name: 'Read our Case Studies',
             href: solutions.footerLink,
-            // TODO: solutions.footerIcon
-            icon: 'blog',
+            icon: inlineAsset(assets, solutions.footerIcon),
             external: true
           }
         ]
@@ -220,7 +238,7 @@ function generateHeaderContent(data) {
                   name: item.fields.name,
                   id: _.kebabCase(item.fields.name),
                   href: item.fields.link,
-                  icon: 'javascript',
+                  icon: inlineAsset(assets, item.fields.icon),
                   external: item.fields.external
                 }))
               },
@@ -252,7 +270,7 @@ function generateHeaderContent(data) {
           {
             id: 'latest-blog',
             name: `<b>Latest from Auth0 Blog:</b> ${data.lastBlogPost.title}`,
-            icon: 'blog',
+            icon: inlineAsset(assets, developers.footerIcon),
             external: true,
             href: data.lastBlogPost.link
           }
@@ -265,4 +283,8 @@ function generateHeaderContent(data) {
       }
     ]
   };
+}
+
+function inlineAsset(assets, asset) {
+  return assets.find(item => item.url === asset.fields.file.url).asset;
 }
