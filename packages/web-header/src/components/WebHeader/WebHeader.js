@@ -9,11 +9,9 @@ import FooterMobile from '../FooterMobile';
 import defaultMenuItems from '../../data/menu-items.json';
 import defaultMenuItemsMobile from '../../data/mobile-items.json';
 import styles from './WebHeader.styl';
-import generateNewMenuItemsJson from '../../modules/update';
 import getFeaturedMessage from '../../modules/featured';
 
 const cx = classNames.bind(styles);
-const blogLastApi = 'https://auth0-marketing.run.webtask.io/last-blog-post';
 
 class WebHeader extends Component {
   static propTypes = {
@@ -84,7 +82,7 @@ class WebHeader extends Component {
     navbarDropdownIsOpen: false,
     notificationIsOpen: true,
     mobileState: true,
-    menuItems: defaultMenuItems,
+    menuItems: defaultMenuItems.menuItems,
     menuItemsMobile: defaultMenuItemsMobile,
     featuredMessage: getFeaturedMessage(),
     loading: true
