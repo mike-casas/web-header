@@ -13,6 +13,7 @@ let contentfulClient = null;
 app.set('jsonp callback name', 'cb');
 app.use(bodyParser.json());
 app.use((req, res, next) => {
+  log('Creating Contentful client');
   const CONTENTFUL_SPACE_ID = req.webtaskContext.secrets.CONTENTFUL_SPACE_ID;
   const CONTENTFUL_API_ACCESS_TOKEN = req.webtaskContext.secrets.CONTENTFUL_API_ACCESS_TOKEN;
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
       space: CONTENTFUL_SPACE_ID,
       accessToken: CONTENTFUL_API_ACCESS_TOKEN
     });
+    log('Contentful client created');
 
     return next();
   }
@@ -29,12 +31,33 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  Promise.all(getContent())
-    .then(downloadHeaderAssets)
-    .then(stuff => {
-      const headerContent = generateHeaderContent(stuff);
+  const storage = req.webtaskContext.storage;
 
-      res.jsonp(headerContent);
+  storageGet(storage)
+    .then(headerContentCache => {
+      if (!headerContentCache) {
+        log('Content *not* from cache');
+        log('Getting content');
+        return Promise.all(getContent())
+          .then(downloadHeaderAssets)
+          .then(generateHeaderContent)
+          .then(headerContent => storageSet(storage, headerContent, { force: 1 }))
+          .then(headerContent => {
+            log('Content generated');
+            res.jsonp(headerContent);
+          })
+          .catch(err => {
+            log(err);
+            res.status(500).json({});
+          });
+      }
+      log('Content from cache');
+
+      return res.jsonp(headerContentCache);
+    })
+    .catch(err => {
+      log(err);
+      res.status(500).json({});
     });
 });
 
@@ -55,6 +78,8 @@ function getContent() {
 }
 
 function downloadHeaderAssets(response) {
+  log('Content getted');
+  log('Downloading assets');
   const rawAssets = response[6].items;
   const stuff = {
     featuredMessages: response[0],
@@ -75,11 +100,13 @@ function downloadHeaderAssets(response) {
       asset
     }));
     stuff.assets = assets;
+    log('Assets downloaded');
     return stuff;
   });
 }
 
 function generateHeaderContent(data) {
+  log('Generating content');
   const featuredMessages = data.featuredMessages.items;
   const platform = data.platformSection.items[0].fields;
   const solutions = data.solutionsSection.items[0].fields;
@@ -286,5 +313,41 @@ function generateHeaderContent(data) {
 }
 
 function inlineAsset(assets, asset) {
-  return assets.find(item => item.url === asset.fields.file.url).asset;
+  const assetFound = assets.find(item => item.url === asset.fields.file.url);
+  return assetFound ? assetFound.asset : undefined;
+}
+
+function log(msg) {
+  console.log(msg);
+}
+
+/**
+ * Webtask Storage API write data promisified
+ *
+ * @param {object} storage - Webtask Storage API
+ * @param {object} data - Data to save on Webtask Storage
+ * @param {object} data - Options for write on Webtask Storage
+ */
+function storageSet(storage, data, options) {
+  return new Promise((resolve, reject) => {
+    storage.set(data, options, error => {
+      if (error) return reject(error);
+      return resolve(data);
+    });
+  });
+}
+
+/**
+ * Webtask Storage API read data promisified
+ *
+ * @param {object} storage - Webtask Storage API
+ * @returns {object} Data from Webtask Storage
+ */
+function storageGet(storage) {
+  return new Promise((resolve, reject) => {
+    storage.get((error, data) => {
+      if (error) return reject(error);
+      return resolve(data);
+    });
+  });
 }
