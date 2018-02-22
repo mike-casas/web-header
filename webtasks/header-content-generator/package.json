@@ -3,6 +3,7 @@
   "main": "./index",
   "dependencies": {
     "axios": "^0.18.0",
+    "basic-auth": "^2.0.0",
     "body-parser": "^1.18.2",
     "contentful": "^5.1.1",
     "express": "^4.16.2",

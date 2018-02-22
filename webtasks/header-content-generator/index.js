@@ -6,6 +6,7 @@ const Webtask = require('webtask-tools');
 const bodyParser = require('body-parser');
 const contentful = require('contentful');
 const _ = require('lodash');
+const basicAuth = require('basic-auth');
 
 const app = express();
 let contentfulClient = null;
@@ -30,30 +31,11 @@ app.use((req, res, next) => {
   return next();
 });
 
-app.get('/', (req, res) => {
+app.post('/', validateApiKey, (req, res) => {
   const storage = req.webtaskContext.storage;
-
-  storageGet(storage)
-    .then(headerContentCache => {
-      if (!headerContentCache) {
-        log('Content *not* from cache');
-        log('Getting content');
-        return Promise.all(getContent())
-          .then(downloadHeaderAssets)
-          .then(generateHeaderContent)
-          .then(headerContent => storageSet(storage, headerContent, { force: 1 }))
-          .then(headerContent => {
-            log('Content generated');
-            res.jsonp(headerContent);
-          })
-          .catch(err => {
-            log(err);
-            res.status(500).json({});
-          });
-      }
-      log('Content from cache');
-
-      return res.jsonp(headerContentCache);
+  return generateContentAndUpdateStorage(storage)
+    .then(() => {
+      res.json({});
     })
     .catch(err => {
       log(err);
@@ -61,7 +43,49 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/', (req, res) => {
+  const storage = req.webtaskContext.storage;
+
+  storageGet(storage).then(headerContentCache => {
+    if (!headerContentCache) {
+      log('Content *not* from cache');
+      log('Getting content');
+      return generateContentAndUpdateStorage(storage)
+        .then(headerContent => {
+          log('Content generated');
+          res.jsonp(headerContent);
+        })
+        .catch(err => {
+          log(err);
+          res.status(500).json({});
+        });
+    }
+    log('Content from cache');
+
+    return res.jsonp(headerContentCache);
+  });
+});
+
 module.exports = Webtask.fromExpress(app);
+
+function validateApiKey(req, res, next) {
+  const VALIDATE_API_KEY_ID = req.webtaskContext.secrets.VALIDATE_API_KEY_ID;
+  const VALIDATE_API_KEY_SECRET = req.webtaskContext.secrets.VALIDATE_API_KEY_SECRET;
+  const cred = basicAuth(req);
+
+  if (!cred || cred.name !== VALIDATE_API_KEY_ID || cred.pass !== VALIDATE_API_KEY_SECRET) {
+    return res.status(401).send({ message: 'Unauthorized' });
+  }
+
+  return next();
+}
+
+function generateContentAndUpdateStorage(storage) {
+  return Promise.all(getContent())
+    .then(downloadHeaderAssets)
+    .then(generateHeaderContent)
+    .then(headerContent => storageSet(storage, headerContent, { force: 1 }));
+}
 
 function getContent() {
   return [
@@ -73,7 +97,7 @@ function getContent() {
     axios
       .get('https://auth0-marketing.run.webtask.io/last-blog-post')
       .then(response => response.data),
-    contentfulClient.getAssets()
+    contentfulClient.getAssets({ 'fields.file.contentType': 'image/svg+xml' })
   ];
 }
 
@@ -89,14 +113,13 @@ function downloadHeaderAssets(response) {
     developersSection: response[4],
     lastBlogPost: response[5]
   };
-  const headerAssets = rawAssets.filter(asset => asset.fields.file.contentType === 'image/svg+xml');
-  const downloadAssets = headerAssets.map(asset =>
+  const downloadAssets = rawAssets.map(asset =>
     axios.get(`https:${asset.fields.file.url}`).then(assetResponse => assetResponse.data)
   );
 
   return Promise.all(downloadAssets).then(downloadedAssets => {
     const assets = downloadedAssets.map((asset, i) => ({
-      url: headerAssets[i].fields.file.url,
+      url: rawAssets[i].fields.file.url,
       asset
     }));
     stuff.assets = assets;
