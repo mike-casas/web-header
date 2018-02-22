@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import cxN from 'classnames';
-import axios from 'axios';
 import Head from '../Head';
 import FeaturedHead from '../FeaturedHead';
 import Item from '../Item';
@@ -110,7 +109,6 @@ class WebHeader extends Component {
 
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
-    this.updateBlogPost();
   }
 
   componentWillUnmount() {
@@ -128,17 +126,6 @@ class WebHeader extends Component {
       featuredMessage: getFeaturedMessage(content.featuredMessages),
       loading: false
     });
-  };
-
-  updateBlogPost = () => {
-    axios
-      .get(blogLastApi)
-      .then(blogResponse => [this.state.menuItems, blogResponse.data])
-      .then(generateNewMenuItemsJson)
-      .then(newMenuItems => {
-        this.setState({ menuItems: newMenuItems });
-      })
-      .catch(err => console.info('Auth0WebHeader', err));
   };
 
   handleResize = () => {
