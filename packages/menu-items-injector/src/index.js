@@ -9,15 +9,16 @@ class ContentInjector {
 
 export default function init({ draft = false, remoteEndpoint = '' }, window, document) {
   if (!remoteEndpoint || !window || !document) {
-    return;
+    return null;
   }
 
   return injectContentFromRemoteEndpoint({ draft, remoteEndpoint }, window, document);
 }
 
 function injectContentFromRemoteEndpoint({ draft, remoteEndpoint }, window, document) {
-  const onError = () => injectContent(null);
-  window.headerContentInjectorJSONPCallback = content => injectContent(content);
+  const onError = () => injectContent(null, window);
+  // eslint-disable-next-line no-param-reassign
+  window.headerContentInjectorJSONPCallback = content => injectContent(content, window);
 
   loadScript(
     `${remoteEndpoint}?cb=headerContentInjectorJSONPCallback&draft=${draft}`,
@@ -39,8 +40,10 @@ function loadScript(src, onError, document) {
   script.onerror = () => onError();
 }
 
-function injectContent(content) {
-  const headerContentInjector = (window.headerContentInjector = new ContentInjector(content));
+function injectContent(content, window) {
+  const headerContentInjector = new ContentInjector(content);
+  // eslint-disable-next-line no-param-reassign
+  window.headerContentInjector = headerContentInjector;
   const { headerContentInjectorCallback } = window;
   if (headerContentInjectorCallback && !Array.isArray(headerContentInjectorCallback)) {
     headerContentInjector.onContentLoad(headerContentInjectorCallback);
