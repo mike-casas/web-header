@@ -203,7 +203,7 @@ function generateHeaderContent(data) {
             description: platform.description,
             key: 'platform-list',
             twoColLayoutBig: true,
-            items: platform.items.map(generateMenuItem)
+            items: platform.items.map(item => generateMenuItem(assets, item))
           }
         ],
         footerHighlight: true,
@@ -228,7 +228,7 @@ function generateHeaderContent(data) {
             title: 'Use Cases',
             key: 'use-cases-list',
             stackedList: true,
-            items: solutions.useCases.map(generateMenuItem)
+            items: solutions.useCases.map(item => generateMenuItem(assets, item))
           },
           {
             componentType: 'list',
@@ -238,11 +238,11 @@ function generateHeaderContent(data) {
             subItems: [
               {
                 titleList: 'INDUSTRIES',
-                items: solutions.useAuth0InIndustries.map(generateMenuItem)
+                items: solutions.useAuth0InIndustries.map(item => generateMenuItem(assets, item))
               },
               {
                 titleList: 'INITIATIVES',
-                items: solutions.useAuth0InInitiatives.map(generateMenuItem)
+                items: solutions.useAuth0InInitiatives.map(item => generateMenuItem(assets, item))
               }
             ]
           }
@@ -267,7 +267,7 @@ function generateHeaderContent(data) {
             componentType: 'list',
             title: 'Company',
             key: 'company-list',
-            items: whyAuth0.companyItems.map(generateMenuItem)
+            items: whyAuth0.companyItems.map(item => generateMenuItem(assets, item))
           },
           {
             componentType: 'list',
@@ -276,7 +276,7 @@ function generateHeaderContent(data) {
             highlight: true,
             titleHref: 'https://auth0.com/resources',
             external: true,
-            items: whyAuth0.resourcesItems.map(generateMenuItem)
+            items: whyAuth0.resourcesItems.map(item => generateMenuItem(assets, item))
           }
         ]
       },
@@ -295,11 +295,15 @@ function generateHeaderContent(data) {
             subItems: [
               {
                 titleList: 'GET STARTED',
-                items: developers.documentationGetStarted.map(generateMenuItem)
+                items: developers.documentationGetStarted.map(item =>
+                  generateMenuItem(assets, item)
+                )
               },
               {
                 titleList: 'SECTIONS',
-                items: developers.documentationSectionsItems.map(generateMenuItem)
+                items: developers.documentationSectionsItems.map(item =>
+                  generateMenuItem(assets, item)
+                )
               }
             ]
           },
@@ -308,7 +312,7 @@ function generateHeaderContent(data) {
             title: 'Resources',
             key: 'resources-list',
             highlight: true,
-            items: developers.resourcesItems.map(generateMenuItem)
+            items: developers.resourcesItems.map(item => generateMenuItem(assets, item))
           }
         ],
         footerLinks: [
@@ -335,7 +339,7 @@ function inlineAsset(assets, asset) {
   return assetFound ? assetFound.asset : undefined;
 }
 
-function generateMenuItem(item) {
+function generateMenuItem(assets, item) {
   const menuItem = {
     name: item.fields.name,
     id: _.kebabCase(item.fields.name),
@@ -343,13 +347,17 @@ function generateMenuItem(item) {
     external: item.fields.external
   };
 
-  if (item.iconColor && item.iconText) {
+  if (item.fields.textIconColor && item.fields.textIconLabel) {
     menuItem.iconColor = item.fields.textIconColor;
     menuItem.iconText = item.fields.textIconLabel;
   }
 
-  if (item.icon) {
-    menuItem.icon = item.fields.icon;
+  if (item.fields.description) {
+    menuItem.description = item.fields.description;
+  }
+
+  if (item.fields.icon) {
+    menuItem.icon = inlineAsset(assets, item.fields.icon);
   }
 
   return menuItem;
