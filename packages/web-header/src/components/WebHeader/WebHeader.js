@@ -94,7 +94,7 @@ class WebHeader extends Component {
     const callback = items => this.injectContent(items);
 
     if (headerContentInjector) {
-      headerContentInjector.onMenuItemsLoad(callback);
+      headerContentInjector.onContentLoad(callback);
     }
 
     if (!headerContentInjector && window.headerContentInjectorCallback) {
@@ -119,7 +119,13 @@ class WebHeader extends Component {
   };
 
   injectContent = content => {
-    this.setState({
+    if (!content) {
+      return this.setState({
+        loading: false
+      });
+    }
+
+    return this.setState({
       menuItems: content.menuItems,
       featuredMessage: getFeaturedMessage(content.featuredMessages),
       loading: false

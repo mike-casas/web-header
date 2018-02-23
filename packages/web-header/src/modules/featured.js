@@ -1,9 +1,9 @@
-import defaultFeaturedMessages from '../data/featured-messages.json';
+import menuItems from '../data/menu-items.json';
 import ProbabilityBasedSelector from './ProbabilityBasedSelector';
 
 export default function getFeaturedMessage(customFeaturedMessages) {
   const variantSelector = new ProbabilityBasedSelector(
-    customFeaturedMessages || defaultFeaturedMessages
+    customFeaturedMessages || menuItems.featuredMessages
   );
   return variantSelector.select();
 }

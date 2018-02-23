@@ -1,5 +1,3 @@
-import defaultContent from '../../default-content/content.json';
-
 class ContentInjector {
   constructor(content) {
     this.content = content;
@@ -10,15 +8,15 @@ class ContentInjector {
 }
 
 export default function init({ draft = false, remoteEndpoint = '' }, window, document) {
-  if (remoteEndpoint) {
-    return injectContentFromRemoteEndpoint({ draft, remoteEndpoint }, window, document);
+  if (!remoteEndpoint || !window || !document) {
+    return;
   }
 
-  return injectContent(defaultContent);
+  return injectContentFromRemoteEndpoint({ draft, remoteEndpoint }, window, document);
 }
 
 function injectContentFromRemoteEndpoint({ draft, remoteEndpoint }, window, document) {
-  const onError = () => injectContent(defaultContent);
+  const onError = () => injectContent(null);
   window.headerContentInjectorJSONPCallback = content => injectContent(content);
 
   loadScript(

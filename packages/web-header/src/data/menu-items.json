@@ -1,36 +1,12 @@
 {
     "featuredMessages": [
         {
-            "link": "https://www.meetup.com/auth0-online-meetup/",
-            "title": "Auth0 Online Meetup",
-            "description": "Join us Feb 7 as we discuss Security in 2018 with special guest David Calavera, CTO of Netlify.",
-            "cta": "Free RSVP today!",
-            "iconColor": "#eb5424",
-            "probability": 0.45
-        },
-        {
-            "link": "https://resources.auth0.com/forrester-tei-research-case-study/",
-            "title": "Total Economic Impact of Auth0",
-            "description": "Using our platform can yield a 548% ROI and $3.7M in identity-related savings.",
-            "cta": "Read the Forrester report",
-            "iconColor": "#eb5424",
-            "probability": 0.4
-        },
-        {
             "link": "http://auth0.com/jobs#job-openings",
             "title": "We are hiring!",
             "description": "If you care deeply about quality, teamwork, and want to build software that people love.",
             "cta": "Join Us!",
             "iconColor": "#eb5424",
             "probability": 0.15
-        },
-        {
-            "link": "https://auth0.com/ambassador-program",
-            "title": "Auth0 Ambassador Program.",
-            "description": "Make the internet safer by empowering developers in your community.",
-            "cta": "Join the Mission!",
-            "iconColor": "#eb5424",
-            "probability": 0
         }
     ],
     "menuItems": [
