@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
       return generateContentAndUpdateStorage(storage)
         .then(headerContent => {
           log('Content generated');
+          res.setHeader('Cache-Control', 'public, max-age=3600'); // 1h
           res.jsonp(headerContent);
         })
         .catch(err => {
@@ -62,6 +63,7 @@ app.get('/', (req, res) => {
     }
     log('Content from cache');
 
+    res.setHeader('Cache-Control', 'public, max-age=3600'); // 1h
     return res.jsonp(headerContentCache);
   });
 });
