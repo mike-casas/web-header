@@ -9,31 +9,18 @@ const _ = require('lodash');
 const basicAuth = require('basic-auth');
 
 const app = express();
-let contentfulClient = null;
+const contentfulClient = {
+  delivery: null,
+  preview: null
+};
 
 app.set('jsonp callback name', 'cb');
 app.use(bodyParser.json());
-app.use((req, res, next) => {
-  log('Creating Contentful client');
-  const CONTENTFUL_SPACE_ID = req.webtaskContext.secrets.CONTENTFUL_SPACE_ID;
-  const CONTENTFUL_API_ACCESS_TOKEN = req.webtaskContext.secrets.CONTENTFUL_API_ACCESS_TOKEN;
 
-  if (!contentfulClient) {
-    contentfulClient = contentful.createClient({
-      space: CONTENTFUL_SPACE_ID,
-      accessToken: CONTENTFUL_API_ACCESS_TOKEN
-    });
-    log('Contentful client created');
-
-    return next();
-  }
-
-  return next();
-});
-
-app.post('/', validateApiKey, (req, res) => {
+app.post('/', initContentfulClient, validateApiKey, (req, res) => {
   const storage = req.webtaskContext.storage;
-  return generateContentAndUpdateStorage(storage)
+
+  storageSet(storage, null, { force: 1 })
     .then(() => {
       res.json({});
     })
@@ -43,32 +30,88 @@ app.post('/', validateApiKey, (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
+app.get('/', initContentfulClient, (req, res) => {
+  const isDraft = !!req.query.draft;
   const storage = req.webtaskContext.storage;
 
-  storageGet(storage).then(headerContentCache => {
-    if (!headerContentCache) {
-      log('Content *not* from cache');
-      log('Getting content');
-      return generateContentAndUpdateStorage(storage)
-        .then(headerContent => {
-          log('Content generated');
-          res.setHeader('Cache-Control', 'public, max-age=3600'); // 1h
-          res.jsonp(headerContent);
-        })
-        .catch(err => {
-          log(err);
-          res.status(500).json({});
-        });
-    }
-    log('Content from cache');
+  if (isDraft) {
+    log('GET / - if (isDraft):is draft');
+    return generateContent(isDraft)
+      .then(headerContent => {
+        log('GET / - if (isDraft):Content generated');
+        res.jsonp(headerContent);
+      })
+      .catch(err => {
+        log(err);
+        res.status(500).json({});
+      });
+  }
 
-    res.setHeader('Cache-Control', 'public, max-age=3600'); // 1h
-    return res.jsonp(headerContentCache);
-  });
+  return storageGet(storage)
+    .then(headerContentCache => {
+      if (!headerContentCache) {
+        log('Content *not* from cache');
+        log('Getting content');
+        return generateContent(isDraft)
+          .then(headerContent => storageSet(storage, headerContent, { force: 1 }))
+          .then(headerContent => {
+            log('Content generated');
+            res.setHeader('Cache-Control', 'public, max-age=3600'); // 1h
+            res.jsonp(headerContent);
+          })
+          .catch(err => {
+            log(err);
+            res.status(500).json({});
+          });
+      }
+
+      log('Content from cache');
+      res.setHeader('Cache-Control', 'public, max-age=3600'); // 1h
+      return res.jsonp(headerContentCache);
+    })
+    .catch(err => {
+      log(err);
+      res.status(500).json({});
+    });
 });
 
 module.exports = Webtask.fromExpress(app);
+
+function initContentfulClient(req, res, next) {
+  log('initContentfulClient:Creating Contentful client');
+  const isDraft = !!req.query.draft;
+  const CONTENTFUL_SPACE_ID = req.webtaskContext.secrets.CONTENTFUL_SPACE_ID;
+  const CONTENTFUL_API_DELIVERY_ACCESS_TOKEN =
+    req.webtaskContext.secrets.CONTENTFUL_API_DELIVERY_ACCESS_TOKEN;
+  const CONTENTFUL_API_PREVIEW_ACCESS_TOKEN =
+    req.webtaskContext.secrets.CONTENTFUL_API_PREVIEW_ACCESS_TOKEN;
+  const CONTENTFUL_API_ACCESS_TOKEN = isDraft
+    ? CONTENTFUL_API_PREVIEW_ACCESS_TOKEN
+    : CONTENTFUL_API_DELIVERY_ACCESS_TOKEN;
+  const typeClient = getContentfulClientType(isDraft);
+
+  if (!contentfulClient[typeClient]) {
+    const opts = {
+      space: CONTENTFUL_SPACE_ID,
+      accessToken: CONTENTFUL_API_ACCESS_TOKEN
+    };
+    if (isDraft) {
+      log('initContentfulClient:is draft');
+      opts.host = 'preview.contentful.com';
+    }
+    contentfulClient[typeClient] = contentful.createClient(opts);
+    log('Contentful client created');
+
+    return next();
+  }
+
+  return next();
+}
+
+function getContentfulClientType(isDraft) {
+  const typeClient = isDraft ? 'preview' : 'delivery';
+  return typeClient;
+}
 
 function validateApiKey(req, res, next) {
   const VALIDATE_API_KEY_ID = req.webtaskContext.secrets.VALIDATE_API_KEY_ID;
@@ -82,24 +125,24 @@ function validateApiKey(req, res, next) {
   return next();
 }
 
-function generateContentAndUpdateStorage(storage) {
-  return Promise.all(getContent())
+function generateContent(isDraft) {
+  return Promise.all(getContent(isDraft))
     .then(downloadHeaderAssets)
-    .then(generateHeaderContent)
-    .then(headerContent => storageSet(storage, headerContent, { force: 1 }));
+    .then(generateHeaderContent);
 }
 
-function getContent() {
+function getContent(isDraft) {
+  const clietType = getContentfulClientType(isDraft);
   return [
-    contentfulClient.getEntries({ content_type: 'featuredMessages' }),
-    contentfulClient.getEntries({ content_type: 'platform-section' }),
-    contentfulClient.getEntries({ content_type: 'solutionsSection' }),
-    contentfulClient.getEntries({ content_type: 'whyAuth0' }),
-    contentfulClient.getEntries({ content_type: 'developersSection' }),
+    contentfulClient[clietType].getEntries({ content_type: 'featuredMessages' }),
+    contentfulClient[clietType].getEntries({ content_type: 'platform-section' }),
+    contentfulClient[clietType].getEntries({ content_type: 'solutionsSection' }),
+    contentfulClient[clietType].getEntries({ content_type: 'whyAuth0' }),
+    contentfulClient[clietType].getEntries({ content_type: 'developersSection' }),
     axios
       .get('https://auth0-marketing.run.webtask.io/last-blog-post')
       .then(response => response.data),
-    contentfulClient.getAssets({ 'fields.file.contentType': 'image/svg+xml' })
+    contentfulClient[clietType].getAssets({ 'fields.file.contentType': 'image/svg+xml' })
   ];
 }
 
@@ -160,14 +203,7 @@ function generateHeaderContent(data) {
             description: platform.description,
             key: 'platform-list',
             twoColLayoutBig: true,
-            items: platform.items.map(item => ({
-              name: item.fields.name,
-              description: item.fields.description,
-              id: _.kebabCase(item.fields.name),
-              href: item.fields.link,
-              external: item.fields.external,
-              icon: inlineAsset(assets, item.fields.icon)
-            }))
+            items: platform.items.map(generateMenuItem)
           }
         ],
         footerHighlight: true,
@@ -192,14 +228,7 @@ function generateHeaderContent(data) {
             title: 'Use Cases',
             key: 'use-cases-list',
             stackedList: true,
-            items: solutions.useCases.map(item => ({
-              name: item.fields.name,
-              id: _.kebabCase(item.fields.name),
-              href: item.fields.link,
-              external: item.fields.external,
-              iconColor: item.fields.textIconColor,
-              iconText: item.fields.textIconLabel
-            }))
+            items: solutions.useCases.map(generateMenuItem)
           },
           {
             componentType: 'list',
@@ -209,21 +238,11 @@ function generateHeaderContent(data) {
             subItems: [
               {
                 titleList: 'INDUSTRIES',
-                items: solutions.useAuth0InIndustries.map(item => ({
-                  name: item.fields.name,
-                  id: _.kebabCase(item.fields.name),
-                  href: item.fields.link,
-                  external: item.fields.external
-                }))
+                items: solutions.useAuth0InIndustries.map(generateMenuItem)
               },
               {
                 titleList: 'INITIATIVES',
-                items: solutions.useAuth0InInitiatives.map(item => ({
-                  name: item.fields.name,
-                  id: _.kebabCase(item.fields.name),
-                  href: item.fields.link,
-                  external: item.fields.external
-                }))
+                items: solutions.useAuth0InInitiatives.map(generateMenuItem)
               }
             ]
           }
@@ -248,12 +267,7 @@ function generateHeaderContent(data) {
             componentType: 'list',
             title: 'Company',
             key: 'company-list',
-            items: whyAuth0.companyItems.map(item => ({
-              name: item.fields.name,
-              id: _.kebabCase(item.fields.name),
-              href: item.fields.link,
-              external: item.fields.external
-            }))
+            items: whyAuth0.companyItems.map(generateMenuItem)
           },
           {
             componentType: 'list',
@@ -262,12 +276,7 @@ function generateHeaderContent(data) {
             highlight: true,
             titleHref: 'https://auth0.com/resources',
             external: true,
-            items: whyAuth0.resourcesItems.map(item => ({
-              name: item.fields.name,
-              id: _.kebabCase(item.fields.name),
-              href: item.fields.link,
-              external: item.fields.external
-            }))
+            items: whyAuth0.resourcesItems.map(generateMenuItem)
           }
         ]
       },
@@ -286,22 +295,11 @@ function generateHeaderContent(data) {
             subItems: [
               {
                 titleList: 'GET STARTED',
-                items: developers.documentationGetStarted.map(item => ({
-                  name: item.fields.name,
-                  id: _.kebabCase(item.fields.name),
-                  href: item.fields.link,
-                  icon: inlineAsset(assets, item.fields.icon),
-                  external: item.fields.external
-                }))
+                items: developers.documentationGetStarted.map(generateMenuItem)
               },
               {
                 titleList: 'SECTIONS',
-                items: developers.documentationSectionsItems.map(item => ({
-                  name: item.fields.name,
-                  id: _.kebabCase(item.fields.name),
-                  href: item.fields.link,
-                  external: item.fields.external
-                }))
+                items: developers.documentationSectionsItems.map(generateMenuItem)
               }
             ]
           },
@@ -310,12 +308,7 @@ function generateHeaderContent(data) {
             title: 'Resources',
             key: 'resources-list',
             highlight: true,
-            items: developers.resourcesItems.map(item => ({
-              name: item.fields.name,
-              id: _.kebabCase(item.fields.name),
-              href: item.fields.link,
-              external: item.fields.external
-            }))
+            items: developers.resourcesItems.map(generateMenuItem)
           }
         ],
         footerLinks: [
@@ -340,6 +333,26 @@ function generateHeaderContent(data) {
 function inlineAsset(assets, asset) {
   const assetFound = assets.find(item => item.url === asset.fields.file.url);
   return assetFound ? assetFound.asset : undefined;
+}
+
+function generateMenuItem(item) {
+  const menuItem = {
+    name: item.fields.name,
+    id: _.kebabCase(item.fields.name),
+    href: item.fields.link,
+    external: item.fields.external
+  };
+
+  if (item.iconColor && item.iconText) {
+    menuItem.iconColor = item.fields.textIconColor;
+    menuItem.iconText = item.fields.textIconLabel;
+  }
+
+  if (item.icon) {
+    menuItem.icon = item.fields.icon;
+  }
+
+  return menuItem;
 }
 
 function log(msg) {
