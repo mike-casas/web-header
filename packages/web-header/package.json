@@ -11,7 +11,6 @@
     "build:normal": "webpack --config ./tools/webpack/webpack.module.config.babel.js",
     "build:cdn": "CDN=true webpack --config ./tools/webpack/webpack.module.config.babel.js",
     "build:heroku": "NODE_ENV=production webpack --config ./tools/webpack/webpack.playground.config.babel.js",
-    "heroku-postbuild": "npm run build:heroku",
     "start:dev": "NODE_ENV=development babel-node ./tools/tasks/start.js",
     "prepublish": "NODE_ENV=production npm run build -- --bail"
   },

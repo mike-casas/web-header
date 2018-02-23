@@ -6,12 +6,13 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "yarn run build:injector",
     "build:injector": "rollup -c packages/menu-items-injector/rollup.config.js",
-    "test": "jest",
+    "build": "yarn run build:injector",
     "coverage": "jest --coverage",
+    "heroku-postbuild": "cd packages/web-header && yarn run build:heroku",
     "lint": "eslint .",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "test": "jest"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
