@@ -31,7 +31,7 @@ app.post('/', initContentfulClient, validateApiKey, (req, res) => {
 });
 
 app.get('/', initContentfulClient, (req, res) => {
-  const isDraft = !!req.query.draft;
+  const isDraft = calculateIsDraft(req.query.draft);
   const storage = req.webtaskContext.storage;
 
   if (isDraft) {
@@ -79,7 +79,7 @@ module.exports = Webtask.fromExpress(app);
 
 function initContentfulClient(req, res, next) {
   log('initContentfulClient:Creating Contentful client');
-  const isDraft = !!req.query.draft;
+  const isDraft = calculateIsDraft(req.query.draft);
   const CONTENTFUL_SPACE_ID = req.webtaskContext.secrets.CONTENTFUL_SPACE_ID;
   const CONTENTFUL_API_DELIVERY_ACCESS_TOKEN =
     req.webtaskContext.secrets.CONTENTFUL_API_DELIVERY_ACCESS_TOKEN;
@@ -123,6 +123,10 @@ function validateApiKey(req, res, next) {
   }
 
   return next();
+}
+
+function calculateIsDraft(draft) {
+  return draft && draft !== 'false';
 }
 
 function generateContent(isDraft) {
