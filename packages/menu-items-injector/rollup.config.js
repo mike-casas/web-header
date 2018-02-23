@@ -10,7 +10,6 @@ export default [generateBuild(), generateBuild({ cdn: true })];
 function generateBuild({ cdn = false } = {}) {
   return {
     input: path.resolve(__dirname, 'src/index.js'),
-    name: 'MenuItemsInjector',
     plugins: [
       rollupNodeResolve(),
       rollupCommonjs(),
@@ -30,14 +29,15 @@ function generateBuild({ cdn = false } = {}) {
       }),
       ...(cdn ? [rollupUglify()] : [])
     ],
-    sourcemap: true,
     output: [
       {
+        name: 'MenuItemsInjector',
         file: path.resolve(
           __dirname,
           cdn ? 'cdn/menu-items-injector.min.js' : 'build/menu-items-injector.js'
         ),
-        format: cdn ? 'umd' : 'cjs'
+        format: cdn ? 'umd' : 'cjs',
+        sourcemap: true
       }
     ]
   };
