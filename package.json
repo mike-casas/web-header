@@ -9,7 +9,7 @@
     "build:injector": "rollup -c packages/menu-items-injector/rollup.config.js",
     "build": "yarn run build:injector",
     "coverage": "jest --coverage",
-    "heroku-postbuild": "cd packages/web-header && yarn run build:heroku",
+    "heroku-postbuild": "yarn run build && cd packages/web-header && yarn run build:heroku",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "test": "jest"
