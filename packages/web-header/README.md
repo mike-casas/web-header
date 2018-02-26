@@ -22,7 +22,8 @@ From CDN:
 
 HTML to load menu items:
 ```html
-<script src="https://cdn.auth0.com/website/menu-items-injector/1.0.1/menu-items-injector.min.js"></script><script>MenuItemsInjector({draft: false, remoteEndpoint: 'https://auth0-marketing.run.webtask.io/header-content-generator'}, window, document);</script>
+<script src="https://cdn.auth0.com/website/menu-items-injector/1.0.1/menu-items-injector.min.js"></script>
+<script>MenuItemsInjector({draft: false, remoteEndpoint: 'https://auth0-marketing.run.webtask.io/header-content-generator'}, window, document);</script>
 ```
 
 
