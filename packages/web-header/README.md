@@ -6,19 +6,25 @@ Auth0's website and landings react component header
 
 From npm client:
 ```bash
-npm install --save @auth0/web-header react@^15.5.4
+npm install --save auth0/pgr#auth0-web-header-v5.1.0-gitpkg react@^16
 ```
 
 From yarn client:
 ```bash
-yarn add @auth0/web-header react@^15.5.4
+yarn add auth0/pgr#auth0-web-header-v5.1.0-gitpkg react@^16
 ```
 
 From CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/4.0.21/web-header.css" />
-<script src="https://cdn.auth0.com/website/web-header/4.0.21/web-header.js"></script>
+<link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/5.1.0/web-header.css" />
+<script src="https://cdn.auth0.com/website/web-header/5.1.0/web-header.js"></script>
 ```
+
+HTML to load menu items:
+```html
+<script src="https://cdn.auth0.com/website/menu-items-injector/1.0.1/menu-items-injector.min.js"></script><script>MenuItemsInjector({draft: false, remoteEndpoint: 'https://auth0-marketing.run.webtask.io/header-content-generator'}, window, document);</script>
+```
+
 
 ## Usage
 
@@ -32,11 +38,6 @@ className | string | '' | Applied to the header root element.
 children | node | null | Can be used to render custom menu items via React components.
 theme | string | 'light' | Header theme, another option is 'dark'.
 featuredEnable | boolean | true | Enable or disable featured link next to the Auth0 logo.
-featuredIconColor | string | null | Featured icon color (hex).
-featuredLink | string | null | Featured link URL.
-featuredTitle | string | null | Featured link title text.
-featuredDescription | string | null | Featured link description text.
-featuredCTA | string | null | Featured link cta text.
 loginButtonEnable | boolean | true | Enable or disable Login button.
 loginButtonLink | string | '' | Link of the Login button, if it's different from `''` the Login button will be rendered as an anchor tag with this href.
 loginButtonOnClick | function | () => {} | Callback function for when Login button is clicked.
@@ -49,16 +50,6 @@ signupButtonEnable | boolean | true | Signup button link.
 signupButtonLink | string | '' | Link of the Signup button, if it's different from `''` the Signup button will be rendered as an anchor tag with this href.
 signupButtonOnClick | function | () => {} | Callback function for when Signup button is clicked.
 signupButtonText | string | 'Sign up' | Text of the Signup button.
-
-#### Methods
-
-Get a message for the featured banner:
-
-```javascript
-import { getFeaturedMessage } from 'auth0-web-header'
-
-getFeaturedMessage()
-```
 
 ### Example
 
