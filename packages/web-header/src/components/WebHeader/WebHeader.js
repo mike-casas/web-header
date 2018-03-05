@@ -10,6 +10,7 @@ import defaultMenuItems from '../../data/menu-items.json';
 import defaultMenuItemsMobile from '../../data/mobile-items.json';
 import styles from './WebHeader.styl';
 import getFeaturedMessage from '../../modules/featured';
+import { whitContextProvider } from '../State';
 
 const cx = classNames.bind(styles);
 
@@ -37,7 +38,8 @@ class WebHeader extends Component {
     talkToSalesButtonOnClick: PropTypes.func,
     talkToSalesButtonText: PropTypes.string,
     userProfile: PropTypes.node,
-    breakpoint: PropTypes.number
+    breakpoint: PropTypes.number,
+    getAbVariantHeader: PropTypes.func
   };
 
   static defaultProps = {
@@ -63,7 +65,8 @@ class WebHeader extends Component {
     talkToSalesButtonOnClick: () => {},
     talkToSalesButtonText: 'Talk to Sales',
     userProfile: null,
-    breakpoint: 992
+    breakpoint: 992,
+    getAbVariantHeader: () => {}
   };
 
   static renderButton(link, onClick, text, className) {
@@ -246,6 +249,7 @@ class WebHeader extends Component {
         loading={loading}
       />
     ));
+
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <header className={cx('header-main', { 'is-notification-open': notificationIsOpen })}>
@@ -326,4 +330,4 @@ class WebHeader extends Component {
   }
 }
 
-export default WebHeader;
+export default whitContextProvider(WebHeader);

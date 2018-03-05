@@ -22,11 +22,15 @@ const App = () => {
     return <WebHeader theme="dark" />;
   }
 
+  window.abVariantHeader = 'replaceItems';
+
+  const ab = () => window.abVariantHeader;
+
   return (
     <div>
       <h1 className="container text-center">Auth0 Web Header Playground</h1>
       <Section title="Theme Dark" dark>
-        <WebHeader theme="dark" />
+        <WebHeader theme="dark" getAbVariantHeader={ab} />
       </Section>
       <Section title="Theme Gray">
         <WebHeader theme="gray" />

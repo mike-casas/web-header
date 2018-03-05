@@ -4,10 +4,18 @@ import classNames from 'classnames/bind';
 import DropdownListItem from '../DropdownListItem';
 import FooterList from '../FooterList';
 import styles from './DropdownList.styl';
+import { arrayItems, contentItems, abVariantName } from '../../modules/UtilsAbTest';
 
 const cx = classNames.bind(styles);
 
-const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns, loading }) => (
+const DropdownList = ({
+  data,
+  highlightHandler,
+  parentClass,
+  closeDropdowns,
+  loading,
+  abVariant
+}) => (
   <div
     className={cx('dropdownList', {
       moreDropdownList: parentClass === 'moreDropdown',
@@ -46,17 +54,21 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns, loa
               <span className={cx('title-list', { loading })}>{subItem.titleList}</span>
             ) : null}
 
-            {(subItem.items || []).map(item => (
-              <DropdownListItem
-                key={item.id}
-                item={item}
-                highlightHandler={highlightHandler}
-                hasArrow={subItem.hasArrows}
-                parentClass={parentClass}
-                closeDropdowns={closeDropdowns}
-                loading={loading}
-              />
-            ))}
+            {(subItem.items || []).map(item => {
+              const useABVariant = arrayItems.includes(item.id) && abVariant === abVariantName;
+              const dataItem = useABVariant ? contentItems[item.id] : item;
+              return (
+                <DropdownListItem
+                  key={dataItem.id}
+                  item={dataItem}
+                  highlightHandler={highlightHandler}
+                  hasArrow={subItem.hasArrows}
+                  parentClass={parentClass}
+                  closeDropdowns={closeDropdowns}
+                  loading={loading}
+                />
+              );
+            })}
           </ul>
         ))}
       </div>
@@ -91,7 +103,8 @@ DropdownList.propTypes = {
   highlightHandler: PropTypes.func,
   parentClass: PropTypes.string,
   closeDropdowns: PropTypes.func,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  abVariant: PropTypes.string
 };
 
 export default DropdownList;

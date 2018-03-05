@@ -5,6 +5,7 @@ import DropdownList from '../DropdownList';
 import DropdownHighlight from '../DropdownHighlight';
 import FooterList from '../FooterList';
 import styles from './Dropdown.styl';
+import { whitContextConsumer } from '../State';
 
 const cx = classNames.bind(styles);
 
@@ -13,11 +14,13 @@ class Dropdown extends Component {
     data: PropTypes.object,
     closeDropdowns: PropTypes.func,
     open: PropTypes.bool,
-    loading: PropTypes.bool.isRequired
+    loading: PropTypes.bool.isRequired,
+    abWinnerVariant: PropTypes.string
   };
 
   static defaultProps = {
-    data: {}
+    data: {},
+    abWinnerVariant: ''
   };
 
   state = {
@@ -48,8 +51,7 @@ class Dropdown extends Component {
   };
 
   render() {
-    const { data, closeDropdowns, open, loading } = this.props;
-
+    const { data, closeDropdowns, open, loading, abWinnerVariant } = this.props;
     return (
       <div
         className={cx('dropdown', data.dropdownClass, {
@@ -69,6 +71,7 @@ class Dropdown extends Component {
                   highlightHandler={this.highlightHandler}
                   closeDropdowns={closeDropdowns}
                   loading={loading}
+                  abVariant={abWinnerVariant}
                 />
               );
             case 'highlight':
@@ -103,4 +106,4 @@ class Dropdown extends Component {
   }
 }
 
-export default Dropdown;
+export default whitContextConsumer(Dropdown);
