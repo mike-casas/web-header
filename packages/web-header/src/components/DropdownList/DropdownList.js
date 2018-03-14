@@ -23,6 +23,7 @@ const DropdownList = ({ data, highlightHandler, parentClass, closeDropdowns, loa
           <a
             className={cx('section-title', { hasArrow: data.titleHref, loading })}
             href={data.titleHref}
+            rel={data.external ? 'external' : ''}
           >
             {data.title}
           </a>
