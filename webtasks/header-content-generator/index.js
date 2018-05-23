@@ -144,7 +144,7 @@ function getContent(isDraft) {
     contentfulClient[clietType].getEntries({ content_type: 'whyAuth0' }),
     contentfulClient[clietType].getEntries({ content_type: 'developersSection' }),
     axios
-      .get('https://auth0-marketing.run.webtask.io/last-blog-post')
+      .get('https://wt-139739a316b9b05b2ef2d61c5ed80be7-0.sandbox.auth0-extend.com/last-blog-post')
       .then(response => response.data),
     contentfulClient[clietType].getAssets({ 'fields.file.contentType': 'image/svg+xml' })
   ];

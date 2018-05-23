@@ -23,7 +23,7 @@ From CDN:
 HTML to load menu items:
 ```html
 <script src="https://cdn.auth0.com/website/menu-items-injector/1.0.1/menu-items-injector.min.js"></script>
-<script>MenuItemsInjector({draft: false, remoteEndpoint: 'https://auth0-marketing.run.webtask.io/header-content-generator'}, window, document);</script>
+<script>MenuItemsInjector({draft: false, remoteEndpoint: 'https://wt-139739a316b9b05b2ef2d61c5ed80be7-0.sandbox.auth0-extend.com/header-content-generator'}, window, document);</script>
 ```
 
 
